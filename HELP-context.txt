@@ -1,0 +1,53 @@
+* Le site de ConTeXt, avec de la doc en ligne et à télécharger:
+http://wiki.contextgarden.net/Main_Page
+
+* Lien direct vers la doc complète:
+http://pmrb.free.fr/contextref.pdf
+
+* En cas de problème quelconque, pas de panique: vous tapez tout en mode texte simple, on pourra toujours rajouter les balises de formatage plus tard !
+Vous pouvez également tout mettre dans un fichier à part, on pourra soit l'incorporer physiquement soit par un lien.
+
+* Organisation globale:
+***********************
+** CTX-FORMAT: quelques fichiers de config, ne pas toucher SVP sauf si vous savez VRAIMENT ce que vous faites !
+** document.tex: le document principal, contient juste des inclusions vers d'autres fichiers.
+** Les autres 'fichiers.tex': des bouts du docu. principal.
+
+* Pour compiler:
+$ context document.tex
+=> on récupère document.pdf.
+
+* Balises les plus utiles:
+**************************
+** Mettre une ligne (ou un bout de ligne) en commentaire: % blabla
+(équivaut à // en java)
+
+** Commencer un nouveau paragraphe: \par
+... la fin de mon paragraphe précédent.
+\par
+Début du nouveau paragraphe.
+
+** Passer à la ligne: \crlf
+
+** Commencer un nouveau paragraphe, avec plus ou moins d'espacement:
+\blank[small|medium|big]
+
+** Commencer une section: \section{Titre de la section}
+
+** Commencer une sous-section: \subsection{Titre de la sous section}
+
+** Faire une liste:
+\startitemize
+\item Premier élément
+\item Deuxième élément
+\stopitemize
+
+** Faire une liste numérotée: \startitemize[n]
+
+** Ecrire un bout de formule mathématique: $...$
+Cet algorithme est en $\Theta(n^2)$.
+
+** Ecrire en gras, italique...
+Ceci est {\bf en gras}, alors que ceci est {\it en italique} et ceci est {\em automatiquement mis en valeur}.
+
+TO BE CONTINUED

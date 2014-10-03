@@ -1,0 +1,40 @@
+Deux sites du même auteur pour choper les bases:
+===============================================
+* version courte: http://gitref.org
+* version longue: http://git-scm.com/doc 
+On peut ensuite télécharger le GitHub Cheat Sheet (sur git-scm.com) qui contient les principales commandes, et visionner la version interactive très instructive.
+
+Principales commandes pour travailler EN LOCAL:
+===============================================
+> pour voir les fichiers nouveaux/modifiés:
+$ git status
+
+> pour que git suive de nouveaux fichiers, ou pour inclure des fichiers modifiés dans le prochain commit:
+$ git add <fichier> <rep> <fichier>... 
+
+> pour "commettre" les derniers changements déclarés par git add (dans la branche actuelle):
+$ git commit
+
+> pour inclure tous les derniers fichiers modifiés ET commettre en même temps:
+$ git commit -a
+
+> pour voir l'historique des derniers commit:
+$ git log
+
+> pour voir dans quelle branche on se trouve:
+$ git branch
+
+> pour créer une nouvelle branche (basée sur la branche actuelle):
+$ git branch <nom de la branche>
+
+> pour changer de branche (il faut que les derniers changements aient été commis):
+$ git checkout <nom de la branche>
+
+> pour créer une nouvelle branche ET y aller directement:
+$ git checkout -b <nom de la branche>
+
+TO BE CONTINUED...
+
+Principales commandes pour transferts sur le SERVEUR /!\
+========================================================
+TO BE CONTINUED...
