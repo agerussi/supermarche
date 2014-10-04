@@ -20,7 +20,6 @@
 \setuppagenumber[state=start]
 \setuppagenumbering[location={footer,inmargin}]
 \setupheads[alternative=inmargin]
-\setuphead[subsubject][style=\tfa]
 
 % les macros pour titres spéciaux
 %\def\Title#1{\midaligned{\tfc #1}\blank[5pt]\hrule}
@@ -43,8 +42,9 @@
 \definevimtyping[CSS][lines=split, syntax=css, directory=../FORMAT/vimoutput/]
 \definevimtyping[XML][lines=split, syntax=xml, directory=../FORMAT/vimoutput/]
 
-% macros pour le glossaire
+% différents réglages de mise en page
 \definedescription[glossaire][location=top,headstyle=bold]
+\definedescription[log][]
 
 % divers
 \mainlanguage[fr]
