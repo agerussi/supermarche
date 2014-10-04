@@ -19,6 +19,9 @@ $ context document.tex
 
 * Balises les plus utiles:
 **************************
+** Inclure le fichier toto.tex: \input toto
+(équivalent à #include en C)
+
 ** Mettre une ligne (ou un bout de ligne) en commentaire: % blabla
 (équivaut à // en java)
 
