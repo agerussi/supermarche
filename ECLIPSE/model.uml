@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_XfJ2oEvBEeS1u7YNhmeRGw" name="model">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_dcneIEvCEeS1u7YNhmeRGw" name="choisir son panier">
+    <extensionPoint xmi:id="__lOBgEvKEeS1u7YNhmeRGw" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_iT_cwEvCEeS1u7YNhmeRGw" name="récupérer les articles">
+    <extensionPoint xmi:id="_T4_2AEvGEeS1u7YNhmeRGw" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_pDVpoEvCEeS1u7YNhmeRGw" name="passer en caisse">
+    <include xmi:id="_dTwgQEvGEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_reaoIEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_s04BkEvCEeS1u7YNhmeRGw" name="payer"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9lPncEvCEeS1u7YNhmeRGw" name="panier en ligne">
+    <generalization xmi:id="_GYIj8EvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
+    <extensionPoint xmi:id="_VKBcMEvKEeS1u7YNhmeRGw" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DwMt0EvDEeS1u7YNhmeRGw" name="panier en direct">
+    <generalization xmi:id="_NA2kYEvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_y8QaEEvDEeS1u7YNhmeRGw" name="panier recettes">
+    <generalization xmi:id="_FuZqcEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_VJ0n4EvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_-bCKgEvDEeS1u7YNhmeRGw" name="Client"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="__AavgEvDEeS1u7YNhmeRGw" name="panier budget">
+    <generalization xmi:id="_FOD9gEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_VwzvYEvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_AqnngEvEEeS1u7YNhmeRGw" name="panier amazon">
+    <generalization xmi:id="_GEOJcEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_WNMJYEvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Pj3TsEvEEeS1u7YNhmeRGw" name="cadbot">
+    <generalization xmi:id="_csyRwEvEEeS1u7YNhmeRGw" general="_iT_cwEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_T4ijAEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_SJWIMEvEEeS1u7YNhmeRGw" name="markettab">
+    <extend xmi:id="_UrPyUEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
+    <extend xmi:id="__lFeoEvKEeS1u7YNhmeRGw" extendedCase="_dcneIEvCEeS1u7YNhmeRGw" extensionLocation="__lOBgEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XdwoIEvEEeS1u7YNhmeRGw" name="caisse hôtesse">
+    <generalization xmi:id="_eFgYMEvEEeS1u7YNhmeRGw" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y811QEvEEeS1u7YNhmeRGw" name="portique de paiement">
+    <generalization xmi:id="_drHiQEvEEeS1u7YNhmeRGw" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_V5lbcEvLEeS1u7YNhmeRGw" addition="_Pj3TsEvEEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_fJPGEEvEEeS1u7YNhmeRGw" name="Livraison">
+    <include xmi:id="_-gqmgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_Ai488EvGEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_PoIoUEvHEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_iGPpwEvEEeS1u7YNhmeRGw" name="Drive">
+    <include xmi:id="_2ckNMEvFEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_5SClgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_6av6AEvFEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_LrArcEvHEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_WL53UEvHEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lMC9EEvEEeS1u7YNhmeRGw" name="paiement espèces">
+    <generalization xmi:id="_t1HEoEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_nhwQMEvEEeS1u7YNhmeRGw" name="paiement carte">
+    <generalization xmi:id="_uU6mEEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rt_nIEvEEeS1u7YNhmeRGw" name="paiement téléphone">
+    <generalization xmi:id="_up5-oEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_EH2t8EvFEeS1u7YNhmeRGw" name="Euréka">
+    <extend xmi:id="_VYt8UEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_qDGWIEvFEeS1u7YNhmeRGw" name="payer en ligne">
+    <generalization xmi:id="_wGNvIEvFEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVptkEvIEeS1u7YNhmeRGw" name="A_client_choisir son panier" memberEnd="_DVqUoEvIEeS1u7YNhmeRGw _DVqUo0vIEeS1u7YNhmeRGw">
+    <ownedEnd xmi:id="_DVqUoEvIEeS1u7YNhmeRGw" name="client" type="_-bCKgEvDEeS1u7YNhmeRGw" association="_DVptkEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DVqUoUvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DVqUokvIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_DVqUo0vIEeS1u7YNhmeRGw" name="choisir son panier" type="_dcneIEvCEeS1u7YNhmeRGw" association="_DVptkEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DVqUpEvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DVqUpUvIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EgHVkEvIEeS1u7YNhmeRGw" name="A_client_récupérer les articles" memberEnd="_EgHVkUvIEeS1u7YNhmeRGw _EgHVlEvIEeS1u7YNhmeRGw">
+    <ownedEnd xmi:id="_EgHVkUvIEeS1u7YNhmeRGw" name="client" type="_-bCKgEvDEeS1u7YNhmeRGw" association="_EgHVkEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EgHVkkvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EgHVk0vIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_EgHVlEvIEeS1u7YNhmeRGw" name="récupérer les articles" type="_iT_cwEvCEeS1u7YNhmeRGw" association="_EgHVkEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EgHVlUvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EgHVlkvIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FXu6EEvIEeS1u7YNhmeRGw" name="A_client_passer en caisse" memberEnd="_FXu6EUvIEeS1u7YNhmeRGw _FXu6FEvIEeS1u7YNhmeRGw">
+    <ownedEnd xmi:id="_FXu6EUvIEeS1u7YNhmeRGw" name="client" type="_-bCKgEvDEeS1u7YNhmeRGw" association="_FXu6EEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FXu6EkvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FXu6E0vIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_FXu6FEvIEeS1u7YNhmeRGw" name="passer en caisse" type="_pDVpoEvCEeS1u7YNhmeRGw" association="_FXu6EEvIEeS1u7YNhmeRGw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FXu6FUvIEeS1u7YNhmeRGw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FXu6FkvIEeS1u7YNhmeRGw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
