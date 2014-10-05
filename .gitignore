@@ -3,3 +3,4 @@
 *.swp
 _*
 ECLIPSE/.project
+*.tmp
