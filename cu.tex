@@ -1,7 +1,9 @@
 \title{Cas d'utilisation}
-
-Le diagramme UML des cas d'utilisation est présenté à la \in{figure}[CU].
-\placefigure[][CU]{Diagramme des cas d'utilisation}{\externalfigure[ECLIPSE/diagrammeCU.pdf][width=\hsize]}
+Nous avons dessiné deux diagrammes séparés.
+En effet nous nous sommes focalisés essentiellement sur les clients et le diagramme correspondant, présenté à la \in{figure}[CUC], est relativement riche.
+Nous avons donc dessiné un deuxième diagramme pour les cas d'utilisation concernant le personnel du supermarket, \in{figure}[CUP].
+\placefigure[][CUC]{Cas d'utilisation des clients}{\externalfigure[ECLIPSE/diagrammeCU.pdf][width=\hsize]}
+\placefigure[][CUP]{Cas d'utilisation du personnel}{\externalfigure[ECLIPSE/CUPersonnel.pdf][width=\hsize]}
 
 \section{Cas d'utilisation principaux}
 
@@ -16,6 +18,12 @@ Ce cas d'utilisation englobe le calcul du montant total des articles prélevés 
 
 \subsection{Payer}
 Désigne le paiement proprement dit, quel que soit le moyen utilisé à cette fin.
+
+\subsection{Suivi emplacement des articles}
+Ce \cu\ englobe l'ensemble des actions destinées à assurer la correspondance entre le ou les emplacement(s) effectif(s) des articles dans les rayons, et le ou les emplacement(s) théoriques enregistrés dans la base de données.
+
+\subsection{Gestion stocks}
+Ce \cu\ regroupe les actions nécessaires au suivi de la disponibilité de chaque article, par exemple l'estimation de la date de rupture de stocks, les commandes fournisseurs, \etc
 
 \section{Cas d'utilisation secondaires}
 
@@ -65,3 +73,7 @@ Le paiement peut avoir lieu en ligne ou sur place lors du retrait.
 \subsection{livraison}
 Dans ce cas d'utilisation, le client se fait livrer un panier préalablement constitué en ligne, directement à son domicile, moyennant un coût de livraison.
 Le paiement peut avoir lieu en ligne ou lors de la livraison.
+
+\subsection{Placement par markettab}
+Dans ce \cu, un personnel du magasin (généralement un magasinier) se sert d'une markettab pour gérer l'emplacement d'un produit dans la base de données.
+Il peut supprimer des emplacements connus, ou en rajouter de nouveaux.

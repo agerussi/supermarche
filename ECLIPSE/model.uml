@@ -103,4 +103,46 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FXu6FkvIEeS1u7YNhmeRGw" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_drXnYExoEeSqzdXgGf3wTg" name="Magasinier">
+    <generalization xmi:id="_gK92UExoEeSqzdXgGf3wTg" general="_ezPOYExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_elOnkExoEeSqzdXgGf3wTg" name="Chef de rayon">
+    <generalization xmi:id="_hpfp0ExoEeSqzdXgGf3wTg" general="_ezPOYExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ezPOYExoEeSqzdXgGf3wTg" name="Personnel"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3ItkcExoEeSqzdXgGf3wTg" name="Suivi emplacement des articles"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8sq8QExoEeSqzdXgGf3wTg" name="Gestion stocks"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="__BSqQExoEeSqzdXgGf3wTg" name="A_magasinier_mise en place des articles" memberEnd="__BSqQUxoEeSqzdXgGf3wTg __BSqRExoEeSqzdXgGf3wTg">
+    <ownedEnd xmi:id="__BSqQUxoEeSqzdXgGf3wTg" name="magasinier" type="_drXnYExoEeSqzdXgGf3wTg" association="__BSqQExoEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BSqQkxoEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__BSqQ0xoEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__BSqRExoEeSqzdXgGf3wTg" name="mise en place des articles" type="_3ItkcExoEeSqzdXgGf3wTg" association="__BSqQExoEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BSqRUxoEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__BSqRkxoEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__aqzkExoEeSqzdXgGf3wTg" name="A_chef de rayon_gestion des stocks" memberEnd="__aqzkUxoEeSqzdXgGf3wTg __aqzlExoEeSqzdXgGf3wTg">
+    <ownedEnd xmi:id="__aqzkUxoEeSqzdXgGf3wTg" name="chef de rayon" type="_elOnkExoEeSqzdXgGf3wTg" association="__aqzkExoEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__aqzkkxoEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__aqzk0xoEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__aqzlExoEeSqzdXgGf3wTg" name="gestion des stocks" type="_8sq8QExoEeSqzdXgGf3wTg" association="__aqzkExoEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__aqzlUxoEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__aqzlkxoEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2lQcoExpEeSqzdXgGf3wTg" name="A_chef de rayon_suivi emplacement des articles" memberEnd="_2lQcoUxpEeSqzdXgGf3wTg _2lQcpExpEeSqzdXgGf3wTg">
+    <ownedEnd xmi:id="_2lQcoUxpEeSqzdXgGf3wTg" name="chef de rayon" type="_elOnkExoEeSqzdXgGf3wTg" association="_2lQcoExpEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2lQcokxpEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2lQco0xpEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_2lQcpExpEeSqzdXgGf3wTg" name="suivi emplacement des articles" type="_3ItkcExoEeSqzdXgGf3wTg" association="_2lQcoExpEeSqzdXgGf3wTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2lQcpUxpEeSqzdXgGf3wTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2lQcpkxpEeSqzdXgGf3wTg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="placement par markettab">
+    <generalization xmi:id="_IgFqgExqEeSqzdXgGf3wTg" general="_3ItkcExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
 </uml:Model>
