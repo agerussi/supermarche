@@ -1,5 +1,42 @@
-* Le site de ConTeXt, avec de la doc en ligne et à télécharger:
+﻿* Le site de ConTeXt, avec de la doc en ligne et à télécharger:
 http://wiki.contextgarden.net/Main_Page
+
+Context la time killer app, ou comment perdre du temps .....
+
+Pourquoi github: pouvoir faire des fichiers contenant les ajouts de chacun sur le master (commit + push)
+pourquoi context: github ne gere pas les fichiers binaires, et travaille très bien sur les fichiers texte pour appliquer les modifications de chacun sur le fichier final ( merging + versionnning)
+
+Scite est un editeur qui utilisera l'extension lexer pour generer des pdfs via context.
+pro: super flexible, fait des trucs de fous, des symboles, des annotations, des sommaires, des formules de maths ( hein, alex ;) )
+cons: pas wysiwig, il faut connaitre les commandes de tetes, pas de preview, il faut imaginer le résultat.....
+
+Alternative: sauver les documents word au format html
+
+********************************************
+Comment installer la package en qq etapes.
+une URL qui explique dans le detail.
+http://wiki.contextgarden.net/Windows_Installation:_ConTeXt_Suite_with_SciTe
+
+et un tuto rapide pour gagner du temps, parce qu'on en manque tous, hein !
+* Install windows
+- télécharger http://standalone.contextgarden.net/setup/context-setup-mswin.zip
+- dezipper l'archive dans un repertoire genre d:\context
+- ouvrir un prompt et aller dans le repertoire cd d:\context; cd d:
+- taper first-setup.bat
+- lire ce qu'indique le bat pour ajouter dans le path, le chemin pour lancer context en mode de commande. (non visible si bat lancé depuis l'explorer
+- telecharger sur http://opensource.ebswift.com/SciTEInstaller/ la version x86 ou x64 ( a savoir scite ne demande pas ou s'installer...., super pour les partitions que l'on veut epargner style ssd ....)
+- telecharger http://foicica.com/scintillua/download/scintillua_3.5.1-1.zip, puis mettre le contenu de l'archive dans le repertoire d'installation scite.
+- installer ruby (http://rubyinstaller.org/downloads/), cocher ajouter le chemin de ruby dans le path.
+- ouvrir un commande prompt dans le repertoire de context (G:\ANDROID\context\bin) et taper: texexec --make --all
+- ouvrir scite, creer un nouveau document et le sauver sous sample.tex, y coller le texte ci dessous
+\starttext
+
+Hello, world!
+
+\stoptext
+- appuyer sur F7, un document sample.pdf sera crée a l'emplacement du sample.pdf et une floppée de document intermediaire.
+- voila maintenant, on peut faire après une heure d'installation, ce que word et pdfcreator font après 5 minutes d'installation, certes context ajoute la gestion des .
+********************************************
 
 * Lien direct vers la doc complète:
 http://pmrb.free.fr/contextref.pdf
