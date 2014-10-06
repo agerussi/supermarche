@@ -1,6 +1,7 @@
 *.tuc
 *.log
 *.swp
+*~
 _*
 ECLIPSE/.project
 *.tmp
