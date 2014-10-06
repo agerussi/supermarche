@@ -18,6 +18,8 @@ et les autres pourront fusionner les changements dans la leur s'ils le désirent
   basées sur sa branche personnelle (localement bien sûr, ou en la remontant
   s'il le juge nécessaire).
 
+* Les fichiers .tex doivent être en UTF8, merci !
+
 Fichiers d'accompagnement:
 ==========================
 Les fichiers HELP-context.txt et HELP-git.txt contiennent une aide basique
