@@ -1,20 +1,23 @@
 \section{classique eureka cadbot cb rfid}
 
 Congong arrive dans le supermarché avec sa liste de course à la main. Il doit acheter 5 packs de lait, du cacao, un poulet fermier, une baguette, un pot de miel, un kilo de sucre, 2 paquets de biscuits au chocolat, 2 kilos de pommes de terre, de la creme fraiche, des bananes, des petits suisses yoplait.
-Il passe par le cadpark le plus proche et récupère un cadbot, décroche sa balise et la met dans sa poche.[CROQUIS 1]\in{figure}[KBOT]
+Il passe par le cadpark le plus proche et récupère un cadbot, décroche sa balise et la met dans sa poche (\in{figure}[BOTSUIVI]).
 Il se promène dans les rayons, suivi automatiquement par le cadbot.
-Il scanne chaque article grâce à la douchette intégrée au cadbot.[CROQUIS 3]\in{figure}[KBOT]
+Il scanne chaque article grâce à la douchette intégrée au cadbot (\in{figure}[BOTSCAN]).
 Celui-ci détecte le dépot d'un article, et en vérifie l'authenticité grâce à son système 
 de balance intégrée (le poids de l'article est codé dans le code barre).
 Plus loin, Congong cherche désespérément les petits suisses yoplait.
-Il se dirige en tête de gondole vers la borne euréka \in{figure}[BOEUR] la plus proche et prononce les mots "petits suisses" tout en appuyant sur le bouton prévu à cet effet.
+Il se dirige en tête de gondole vers la borne euréka (\in{figure}[BOEUR]) la plus proche et prononce les mots "petits suisses" tout en appuyant sur le bouton prévu à cet effet.
 Sur l'écran s'affiche alors la disponibilité de tous les produits assimilés à des petits suisses.
 Après avoir choisi un élément, celui est localisé sur le plan schématique du magasin qui apparait.
 Ayant trouvé ses petits suisses yoplait, il décide de reposer les yaourts à la fraise dans le rayon.
-\placefigure[BOEUR]{Borne Eureka}{\externalfigure[CROQUIS/borneEureka.jpg][width=\hsize]}
+\placefigure[][BOEUR]{Borne Eureka}{\externalfigure[CROQUIS/borneEureka.jpg][width=\hsize]}
 Il les retire de son caddie et les scanne à nouveau.
 CongCong termine ses courses en ajoutant dans le panier les produits de son choix.
-Il se dirige vers le terminal de paiement, passe le portique et le prix de l'ensemble de ses courses s'affiche sur la borne dès que son cadbot vient se garer au milieu du portique, où il restera bloqué en attendant le paiement.[CROQUIS 4]\in{figure}[KBOT]
+Il se dirige vers le terminal de paiement, passe le portique et le prix de l'ensemble de ses courses s'affiche sur la borne dès que son cadbot vient se garer au milieu du portique, où il restera bloqué en attendant le paiement (\in{figure}[BOTPORTIQUE]).
 Congong paie avec sa carte banquaire et va à sa voiture où il décharge le cadbot.
 Il raccroche alors la balise au cadbot, qui va automatiquement se ranger dans son cadpark de rattachement.
-\placefigure[BOEUR]{Le Cadbot}{\externalfigure[CROQUIS/cadbot.jpg][width=\hsize]}
+
+\placefigure[][BOTSUIVI]{Le cadbot suit le porteur de sa balise}{\externalfigure[CROQUIS/cadbot-suivi.svg][width=0.6\hsize]}
+\placefigure[][BOTSCAN]{Dépot des articles dans un cadbot}{\externalfigure[CROQUIS/cadbot-scan.svg][width=0.5\hsize]}
+\placefigure[][BOTPORTIQUE]{Portique de paiement}{\externalfigure[CROQUIS/cadbot-portique.svg][width=0.6\hsize]}
