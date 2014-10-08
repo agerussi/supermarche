@@ -1,0 +1,23 @@
+\section{liste connectée}
+
+CongCong de chez lui se connecte sur le site du distributeur afin de préparer ses courses.La, il retrouve ses achats précédents groupés par date d'achat, ainsi qu'un menu qui lui permet de creer sa liste selon les derniers achats, selon des recettes qu'il choisira, ou avec une restriction budgétaire.\in{figure}[lcon]. Aujourd'hui, CongCong valide la proposition faite par le site, qui est de renouveler les achats de sa derniere liste agrementer de produits qu'il n'a pas acheté depuis longtemps. (sopalin, savon, cirage et des filtres a café.)
+\placefigure[lcon]{liste connectée}{\externalfigure[CROQUIS/liste_connectee.jpg][width=\hsize]}
+Une fois la liste terminée, CongCong valide sa liste.
+
+Les produits le plus chers ont un logo qui indique qu'une puce rfid est présente a l'image des cartes bleus. 
+CongCong ne scanne plus ces articles avant de les déposer dans le caddie, mais les dépose directement.
+il est donc libre de mettre et enlever les produits sans devoir penser a les scanner a chaque operation (ajout/suppression)
+Pour les autres produits ou la puce rfid aurait un cout trop important, le logo n'est pas présent et le scan du code barre est possible.
+Lorsqu'il arrive a la caisse, le cadbot se dirige vers un emplacement de detection des tags rfid des produits.
+Parceque les produits avec et sans tag rfid sont présent, ConCong doit sortir l'intégralité du contenu de son caddie sur le tapis roulant de la caisse.
+Il scanne alors les produits sans le tag rfid et les deposent dans le caddie. il depose directement les produits avec tag dans le caddie. cette operation permet de lire le tag et de l'ajouter au ticket de caisse.
+CongCong satisfait de ses courses, procéde au paiement par CB de son caddie.
+CongCong se dirige maintenant vers sa voiture pour decharger ses courses.
+CongCong raccroche la balise au cadbot qui va automatiquement se ranger dans son cadpark de rattachement.
+
+
+\subsection{Variante1: Contrainte sur la liste connectée (WIP)}
+CongCong de chez lui se connecte sur le site du distributeur afin de préparer ses courses.La, il retrouve ses achats précédents groupés par date d'achat, ainsi qu'un menu qui lui permet de creer sa liste selon les derniers achats, selon des recettes qu'il choisira, ou avec une restriction budgétaire.\in{figure}[lcon]. Aujourd'hui, CongCong a une fin de mois difficile et selectionne le menu budget et définit un montant a ne pas dépasser.
+Le site lui propose une liste selon ses dernières listes d'achats, cependant les produits en plusieurs exemplaires et ceux pour lesquels, il existe un produit moins cher (discount, marque distributueur, concurrent) apparraissent en surbrillance. Un bandeau de couleur rouge reste présent tant que le budget définit n'est pas atteint. Cela n'empeche pas CongCong de valider sa liste malgré le dépassement de la restriction budgetaire.
+CongCong se rend ultérieurement en magasin pour faire ses courses comme dans le scenario ci dessus.
+\placefigure[lcon]{liste connectée}{\externalfigure[CROQUIS/liste_connectee.jpg][width=\hsize]}
