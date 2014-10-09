@@ -18,11 +18,12 @@ $ git commit
 > pour inclure tous les derniers fichiers modifiés ET commettre en même temps:
 $ git commit -a
 
-> pour voir l'historique des derniers commit:
+> pour voir l'historique des derniers commit de la branche courante:
 $ git log
 
-> pour voir dans quelle branche on se trouve:
+> pour voir les branches et dans quelle branche on se trouve:
 $ git branch
+$ git branch -a  (affichera aussi les branches distantes)
 
 > pour créer une nouvelle branche (basée sur la branche actuelle):
 $ git branch <nom de la branche>
@@ -43,7 +44,7 @@ A partir de là vous pouvez faire des merges dans votre propre branche, ou exami
 PS: le petit outil Linux 'gitg' permet une bonne visu graphique des branches/changements/etc.
 
 Si quelqu'un vous dit qu'il a fait un super boulot vous pouvez directement faire le merge dans votre branche:
-> git pull <son prénom>
+> git pull origin <son prénom>
 
 Quand vous avez fait des commits dans votre branche, vous remontez les changements:
 > git push origin <votre branche>
