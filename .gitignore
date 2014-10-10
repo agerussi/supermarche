@@ -1,6 +1,9 @@
 *.tuc
 *.log
 *.swp
+*~
 _*
+*.bak
 ECLIPSE/.project
+CROQUIS/m_k_i_v*
 *.tmp
