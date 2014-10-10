@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="634.78125"
+   height="282.13641"
    id="svg5713"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="Nouveau document 13">
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="Liste_connectée_avt_login.svg">
   <defs
      id="defs5715" />
   <sodipodi:namedview
@@ -24,17 +24,23 @@
      borderopacity="0.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
-     inkscape:zoom="0.35"
-     inkscape:cx="350"
-     inkscape:cy="202.34598"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="192.68617"
+     inkscape:cy="208.34704"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="511"
-     inkscape:window-height="453"
+     inkscape:window-width="1237"
+     inkscape:window-height="765"
      inkscape:window-x="225"
      inkscape:window-y="225"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     showborder="false"
+     inkscape:showpageshadow="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5718">
     <rdf:RDF>
@@ -43,14 +49,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(40.249996,-614.14485)">
     <rect
        style="fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="rect2985"
@@ -183,16 +190,16 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="514.03571"
+       x="511.00525"
        y="669.65094"
        id="text5322"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5324"
-         x="514.03571"
+         x="511.00525"
          y="669.65094">Me connecter</tspan><tspan
          sodipodi:role="line"
-         x="514.03571"
+         x="511.00525"
          y="684.65094"
          id="tspan5326" /></text>
     <path

@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="cadbot-Suivi.svg">
+   sodipodi:docname="cadbot-scan.svg">
   <defs
      id="defs4">
     <marker
@@ -39,9 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="138.43165"
-     inkscape:cy="14.053669"
+     inkscape:zoom="2.8"
+     inkscape:cx="137.52193"
+     inkscape:cy="114.99518"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,7 +87,7 @@
      transform="translate(-144.4375,-307.77487)">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 190,362.36218 100,0 -40,70 -95,0 z"
+       d="m 195,362.36216 95,2e-5 -40,70 -95,0 z"
        id="path2987"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -99,7 +99,7 @@
        sodipodi:nodetypes="ccccccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 190,362.36218 -10,-20 -35,70 10,20"
+       d="m 195,362.36216 -10,-20 -40,70.00002 10,20"
        id="path2991"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />

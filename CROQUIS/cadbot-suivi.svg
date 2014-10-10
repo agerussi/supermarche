@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="Nouveau document 1">
+   sodipodi:docname="cadbot-suivi.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,13 +24,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="187.88011"
-     inkscape:cy="19.645187"
+     inkscape:zoom="3.959798"
+     inkscape:cx="108.79056"
+     inkscape:cy="86.236001"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -61,7 +61,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -72,7 +72,7 @@
      transform="translate(-144.4375,-307.77487)">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 190,362.36218 100,0 -40,70 -95,0 z"
+       d="m 195,362.36217 95,1e-5 -40,70 -95,0 z"
        id="path2987"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -84,7 +84,7 @@
        sodipodi:nodetypes="ccccccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 190,362.36218 -10,-20 -35,70 10,20"
+       d="m 195,362.36217 -10,-20 -40,70.00001 10,20"
        id="path2991"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
