@@ -142,7 +142,58 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2lQcpkxpEeSqzdXgGf3wTg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="placement par markettab">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="Placement par markettab">
     <generalization xmi:id="_IgFqgExqEeSqzdXgGf3wTg" general="_3ItkcExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_clDzwFCTEeS5xfq3BneIRw" name="Hôte(esse) de caisse">
+    <generalization xmi:id="_pSRGMFCTEeS5xfq3BneIRw" general="_ezPOYExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_kmPb8FCTEeS5xfq3BneIRw" name="Gestion Personnel">
+    <include xmi:id="_fJJrsFCUEeS5xfq3BneIRw" addition="_ZkODgFCUEeS5xfq3BneIRw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oxCBYFCTEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_oxCBYVCTEeS5xfq3BneIRw _oxCBZFCTEeS5xfq3BneIRw">
+    <ownedEnd xmi:id="_oxCBYVCTEeS5xfq3BneIRw" name="personnel" type="_ezPOYExoEeSqzdXgGf3wTg" association="_oxCBYFCTEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oxCBYlCTEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oxCBY1CTEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_oxCBZFCTEeS5xfq3BneIRw" name="pointage temps de travail" type="_kmPb8FCTEeS5xfq3BneIRw" association="_oxCBYFCTEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oxCBZVCTEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oxCBZlCTEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_10vvUFCTEeS5xfq3BneIRw" name="Gestion d'une caisse"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AO-SgFCUEeS5xfq3BneIRw" name="A_hôte(esse) de caisse_gestion d'une caisse" memberEnd="_AO-5kFCUEeS5xfq3BneIRw _AO-5k1CUEeS5xfq3BneIRw">
+    <ownedEnd xmi:id="_AO-5kFCUEeS5xfq3BneIRw" name="hôte(esse) de caisse" type="_clDzwFCTEeS5xfq3BneIRw" association="_AO-SgFCUEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AO-5kVCUEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AO-5klCUEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_AO-5k1CUEeS5xfq3BneIRw" name="gestion d'une caisse" type="_10vvUFCTEeS5xfq3BneIRw" association="_AO-SgFCUEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AO-5lFCUEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AO-5lVCUEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZkODgFCUEeS5xfq3BneIRw" name="Pointage temps de travail"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cu0-UFCUEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_cu0-UVCUEeS5xfq3BneIRw _cu0-VFCUEeS5xfq3BneIRw">
+    <ownedEnd xmi:id="_cu0-UVCUEeS5xfq3BneIRw" name="personnel" type="_ezPOYExoEeSqzdXgGf3wTg" association="_cu0-UFCUEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cu0-UlCUEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cu0-U1CUEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cu0-VFCUEeS5xfq3BneIRw" name="pointage temps de travail" type="_ZkODgFCUEeS5xfq3BneIRw" association="_cu0-UFCUEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cu0-VVCUEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cu0-VlCUEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_SoGwgFCVEeS5xfq3BneIRw" name="gestionnaire du personnel">
+    <generalization xmi:id="_Xt17QFCVEeS5xfq3BneIRw" general="_ezPOYExoEeSqzdXgGf3wTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Z5TtQFCVEeS5xfq3BneIRw" name="A_gestionnaire du personnel_gestion personnel" memberEnd="_Z5TtQVCVEeS5xfq3BneIRw _Z5UUUlCVEeS5xfq3BneIRw">
+    <ownedEnd xmi:id="_Z5TtQVCVEeS5xfq3BneIRw" name="gestionnaire du personnel" type="_SoGwgFCVEeS5xfq3BneIRw" association="_Z5TtQFCVEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z5UUUFCVEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z5UUUVCVEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Z5UUUlCVEeS5xfq3BneIRw" name="gestion personnel" type="_kmPb8FCTEeS5xfq3BneIRw" association="_Z5TtQFCVEeS5xfq3BneIRw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z5UUU1CVEeS5xfq3BneIRw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z5UUVFCVEeS5xfq3BneIRw" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
