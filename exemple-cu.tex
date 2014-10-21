@@ -1,0 +1,47 @@
+% exemple de rédaction des scénarii associés à un CU
+
+\startCU
+\nom Consulter planning UE
+\but Ce cas montre la suite de pas permettant à un enseignant de consulter le planning d'une UE
+\acteur enseignant
+\precondition l'enseignant est en charge d'au moins une UE
+\declenchement l'enseignant a choisi de consulter le planning.
+\auteur Alexandre G
+\date 21/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] le système construit la liste des UE
+\etape[RETOUR] l'enseignant choisit une UE
+\etape le système construit le planning de l'UE
+\etape[SA2] le système affiche le planning
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition L'enseignant a consulté le planning de l'UE.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[windaude crashes] 
+  \etape le système est sous windaube et ne démarre pas
+  \etape l'utilisateur s'énerve
+  \etape il installe linux
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition Tout est retourné à la normale
+\stopalternatif
+
+\startalternatif[SA2]
+\startcondition[nombre de saisies incorrectes trop grand]
+  \etape le système prévient le banquier
+  \etape le système met fin à la session
+\stopcondition
+\startcondition[autre problème]
+  \etape faire reset général
+\stopcondition
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+Pas de scénario d'exception.
+\stopCU
