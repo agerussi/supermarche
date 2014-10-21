@@ -1,8 +1,6 @@
 ﻿* Le site de ConTeXt, avec de la doc en ligne et à télécharger:
 http://wiki.contextgarden.net/Main_Page
 
-Context la time killer app, ou comment perdre du temps .....
-
 Pourquoi github: pouvoir faire des fichiers contenant les ajouts de chacun sur le master (commit + push)
 pourquoi context: github ne gere pas les fichiers binaires, et travaille très bien sur les fichiers texte pour appliquer les modifications de chacun sur le fichier final ( merging + versionnning)
 
@@ -30,12 +28,9 @@ et un tuto rapide pour gagner du temps, parce qu'on en manque tous, hein !
 - ouvrir un commande prompt dans le repertoire de context (G:\ANDROID\context\bin) et taper: texexec --make --all
 - ouvrir scite, creer un nouveau document et le sauver sous sample.tex, y coller le texte ci dessous
 \starttext
-
 Hello, world!
-
 \stoptext
 - appuyer sur F7, un document sample.pdf sera crée a l'emplacement du sample.pdf et une floppée de document intermediaire.
-- voila maintenant, on peut faire après une heure d'installation, ce que word et pdfcreator font après 5 minutes d'installation, certes context ajoute la gestion des .
 ********************************************
 
 * Lien direct vers la doc complète:

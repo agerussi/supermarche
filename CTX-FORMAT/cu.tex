@@ -26,12 +26,13 @@
     \def\stopalternatif{\stopitemize\egroup}
     \def\startcondition[####1]{%
       \let\etape\item%
-      \let\stopcondition\stopitemize	
-      \item{} [####1]%
+      \let\stopcondition\stopitemize%
+      \blank[medium]
+      \item\relax[####1]%
       \edef\numii{}%\in[##1]}%
-      \startitemize[n,packed,joinedup][left=\num,distance=1em]
+      \startitemize[n][left=\num,distance=1em]
     }%
     \edef\num{\in[##1]}%
-    \startitemize[a,repeat][left=\num,distance=1em,before=]
+    \startitemize[a,repeat,joinedup][left=\num,distance=1em]
   }%
 }
