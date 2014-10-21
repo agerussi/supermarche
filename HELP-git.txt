@@ -2,7 +2,47 @@ Deux sites du même auteur pour choper les bases:
 ===============================================
 * version courte: http://gitref.org
 * version longue: http://git-scm.com/doc 
-On peut ensuite télécharger le GitHub Cheat Sheet (sur git-scm.com) qui contient les principales commandes, et visionner la version interactive très instructive.
+On peut ensuite télécharger le GitHub Cheat Sheet (https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf) qui contient les principales commandes, et visionner la version interactive très instructive (http://ndpsoftware.com/git-cheatsheet.html)
+
+TUTO: Configurer Git à la fac
+=============================
+Dans votre répertoire principal, créer un fichier .gitconfig contenant:
+TO BE CONTINUED
+
+TUTO: WorkFlow principal pour les débutants:
+============================================
+1) cloner le projet (une fois pour toutes a priori)
+$ git clone https://github.com/agerussi/supermarche.git
+Ceci va créer le répertoire 'supermarche' qui contient le projet
+
+2) créer sa branche perso et y aller:
+$ git checkout -b <prenom>    # <prenom>=raissa, congcong, ou khalil
+
+3) à partir de là vous pouvez modifier les fichiers existants, ou en créer de nouveaux.
+Ce qu'il faut savoir c'est que les fichiers peuvent avoir 3 status différents sous git:
+  a) le fichier n'est pas pris en compte du tout (souhaitable en général pour les fichiers produits à partir d'autres, comme les binaires, les .bak, .log etc)
+  b) le fichier est pris en compte mais ne sera pas inclus dans le prochain commit
+  c) le fichier sera inclus dans le prochain commit
+(on peut voir le status des fichiers avec git status)
+En conséquence: à chaque fois que vous créez un NOUVEAU fichier ou répertoire, il faut l'ajouter:
+$ git add <fichier>  # fait passer du status a) au status c)
+Pour faire passer de b) à c) on peut aussi utiliser git add mais en général on utilise une option du commit qui va automatiquement inclure tous les fichiers b) vers c) (voir ci-dessous)
+
+4) dès qu'on a fait quelques changements significatifs, on les commet:
+$ git commit -a
+(le -a dit qu'il faut inclure aussi les fichiers de type b), sinon seuls les c) seront inclus)
+git permet alors de taper un petit message qui explique brièvement les changements effectués.
+
+5) on recommence l'étape 3 et 4 autant de fois que nécessaire.
+Conseil: faites des commits souvent, n'attendez pas d'avoir révolutionné l'appli pour faire un commit.
+Si vous voulez renommer ou effacer un fichier:
+$ git mv ....
+$ git rm ....
+
+6) pour faire remonter votre branche sur le serveur (afin que les autres puissent voir vos changements):
+$ git push origin <nom de votre branche>
+Puis envoyer un mail pour prévenir les autres, qui pourront alors voir et intégrer vos changements aux leurs.
+Voilà les bases pour contribuer.
 
 Principales commandes pour travailler EN LOCAL:
 ===============================================
