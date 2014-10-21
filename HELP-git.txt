@@ -44,6 +44,44 @@ $ git push origin <nom de votre branche>
 Puis envoyer un mail pour prévenir les autres, qui pourront alors voir et intégrer vos changements aux leurs.
 Voilà les bases pour contribuer.
 
+TUTO: incorporer les changements des autres dans votre branche
+==============================================================
+Dans git, c'est toujours vous-même qui allez chercher les changements des autres, et non les autres qui changent votre version.
+Quand quelqu'un (par exemple francois) vous annonce qu'il a fait du bon boulot, il est temps d'incorporer ses changements chez vous.
+1) on récupère l'ensemble des changements (sans rien incorporer):
+$ git fetch origin francois
+
+2) on peut se faire une idée de l'évolution de l'historique avec:
+$ git log --oneline --decorate --graph
+
+3) on peut aller voir les changements de francois:
+$ git checkout origin/francois  (il faut n'avoir aucun changement en cours dans sa branche)
+Puis on revient dans sa branche:
+$ git checkout <prenom>
+
+4) on décide (ou pas...) d'incorporer les changements de francois dans sa branche:
+$ git merge origin/francois
+Si tout se passe bien, git synchronise tout automatiquement.
+Sinon, il marque dans les fichiers les points de conflits, il faut les résoudre à la main, puis refaire un commit.
+That's all.
+
+5) Astuce1: pour ceux qui ont peur de bousiller leur branche:
+5.1) on fait une nouvelle branche (tmp) et on y va:
+$ git checkout -b tmp
+
+5.2) on fait le merge dedans:
+$ git merge origin/francois
+
+5.3) une fois qu'on est content, on merge tmp dans sa branche perso:
+$ git checkout <prenom>
+$ git merge tmp
+
+5.4) on peut effacer la branche temporaire:
+$ git branch -d tmp
+
+6) Astuce 2: pour faire "fetch+merge" en même temps:
+$ git pull origin/francois
+
 Principales commandes pour travailler EN LOCAL:
 ===============================================
 > pour voir les fichiers nouveaux/modifiés:
