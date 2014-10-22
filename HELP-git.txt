@@ -7,7 +7,16 @@ On peut ensuite télécharger le GitHub Cheat Sheet (https://training.github.com
 TUTO: Configurer Git à la fac
 =============================
 Dans votre répertoire principal, créer un fichier .gitconfig contenant:
-TO BE CONTINUED
+[http]
+    proxy=http://cache-etu.univ-lille1.fr:3128
+[https]
+    proxy=http://cache-etu.univ-lille1.fr:3128
+[user]
+	name = Prénom Nom
+	email = xxx.yyy@etudiant-univ-lille1.fr
+[color]
+	ui=true
+
 
 TUTO: WorkFlow principal pour les débutants:
 ============================================
@@ -19,13 +28,13 @@ Ceci va créer le répertoire 'supermarche' qui contient le projet
 $ git checkout -b <prenom>    # <prenom>=raissa, congcong, ou khalil
 
 3) à partir de là vous pouvez modifier les fichiers existants, ou en créer de nouveaux.
-Ce qu'il faut savoir c'est que les fichiers peuvent avoir 3 status différents sous git:
+Ce qu'il faut savoir c'est que les fichiers peuvent avoir 3 statuts différents sous git:
   a) le fichier n'est pas pris en compte du tout (souhaitable en général pour les fichiers produits à partir d'autres, comme les binaires, les .bak, .log etc)
   b) le fichier est pris en compte mais ne sera pas inclus dans le prochain commit
   c) le fichier sera inclus dans le prochain commit
 (on peut voir le status des fichiers avec git status)
 En conséquence: à chaque fois que vous créez un NOUVEAU fichier ou répertoire, il faut l'ajouter:
-$ git add <fichier>  # fait passer du status a) au status c)
+$ git add <fichier>  # fait passer du statut a) au statut c)
 Pour faire passer de b) à c) on peut aussi utiliser git add mais en général on utilise une option du commit qui va automatiquement inclure tous les fichiers b) vers c) (voir ci-dessous)
 
 4) dès qu'on a fait quelques changements significatifs, on les commet:
