@@ -1,0 +1,85 @@
+Nous avons dessiné deux diagrammes séparés.
+En effet nous nous sommes focalisés essentiellement sur les clients et le diagramme correspondant, présenté à la \in{figure}[CUC], est relativement riche.
+Nous avons donc dessiné un deuxième diagramme pour les cas d'utilisation concernant le personnel du futurmarket, \in{figure}[CUP].
+\placefigure[][CUC]{Cas d'utilisation des clients}{\externalfigure[ECLIPSE-alexandre/diagrammeCU.pdf][width=\hsize]}
+\placefigure[][CUP]{Cas d'utilisation du personnel}{\externalfigure[ECLIPSE-alexandre/CUPersonnel.pdf][width=\hsize]}
+
+\subsection{Cas d'utilisation principaux}
+
+\subsubsection{Choisir son panier}
+Ce cas d'utilisation regroupe tous les moyens à la disposition du client pour établir son panier d'achats.
+
+\subsubsection{Récupérer les articles}
+Ce cas d'utilisation regroupe tous les moyens à la disposition du client pour récupérer les articles qu'il désire acheter, à partir d'un panier déjà établi ou lors d'un achat spontané.
+
+\subsubsection{Passer en caisse}
+Ce cas d'utilisation englobe le calcul du montant total des articles prélevés en magasin et le paiement proprement dit.
+
+\subsubsection{Payer}
+Désigne le paiement proprement dit, quel que soit le moyen utilisé à cette fin.
+
+\subsubsection{Suivi emplacement des articles}
+Ce \cu\ englobe l'ensemble des actions destinées à assurer la correspondance entre le ou les emplacement(s) effectif(s) des articles dans les rayons, et le ou les emplacement(s) théoriques enregistrés dans la base de données.
+
+\subsubsection{Gestion stocks}
+Ce \cu\ regroupe les actions nécessaires au suivi de la disponibilité de chaque article, par exemple l'estimation de la date de rupture de stocks, les commandes fournisseurs, \etc
+
+\subsubsection{Gestion du personnel}
+Ce \cu\ regroupe tous les aspects liés à la gestion du personnel: plannings, pointage, périodes d'indisponibilité, affectations à divers postes, \etc
+
+\subsection{Cas d'utilisation secondaires}
+
+\subsubsection{Panier recettes}
+Dans ce cas d'utilisation, le client utilise les recettes pour s'aider à constituer son panier.
+
+\subsubsection{Panier budget}
+Dans ce cas d'utilisation, le client gère son panier selon des contraintes de budget, en utilisant les services proposés à cet effet par le système.
+
+\subsubsection{Panier amazon}
+Dans ce cas d'utilisation, le client gère son panier par lui-même, en ligne, à l'aide de ses paniers pré-établis, des associations de produits proposés spontanément par le système.
+
+\subsubsection{Panier en direct}
+Ce cas d'utilisation désigne la constitution du panier en temps réel dans le magasin, à l'aide notamment des possibilités offertes par la markettab.
+
+\subsubsection{Cadbot}
+Ce cas d'utilisation décrit l'utilisation du cadbot en temps que support pour la récupération effective des articles en magasin.
+
+\subsubsection{Markettab}
+Ce cas d'utilisation décrit l'utilisation d'une markettab pour choisir son panier, trouver un article, ou être guidé dans le magasin.
+
+\subsubsection{Euréka}
+Dans ce cas d'utilisation, le client interroge une borne euréka pour localiser un produit ou s'informer de sa disponibilité.
+
+\subsubsection{Portique de paiement}
+Dans ce cas d'utilisation, le client utilise un cadbot et va procéder au passage en caisse par un portique prévu à cet effet. 
+
+\subsubsection{Caisse hôtesse}
+Ce cas décrit un passage classique dans une caisse comportant une hôtesse, incluant un déballage, scan et remballage des articles du caddie.
+
+\subsubsection{Paiement téléphone}
+TODO
+
+\subsubsection{Paiement espèces}
+Ce cas d'utilisation désigne l'utilisation de monnaie papier ou métallique pour payer ses achats, soit à une caisse classique, soit lors d'une livraison ou d'un retrait au drive.
+
+\subsubsection{Paiement en ligne}
+Ce cas d'utilisation désigne un paiement effectif de chez soi, à partir du site du futurmarket.
+
+\subsubsection{Paiement carte}
+Ce cas d'utilisation désigne l'utilisation d'une carte (bancaire ou carte magasin) dans un terminal de paiement (caisse, portique, point drive, livraison).
+
+\subsubsection{Drive}
+Dans ce cas d'utilisation, le client se fait préparer un panier préalablement constitué en ligne et va le récupérer lui-même au point de retrait drive du futurmarket.
+Le paiement peut avoir lieu en ligne ou sur place lors du retrait.
+
+\subsubsection{Livraison}
+Dans ce cas d'utilisation, le client se fait livrer un panier préalablement constitué en ligne, directement à son domicile, moyennant un coût de livraison.
+Le paiement peut avoir lieu en ligne ou lors de la livraison.
+
+\subsubsection{Placement par markettab}
+Dans ce \cu, un personnel du magasin (généralement un magasinier) se sert d'une markettab pour gérer l'emplacement d'un produit dans la base de données.
+Il peut supprimer des emplacements connus, ou en rajouter de nouveaux.
+
+\subsubsection{Pointage temps de travail}
+Ce \cu\ englobe les différents scénarios inhérents à la mesure du temps de présence effectif du personnel.
+L'ensemble du personnel doit notamment «pointer» grâce à son badge rfid.
