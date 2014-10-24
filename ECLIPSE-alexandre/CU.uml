@@ -11,7 +11,7 @@
     <extend xmi:id="_reaoIEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_s04BkEvCEeS1u7YNhmeRGw" name="payer"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_9lPncEvCEeS1u7YNhmeRGw" name="panier en ligne">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9lPncEvCEeS1u7YNhmeRGw" name="constituer sa liste connectée">
     <generalization xmi:id="_GYIj8EvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
     <extensionPoint xmi:id="_VKBcMEvKEeS1u7YNhmeRGw" name="point"/>
   </packagedElement>
@@ -46,12 +46,12 @@
     <generalization xmi:id="_drHiQEvEEeS1u7YNhmeRGw" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_V5lbcEvLEeS1u7YNhmeRGw" addition="_Pj3TsEvEEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_fJPGEEvEEeS1u7YNhmeRGw" name="Livraison">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_fJPGEEvEEeS1u7YNhmeRGw" name="se faire livrer">
     <include xmi:id="_-gqmgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_Ai488EvGEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_PoIoUEvHEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_iGPpwEvEEeS1u7YNhmeRGw" name="Drive">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_iGPpwEvEEeS1u7YNhmeRGw" name="utiliser le drive">
     <include xmi:id="_2ckNMEvFEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_5SClgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_6av6AEvFEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
@@ -110,8 +110,8 @@
     <generalization xmi:id="_hpfp0ExoEeSqzdXgGf3wTg" general="_ezPOYExoEeSqzdXgGf3wTg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_ezPOYExoEeSqzdXgGf3wTg" name="Personnel"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3ItkcExoEeSqzdXgGf3wTg" name="Suivi emplacement des articles"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8sq8QExoEeSqzdXgGf3wTg" name="Gestion stocks"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3ItkcExoEeSqzdXgGf3wTg" name="Suivre l'emplacement des articles"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8sq8QExoEeSqzdXgGf3wTg" name="Gérer les stocks"/>
   <packagedElement xmi:type="uml:Association" xmi:id="__BSqQExoEeSqzdXgGf3wTg" name="A_magasinier_mise en place des articles" memberEnd="__BSqQUxoEeSqzdXgGf3wTg __BSqRExoEeSqzdXgGf3wTg">
     <ownedEnd xmi:id="__BSqQUxoEeSqzdXgGf3wTg" name="magasinier" type="_drXnYExoEeSqzdXgGf3wTg" association="__BSqQExoEeSqzdXgGf3wTg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BSqQkxoEeSqzdXgGf3wTg" value="1"/>
@@ -142,13 +142,13 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2lQcpkxpEeSqzdXgGf3wTg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="Placement par markettab">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="Placer par markettab">
     <generalization xmi:id="_IgFqgExqEeSqzdXgGf3wTg" general="_3ItkcExoEeSqzdXgGf3wTg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_clDzwFCTEeS5xfq3BneIRw" name="Hôte(esse) de caisse">
     <generalization xmi:id="_pSRGMFCTEeS5xfq3BneIRw" general="_ezPOYExoEeSqzdXgGf3wTg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_kmPb8FCTEeS5xfq3BneIRw" name="Gestion Personnel">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_kmPb8FCTEeS5xfq3BneIRw" name="Gérer le personnel">
     <include xmi:id="_fJJrsFCUEeS5xfq3BneIRw" addition="_ZkODgFCUEeS5xfq3BneIRw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_oxCBYFCTEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_oxCBYVCTEeS5xfq3BneIRw _oxCBZFCTEeS5xfq3BneIRw">
@@ -161,7 +161,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oxCBZlCTEeS5xfq3BneIRw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_10vvUFCTEeS5xfq3BneIRw" name="Gestion d'une caisse"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_10vvUFCTEeS5xfq3BneIRw" name="Gérer une caisse"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_AO-SgFCUEeS5xfq3BneIRw" name="A_hôte(esse) de caisse_gestion d'une caisse" memberEnd="_AO-5kFCUEeS5xfq3BneIRw _AO-5k1CUEeS5xfq3BneIRw">
     <ownedEnd xmi:id="_AO-5kFCUEeS5xfq3BneIRw" name="hôte(esse) de caisse" type="_clDzwFCTEeS5xfq3BneIRw" association="_AO-SgFCUEeS5xfq3BneIRw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AO-5kVCUEeS5xfq3BneIRw" value="1"/>
@@ -172,7 +172,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AO-5lVCUEeS5xfq3BneIRw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZkODgFCUEeS5xfq3BneIRw" name="Pointage temps de travail"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZkODgFCUEeS5xfq3BneIRw" name="Pointer temps de travail"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_cu0-UFCUEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_cu0-UVCUEeS5xfq3BneIRw _cu0-VFCUEeS5xfq3BneIRw">
     <ownedEnd xmi:id="_cu0-UVCUEeS5xfq3BneIRw" name="personnel" type="_ezPOYExoEeSqzdXgGf3wTg" association="_cu0-UFCUEeS5xfq3BneIRw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cu0-UlCUEeS5xfq3BneIRw" value="1"/>
