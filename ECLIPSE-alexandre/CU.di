@@ -24,9 +24,6 @@
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
-          <emfPageIdentifier href="CU.notation#_Z_9KAEvCEeS1u7YNhmeRGw"/>
-        </children>
-        <children>
           <emfPageIdentifier href="CU.notation#_c41-QUxoEeSqzdXgGf3wTg"/>
         </children>
         <children>

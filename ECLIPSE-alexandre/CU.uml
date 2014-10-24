@@ -119,8 +119,8 @@
     <generalization xmi:id="_hpfp0ExoEeSqzdXgGf3wTg" general="_ezPOYExoEeSqzdXgGf3wTg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_ezPOYExoEeSqzdXgGf3wTg" name="Personnel"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3ItkcExoEeSqzdXgGf3wTg" name="Suivre l'emplacement des articles"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8sq8QExoEeSqzdXgGf3wTg" name="Gérer les stocks"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3ItkcExoEeSqzdXgGf3wTg" name="SuivreEmplacementArticles"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8sq8QExoEeSqzdXgGf3wTg" name="GérerStocks"/>
   <packagedElement xmi:type="uml:Association" xmi:id="__BSqQExoEeSqzdXgGf3wTg" name="A_magasinier_mise en place des articles" memberEnd="__BSqQUxoEeSqzdXgGf3wTg __BSqRExoEeSqzdXgGf3wTg">
     <ownedEnd xmi:id="__BSqQUxoEeSqzdXgGf3wTg" name="magasinier" type="_drXnYExoEeSqzdXgGf3wTg" association="__BSqQExoEeSqzdXgGf3wTg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BSqQkxoEeSqzdXgGf3wTg" value="1"/>
@@ -151,13 +151,13 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2lQcpkxpEeSqzdXgGf3wTg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="Placer par markettab">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RuhEExpEeSqzdXgGf3wTg" name="PlacerParMarkettab">
     <generalization xmi:id="_IgFqgExqEeSqzdXgGf3wTg" general="_3ItkcExoEeSqzdXgGf3wTg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_clDzwFCTEeS5xfq3BneIRw" name="Hôte(esse) de caisse">
     <generalization xmi:id="_pSRGMFCTEeS5xfq3BneIRw" general="_ezPOYExoEeSqzdXgGf3wTg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_kmPb8FCTEeS5xfq3BneIRw" name="Gérer le personnel">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_kmPb8FCTEeS5xfq3BneIRw" name="GérerPersonnel">
     <include xmi:id="_fJJrsFCUEeS5xfq3BneIRw" addition="_ZkODgFCUEeS5xfq3BneIRw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_oxCBYFCTEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_oxCBYVCTEeS5xfq3BneIRw _oxCBZFCTEeS5xfq3BneIRw">
@@ -170,7 +170,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oxCBZlCTEeS5xfq3BneIRw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_10vvUFCTEeS5xfq3BneIRw" name="Gérer une caisse"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_10vvUFCTEeS5xfq3BneIRw" name="GérerCaisse"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_AO-SgFCUEeS5xfq3BneIRw" name="A_hôte(esse) de caisse_gestion d'une caisse" memberEnd="_AO-5kFCUEeS5xfq3BneIRw _AO-5k1CUEeS5xfq3BneIRw">
     <ownedEnd xmi:id="_AO-5kFCUEeS5xfq3BneIRw" name="hôte(esse) de caisse" type="_clDzwFCTEeS5xfq3BneIRw" association="_AO-SgFCUEeS5xfq3BneIRw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AO-5kVCUEeS5xfq3BneIRw" value="1"/>
@@ -181,7 +181,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AO-5lVCUEeS5xfq3BneIRw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZkODgFCUEeS5xfq3BneIRw" name="Pointer temps de travail"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZkODgFCUEeS5xfq3BneIRw" name="PointerTempsTravail"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_cu0-UFCUEeS5xfq3BneIRw" name="A_personnel_pointage temps de travail" memberEnd="_cu0-UVCUEeS5xfq3BneIRw _cu0-VFCUEeS5xfq3BneIRw">
     <ownedEnd xmi:id="_cu0-UVCUEeS5xfq3BneIRw" name="personnel" type="_ezPOYExoEeSqzdXgGf3wTg" association="_cu0-UFCUEeS5xfq3BneIRw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cu0-UlCUEeS5xfq3BneIRw" value="1"/>
@@ -232,10 +232,10 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_JetH4FtdEeS_R9WagCsW3g" name="RécupérerCadbot"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_NRs4YFtdEeS_R9WagCsW3g" name="AjouterArticles">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_NRs4YFtdEeS_R9WagCsW3g" name="AjouterArticleCadbot">
     <extend xmi:id="_x-ODoFtdEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_ToxIIFtdEeS_R9WagCsW3g" name="RetirerArticles">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ToxIIFtdEeS_R9WagCsW3g" name="RetirerArticleCadbot">
     <extend xmi:id="_qH1WMFtdEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_ZZvoQFtdEeS_R9WagCsW3g" name="LibérerCadbot"/>
@@ -339,13 +339,26 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_uK7iIFuzEeS_R9WagCsW3g" name="SauvegarderListeConnectée">
     <extend xmi:id="_7U_vsFuzEeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Mg4M4Fu0EeS_R9WagCsW3g" name="ConstituerListeConnectée">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Mg4M4Fu0EeS_R9WagCsW3g" name="ChoisirArticles">
     <generalization xmi:id="_trMnQFu1EeS_R9WagCsW3g" general="_dcneIEvCEeS1u7YNhmeRGw"/>
     <extend xmi:id="_ay0BcFu0EeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+    <extensionPoint xmi:id="_Je6LgFvGEeS_R9WagCsW3g" name="point1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_eCELsFu0EeS_R9WagCsW3g" name="DétruireListeConnectée">
     <extend xmi:id="_io5M4Fu0EeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_t73EAFu2EeS_R9WagCsW3g" name="RechercherRecetteConnectée"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_UAYSEFu5EeS_R9WagCsW3g" name="GérerListeConnectée"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_UAYSEFu5EeS_R9WagCsW3g" name="GérerListeConnectée">
+    <extensionPoint xmi:id="_zsKGUFvEEeS_R9WagCsW3g" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_tApQkFvEEeS_R9WagCsW3g" name="CréerListeConnectée">
+    <extend xmi:id="_zrEhMFvEEeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_zsKGUFvEEeS_R9WagCsW3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cQCksFvFEeS_R9WagCsW3g" name="ModifierListeConnectée">
+    <include xmi:id="_rz1pwFvFEeS_R9WagCsW3g" addition="_Mg4M4Fu0EeS_R9WagCsW3g"/>
+    <extend xmi:id="_ibuD0FvFEeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_zsKGUFvEEeS_R9WagCsW3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_E2oY0FvGEeS_R9WagCsW3g" name="SupprimerArticle">
+    <extend xmi:id="_JeYAAFvGEeS_R9WagCsW3g" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_Je6LgFvGEeS_R9WagCsW3g"/>
+  </packagedElement>
 </uml:Model>
