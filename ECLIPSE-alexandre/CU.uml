@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_XfJ2oEvBEeS1u7YNhmeRGw" name="model">
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_dcneIEvCEeS1u7YNhmeRGw" name="choisir son panier" isAbstract="true">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_dcneIEvCEeS1u7YNhmeRGw" name="ChoisirPanier" isAbstract="true">
     <extensionPoint xmi:id="__lOBgEvKEeS1u7YNhmeRGw" name="point"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_iT_cwEvCEeS1u7YNhmeRGw" name="récupérer les articles">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_iT_cwEvCEeS1u7YNhmeRGw" name="RécupérerArticles">
     <extensionPoint xmi:id="_T4_2AEvGEeS1u7YNhmeRGw" name="point"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_pDVpoEvCEeS1u7YNhmeRGw" name="passer en caisse">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_pDVpoEvCEeS1u7YNhmeRGw" name="PasserEnCaisse">
     <include xmi:id="_dTwgQEvGEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
     <extend xmi:id="_reaoIEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_s04BkEvCEeS1u7YNhmeRGw" name="payer"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_9lPncEvCEeS1u7YNhmeRGw" name="constituer sa liste connectée">
-    <generalization xmi:id="_GYIj8EvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
-    <extensionPoint xmi:id="_VKBcMEvKEeS1u7YNhmeRGw" name="point"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_s04BkEvCEeS1u7YNhmeRGw" name="PayerCourses"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9lPncEvCEeS1u7YNhmeRGw" name="GérerListeConnectée">
+    <extensionPoint xmi:id="_VKBcMEvKEeS1u7YNhmeRGw" name=""/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_DwMt0EvDEeS1u7YNhmeRGw" name="panier en direct sur markettab">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DwMt0EvDEeS1u7YNhmeRGw" name="panier en direct ">
     <generalization xmi:id="_NA2kYEvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
     <extensionPoint xmi:id="_7I2EUFtWEeS_R9WagCsW3g" name="point1"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_y8QaEEvDEeS1u7YNhmeRGw" name="utiliser les recettes connectées">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_y8QaEEvDEeS1u7YNhmeRGw" name="AppliquerRecetteConnectée">
     <generalization xmi:id="_FuZqcEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
-    <extend xmi:id="_VJ0n4EvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+    <include xmi:id="_5ZNREFu2EeS_R9WagCsW3g" addition="_t73EAFu2EeS_R9WagCsW3g"/>
+    <extend xmi:id="_VJ0n4EvKEeS1u7YNhmeRGw" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_-2OQMFuyEeS_R9WagCsW3g" extendedCase="_dcneIEvCEeS1u7YNhmeRGw" extensionLocation="__lOBgEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_-bCKgEvDEeS1u7YNhmeRGw" name="Client"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="__AavgEvDEeS1u7YNhmeRGw" name="appliquer des contraintes de budget">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="__AavgEvDEeS1u7YNhmeRGw" name="AppliquerContrainteBudget">
     <generalization xmi:id="_FOD9gEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
-    <extend xmi:id="_VwzvYEvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_VwzvYEvKEeS1u7YNhmeRGw" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_AqnngEvEEeS1u7YNhmeRGw" name="utiliser la constitution libre assistée">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_AqnngEvEEeS1u7YNhmeRGw" name="AjouterArticle">
     <generalization xmi:id="_GEOJcEvEEeS1u7YNhmeRGw" general="_9lPncEvCEeS1u7YNhmeRGw"/>
-    <extend xmi:id="_WNMJYEvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_WNMJYEvKEeS1u7YNhmeRGw" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Pj3TsEvEEeS1u7YNhmeRGw" name="utiliser le cadbot">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Pj3TsEvEEeS1u7YNhmeRGw" name="UtiliserCadbot">
     <generalization xmi:id="_csyRwEvEEeS1u7YNhmeRGw" general="_iT_cwEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_E6R6cFtdEeS_R9WagCsW3g" addition="_Y811QEvEEeS1u7YNhmeRGw"/>
-    <include xmi:id="_fTUqwFtdEeS_R9WagCsW3g" addition="_JetH4FtdEeS_R9WagCsW3g"/>
     <include xmi:id="_f1HwQFtdEeS_R9WagCsW3g" addition="_NRs4YFtdEeS_R9WagCsW3g"/>
     <include xmi:id="_gN1yQFtdEeS_R9WagCsW3g" addition="_ToxIIFtdEeS_R9WagCsW3g"/>
-    <include xmi:id="_gntDwFtdEeS_R9WagCsW3g" addition="_ZZvoQFtdEeS_R9WagCsW3g"/>
     <extend xmi:id="_T4ijAEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
     <extensionPoint xmi:id="_qH_uQFtdEeS_R9WagCsW3g" name="point1"/>
   </packagedElement>
@@ -46,41 +45,41 @@
     <extend xmi:id="_UrPyUEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
     <extend xmi:id="__lFeoEvKEeS1u7YNhmeRGw" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="__lOBgEvKEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_XdwoIEvEEeS1u7YNhmeRGw" name="passer par une caisse à hôtesse">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XdwoIEvEEeS1u7YNhmeRGw" name="PasserCaisseHôtesse">
     <generalization xmi:id="_eFgYMEvEEeS1u7YNhmeRGw" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
     <generalization xmi:id="_ju1XUFteEeS_R9WagCsW3g" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y811QEvEEeS1u7YNhmeRGw" name="passer au portique de paiement">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y811QEvEEeS1u7YNhmeRGw" name="PasserPortiquePaiement">
     <generalization xmi:id="_drHiQEvEEeS1u7YNhmeRGw" general="_pDVpoEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_V5lbcEvLEeS1u7YNhmeRGw" name="" addition="_Pj3TsEvEEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_fJPGEEvEEeS1u7YNhmeRGw" name="se faire livrer">
-    <include xmi:id="_-gqmgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_fJPGEEvEEeS1u7YNhmeRGw" name="FaireLivrer">
+    <include xmi:id="_-gqmgEvFEeS1u7YNhmeRGw" addition="_7_vuwFtkEeS_R9WagCsW3g"/>
     <include xmi:id="_Ai488EvGEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_PoIoUEvHEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_8nLfAFtgEeS_R9WagCsW3g" addition="_dgvygFtgEeS_R9WagCsW3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_iGPpwEvEEeS1u7YNhmeRGw" name="utiliser le drive">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_iGPpwEvEEeS1u7YNhmeRGw" name="UtiliserDrive">
     <include xmi:id="_2ckNMEvFEeS1u7YNhmeRGw" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
-    <include xmi:id="_5SClgEvFEeS1u7YNhmeRGw" addition="_9lPncEvCEeS1u7YNhmeRGw"/>
+    <include xmi:id="_5SClgEvFEeS1u7YNhmeRGw" addition="_7_vuwFtkEeS_R9WagCsW3g"/>
     <include xmi:id="_6av6AEvFEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_LrArcEvHEeS1u7YNhmeRGw" addition="_s04BkEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_WL53UEvHEeS1u7YNhmeRGw" addition="_TstsoFtgEeS_R9WagCsW3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_lMC9EEvEEeS1u7YNhmeRGw" name="payer en espèces">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lMC9EEvEEeS1u7YNhmeRGw" name="PayerEnEspèces">
     <generalization xmi:id="_t1HEoEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_kz3FsFteEeS_R9WagCsW3g" addition="_XdwoIEvEEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_nhwQMEvEEeS1u7YNhmeRGw" name="payer par carte">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_nhwQMEvEEeS1u7YNhmeRGw" name="PayerParCarte">
     <generalization xmi:id="_uU6mEEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_rt_nIEvEEeS1u7YNhmeRGw" name="payer par téléphone">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rt_nIEvEEeS1u7YNhmeRGw" name="PayerParTéléphone">
     <generalization xmi:id="_up5-oEvEEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_EH2t8EvFEeS1u7YNhmeRGw" name="utiliser une borne Euréka">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_EH2t8EvFEeS1u7YNhmeRGw" name="UtiliserBorneEuréka">
     <extend xmi:id="_VYt8UEvGEeS1u7YNhmeRGw" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_qDGWIEvFEeS1u7YNhmeRGw" name="payer en ligne">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_qDGWIEvFEeS1u7YNhmeRGw" name="PayerEnLigne">
     <generalization xmi:id="_wGNvIEvFEeS1u7YNhmeRGw" general="_s04BkEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_DVptkEvIEeS1u7YNhmeRGw" name="A_client_choisir son panier" memberEnd="_DVqUoEvIEeS1u7YNhmeRGw _DVqUo0vIEeS1u7YNhmeRGw">
@@ -217,8 +216,8 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Nk53UFtUEeS_R9WagCsW3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_tApakFtWEeS_R9WagCsW3g" name="consulter les promos" clientDependency="_xvM0YFtWEeS_R9WagCsW3g">
-    <extend xmi:id="_7IpQAFtWEeS_R9WagCsW3g" name="" extendedCase="_9lPncEvCEeS1u7YNhmeRGw" extensionLocation="_7I2EUFtWEeS_R9WagCsW3g"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_tApakFtWEeS_R9WagCsW3g" name="ConsulterPromotions" clientDependency="_xvM0YFtWEeS_R9WagCsW3g">
+    <extend xmi:id="_7IpQAFtWEeS_R9WagCsW3g" name="" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_7I2EUFtWEeS_R9WagCsW3g"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_xvM0YFtWEeS_R9WagCsW3g" name="" supplier="_DwMt0EvDEeS1u7YNhmeRGw" client="_tApakFtWEeS_R9WagCsW3g"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_8fCB4FtbEeS_R9WagCsW3g" name=""/>
@@ -232,14 +231,14 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AwDLJltcEeS_R9WagCsW3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_JetH4FtdEeS_R9WagCsW3g" name="récupérer un cadbot"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_NRs4YFtdEeS_R9WagCsW3g" name="ajouter des articles">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JetH4FtdEeS_R9WagCsW3g" name="RécupérerCadbot"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_NRs4YFtdEeS_R9WagCsW3g" name="AjouterArticles">
     <extend xmi:id="_x-ODoFtdEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_ToxIIFtdEeS_R9WagCsW3g" name="retirer des articles">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ToxIIFtdEeS_R9WagCsW3g" name="RetirerArticles">
     <extend xmi:id="_qH1WMFtdEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZZvoQFtdEeS_R9WagCsW3g" name="libérer un cadbot"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ZZvoQFtdEeS_R9WagCsW3g" name="LibérerCadbot"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_b6eqMFteEeS_R9WagCsW3g" name="Actor"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_c7IO4FteEeS_R9WagCsW3g" name="A_payer_actor" memberEnd="_c7IO4VteEeS_R9WagCsW3g _c7IO5FteEeS_R9WagCsW3g">
     <ownedEnd xmi:id="_c7IO4VteEeS_R9WagCsW3g" name="payer" type="_s04BkEvCEeS1u7YNhmeRGw" association="_c7IO4FteEeS_R9WagCsW3g">
@@ -281,7 +280,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kCgExltfEeS_R9WagCsW3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_koefoFtfEeS_R9WagCsW3g" name="faire ses courses soi-même">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_koefoFtfEeS_R9WagCsW3g" name="FaireCoursesEnPersonne">
     <include xmi:id="_o_otIFtfEeS_R9WagCsW3g" addition="_iT_cwEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_pv2pIFtfEeS_R9WagCsW3g" addition="_pDVpoEvCEeS1u7YNhmeRGw"/>
     <include xmi:id="_-69U8FtfEeS_R9WagCsW3g" addition="_dcneIEvCEeS1u7YNhmeRGw"/>
@@ -297,10 +296,10 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_xm6sAFtfEeS_R9WagCsW3g" name="Actor1"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_TstsoFtgEeS_R9WagCsW3g" name="récupérer au drive">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_TstsoFtgEeS_R9WagCsW3g" name="RécupérerDrive">
     <generalization xmi:id="_oQ8lsFtgEeS_R9WagCsW3g" general="_iT_cwEvCEeS1u7YNhmeRGw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_dgvygFtgEeS_R9WagCsW3g" name="réceptionner la livraison">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_dgvygFtgEeS_R9WagCsW3g" name="RéceptionnerLivraison">
     <generalization xmi:id="_pHfzMFtgEeS_R9WagCsW3g" general="_iT_cwEvCEeS1u7YNhmeRGw"/>
     <generalization xmi:id="_EaSO8FthEeS_R9WagCsW3g" general="_dgvygFtgEeS_R9WagCsW3g"/>
     <generalization xmi:id="_HP2t4FthEeS_R9WagCsW3g" general="_iT_cwEvCEeS1u7YNhmeRGw"/>
@@ -315,4 +314,38 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bE1URlthEeS_R9WagCsW3g" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_zeQrUFtjEeS_R9WagCsW3g" name="UtiliserModeAutonome">
+    <include xmi:id="_gntDwFtdEeS_R9WagCsW3g" addition="_ZZvoQFtdEeS_R9WagCsW3g"/>
+    <include xmi:id="_fTUqwFtdEeS_R9WagCsW3g" addition="_JetH4FtdEeS_R9WagCsW3g"/>
+    <extend xmi:id="_78ligFtjEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_7_vuwFtkEeS_R9WagCsW3g" name="UtiliserListeConnectée">
+    <generalization xmi:id="_A8ZO8FtlEeS_R9WagCsW3g" general="_dcneIEvCEeS1u7YNhmeRGw"/>
+    <generalization xmi:id="_GYIj8EvEEeS1u7YNhmeRGw" general="_dcneIEvCEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JsqnkFuuEeS_R9WagCsW3g" name="UtiliserGuidageMarkettab">
+    <extend xmi:id="_MmFrwFuuEeS_R9WagCsW3g" extendedCase="_iT_cwEvCEeS1u7YNhmeRGw" extensionLocation="_T4_2AEvGEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8kvVwFuyEeS_R9WagCsW3g" name="A_client_gérer une liste connectée" memberEnd="_8kvVwVuyEeS_R9WagCsW3g _8kvVxFuyEeS_R9WagCsW3g">
+    <ownedEnd xmi:id="_8kvVwVuyEeS_R9WagCsW3g" name="client" type="_M6wHEFtUEeS_R9WagCsW3g" association="_8kvVwFuyEeS_R9WagCsW3g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8kvVwluyEeS_R9WagCsW3g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8kvVw1uyEeS_R9WagCsW3g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_8kvVxFuyEeS_R9WagCsW3g" name="gérer une liste connectée" type="_UAYSEFu5EeS_R9WagCsW3g" association="_8kvVwFuyEeS_R9WagCsW3g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8kvVxVuyEeS_R9WagCsW3g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8kvVxluyEeS_R9WagCsW3g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uK7iIFuzEeS_R9WagCsW3g" name="SauvegarderListeConnectée">
+    <extend xmi:id="_7U_vsFuzEeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Mg4M4Fu0EeS_R9WagCsW3g" name="ConstituerListeConnectée">
+    <generalization xmi:id="_trMnQFu1EeS_R9WagCsW3g" general="_dcneIEvCEeS1u7YNhmeRGw"/>
+    <extend xmi:id="_ay0BcFu0EeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_eCELsFu0EeS_R9WagCsW3g" name="DétruireListeConnectée">
+    <extend xmi:id="_io5M4Fu0EeS_R9WagCsW3g" extendedCase="_UAYSEFu5EeS_R9WagCsW3g" extensionLocation="_VKBcMEvKEeS1u7YNhmeRGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_t73EAFu2EeS_R9WagCsW3g" name="RechercherRecetteConnectée"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_UAYSEFu5EeS_R9WagCsW3g" name="GérerListeConnectée"/>
 </uml:Model>
