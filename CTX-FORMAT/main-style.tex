@@ -19,7 +19,17 @@
   location=singlesided]
 \setuppagenumber[state=start]
 \setuppagenumbering[location={footer,inmargin}]
-\setupheads[alternative=inmargin]
+\unexpanded\def\HeadTitle#1#2%
+{\hbox to \hsize \bgroup
+\hfill
+\setupframed[offset=.25em,frame=off]
+\tbox{\framed[width=3cm,align=left]{#1\kern1ex}}%
+\tbox{\framed[align=right,leftframe=on]{\kern1ex#2}}%
+\egroup}
+%\setupheads[subsection][command=\HeadTitle]
+\setupheads[command=\HeadTitle]
+
+%\setupheads[alternative=inmargin]
 
 % les macros pour titres spéciaux
 %\def\Title#1{\midaligned{\tfc #1}\blank[5pt]\hrule}
@@ -50,6 +60,3 @@
 \mainlanguage[fr]
 \setupinteraction[state=start]
 \definetyping[PL][option=color]
-
-\input \path/abbreviations
-\input \path/cu
