@@ -16,128 +16,129 @@ Un dernier diagramme présente les cas d'utilisation concernant le personnel du 
 Ce sont pour la plupart des cas d'utilisation auxquels correspondent une multitude de scénarios possibles, ou qui décrivent un mode d'utilisation plutôt qu'une suite d'actions précises.
 Ils sont représentés en gras sur les diagrammes.
 
-\subsubsection{ChoisirArticles}
+\descCU{ChoisirArticles}
 Ce \cu\ décrit l'activité consistant à construire une liste connectée d'articles, en utilisant les diverses approches proposées à cet effet par le système.
 
-\subsubsection{ChoisirPanier}
+\descCU{ChoisirPanier}
 Ce cas d'utilisation regroupe tous les scénarios à la disposition du client pour établir son panier d'achats, que ce soit depuis chez lui ou directement dans le magasin.
 
-\subsubsection{FaireCourseEnPersonne}
+\descCU{FaireCourseEnPersonne}
 Ce \cu\ correspond à l'utilisation classique d'un FuturMarket, à savoir le client qui fait ses courses de lui-même dans le magasin.
 
-\subsubsection{FaireLivrer}
+\descCU{FaireLivrer}
 Ce \cu\ décrit la livraison directement à domicile des articles décrits dans une liste connectée, moyennant un coût de livraison.
 Le paiement peut avoir lieu en ligne ou lors de la livraison.
 
-\subsubsection{GérerListeConnectée}
+\descCU{GérerListeConnectée}
 Désigne l'administration des listes connectées (création, sauvegarde, effacement, modification\dots).
 
-\subsubsection{GérerPersonnel}
+\descCU{GérerPersonnel}
 Ce \cu\ regroupe tous les aspects liés à la gestion du personnel: plannings, pointage, périodes d'indisponibilité, affectations à divers postes, \etc
 
-\subsubsection{GérerStocks}
+\descCU{GérerStocks}
 Ce \cu\ regroupe les actions nécessaires au suivi de la disponibilité de chaque article, par exemple l'estimation de la date de rupture de stocks, les commandes fournisseurs, \etc
 
-\subsubsection{PasserEnCaisse}
+\descCU{PasserEnCaisse}
 Ce cas d'utilisation englobe le calcul du montant total des articles prélevés en magasin et le paiement en lui-même.
 
-\subsubsection{PayerCourses}
+\descCU{PayerCourses}
 Désigne le paiement proprement dit, quel que soit le moyen utilisé à cette fin.
 
-\subsubsection{RécupérerArticles}
+\descCU{RécupérerArticles}
 Ce cas d'utilisation regroupe tous les scénarios à la disposition du client pour récupérer les articles qu'il désire acheter, à partir d'un panier déjà établi ou lors d'un achat spontané.
 
-\subsubsection{SuivreEmplacementArticles}
+\descCU{SuivreEmplacementArticles}
 Ce \cu\ englobe l'ensemble des scénarios destinés à assurer la correspondance entre le ou les emplacement(s) effectif(s) des articles dans les rayons, et le ou les emplacement(s) théoriques enregistrés dans la base de données.
 
-\subsubsection{UtiliserCadbot}
+\descCU{UtiliserCadbot}
 Ce cas d'utilisation décrit l'utilisation du cadbot en temps que support pour la récupération effective des articles en magasin.
 
-\subsubsection{UtiliserDrive}
+\descCU{UtiliserDrive}
 Ce \cu\ décrit la possibilité de court-circuiter la récupération des articles en magasin: à partir d'une liste connectée, les articles sont récoltés par le personnel du FuturMarket et récupérés emballés par le client au service «drive» du FuturMarket.
 
 
 \subsection{Liste ordonnée des cas d'utilisation concrets}
 
-\subsubsection{AjouterArticle}
+\descCU{AjouterArticle}
 Dans ce cas d'utilisation, le client ajoute un produit à une liste connectée en cours de constitution, par libre choix après consultation du catalogue ou suite à des propositions spontanées de produits par le système.
 
-\subsubsection{AjouterArticleCadbot}
+\descCU{AjouterArticleCadbot}
 Dans ce \cu\ le client ajoute un article dans le cadbot.
 
-\subsubsection{AppliquerContrainteBudget}
+\descCU{AppliquerContrainteBudget}
 Dans ce \cu, le client choisit plusieurs options possibles pour limiter le coût de ses achats.
 
-\subsubsection{AppliquerRecetteConnectée}
+\descCU{AppliquerRecetteConnectée}
 Dans ce  \cu\ le client utilise une recette connectée pour ajouter des articles à son panier.
 
-\subsubsection{ConsulterPromotions}
+\descCU{ConsulterPromotions}
 Le client fait afficher la liste des articles en promotion en ce moment, afin de pouvoir les inclure éventuellement dans son panier.
 
-\subsubsection{CréerListeConnectée}
+\descCU{CréerListeConnectée}
 Ce \cu\ correspond à la création d'une nouvelle liste connectée, vierge au départ, qui pourra ensuite être complétée.
 
-\subsubsection{DétruireListeConnectée}
+\descCU{DétruireListeConnectée}
 Ici le client détruit définitivement une liste connectée préalablement sauvegardée.
 
-\subsubsection{GérerCaisse}
+\descCU{GérerCaisse}
 \TODO
 
-\subsubsection{LibérerCadbot}
+\descCU{LibérerCadbot}
 Dans ce \cu\ le client redonne sa liberté à son cadbot, en lui permettant de rejoindre son cadpark.
 
-\subsubsection{ModifierListeConnectée}
+\descCU{ModifierListeConnectée}
 Le client ajoute ou supprime des articles dans une liste connectée déjà existante.
 
-\subsubsection{PlacerParMarkettab}
+\descCU{PlacerParMarkettab}
 Dans ce \cu, un personnel du magasin (généralement un magasinier) se sert d'une markettab pour gérer l'emplacement d'un produit dans la base de données.
 Il peut supprimer des emplacements connus, ou en rajouter de nouveaux.
 
-\subsubsection{PasserCaisseHôtesse}
+\descCU{PasserCaisseHôtesse}
 Ce cas décrit un passage classique dans une caisse comportant une hôtesse, incluant un déballage, scan et remballage des articles du caddie.
 
-\subsubsection{PasserPortiquePaiement}
+\descCU{PasserPortiquePaiement}
 Dans ce cas d'utilisation, le client utilise un cadbot et va procéder au passage en caisse par un portique prévu à cet effet. 
 
-\subsubsection{PayerEnEspèces}
+\descCU{PayerEnEspèces}
 Ce cas d'utilisation désigne l'utilisation de monnaie papier ou métallique pour payer ses achats, soit à une caisse classique, soit lors d'une livraison ou d'un retrait au drive.
 
-\subsubsection{PayerEnLigne}
+\descCU{PayerEnLigne}
 Ce cas d'utilisation désigne un paiement effectif de chez soi, à partir du site du futurmarket.
 
-\subsubsection{PayerParCarte}
+\descCU{PayerParCarte}
 Ce cas d'utilisation désigne l'utilisation d'une carte (bancaire ou carte magasin) dans un terminal de paiement (caisse à hôtesse, portique, point drive, livraison).
 
-\subsubsection{PayerParTéléphone}
+\descCU{PayerParTéléphone}
 \TODO
 
-\subsubsection{PointerTempsTravail}
+\descCU{PointerTempsTravail}
 Ce \cu\ englobe les différents scénarios inhérents à la mesure du temps de présence effectif du personnel.
 L'ensemble du personnel doit notamment «pointer» grâce à son badge rfid.
 
-\subsubsection{RechercherRecetteConnectée}
+\descCU{RechercherRecetteConnectée}
 Ce \cu\ concerne le choix d'une recette connectée, par consultation directe d'une liste, par recherche basée sur un nom de recette, ou par une recherche basée sur un des ingrédients principaux.
 
-\subsubsection{RécupérerCadbot}
+\descCU{RécupérerCadbot}
 Consiste à prendre possession d'un cadbot au cadpark.
 
-\subsubsection{RetirerArticleCadbot}
+\descCU{RetirerArticleCadbot}
 Dans ce \cu\ le client retire un article de son cadbot.
 
-\subsubsection{SauvegarderListeConnectée}
+\descCU{SauvegarderListeConnectée}
 Ici le client valide les changements effectués à une liste connectée en les sauvegardant pour utilisation future.
 
-\subsubsection{SupprimerArticle}
+\descCU{SupprimerArticle}
 Ce \cu\ décrit la suppression d'un article d'une liste connectée en cours de conception/modification.
 
-\subsubsection{UtiliserBorneEuréka}
+\descCU{UtiliserBorneEuréka}
 Dans ce cas d'utilisation, le client interroge une borne euréka pour localiser un produit ou s'informer de sa disponibilité.
 
-\subsubsection{UtiliserGuidageMarkettab}
+\descCU{UtiliserGuidageMarkettab}
 Dans ce \cu\ le client se trouve dans le magasin et désire se laisser guider par la markettab pour récupérer les articles de sa liste.
 
-\subsubsection{UtiliserListeConnectée}
+\descCU{UtiliserListeConnectée}
 Décrit le client versant les articles contenus dans une liste connectée dans son panier du jour.
 
-\subsubsection{UtiliserModeAutonome}
+\descCU{UtiliserModeAutonome}
 Dans ce \cu\ le client met le cadbot en mode de déplacement autonome, dans lequel ce dernier le suit automatiquement et ira se ranger tout seul en fin de courses.
+\par
