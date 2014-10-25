@@ -1,123 +1,86 @@
-\TODO
 Dans ce qui suit, nous proposons un classement des \cu\ par ordre décroissant de priorité de développement.
 Nous n'avons pas repris tous les \cu\ in extenso mais uniquement ceux qui se distinguent des autres par un apport de fonctionnalités décisif ou une difficulté de développement particulière. 
 En particulier les CU abstraits dont l'existence éventuelle est directement la conséquence de l'implémentation d'un ou plusieurs \cu\ plus spécialisés n'apparaissent pas ici.\par
 Le classement s'effectue à l'aide de deux notes:
 \startitemize[n]
-\item une note «client» (NC), allant de 1 (peu d'intérêt) à 3 (intérêt majeur), qui juge l'apport du \cu\ dans la satisfaction des clients du \fm\ et/ou de la maîtrise d'ouvrage;
-\item une note de «risque» (NR), allant de 1 (peu de risques) à 3 (risques importants), qui juge la probabilité qu'à le \cu\ de d'imposer une remise en question majeure de la structure de l'application, et donc d'invalider des développements antérieurs.
+\item une note «client» (NC), allant de 1 (peu d'intérêt) à 5 (intérêt majeur), qui juge l'apport du \cu\ dans la satisfaction des clients du \fm\ et/ou de la maîtrise d'ouvrage;
+\item une note de «risque» (NR), allant de 1 (solution connue, éprouvée) à 5 (à la limite de l'expérimental), qui juge la probabilité qu'a le \cu\ d'imposer une remise en question majeure de la structure de l'application, et donc d'invalider des développements antérieurs.
 \stopitemize
 Le classement final est alors effectué selon la somme de ces deux notes.
 
+\subsection{Analyse et notation des \cu}
+
 \def\NC#1{\sym{\bf NC~#1}}%
 \def\NR#1{\sym{\bf NR~#1}}%
-\def\startnote{\startitemize[][distance=2em]}
+\def\startnote{\startitemize[packed][distance=2em]}%
 \let\stopnote\stopitemize
-
-\descCU{AjouterArticle}
-\startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{AjouterArticleCadbot}
-\startnote
-\NC0
-\NR0
-\stopnote
 
 \descCU{AppliquerContrainteBudget}
 \startnote
-\NC0
-\NR0
+\NC2 Cette partie du système d'aide à la constitution de panier n'est pas fondamentale mais peut intéresser une certaine catégorie de clients.
+\NR2 Aucun problème technique, mais l'ergonomie et la souplesse des options demande un design bien pensé.
+Peu de risques pour le reste du système puisque ce \cu\ en est relativement indépendant.
 \stopnote
 
-\descCU{AppliquerRecetteConnectée}
+\descCU{AppliquerRecetteConnectée, RechercherRecetteConnectée}
 \startnote
-\NC0
-\NR0
+\NC4 Le concept de recette connectée est une nouveauté importante qui séduira probablement les clients.
+\NR2 Pas de difficulté particulière une fois que le SGBD des articles du \fm\ est en place.
 \stopnote
 
 \descCU{ConsulterPromotions}
 \startnote
-\NC0
-\NR0
+\NC2 Cette possibilité n'est pas fondamentale mais intéresse classiquement une certaine catégorie de clients.
+\NR1 Pas de difficulté.
 \stopnote
 
-\descCU{CréerListeConnectée}
+\descCU{ChoisirArticles}
 \startnote
-\NC0
-\NR0
+\NC5 De ce \cu\ représente la faculté à constituer des listes d'articles réutilisables, et de manière assistée.
+La quasi-totalité des fonctionnalités d'un \fm\ dépendent directement ou indirectement de celui-ci.
+\NR3 Peu de difficultés techniques, mais les fonctionnalités à développer vont influencer une grande partie du design du système, donc il est important de le traiter relativement tôt.
 \stopnote
 
-\descCU{DétruireListeConnectée}
+\descCU{GérerListeConnectée, UtiliserListeConnectée}
 \startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{ModifierListeConnectée}
-\startnote
-\NC0
-\NR0
+\NC4 Ces \cu\ sont importants pour le client puisque les possibilités de drive, de commander, ou encore de réutiliser d'anciennes listes de courses en dépendent.
+\NR1 Peu de difficultés techniques.
 \stopnote
 
 \descCU{PasserCaisseHôtesse}
 \startnote
-\NC3 Cette fonctionalité est classique mais vraiment indispensable pour les clients qui désirent ne pas se servir d'un cadbot.
+\NC5 Cette fonctionalité est classique mais vraiment indispensable pour les clients qui désirent ne pas se servir d'un cadbot.
 De par les risques de «rejet technologique» des personnes peu versées dans les outils numériques (notamment les personnes âgées), conserver ce mode de passage en caisse reste également important pour la MOA.
 \NR1 Peu de risques techniques.
 \stopnote
 
 \descCU{PasserPortiquePaiement}
 \startnote
-\NC0
-\NR0
+\NC5 Ce mode de passage en caisse est la dernière étape dans l'utilisation du cadbot.
+De ce point de vue, il est fondamental pour le client et la MOA.
+\NR2 Peu de difficultés si l'on suppose que le reste système cadbot existe et fonctionne, puisqu'il suffit simplement de faire communiquer le cadbot et un terminal de paiement classique (une solution complètement basique serait de scanner un code barre affiché sur l'écran du cadbot).
 \stopnote
 
 \descCU{PayerEnEspèces}
 \startnote
-\NC0
-\NR0
+\NC3 Mode de paiement classique qu'il est relativement important de conserver, même s'il est en voie de disparition dans les gros \fm.
+\NR1 Aucun risque.
 \stopnote
 
 \descCU{PayerEnLigne}
 \startnote
-\NC0
-\NR0
+\NC4 Mode de paiement classique depuis quelques années, attendu par les clients.
+\NR2 Il y a des risques de sécurité qu'il faut prendre correctement en compte, mais d'un autre côté des solutions techniques éprouvées existent.
 \stopnote
 
 \descCU{PayerParCarte}
 \startnote
-\NC0
-\NR0
+\NC5 Mode de paiement très majoritaire, absolument indispensable.
+\NR1 Aucun risque, des solutions classiques existent.
 \stopnote
 
 \descCU{PayerParTéléphone}
-\startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{RechercherRecetteConnectée}
-\startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{RetirerArticleCadbot}
-\startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{SauvegarderListeConnectée}
-\startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{SupprimerArticle}
+\TODO
 \startnote
 \NC0
 \NR0
@@ -125,25 +88,79 @@ De par les risques de «rejet technologique» des personnes peu versées dans le
 
 \descCU{UtiliserBorneEuréka}
 \startnote
-\NC0
-\NR0
+\NC3 Ce système de bornes est intéressant pour les clients, sans être fondamental.
+\NR3 La difficulté principale est la reconnaissance vocale. 
+Des solutions clé en main existent sûrement, mais nous n'avons pas d'expérience dans ce domaine.
+Le reste de la solution logicielle est classique une fois le système de SGBD des articles mis en place, et en particulier le système de coordonnées pour leur localisation dans le magasin.
+Ce \cu\ comporte finalement peu de risques pour le reste du système car il en est essentiellement indépendant.
+\stopnote
+
+\descCU{UtiliserCadbot}
+\startnote
+\NC5 Le concept de Cadbot est essentiel pour la MOA, car il est l'une des innovations importantes qu'elle destine à ses clients.
+\NR5 Nombreux points délicats ou méconnus:
+\startitemize
+\item conception «physique»: caddie avec balance précise et robuste intégrée, plusieurs lecteurs de codes barres, lecteur de puces RFID, mini-ordinateur de bord;
+\item problème de la recharge énergétique du cadbot
+\item liaisons de l'ordinateur et des périphériques;
+\item méconnaissance des systèmes embarqués en général.
+\stopitemize
 \stopnote
 
 \descCU{UtiliserGuidageMarkettab}
 \startnote
-\NC0
-\NR0
-\stopnote
-
-\descCU{UtiliserListeConnectée}
-\startnote
-\NC0
-\NR0
+\NC3 L'utilité de cette fonctionnalité dépend du type de client.
+Le «pressé» qui suit systématiquement les listes connectées composée par sa femme appréciera.
+Les autres, qui aiment flaner et prendre leur temps dans les rayons pour se laisser inspirer et compléter leur liste de courses basique ne l'utiliseront probablement pas.
+\NR5 Il s'agit de concevoir un système comparable à un GPS automobile.
+Méconnaissance des technologies permettant de repérer le client dans le magasin.
+Ce \cu\ est découplé du reste du système, donc le risque en termes d'impact est peu important.
 \stopnote
 
 \descCU{UtiliserModeAutonome}
 \startnote
-\NC0
-\NR0
+\NC1 La robotisation complète du cadbot n'est pas un objectif prioritaire pour la MOA.
+Cela peut être intéressant, mais à condition que ce soit vraiment performant, ce qui n'est pas gagné dans ce domaine relativement expérimental. 
+D'autre part, il pourrait y avoir un phénomène de rejet de la part des clients vis à vis de ces «robots».
+Pousser un caddie classique n'est pas considéré comme un effort important par les clients.
+Enfin, l'inclusion d'un moteur (entre autres périphériques) dans le cadbot va rendre son coût plus important: pas sûr qu'il y ait bénéfice en fin de compte.
+\NR5 Grands défis technologiques. Méconnaissance des solutions existantes, manque de recul sur la faisabilité et la fiabilité des «robots suiveurs». 
+À noter cependant: les fonctions de guidage du cadbot sont complètement découplées du reste du système, donc ce \cu\ ne mettra pas le design en péril et peut être considéré n'importe quand dans le projet.
 \stopnote
 
+
+
+
+
+\subsection{Tableau récapitulatif}
+
+Le tableau \in[CLASSEMENT] reprend les notes précédentes et classe les \cu\ dans l'ordre dans lequel nous envisageons le développement.
+\placetable[][CLASSEMENT]{Ordre de développement des \cu}{%
+\newcount\tmpcount\tmpcount1\def\Num{\the\tmpcount\global\advance\tmpcount by 1}%
+\starttable[|c|r|c|c|c|]
+  \HL
+  \VL \bf rang\VL \bf \cu\VL \bf NC\VL \bf NR\VL \bf total\VL\FR \HL
+  \VL \Num\VL UtiliserCadbot\VL 10\VL 5\VL 5\VL\MR \HL
+  \VL \Num\VL ChoisirArticles\VL 8\VL 5\VL 3\VL\MR \HL
+  \VL \Num\VL PasserPortiquePaiement\VL 7\VL 5\VL 2\VL\MR \HL
+  \VL \Num\VL AppliquerRecetteConnectée, RechercherRecetteConnectée\VL 6\VL 4\VL 2\VL\MR \HL
+  \VL \Num\VL GérerListeConnectée, UtiliserListeConnectée\VL 5\VL 4\VL 1\VL\MR \HL
+  \VL \Num\VL UtiliserBorneEuréka\VL 6\VL 3\VL 3\VL\MR \HL
+  \VL \Num\VL PasserCaisseHôtesse\VL 6\VL 5\VL 1\VL\MR \HL
+  \VL \Num\VL PayerParCarte\VL 6\VL 5\VL 1\VL\MR \HL
+  \VL \Num\VL PayerEnLigne\VL 6\VL 4\VL 2\VL\MR \HL
+  \VL \Num\VL PayerEnEspèces\VL 4\VL 3\VL 1\VL\MR \HL
+  \VL \Num\VL AppliquerContrainteBudget\VL 4\VL 2\VL 2\VL\MR \HL
+  \VL \Num\VL ConsulterPromotions\VL 3\VL 2\VL 1\VL\MR \HL
+  \VL \Num\VL PayerParTéléphone\VL ?\VL ?\VL ?\VL\MR \HL
+  \VL N.C\VL \it UtiliserModeAutonome\VL 6\VL 1\VL 5\VL\MR \HL
+  \VL N.C\VL \it UtiliserGuidageMarkettab\VL 8\VL 3\VL 5\VL\MR \HL
+\stoptable}
+    
+Cet ordre est influencé par la note globale obtenue par chaque \cu, mais pas uniquement. 
+\par
+Nous avons remonté notamment GérerListeConnectée car il s'agit d'un concept important de notre application. 
+\par
+Le cas d'UtiliserGuidageMarkettab et UtiliserModeAutonome est particulier: ce sont tous les deux des \cu\ très compliqués technologiquement, peu risqués pour le système à développer car indépendants, mais cependant susceptibles de demander des modifications importantes au niveau matériel (hardware), selon les solutions envisagées.
+Nous les avons donc mis entre parenthèses et hors classement pour signifier qu'il n'est envisageable de s'y intéresser que si nous pouvons le faire en parallèle du reste des \cu. 
+Il faudrait attribuer une petite équipe à la recherche de solutions pendant que le travail principal pourrait démarrer selon l'ordre retenu.
