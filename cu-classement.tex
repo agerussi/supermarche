@@ -1,3 +1,4 @@
+\section{Classement des cas d'utilisation}
 Dans ce qui suit, nous proposons un classement des \cu\ par ordre décroissant de priorité de développement.
 Nous n'avons pas repris tous les \cu\ in extenso mais uniquement ceux qui se distinguent des autres par un apport de fonctionnalités décisif ou une difficulté de développement particulière. 
 En particulier les CU abstraits dont l'existence éventuelle est directement la conséquence de l'implémentation d'un ou plusieurs \cu\ plus spécialisés n'apparaissent pas ici.\par
@@ -49,7 +50,7 @@ La quasi-totalité des fonctionnalités d'un \fm\ dépendent directement ou indi
 
 \descCU{PasserCaisseHôtesse}
 \startnote
-\NC5 Cette fonctionalité est classique mais vraiment indispensable pour les clients qui désirent ne pas se servir d'un cadbot.
+\NC5 Cette fonctionnalité est classique mais vraiment indispensable pour les clients qui désirent ne pas se servir d'un cadbot.
 De par les risques de «rejet technologique» des personnes peu versées dans les outils numériques (notamment les personnes âgées), conserver ce mode de passage en caisse reste également important pour la MOA.
 \NR1 Peu de risques techniques.
 \stopnote
@@ -110,8 +111,8 @@ Ce \cu\ comporte finalement peu de risques pour le reste du système car il en e
 \descCU{UtiliserGuidageMarkettab}
 \startnote
 \NC3 L'utilité de cette fonctionnalité dépend du type de client.
-Le «pressé» qui suit systématiquement les listes connectées composée par sa femme appréciera.
-Les autres, qui aiment flaner et prendre leur temps dans les rayons pour se laisser inspirer et compléter leur liste de courses basique ne l'utiliseront probablement pas.
+Le «pressé» qui suit systématiquement les listes connectées composées par sa femme appréciera.
+Les autres, qui aiment flâner et prendre leur temps dans les rayons pour se laisser inspirer et compléter leur liste de courses basique ne l'utiliseront probablement pas.
 \NR5 Il s'agit de concevoir un système comparable à un GPS automobile.
 Méconnaissance des technologies permettant de repérer le client dans le magasin.
 Ce \cu\ est découplé du reste du système, donc le risque en termes d'impact est peu important.
@@ -161,6 +162,6 @@ Cet ordre est influencé par la note globale obtenue par chaque \cu, mais pas un
 \par
 Nous avons remonté notamment GérerListeConnectée car il s'agit d'un concept important de notre application. 
 \par
-Le cas d'UtiliserGuidageMarkettab et UtiliserModeAutonome est particulier: ce sont tous les deux des \cu\ très compliqués technologiquement, peu risqués pour le système à développer car indépendants, mais cependant susceptibles de demander des modifications importantes au niveau matériel (hardware), selon les solutions envisagées.
+Le cas d'UtiliserGuidageMarkettab et UtiliserModeAutonome est particulier: ce sont tous les deux des \cu\ très compliqués technologiquement, peu risqués pour le système à développer car indépendants, mais cependant susceptibles de demander des modifications importantes au niveau matériel (hardware) sur le cadbot et la markettab, selon les solutions envisagées.
 Nous les avons donc mis entre parenthèses et hors classement pour signifier qu'il n'est envisageable de s'y intéresser que si nous pouvons le faire en parallèle du reste des \cu. 
 Il faudrait attribuer une petite équipe à la recherche de solutions pendant que le travail principal pourrait démarrer selon l'ordre retenu.
