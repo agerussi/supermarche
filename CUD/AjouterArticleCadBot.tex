@@ -1,0 +1,40 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «AjouterArticleCadBot» }
+
+\startCU
+\nom AjouterArticleCadBot
+\but Ce cas montre l'ajout d'un article dans le cadBot.
+\acteur Client
+\precondition Le client a pris son cadBot au cadPark.
+\declenchement Le client est pret a deposer un produit dans le cadBot.
+\auteur François Dubiez
+\date 29/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] Le cadbot detecte le produit grace a son puce RFID lorsque le client le passe devant le detecteur. 
+\etape[RETOUR] Le cadbot emet un beep afin d'informer le client de la lecture du code RFID.
+\etape Le cadbot compare le poids supposé de l'article avec le poids ajouté dans le caddie.
+\etape L'objet est ajouté à la liste des objets achetés.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition L'objet a été ajouté a la liste des produits deposés dans le cadBot. Cela constitue la liste qui sera transmise lors du passage en caisse.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[Lecture du code Barre] 
+  \etape Certains produits vendu au poids ou a l'unité.(viande, poisson, fruits, legumes, etc...), necessite un pesage.
+  \etape Lors du pesage du produit, la balance imprime avec un autocollant avec un code barre qui sera collé sur le sac contenant le produit.
+  \etape Le client passe le code barre devant le lecteur optique du cadBot.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition L'objet est ajouté a la liste des achats potentiels.
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+La puce RFID n'est pas reconnu/ Le code Barre n'a pu etre lu.
+Lors du passage en caisse, il conviendra d'appeler une hotesse de caisse afin de traiter l'anomalie manuellement.
+\stopCU
