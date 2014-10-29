@@ -6,3 +6,6 @@ _*
 *.bak
 CROQUIS/m_k_i_v*
 *.tmp
+*.mp
+*.tui
+document.pdf

@@ -1,48 +1,40 @@
 % exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «exemple» (A VIRER!)}
+\subsection{Cas d'utilisation: «utiliserCadBot» }
 
 \startCU
-\nom Consulter planning UE
-\but Ce cas montre la suite de pas permettant à un enseignant de consulter le planning d'une UE
-\acteur enseignant
-\precondition l'enseignant est en charge d'au moins une UE
-\declenchement l'enseignant a choisi de consulter le planning.
-\auteur Alexandre G
-\date 21/10/14
+\nom utiliserCadBot
+\but Ce cas montre la suite de pas permettant à un client de faire ses courses avec le cadbot
+\acteur client
+\precondition le client a pris son cadBot au cadPark
+\declenchement Le client a choisi de faire ses achats dans le magasin.
+\auteur François Dubiez
+\date 29/10/14
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] le système construit la liste des UE
-\etape[RETOUR] l'enseignant choisit une UE
-\etape le système construit le planning de l'UE
-\etape[SA2] le système affiche le planning
+\etape[SA1] Le CadBot suit le client dans le magasin. 
+\etape[RETOUR] Le client se déplace dans les allées à la recherche des produits de sa liste de course.
+\etape Lorsque le client ajoute deux objets dans le cadBot, le CU AjouterArticleCadbot (extend) est utilisé.
+\etape Le client se rapelle qu'il n'a besoin que d'un objet, il le retire donc du cadBot,(extend) le CU RetirerArticleCadBot est lancé.
+\etape Lorsque le client a obtenu les produits qu'il cherchait, il se dirige vers le portique de paiement. (include PasserPortiquePaiement)
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition L'enseignant a consulté le planning de l'UE.
+\postcondition Le client a terminé ses courses et le cadBot se trouve dans le portique de paiement.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
 \startalternatif[SA1] % ensemble des scénarii débutant à SA1
-\startcondition[windaude crashes] 
-  \etape le système est sous windaube et ne démarre pas
-  \etape l'utilisateur s'énerve
-  \etape il installe linux
+\startcondition[ModeAutonome] 
+  \etape le client n'a pas pris la balise du cadbot.
+  \etape le client pousse le cadbot au lieu que ce dernier le suive.
   \etape retour à l'étape \in[RETOUR]
 \stopcondition
-\postcondition Tout est retourné à la normale
+\postcondition Le client pousse le cadBot.
 \stopalternatif
 
-\startalternatif[SA2]
-\startcondition[nombre de saisies incorrectes trop grand]
-  \etape le système prévient le banquier
-  \etape le système met fin à la session
-\stopcondition
-\startcondition[autre problème]
-  \etape faire reset général
-\stopcondition
-\stopalternatif
 
 % les scénarii d'exceptions
 \exception % ou \exceptions s'il y en a plusieurs
-Pas de scénario d'exception.
+Le client n'a pas fait d'achat, se rend au portique de paiement avec un cadBotVide.
+le portique de paiement detecte un chariot vide et permet au client d'aller déposer le cadBot au cadPark.
 \stopCU
