@@ -1,0 +1,71 @@
+\subsection{«AppliquerRecetteConnectée»}
+
+\startCU
+\nom AppliquerRecetteConnectée
+\but Transférer les articles associés à une recette connectée dans la liste d'articles courante
+\acteur le client
+\precondition le client consulte une recette connectée 
+\declenchement le client sélectionne l'option «appliquer la recette»
+\auteur Alexandre G
+\date 30/10/2014
+
+\nominal % scénario nominal
+\startnominal
+\etape[DEBUT] le système affiche la page de mise à l'échelle de la recette
+\etape[ZOOM] le client sélectionne «nombre de personnes» 
+\etape le client saisit le nombre de personnes
+\etape le client valide
+\etape[VALIDATION] le système valide le choix du client
+\etape[AFFICHAGE] le système affiche la liste des produits à acheter et les quantités associées
+\etape[MODIFS] le client valide la liste
+\etape le système affiche la page de gestion de la liste courante
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition les articles ont été rajoutés à la liste courante du client
+
+% les scénarii alternatifs
+\alternatifs 
+\startalternatif[ZOOM] 
+\startcondition[le client sélectionne «appliquer un facteur»]
+  \etape le client saisit le facteur d'échelle à appliquer (sans unité ou en pourcentages)
+  \etape le client valide
+  \etape retour à l'étape \in[VALIDATION]
+\stopcondition
+\stopalternatif
+
+\startalternatif[VALIDATION] 
+\startcondition[le facteur d'échelle est aberrant] 
+  \etape le système affiche un avertissement expliquant pourquoi le choix semble aberrant
+  \etape le client annule son choix (resp. confirme son choix)
+  \etape retour à l'étape \in[DEBUT] (resp. \in[AFFICHAGE])
+\stopcondition
+\stopalternatif
+
+\startalternatif[MODIFS] 
+\startcondition[le client annule la liste] 
+  \etape retour à l'étape \in[DEBUT]
+\stopcondition
+\startcondition[le client supprime un article] 
+  \etape le système retire l'article de la liste
+  \etape retour à l'étape \in[MODIFS]
+\stopcondition
+\postcondition l'article supprimé n'est plus dans la liste
+\startcondition[le client modifie un article] 
+  \etape le système propose la liste des articles équivalents
+  \etape le client en sélectionne un
+  \etape le système retourne à la liste d'articles
+  \etape retour à l'étape \in[MODIFS]
+\stopcondition
+\postcondition dans la liste, l'article a été remplacé par celui sélectionné par le client, et la quantité a été adaptée en conséquence
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception 
+\startalternatif[ZOOM] 
+\startcondition[le client sélectionne «annulation»]
+  \etape le système retourne à consultation de la recette connectée
+  \etape {\it fin du \cu} 
+\stopcondition
+\postcondition la liste d'articles courante est inchangée
+\stopalternatif
+\stopCU
