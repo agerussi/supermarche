@@ -1,0 +1,49 @@
+\subsection{Cas d'utilisation: «UtiliserBorneEuréka» }
+
+\startCU
+\nom UtiliserBorneEuréka
+\but le client interroge une borne Euréka pour localiser un produit ou s’informer de sa disponibilité
+\acteur un client
+\precondition le client est dans le magasin face à une borne Euréka
+\declenchement le client appuie sur le bouton d'interrogation
+\auteur Alexandre G
+\date 30/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[DEBUT] le client prononce le nom de l'article devant le microphone de la borne, puis relâche le bouton
+\etape[INCONNU] la borne affiche les mots prononcés, la liste des produits associés à ces mots ainsi que des renseignements (disponibilité, quantité en stock, prix\dots) 
+\etape[LISTEVIDE] le client sélectionne un produit dans la liste
+\etape le système affiche l'emplacement du produit et la position du client sur un plan du magasin
+\etape[AUTRE] le système attend une minute avant d'afficher une page d'accueil
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition le système affiche une page d'accueil
+
+% les scénarii alternatifs
+\alternatifs 
+
+\startalternatif[INCONNU]
+\startcondition[les mots prononcés ne sont pas reconnus]
+  \etape le système affiche un message d'information
+  \etape retour à l'étape \in[AUTRE]
+\stopcondition
+\stopalternatif
+
+\startalternatif[LISTEVIDE]
+\startcondition[la liste d'articles est vide]
+\etape retour à l'étape \in[AUTRE]
+\stopcondition
+\stopalternatif
+
+\startalternatif[AUTRE] 
+\startcondition[le client veut sélectionner un autre article de la liste] 
+  \etape le client revient à la liste 
+  \etape retour à l'étape \in[LISTEVIDE]
+\stopcondition
+\startcondition[le client appuie sur le bouton d'interrogation]
+  \etape retour à l'étape \in[DEBUT]
+\stopcondition
+\stopalternatif
+
+\stopCU
