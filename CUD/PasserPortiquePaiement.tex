@@ -1,0 +1,46 @@
+﻿% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «PasserPortiquePAiement» }
+
+\startCU
+\nom PasserPortiquePaiement
+\but le CadBot se positionne sur l'emplacement dédié en caisse et transfert la liste des objets présents dans le cadBot
+\acteur client
+\precondition Le client a fait ses courses avec un cadBot.
+\declenchement le client a terminé ses courses et se dirige vers le portique de paiement.
+\auteur François Dubiez
+\date 30/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] Le client se dirige vers la caisse comportant un portique de paiement.
+\etape[RETOUR] le CadBot est dans l'emplacement dédié. Le portique a détecté le cadBot et une communication s'engage entre le portique et le cadBot.
+\etape[SA2] le CadBot transmet le liste des objets detectés.
+\etape [RETOUR2]{\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le client est pret a procéder au paiement.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[ModeManuel] 
+  \etape le cadBot est placé par le client sur l'emplacement adéquat.
+  \etape  Un marquage au sol est destiné a aider le client a positionner correctement le cadBot dans le portique.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition Le cadBot est en mesure de transmettre la liste des produits detectés.
+\stopalternatif
+
+\startalternatif[SA2]
+\startcondition[Anomalie de poids]
+  \etape Le CadBot détecte une différence de poids trop grande entre la somme des poids des articles détectés et le poids total détecté.
+  \etape Le cadBot informe le portique de cette anomalie.
+  \etape Un personnel du magasin est informé de l'anomalie et vient aider le client a identifier le problème.
+  \etape Le problème etant identifier, le correctif est appliqué (suppression de l'article non présent, ajout de l'article non détécté a la liste....)
+  \etape retour à l'étape \in[RETOUR2]
+\stopcondition
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+Pas de scénario d'exception.
+\stopCU
