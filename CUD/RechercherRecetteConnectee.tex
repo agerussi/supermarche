@@ -1,0 +1,39 @@
+\subsection{«RechercherRecetteConnectée»}
+
+\startCU
+\nom RechercherRecetteConnectée
+\but se rendre sur la page de consultation d'une recette connectée
+\acteur le client
+\precondition le client est connecté sur le site ou en possession d'une markettab
+\declenchement le client désire consulter une recette connectée
+\auteur Alexandre G
+\date 30/10/2014
+
+\nominal % scénario nominal
+\startnominal
+\etape[DEBUT] le client choisit un article (par clic à partir d'une liste ou scan en magasin)
+\etape le système affiche la page de consultation de l'article
+\etape le client choisit l'option «recettes associées»
+\etape le système affiche la liste des recettes associées à l'article 
+\etape[SELECT] le client en sélectionne une
+\etape le système affiche la page consultation de la recette
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition le client a consulté une recette
+
+% les scénarii alternatifs
+\alternatifs 
+\startalternatif[DEBUT] 
+\startcondition[le client sélectionne l'option «rechercher recettes»] 
+  \etape le système affiche la liste des recettes connues par ordre alphabétique
+  \etape retour à l'étape \in[SELECT]
+\stopcondition
+\stopalternatif
+
+\startalternatif[SELECT] 
+\startcondition[le client saisit quelques lettres dans le cadre «filtre»]
+  \etape le système filtre les recettes affichées à l'aide du motif tapé par le client
+  \etape retour à l'étape \in[SELECT]
+\stopcondition
+\stopalternatif
+\stopCU
