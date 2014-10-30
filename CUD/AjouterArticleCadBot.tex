@@ -16,6 +16,7 @@
 \etape[RETOUR] Le cadbot émet un beep afin d'informer le client de la lecture du code RFID.
 \etape Le cadbot compare le poids supposé de l'article avec le poids ajouté dans le caddie.
 \etape L'objet est ajouté à la liste des objets achetés.
+\etape le cadBot communique avec la marketTab afin d'indiquer le dernier ajout.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition L'objet a été ajouté a la liste des produits deposés dans le cadBot. Cela constitue la liste qui sera transmise lors du passage en caisse.
@@ -35,6 +36,13 @@
 
 % les scénarii d'exceptions
 \exception % ou \exceptions s'il y en a plusieurs
-La puce RFID n'est pas reconnu/ Le code Barre n'a pu etre lu.
-Lors du passage en caisse, il conviendra d'appeler une hotesse de caisse afin de traiter l'anomalie manuellement.
+\startalternatif[SA1]
+\startcondition[ Ajout d'un produit non détécté ]
+   \etape Le cadbot n'arrive pas à lire la puce RFID ou le code Barre.
+   \etape Un son plus grave est émis pour alerter le clientainsi qu'un affichage d'un message d'alerte sur la markettab.
+   \etape Le cadbot informera le portique de paiement qu'une anomalie a été détéctée.
+\stopcondition
+\postcondition L'anomalie sera transmise au portique de paiement.
+\stopalternatif
+
 \stopCU
