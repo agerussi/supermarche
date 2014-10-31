@@ -361,4 +361,77 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_E2oY0FvGEeS_R9WagCsW3g" name="SupprimerArticle">
     <extend xmi:id="_JeYAAFvGEeS_R9WagCsW3g" extendedCase="_Mg4M4Fu0EeS_R9WagCsW3g" extensionLocation="_Je6LgFvGEeS_R9WagCsW3g"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_B7haUWDvEeSfPtr3YUt7vQ" name="GérerRecettesConnectées">
+    <extend xmi:id="_SKrUEGDwEeSfPtr3YUt7vQ" extendedCase="_7gGZkGDvEeSfPtr3YUt7vQ" extensionLocation="_SK5WgGDwEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_SnvqkGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_TzRCgGDwEeSfPtr3YUt7vQ" extendedCase="_9PtWAGDvEeSfPtr3YUt7vQ" extensionLocation="_TzhhMGDwEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_UN-BgGDwEeSfPtr3YUt7vQ" extendedCase="__at1AGDvEeSfPtr3YUt7vQ" extensionLocation="_UOLc4GDwEeSfPtr3YUt7vQ"/>
+    <extensionPoint xmi:id="_Sn8e4GDwEeSfPtr3YUt7vQ" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LHOU4GDvEeSfPtr3YUt7vQ" name="A_client_gérerrecettesconnectées" memberEnd="_LHOU4WDvEeSfPtr3YUt7vQ _LHOU5GDvEeSfPtr3YUt7vQ">
+    <ownedEnd xmi:id="_LHOU4WDvEeSfPtr3YUt7vQ" name="client" type="_-bCKgEvDEeS1u7YNhmeRGw" association="_LHOU4GDvEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LHOU4mDvEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LHOU42DvEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_LHOU5GDvEeSfPtr3YUt7vQ" name="gérerrecettesconnectées" type="_B7haUWDvEeSfPtr3YUt7vQ" association="_LHOU4GDvEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LHOU5WDvEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LHOU5mDvEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_7gGZkGDvEeSfPtr3YUt7vQ" name="AjouterRecetteConnectée">
+    <generalization xmi:id="_1G9QwGDwEeSfPtr3YUt7vQ" general="_B7haUWDvEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_XxjdAGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+    <extensionPoint xmi:id="_SK5WgGDwEeSfPtr3YUt7vQ" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9PtWAGDvEeSfPtr3YUt7vQ" name="ModifierRecetteConnectée">
+    <generalization xmi:id="_1wO3QGDwEeSfPtr3YUt7vQ" general="_B7haUWDvEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_W3zKgGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+    <extensionPoint xmi:id="_TzhhMGDwEeSfPtr3YUt7vQ" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="__at1AGDvEeSfPtr3YUt7vQ" name="NoterRecetteConnectée">
+    <generalization xmi:id="_2MnRQGDwEeSfPtr3YUt7vQ" general="_B7haUWDvEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_WdemAGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+    <extensionPoint xmi:id="_UOLc4GDwEeSfPtr3YUt7vQ" name="point"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_BWY3gGDwEeSfPtr3YUt7vQ" name="CommenterRecetteConnectée">
+    <generalization xmi:id="_2q03QGDwEeSfPtr3YUt7vQ" general="_B7haUWDvEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_WF5zgGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_C7BTAGDwEeSfPtr3YUt7vQ" name="SupprimerRecetteConnectée">
+    <generalization xmi:id="_3CtLwGDwEeSfPtr3YUt7vQ" general="_B7haUWDvEeSfPtr3YUt7vQ"/>
+    <extend xmi:id="_VmsvAGDwEeSfPtr3YUt7vQ" extendedCase="_B7haUWDvEeSfPtr3YUt7vQ" extensionLocation="_Sn8e4GDwEeSfPtr3YUt7vQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IGi8sGDwEeSfPtr3YUt7vQ" name="A_ajouterrecetteconnectée_gérerrecettesconnectées" memberEnd="_IGi8sWDwEeSfPtr3YUt7vQ _IGi8tGDwEeSfPtr3YUt7vQ">
+    <ownedEnd xmi:id="_IGi8sWDwEeSfPtr3YUt7vQ" name="ajouterrecetteconnectée" type="_7gGZkGDvEeSfPtr3YUt7vQ" association="_IGi8sGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGi8smDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGi8s2DwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_IGi8tGDwEeSfPtr3YUt7vQ" name="gérerrecettesconnectées" type="_B7haUWDvEeSfPtr3YUt7vQ" association="_IGi8sGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGi8tWDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGi8tmDwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_NZA74GDwEeSfPtr3YUt7vQ" name="Actor2"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_N1SBIGDwEeSfPtr3YUt7vQ" name="A_gérerrecettesconnectées_actor2" memberEnd="_N1SBIWDwEeSfPtr3YUt7vQ _N1SBJGDwEeSfPtr3YUt7vQ">
+    <ownedEnd xmi:id="_N1SBIWDwEeSfPtr3YUt7vQ" name="gérerrecettesconnectées" type="_B7haUWDvEeSfPtr3YUt7vQ" association="_N1SBIGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_N1SBImDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N1SBI2DwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_N1SBJGDwEeSfPtr3YUt7vQ" name="actor2" type="_NZA74GDwEeSfPtr3YUt7vQ" association="_N1SBIGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_N1SBJWDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N1SBJmDwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QiAtIGDwEeSfPtr3YUt7vQ" name="A_gérerrecettesconnectées_client" memberEnd="_QiAtIWDwEeSfPtr3YUt7vQ _QiAtJGDwEeSfPtr3YUt7vQ">
+    <ownedEnd xmi:id="_QiAtIWDwEeSfPtr3YUt7vQ" name="gérerrecettesconnectées" type="_B7haUWDvEeSfPtr3YUt7vQ" association="_QiAtIGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QiAtImDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QiAtI2DwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_QiAtJGDwEeSfPtr3YUt7vQ" name="client" type="_-bCKgEvDEeS1u7YNhmeRGw" association="_QiAtIGDwEeSfPtr3YUt7vQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QiAtJWDwEeSfPtr3YUt7vQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QiAtJmDwEeSfPtr3YUt7vQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_hUVa0GDwEeSfPtr3YUt7vQ" name="Actor3"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_mvhRIGDwEeSfPtr3YUt7vQ" name=""/>
 </uml:Model>

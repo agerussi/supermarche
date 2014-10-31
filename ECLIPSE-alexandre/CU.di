@@ -19,6 +19,9 @@
     <availablePage>
       <emfPageIdentifier href="CU.notation#_Ln5MgFteEeS_R9WagCsW3g"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="CU.notation#_5RX4MGDvEeSfPtr3YUt7vQ"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -37,6 +40,9 @@
         </children>
         <children>
           <emfPageIdentifier href="CU.notation#_Ln5MgFteEeS_R9WagCsW3g"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="CU.notation#_5RX4MGDvEeSfPtr3YUt7vQ"/>
         </children>
       </children>
     </windows>

@@ -1,9 +1,11 @@
 \section{Description globale}
 
-Afin d'obtenir quelque chose de lisible, nous présentons cinq diagrammes différents.
+Afin d'obtenir quelque chose de lisible, nous présentons plusieurs diagrammes différents.
 \par
 Le diagramme de la \in{figure}[CUCGLOBAL] décrit à grande échelle les \cu\ concernant les clients du FuturMarket.
 Trois autres diagrammes donnent les \cu\ détaillés concernant la constitution du panier (\in{figure}[CUCPANIER]), la récupération des articles (\in{figure}[CUCRECUPERER]) et le paiement (\in{figure}[CUCPAYER]).
+\par
+Le diagramme de la \in{figure}[CUCRECETTES] détaille la partie du système dédiée à la création et la gestion des recettes connectées.
 \par
 Un dernier diagramme présente les cas d'utilisation concernant le personnel du FuturMarket, \in{figure}[CUP].
 
@@ -11,6 +13,7 @@ Un dernier diagramme présente les cas d'utilisation concernant le personnel du 
 \placefigure[][CUCPANIER]{CU relatifs à la constitution du panier}{\externalfigure[ECLIPSE-alexandre/CUClient-panier.pdf][width=\hsize]}
 \placefigure[][CUCRECUPERER]{CU relatifs à la récupération des articles}{\externalfigure[ECLIPSE-alexandre/CUClient-recuperer.pdf][width=\hsize]}
 \placefigure[][CUCPAYER]{CU relatifs au paiement}{\externalfigure[ECLIPSE-alexandre/CUClient-payer.pdf][width=\hsize]}
+\placefigure[][CUCRECETTES]{Détails concernant la gestion des recettes connectées}{\externalfigure[ECLIPSE-alexandre/CUClient-recettes.pdf][width=\hsize]}
 \placefigure[][CUP]{Cas d'utilisation du personnel}{\externalfigure[ECLIPSE-alexandre/CUPersonnel.pdf][width=\hsize]}
 
 \subsection{Liste ordonnée des cas d'utilisation abstraits}
@@ -36,6 +39,9 @@ Désigne l'administration des listes connectées (création, sauvegarde, effacem
 
 \descCU{GérerPersonnel}
 Ce \cu\ regroupe tous les aspects liés à la gestion du personnel: plannings, pointage, périodes d'indisponibilité, affectations à divers postes, \etc
+
+\descCU{GérerRecettesConnectées}
+Ce \cu\ regroupe l'ensemble des opérations de gestion des recettes connectées: création, modification, suppression, notation\dots
 
 \descCU{GérerStocks}
 Ce \cu\ regroupe les actions nécessaires au suivi de la disponibilité de chaque article, par exemple l'estimation de la date de rupture de stocks, les commandes fournisseurs, \etc
@@ -67,6 +73,9 @@ Dans ce cas d'utilisation, le client ajoute un produit à une liste connectée e
 \descCU{AjouterArticleCadbot}
 Dans ce \cu\ le client ajoute un article dans le cadbot.
 
+\descCU{AjouterRecetteConnectée}
+Un client crée une nouvelle recette connectée et l'ajoute dans la base de données.
+
 \descCU{AppliquerContrainteBudget}
 Dans ce \cu, le client choisit plusieurs options possibles pour limiter le coût de ses achats.
 
@@ -90,6 +99,12 @@ Dans ce \cu\ le client redonne sa liberté à son cadbot, en lui permettant de r
 
 \descCU{ModifierListeConnectée}
 Le client ajoute ou supprime des articles dans une liste connectée déjà existante.
+
+\descCU{ModifierRecetteConnectée}
+Un client modifie une des recettes connectées dont il est l'auteur.
+
+\descCU{NoterRecetteConnectée}
+Un client donne un avis sur une recette, sous la forme d'une note et d'un commentaire.
 
 \descCU{PlacerParMarkettab}
 Dans ce \cu, un personnel du magasin (généralement un magasinier) se sert d'une markettab pour gérer l'emplacement d'un produit dans la base de données.
@@ -131,6 +146,9 @@ Ici le client valide les changements effectués à une liste connectée en les s
 
 \descCU{SupprimerArticle}
 Ce \cu\ décrit la suppression d'un article d'une liste connectée en cours de conception/modification.
+
+\descCU{SupprimerRecetteConnectée}
+Un client supprime une recette dont il est l'auteur.
 
 \descCU{UtiliserBorneEuréka}
 Dans ce cas d'utilisation, le client interroge une borne euréka pour localiser un produit ou s'informer de sa disponibilité.
