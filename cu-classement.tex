@@ -112,8 +112,10 @@ Ce \cu\ comporte finalement peu de risques pour le reste du système car il en e
 \NC3 L'utilité de cette fonctionnalité dépend du type de client.
 Le «pressé» qui suit systématiquement les listes connectées composées par sa femme appréciera.
 Les autres, qui aiment flâner et prendre leur temps dans les rayons pour se laisser inspirer et compléter leur liste de courses basique ne l'utiliseront probablement pas.
-\NR5 Il s'agit de concevoir un système comparable à un GPS automobile.
-Méconnaissance des technologies permettant de repérer le client dans le magasin.
+\NR3 
+Si l'on considère que le SGBD des articles est en place (avec la localisation de chacun d'eux), cette fonctionnalité n'est pas techniquement très difficile.
+La principale difficulté est d'être capable d'afficher un plan du \fm\ sur lequel est mis en évidence le produit à récupérer.
+Cependant de nombreux «détails» au niveau de l'ergonomie doivent être mis au point.
 Ce \cu\ est découplé du reste du système, donc le risque en termes d'impact est peu important.
 \stopnote
 
@@ -146,6 +148,7 @@ Le tableau \in[CLASSEMENT] reprend les notes précédentes et classe les \cu\ da
   \VL \Num\VL AppliquerRecetteConnectée, RechercherRecetteConnectée\VL 6\VL 4\VL 2\VL\MR \HL
   \VL \Num\VL GérerListeConnectée, UtiliserListeConnectée\VL 5\VL 4\VL 1\VL\MR \HL
   \VL \Num\VL UtiliserBorneEuréka\VL 6\VL 3\VL 3\VL\MR \HL
+  \VL \Num\VL UtiliserGuidageMarkettab\VL 6\VL 3\VL 3\VL\MR \HL
   \VL \Num\VL PasserCaisseHôtesse\VL 6\VL 5\VL 1\VL\MR \HL
   \VL \Num\VL PayerParCarte\VL 6\VL 5\VL 1\VL\MR \HL
   \VL \Num\VL PayerEnLigne\VL 6\VL 4\VL 2\VL\MR \HL
@@ -154,13 +157,13 @@ Le tableau \in[CLASSEMENT] reprend les notes précédentes et classe les \cu\ da
   \VL \Num\VL ConsulterPromotions\VL 3\VL 2\VL 1\VL\MR \HL
   \VL \Num\VL PayerParTéléphone\VL 6\VL 5\VL 1\VL\MR \HL
   \VL N.C\VL \it UtiliserModeAutonome\VL 6\VL 1\VL 5\VL\MR \HL
-  \VL N.C\VL \it UtiliserGuidageMarkettab\VL 8\VL 3\VL 5\VL\MR \HL
 \stoptable}
     
 Cet ordre est influencé par la note globale obtenue par chaque \cu, mais pas uniquement. 
 \par
 Nous avons remonté notamment GérerListeConnectée car il s'agit d'un concept important de notre application. 
+Nous avons également repoussé PayerParTéléphone car il s'avère que d'autres tentatives déjà existantes d'un tel système n'aient rencontré qu'un succès mitigé.
 \par
-Le cas d'UtiliserGuidageMarkettab et UtiliserModeAutonome est particulier: ce sont tous les deux des \cu\ très compliqués technologiquement, peu risqués pour le système à développer car indépendants, mais cependant susceptibles de demander des modifications importantes au niveau matériel (hardware) sur le cadbot et la markettab, selon les solutions envisagées.
-Nous les avons donc mis entre parenthèses et hors classement pour signifier qu'il n'est envisageable de s'y intéresser que si nous pouvons le faire en parallèle du reste des \cu. 
+Le cas d'UtiliserModeAutonome est particulier: c'est un \cu\ très compliqué technologiquement, peu risqué pour le système à développer car indépendant, mais cependant susceptible de demander des modifications importantes au niveau matériel (hardware) sur le cadbot selon les solutions envisagées.
+Nous l'avons donc mis entre parenthèses et hors classement pour signifier qu'il n'est envisageable de s'y intéresser que si nous pouvons le faire en parallèle du reste des \cu. 
 Il faudrait attribuer une petite équipe à la recherche de solutions pendant que le travail principal pourrait démarrer selon l'ordre retenu.
