@@ -1,0 +1,54 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «RetirerArticleCadBot» }
+
+\startCU
+\nom RetirerArticleCadBot
+\but Ce cas montre le retrait d'un article du cadBot.
+\acteur Client
+\precondition Le client a pris son cadBot au cadPark.
+\declenchement Le client est pret a retirer un produit du cadBot.
+\auteur François Dubiez
+\date 30/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] Le cadBot détecte le produit grace à sa puce RFID lorsque le client le passe devant le detecteur. 
+\etape[RETOUR] Le cadBot émet un beep afin d'informer le client de la lecture du code RFID.
+\etape[SA3] Le cadBot valide la suppression de l'article en comparant la variation de poids du caddie.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le cadBot ôte le produit de la liste des objets deposés.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[Lecture du code Barre] 
+  \etape Le client passe le code barre devant le lecteur optique du cadBot.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition La cadBot a réussi à lire le code Barre.
+\stopalternatif
+
+\startalternatif[SA1]
+\startcondition[Erreur de lecture Tag RFID / code barre]
+   \etape Le cadbot n'arrive pas à lire la puce RFID ou le code Barre.
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot garde en mémoire la variation de poids pour la transmettre au portique ainsi que le poids total actuel afin de poursuivre le suivi.
+\stopcondition
+\postcondition Le cadBot transmettra l'anomalie au portique de paiement.
+\stopalternatif
+
+
+\startalternatif[SA3]
+\startcondition[ variation de Poids non detecté ]
+   \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
+   \etape Le cadBot émet un son plus grave émis pour alerter le client.
+\stopcondition
+\postcondition Le cadBot transmettra une alerte au portique concernant cet objet en indiquant que la diminution de poids n'a pas été détéctée.
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+Aucun scenario d'exception.
+\stopCU
