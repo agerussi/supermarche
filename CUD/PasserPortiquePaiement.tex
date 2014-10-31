@@ -1,20 +1,20 @@
 ﻿% exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «PasserPortiquePAiement» }
+\subsection{Cas d'utilisation: «PasserPortiquePaiement» }
 
 \startCU
 \nom PasserPortiquePaiement
 \but le CadBot se positionne sur l'emplacement dédié en caisse et transfert la liste des objets présents dans le cadBot
-\acteur client
+\acteur client, personnel du magasin
 \precondition Le client a fait ses courses avec un cadBot.
-\declenchement le client a terminé ses courses et se dirige vers le portique de paiement.
+\declenchement le client a terminé ses courses.
 \auteur François Dubiez
 \date 30/10/14
 
 \nominal % scénario nominal
 \startnominal
 \etape[SA1] Le client se dirige vers la caisse comportant un portique de paiement.
-\etape[RETOUR] le CadBot est dans l'emplacement dédié. Le portique a détecté le cadBot et une communication s'engage entre le portique et le cadBot.
-\etape[SA2] Le CadBot transmet le liste des objets détectés.
+\etape[RETOUR] le CadBot est dans l'emplacement dédié.
+\etape[SA2] Le CadBot envoie au système la liste détaillée des articles présents dans le cadBot.
 \etape [RETOUR2]{\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le client est prêt a procéder au paiement.
@@ -23,33 +23,32 @@
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
 \startalternatif[SA1] % ensemble des scénarii débutant à SA1
 \startcondition[ModeManuel] 
-  \etape le cadBot est placé par le client sur l'emplacement adéquat.
-  \etape  Un marquage au sol est destiné a aider le client a positionner correctement le cadBot dans le portique.
+  \etape le Client place le cadBot conformément au marquage au sol.
   \etape retour à l'étape \in[RETOUR]
 \stopcondition
 \postcondition Le cadBot est en mesure de transmettre la liste des produits détectés.
 \stopalternatif
 
+\startalternatif[RETOUR] 
+\startcondition[Pas de communication cadBot / Portique]
+  \etape Le cadBot émet en son grave.
+  \etape Le cadBot envoie par wifi une alerte au système informatique du magasin afin d'alerter le personnel.
+ \etape Un membre du personnel procède a l'identification traditionnel des objets. 
+  \etape retour à l'étape \in[RETOUR2]
+\stopcondition
+\postcondition Le client peut procéder au paiement.
+\stopalternatif
+
 \startalternatif[SA2]
-\startcondition[Anomalie de poids]
-  \etape Le CadBot détecte une différence de poids trop grande entre la somme des poids des articles détectés et le poids total détecté.
-  \etape Le cadBot informe le portique de cette anomalie.
-  \etape Un personnel du magasin est informé de l'anomalie et vient aider le client a identifier le problème.
-  \etape Le problème étant identifié, le correctif est appliqué (suppression de l'article non présent, ajout de l'article non détecté a la liste....) par le personnel du magasin.
+\startcondition[Anomalies]
+  \etape Le CadBot envoie au système la liste des anomalies détectées.
+    \etape Le système informe le personnel du magasin qu'au moins une anomalie nécessite une intervention exterieur au système.
+  \etape Le personnel du magasin traite la/les anomalies.
   \etape retour à l'étape \in[RETOUR2]
 \stopcondition
 \stopalternatif
 
 % les scénarii d'exceptions
 \exception % ou \exceptions s'il y en a plusieurs
-\startalternatif[RETOUR] 
-\startcondition[Pas de communication]
-  \etape Le cadBot n'est pas en mesure de communiquer avec le portique de paiement.
-  \etape Le cadBot émet en beep afin d'attirer l'attention du client sur la marketTab.
-  \etape Le cadBot envoie un message d'alerte sur la marketTab informant le client.
-  \etape Le cadBot envoie par wifi une alerte au système informatique du magasin afin d'alerter le personnel.
- \etape La détection des produits se fera en mode dégradé, a savoir en sortant et bipant tout les produits.
-\stopcondition
-\postcondition Le système central est informé de l'impossibilité de poursuivre la procédure.
-\stopalternatif
+
 \stopCU
