@@ -45,11 +45,16 @@
 \startcondition[le client annule la liste] 
   \etape retour à l'étape \in[DEBUT]
 \stopcondition
-\startcondition[le client supprime un article] 
-  \etape le système retire l'article de la liste
+\startcondition[le client désélectionne un article] 
+  \etape le système grise l'affichage de l'article et active l'option de sélection
   \etape retour à l'étape \in[MODIFS]
 \stopcondition
-\postcondition l'article supprimé n'est plus dans la liste
+\postcondition l'article désélectionné n'est plus dans la liste effective
+\startcondition[le client sélectionne un article désélectionné] 
+  \etape le système dé-grise l'affichage de l'article et active l'option de désélection
+  \etape retour à l'étape \in[MODIFS]
+\stopcondition
+\postcondition l'article sélectionné est rajouté dans la liste effective
 \startcondition[le client modifie un article] 
   \etape le système propose la liste des articles équivalents
   \etape le client en sélectionne un
