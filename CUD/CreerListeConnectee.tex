@@ -1,0 +1,45 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: CréerListeConnectée}
+
+\startCU
+\nom CréerListeConnectée
+\but Ce cas d’utilisation correspond à la création d’une nouvelle liste connectée, vierge au départ, qui pourra ensuite être complétée.
+\acteur client
+\precondition Le client est connecté sur le site ou en possession d'une markettab
+\declenchement le client désire créer une nouvelle liste de course.
+\auteur François D.
+\date 03/11/14
+
+\nominal % scénario nominal
+\startnominal
+\etape Le client clique Liste de courses du menu.
+\etape Le système affiche Nouvelle liste puis la liste des courses deja enregistrées.
+\etape Le client clique sur Nouvelle liste.
+\etape[SA1] Le système demande le nom de la liste et propose également d'annuler la création de liste.
+\etape[SA2] Le système valide le nom de la liste fournie par le Client.
+\etape[RETOUR] {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le système a enregistré une nouvelle liste de courses.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[SA2] % ensemble des scénarii débutant à SA1
+\startcondition[Nom invalide]
+  \etape le système demande à nouveau le nom de la liste et propose également d'annuler la création de liste.
+  \etape Le client entre un nom correct.
+  \etape Le système valide le nom de la liste.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition 
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+\startalternatif[SA1]
+\startcondition[Annulation de la création]
+  \etape Le client clique sur le bouton annuler.
+  \etape le système met fin à la creation de liste et revient a l'affichage de "nouvelle liste et de la liste de courses.
+\stopcondition
+\stopalternatif
+\stopCU
