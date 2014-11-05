@@ -1,4 +1,3 @@
-% exemple de rédaction des scénarii associés à un CU
 \subsection{Cas d'utilisation: CréerListeConnectée}
 
 \startCU
@@ -13,33 +12,32 @@
 \nominal % scénario nominal
 \startnominal
 \etape Le client clique Liste de courses du menu.
-\etape Le système affiche Nouvelle liste puis la liste des courses deja enregistrées.
+\etape Le système affiche dans la barre du menu 'Nouvelle liste' puis la liste des courses deja enregistrées dans la boite située en dessous à gauche.
 \etape Le client clique sur Nouvelle liste.
-\etape[SA1] Le système demande le nom de la liste et propose également d'annuler la création de liste.
-\etape[SA2] Le système valide le nom de la liste fournie par le Client.
+\etape[ANNUL] Le système demande le nom de la liste et propose également d'annuler la création de liste.
+\etape[NOMINVAL] Le système valide le nom de la liste fournie par le Client.
 \etape[RETOUR] {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le système a enregistré une nouvelle liste de courses.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[SA2] % ensemble des scénarii débutant à SA1
+\startalternatif[NOMINVAL] % ensemble des scénarii débutant à SA1
 \startcondition[Nom invalide]
   \etape le système demande à nouveau le nom de la liste et propose également d'annuler la création de liste.
   \etape Le client entre un nom correct.
   \etape Le système valide le nom de la liste.
   \etape retour à l'étape \in[RETOUR]
 \stopcondition
-\postcondition 
 \stopalternatif
-
 
 % les scénarii d'exceptions
 \exception % ou \exceptions s'il y en a plusieurs
-\startalternatif[SA1]
+\startalternatif[ANNUL]
 \startcondition[Annulation de la création]
   \etape Le client clique sur le bouton annuler.
-  \etape le système met fin à la creation de liste et revient a l'affichage de "nouvelle liste et de la liste de courses.
+  \etape le système met fin à la creation de liste et revient à l'affichage de nouvelle liste et de la liste de courses.
 \stopcondition
+\postcondition La liste de courses est inchangée
 \stopalternatif
 \stopCU

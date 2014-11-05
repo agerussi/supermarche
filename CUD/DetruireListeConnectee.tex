@@ -1,0 +1,44 @@
+\subsection{Cas d'utilisation: DetruireListeConnectee}
+
+\startCU
+\nom DetruireListeConnectee
+\but Détruire une/des liste(s) précédemment crée(s).
+\acteur Le client
+\precondition Le client consulte une liste connectée.
+\declenchement le client sélectionne l'option «supprimer la liste»
+\auteur François D.
+\date 05/11/2014
+
+\nominal % scénario nominal
+\startnominal
+\etape[DEBUT] Le système affiche la liste des courses disponibles ainsi que 'nouvelle liste' et 'supprimer une/des listes' dans la barre de menu, indique dans la boite située en dessous à gauche la liste des courses disponibles.
+\etape[DEJALISTE] Le client sélectionne Supprimer une/des listes.
+\etape le système propose au client une série de liste de courses sélectionnables pour la suppression avec l'action OK ou ANNULER.
+\etape[ANNULATION] le client sélectionne une ou plusieurs listes à supprimer puis clique sur OK.
+\etape[VALIDATION] le système valide le choix du client
+\etape[AFFICHAGE] le système supprime la/les liste(s) sélectionnée(s).
+\etape[FIN] {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition la/les listes ont ont été supprimées de la liste courante de liste de courses
+
+% les scénarii alternatifs
+\alternatifs 
+\startalternatif[DEJALISTE] 
+\startcondition[le client se trouve déja dans une liste de courses et désire la supprimer.Le système reconnait qu'une liste est en cours d'édition et le menu 'Supprimer une/des listes' est devenu 'Supprimer cette liste'.]
+  \etape Le client clique sur 'Supprimer cette liste'
+  \etape Le système demande confirmation.
+  \etape Le client confirme la suppression.
+  \etape Retour à l'étape \in[VALIDATION]
+\stopcondition
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception 
+\startalternatif[ANNULATION] 
+\startcondition[le client sélectionne «ANNULATION»]
+  \etape Le système retourne à l'affichage de la série de liste de courses.
+  \etape {\it fin du \cu} 
+\stopcondition
+\postcondition La liste de courses est inchangée
+\stopalternatif
+\stopCU
