@@ -5,18 +5,15 @@
 \but Ce cas d’utilisation correspond à la création d’une nouvelle liste connectée, vierge au départ, qui pourra ensuite être complétée.
 \acteur client
 \precondition Le client est connecté sur le site ou en possession d'une markettab
-\declenchement le client désire créer une nouvelle liste de course.
+\declenchement le client clique sur nouvelle liste de course dans le menu.
 \auteur François D.
 \date 03/11/14
 
 \nominal % scénario nominal
 \startnominal
-\etape Le client clique Liste de courses du menu.
-\etape Le système affiche dans la barre du menu 'Nouvelle liste' puis la liste des courses deja enregistrées dans la boite située en dessous à gauche.
-\etape Le client clique sur Nouvelle liste.
 \etape[ANNUL] Le système demande le nom de la liste et propose également d'annuler la création de liste.
 \etape[NOMINVAL] Le système valide le nom de la liste fournie par le Client.
-\etape[RETOUR] {\it fin du cas d'utilisation}
+\etape[RETOURDL] {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le système a enregistré une nouvelle liste de courses.
 
@@ -24,10 +21,10 @@
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
 \startalternatif[NOMINVAL] % ensemble des scénarii débutant à SA1
 \startcondition[Nom invalide]
-  \etape le système demande à nouveau le nom de la liste et propose également d'annuler la création de liste.
-  \etape Le client entre un nom correct.
-  \etape Le système valide le nom de la liste.
-  \etape retour à l'étape \in[RETOUR]
+  \etape Le système informe le client que le nom est incorrect.
+  \etape Le système demande à nouveau le nom de la liste et propose également d'annuler la création de liste.
+  \etape Le client entre un nom correct (resp. annule)
+  \etape retour à l'étape \in[NOMINVAL](resp. fin du cas d'utilisation.\in[RETOURDL])
 \stopcondition
 \stopalternatif
 
@@ -36,7 +33,7 @@
 \startalternatif[ANNUL]
 \startcondition[Annulation de la création]
   \etape Le client clique sur le bouton annuler.
-  \etape le système met fin à la creation de liste et revient à l'affichage de nouvelle liste et de la liste de courses.
+  \etape Le système met fin à la creation de liste et fin du cas d'utilisation.\in[RETOURDL].
 \stopcondition
 \postcondition La liste de courses est inchangée
 \stopalternatif
