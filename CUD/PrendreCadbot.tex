@@ -1,0 +1,46 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «PrendreCadbot» }
+
+\startCU
+\nom Prendre Cadbot
+\but  ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
+\acteur Client
+\precondition Le client veut faire ses courses dans le FuturMarket.
+
+\auteur Raissa Mbabazi Simbi
+\date 7/11/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] Le client arrive au parking des cadbot. 
+\etape[RETOUR] 	Le client prend un cadbot de la grille.
+\etape[SE1] Le client prend la balise du cadbot.
+\etape Le client met en marche le cadbot.
+\etape Le cadbot suit le client tout au long du FuturMarket
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le cadbot n'est plus dans le parking.
+
+% les scénarii alternatifs
+\alternatifs
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[Cadbot ne fonctionne pas] 
+  \etape[SE1]  Le client remet le cadbot sur la grille.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
+\stopalternatif
+
+\startalternatif[SE1]
+\startcondition[ Le cadbot ne detecte pas sa balise]
+   \etape  Le client remet le cadbot sur la grille.
+  \etape retour à l'étape \in[RETOUR]
+\stopcondition
+\postcondition L'anomalie concernant cet objet sera transmise à la maintenance.
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception
+Il n'y a plus de cadbot dans la parking
+\stopCU
