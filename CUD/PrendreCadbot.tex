@@ -17,9 +17,9 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le client arrive au parking des cadbot. 
-\etape[RETOUR] 	Le client prend un cadbot de la grille.
-\etape[SE1] Le client prend la balise du cadbot.
+\etape[PC:SA1] Le client arrive au parking des cadbot. 
+\etape[PC:RETOUR] 	Le client prend un cadbot de la grille.
+\etape[PC:SE1] Le client prend la balise du cadbot.
 \etape Le client met en marche le cadbot.
 \etape Le cadbot suit le client tout au long du FuturMarket
 \etape {\it fin du cas d'utilisation}
@@ -28,18 +28,18 @@
 
 % les scénarii alternatifs
 \alternatifs
-\startalternatif[SA1] % ensemble des scénario débutant à SA1
+\startalternatif[PC:SA1] % ensemble des scénario débutant à SA1
 \startcondition[Cadbot ne fonctionne pas] 
   \etape Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[RETOUR]
+  \etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
 \postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
 \stopalternatif
 
-\startalternatif[SE1]
-\startcondition[ Le cadbot ne detecte pas sa balise]
+\startalternatif[PC:SE1]
+\startcondition[Le cadbot ne detecte pas sa balise]
    \etape  Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[RETOUR]
+  \etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
 \postcondition L'anomalie concernant cet objet sera transmise à la maintenance.
 \stopalternatif

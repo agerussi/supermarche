@@ -1,5 +1,8 @@
 % exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «UtiliserGuidageMarkettab» }
+\subsection{«UtiliserGuidageMarkettab»}
+\TODO\ Pas intégrable en l'état:
+* Il manque beaucoup de détails (par exemple étape 4: comment ???) 
+* incohérences: par exemple en pré-condition: le client indique la liste des produits, et en étape 1, le client saisit une markettab...
 
 \startCU
 \nom UtiliserGuidageMarkettab
@@ -12,28 +15,28 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[RETOUR1] Le client saisit une markettab. 
+\etape[UGM:RETOUR1] Le client saisit une markettab. 
 \etape Le client indique la liste des produits qu'il souhaite acheter, soit par une liste connectée, soit par une composition de sa liste sur place.
-\etape[SE1]  La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
-\etape [RETOUR2]Le client suit le chemin.
+\etape[UGM:SE1]  La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
+\etape[UGM:RETOUR2] Le client suit le chemin.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition La carte du chemin à suivre est affichée sur la Markettab
 
 % les scénarii alternatifs
 \alternatifs
-\startalternatif
+\startalternatif[UGM:RETOUR1]
 \startcondition[La Markettab ne fonctionne pas] 
-  \etape Le client remet la Markettab sur son support.
-  \etape retour à l'étape \in[RETOUR1]
+  \etape Le client remet la Markettab sur son support
+  \etape retour à l'étape \in[UGM:RETOUR1]
 \stopcondition
 \postcondition La carte du chemin à suivre est affichée sur la Markettab
 \stopalternatif
 
-\startalternatif[SE1]
+\startalternatif[UGM:SE1]
 \startcondition[ La Markettab ne retrouve pas dans le FuturMarket certains articles sur la liste de produits indiquée par le client]
    \etape  La Markettab indique le chemin corréspondant aux articles trouvés dans le FuturMarket.
-  \etape retour à l'étape \in[RETOUR2]
+  \etape retour à l'étape \in[UGM:RETOUR2]
 \stopcondition
 \postcondition La carte du chemin à suivre est affichée sur la Markettab
 \stopalternatif
