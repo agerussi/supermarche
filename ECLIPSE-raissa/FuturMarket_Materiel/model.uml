@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_rgoYIGAeEeSXjrPLCRUqJQ" name="model">
+  <packagedElement xmi:type="uml:Class" xmi:id="_t6RJAGAeEeSXjrPLCRUqJQ" name="FuturMarket"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vunbgGAeEeSXjrPLCRUqJQ" name="Materiel">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M-_6cGAhEeSXjrPLCRUqJQ" name="Description" type="_IGprcGAhEeSXjrPLCRUqJQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TG33oGAhEeSXjrPLCRUqJQ" name="quantite" type="_JVrqYGAhEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0BHygGAeEeSXjrPLCRUqJQ" name="Balise">
+    <generalization xmi:type="uml:Generalization" xmi:id="_LBiaIGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1W9kEGAeEeSXjrPLCRUqJQ" name="Cadbot">
+    <generalization xmi:type="uml:Generalization" xmi:id="_LnUAsGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2FL8AGAeEeSXjrPLCRUqJQ" name="MarketTab">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Nbq6QGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2ncUgGAeEeSXjrPLCRUqJQ" name="Eureka">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Oqs5MGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3KPfkGAeEeSXjrPLCRUqJQ" name="PortiquePaiement">
+    <generalization xmi:type="uml:Generalization" xmi:id="_PZaZUGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3sB-AGAeEeSXjrPLCRUqJQ" name="Caisse">
+    <generalization xmi:type="uml:Generalization" xmi:id="_QGQRMGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_434tIGAeEeSXjrPLCRUqJQ" name="Caddie">
+    <generalization xmi:type="uml:Generalization" xmi:id="_KOfzoGAfEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RsRMwGAfEeSXjrPLCRUqJQ" name="connectee a" memberEnd="_RsRMwWAfEeSXjrPLCRUqJQ _RsQlsGAfEeSXjrPLCRUqJQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RsRMwWAfEeSXjrPLCRUqJQ" name="balise" type="_0BHygGAeEeSXjrPLCRUqJQ" association="_RsRMwGAfEeSXjrPLCRUqJQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RsRMwmAfEeSXjrPLCRUqJQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RsRMw2AfEeSXjrPLCRUqJQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RsQlsGAfEeSXjrPLCRUqJQ" name="cadbot" type="_1W9kEGAeEeSXjrPLCRUqJQ" association="_RsRMwGAfEeSXjrPLCRUqJQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RsQlsWAfEeSXjrPLCRUqJQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RsQlsmAfEeSXjrPLCRUqJQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_YEhvUGAfEeSXjrPLCRUqJQ" name="possède du " memberEnd="_YEhvUWAfEeSXjrPLCRUqJQ _YEhIQGAfEeSXjrPLCRUqJQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YEhvUWAfEeSXjrPLCRUqJQ" name="futurMarket" type="_t6RJAGAeEeSXjrPLCRUqJQ" association="_YEhvUGAfEeSXjrPLCRUqJQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YEhvUmAfEeSXjrPLCRUqJQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YEhvU2AfEeSXjrPLCRUqJQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YEhIQGAfEeSXjrPLCRUqJQ" name="materiel" type="_vunbgGAeEeSXjrPLCRUqJQ" association="_YEhvUGAfEeSXjrPLCRUqJQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YEhIQWAfEeSXjrPLCRUqJQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YEhIQmAfEeSXjrPLCRUqJQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_IGprcGAhEeSXjrPLCRUqJQ" name="String"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_JVrqYGAhEeSXjrPLCRUqJQ" name="Integer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1X8FYGAnEeSXjrPLCRUqJQ" name="CarteFuturMarket">
+    <generalization xmi:type="uml:Generalization" xmi:id="_7hT3YGAnEeSXjrPLCRUqJQ" general="_vunbgGAeEeSXjrPLCRUqJQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9K1Z8GAnEeSXjrPLCRUqJQ" name="Points" type="_JVrqYGAhEeSXjrPLCRUqJQ"/>
+  </packagedElement>
+</uml:Model>
