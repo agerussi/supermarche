@@ -12,24 +12,24 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le cadBot détecte le produit grace à sa puce RFID lorsque le client le passe devant le detecteur. 
-\etape[RETOUR] Le cadBot émet un beep afin d'informer le client de la lecture du code RFID.
-\etape[SA3] Le cadBot valide la suppression de l'article en comparant la variation de poids du caddie.
+\etape[RAC:SA1] Le cadBot détecte le produit grace à sa puce RFID lorsque le client le passe devant le detecteur. 
+\etape[RAC:RETOUR] Le cadBot émet un beep afin d'informer le client de la lecture du code RFID.
+\etape[RAC:SA3] Le cadBot valide la suppression de l'article en comparant la variation de poids du caddie.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le cadBot ôte le produit de la liste des objets deposés.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startalternatif[RAC:SA1] % ensemble des scénarii débutant à SA1
 \startcondition[Lecture du code Barre] 
   \etape Le client passe le code barre devant le lecteur optique du cadBot.
-  \etape retour à l'étape \in[RETOUR]
+  \etape retour à l'étape \in[RAC:RETOUR]
 \stopcondition
 \postcondition La cadBot a réussi à lire le code Barre.
 \stopalternatif
 
-\startalternatif[SA1]
+\startalternatif[RAC:SA1]
 \startcondition[Erreur de lecture Tag RFID / code barre]
    \etape Le cadbot n'arrive pas à lire la puce RFID ou le code Barre.
    \etape Le cadBot émet un son plus grave pour alerter le client.
@@ -39,16 +39,12 @@
 \stopalternatif
 
 
-\startalternatif[SA3]
-\startcondition[ variation de Poids non detecté ]
+\startalternatif[RAC:SA3]
+\startcondition[variation de Poids non detecté]
    \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
    \etape Le cadBot émet un son plus grave émis pour alerter le client.
 \stopcondition
 \postcondition Le cadBot transmettra une alerte au portique concernant cet objet en indiquant que la diminution de poids n'a pas été détéctée.
 \stopalternatif
 
-
-% les scénarii d'exceptions
-\exception % ou \exceptions s'il y en a plusieurs
-Aucun scenario d'exception.
 \stopCU

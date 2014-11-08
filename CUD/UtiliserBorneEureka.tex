@@ -11,11 +11,11 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[DEBUT] le client prononce le nom de l'article devant le microphone de la borne, puis relâche le bouton
-\etape[INCONNU] le système affiche les mots prononcés, la liste des produits associés à ces mots ainsi que des renseignements (disponibilité, quantité en stock, prix\dots) 
-\etape[LISTEVIDE] le client sélectionne un produit dans la liste
+\etape[UBE:DEBUT] le client prononce le nom de l'article devant le microphone de la borne, puis relâche le bouton
+\etape[UBE:INCONNU] le système affiche les mots prononcés, la liste des produits associés à ces mots ainsi que des renseignements (disponibilité, quantité en stock, prix\dots) 
+\etape[UBE:LISTEVIDE] le client sélectionne un produit dans la liste
 \etape le système affiche l'emplacement du produit et la position du client sur un plan du magasin
-\etape[AUTRE] le système attend une minute avant d'afficher une page d'accueil
+\etape[UBE:AUTRE] le système attend une minute avant d'afficher une page d'accueil
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition le système affiche une page d'accueil
@@ -23,26 +23,26 @@
 % les scénarii alternatifs
 \alternatifs 
 
-\startalternatif[INCONNU]
+\startalternatif[UBE:INCONNU]
 \startcondition[les mots prononcés ne sont pas reconnus]
   \etape le système affiche un message d'information
-  \etape retour à l'étape \in[AUTRE]
+  \etape retour à l'étape \in[UBE:AUTRE]
 \stopcondition
 \stopalternatif
 
-\startalternatif[LISTEVIDE]
+\startalternatif[UBE:LISTEVIDE]
 \startcondition[la liste d'articles est vide]
-\etape retour à l'étape \in[AUTRE]
+\etape retour à l'étape \in[UBE:AUTRE]
 \stopcondition
 \stopalternatif
 
-\startalternatif[AUTRE] 
+\startalternatif[UBE:AUTRE] 
 \startcondition[le client veut sélectionner un autre article de la liste] 
   \etape le client revient à la liste 
-  \etape retour à l'étape \in[LISTEVIDE]
+  \etape retour à l'étape \in[UBE:LISTEVIDE]
 \stopcondition
 \startcondition[le client appuie sur le bouton d'interrogation]
-  \etape retour à l'étape \in[DEBUT]
+  \etape retour à l'étape \in[UBE:DEBUT]
 \stopcondition
 \stopalternatif
 

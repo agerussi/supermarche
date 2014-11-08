@@ -11,29 +11,29 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[ANNUL] Le système demande le nom de la liste et propose également d'annuler la création de liste.
-\etape[NOMINVAL] Le système valide le nom de la liste fournie par le Client.
-\etape[RETOURDL] {\it fin du cas d'utilisation}
+\etape[CLC:ANNUL] Le système demande le nom de la liste et propose également d'annuler la création de liste.
+\etape[CLC:NOMINVAL] Le système valide le nom de la liste fournie par le Client.
+\etape[CLC:RETOURDL] {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le système a enregistré une nouvelle liste de courses.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[NOMINVAL] % ensemble des scénarii débutant à SA1
+\startalternatif[CLC:NOMINVAL] % ensemble des scénarii débutant à SA1
 \startcondition[Nom invalide]
   \etape Le système informe le client que le nom est incorrect.
   \etape Le système demande à nouveau le nom de la liste et propose également d'annuler la création de liste.
   \etape Le client entre un nom correct (resp. annule)
-  \etape retour à l'étape \in[NOMINVAL](resp. fin du cas d'utilisation.\in[RETOURDL])
+  \etape retour à l'étape \in[CLC:NOMINVAL](resp. fin du cas d'utilisation.\in[CLC:RETOURDL])
 \stopcondition
 \stopalternatif
 
 % les scénarii d'exceptions
 \exception % ou \exceptions s'il y en a plusieurs
-\startalternatif[ANNUL]
+\startalternatif[CLC:ANNUL]
 \startcondition[Annulation de la création]
   \etape Le client clique sur le bouton annuler.
-  \etape Le système met fin à la creation de liste et fin du cas d'utilisation.\in[RETOURDL].
+  \etape Le système met fin à la creation de liste et fin du cas d'utilisation.\in[CLC:RETOURDL].
 \stopcondition
 \postcondition La liste de courses est inchangée
 \stopalternatif

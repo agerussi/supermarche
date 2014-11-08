@@ -1,7 +1,7 @@
-\subsection{Cas d'utilisation: DetruireListeConnectee}
+\subsection{Cas d'utilisation: DétruireListeConnectée}
 
 \startCU
-\nom DetruireListeConnectee
+\nom DétruireListeConnectée
 \but Détruire une/des liste(s) précédemment crée(s).
 \acteur Le client
 \precondition Le client consulte une liste connectée.
@@ -11,29 +11,29 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[DEJALISTE] Le client sélectionne Supprimer une/des listes dans le menu.
+\etape[DLC:DEJALISTE] Le client sélectionne Supprimer une/des listes dans le menu.
 \etape Le système propose au client une série de liste de courses sélectionnables pour la suppression avec l'action OK ou ANNULER.
-\etape[ANNULATION] Le client sélectionne une ou plusieurs listes à supprimer puis clique sur OK.
-\etape[VALIDATION] Le système valide le choix du client
-\etape[AFFICHAGE] Le système supprime la/les liste(s) sélectionnée(s).
-\etape[FIN] {\it fin du cas d'utilisation}
+\etape[DLC:ANNULATION] Le client sélectionne une ou plusieurs listes à supprimer puis clique sur OK.
+\etape[DLC:VALIDATION] Le système valide le choix du client
+\etape[DLC:AFFICHAGE] Le système supprime la/les liste(s) sélectionnée(s).
+\etape[DLC:FIN] {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition la/les listes ont ont été supprimées de la liste courante de liste de courses
 
 % les scénarii alternatifs
 \alternatifs 
-\startalternatif[DEJALISTE] 
+\startalternatif[DLC:DEJALISTE] 
 \startcondition[le client se trouve déja dans une liste de courses et désire la supprimer.Le système reconnait qu'une liste est en cours d'édition et le menu 'Supprimer une/des listes' est devenu 'Supprimer cette liste'.]
   \etape Le client clique sur 'Supprimer cette liste'
   \etape Le système demande confirmation.
   \etape Le client confirme la suppression.
-  \etape Retour à l'étape \in[VALIDATION]
+  \etape Retour à l'étape \in[DLC:VALIDATION]
 \stopcondition
 \stopalternatif
 
 % les scénarii d'exceptions
 \exception 
-\startalternatif[ANNULATION] 
+\startalternatif[DLC:ANNULATION] 
 \startcondition[le client sélectionne «ANNULATION»]
   \etape Le système retourne à l'affichage de la série de liste de courses.
   \etape {\it fin du \cu} 

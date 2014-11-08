@@ -12,43 +12,40 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le client se dirige vers la caisse comportant un portique de paiement.
-\etape[RETOUR] le CadBot est dans l'emplacement dédié.
-\etape[SA2] Le CadBot envoie au système la liste détaillée des articles présents dans le cadBot.
-\etape [RETOUR2]{\it fin du cas d'utilisation}
+\etape[PPP:SA1] Le client se dirige vers la caisse comportant un portique de paiement.
+\etape[PPP:RETOUR] le CadBot est dans l'emplacement dédié.
+\etape[PPP:SA2] Le CadBot envoie au système la liste détaillée des articles présents dans le cadBot.
+\etape[PPP:RETOUR2]{\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le client est prêt a procéder au paiement.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startalternatif[PPP:SA1] % ensemble des scénarii débutant à SA1
 \startcondition[ModeManuel] 
   \etape le Client place le cadBot conformément au marquage au sol.
-  \etape retour à l'étape \in[RETOUR]
+  \etape retour à l'étape \in[PPP:RETOUR]
 \stopcondition
 \postcondition Le cadBot est en mesure de transmettre la liste des produits détectés.
 \stopalternatif
 
-\startalternatif[RETOUR] 
+\startalternatif[PPP:RETOUR] 
 \startcondition[Pas de communication cadBot / Portique]
   \etape Le cadBot émet en son grave.
   \etape Le cadBot envoie par wifi une alerte au système informatique du magasin afin d'alerter le personnel.
  \etape Un membre du personnel procède a l'identification traditionnel des objets. 
-  \etape retour à l'étape \in[RETOUR2]
+  \etape retour à l'étape \in[PPP:RETOUR2]
 \stopcondition
 \postcondition Le client peut procéder au paiement.
 \stopalternatif
 
-\startalternatif[SA2]
+\startalternatif[PPP:SA2]
 \startcondition[Anomalies]
   \etape Le CadBot envoie au système la liste des anomalies détectées.
     \etape Le système informe le personnel du magasin qu'au moins une anomalie nécessite une intervention exterieur au système.
   \etape Le personnel du magasin traite la/les anomalies.
-  \etape retour à l'étape \in[RETOUR2]
+  \etape retour à l'étape \in[PPP:RETOUR2]
 \stopcondition
 \stopalternatif
-
-% les scénarii d'exceptions
-\exception % ou \exceptions s'il y en a plusieurs
 
 \stopCU
