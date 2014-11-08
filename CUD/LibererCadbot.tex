@@ -1,12 +1,17 @@
 % exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «LibererCadbot» }
+\subsection{«LibérerCadbot»}
+\TODO\ ce CU n'est pas intégrable tel quel: 
+* devrait de focaliser sur l'interaction avec le client, le retour automatique est HS
+* on ne sait pas comment l'anomalie est transmise
+* que fait le cadbot quand il est presque déchargé ?
+* que se passe-t-il si le cadbot n'est pas vide et qu'on raccroche la balise ?
+* etc.
 
 \startCU
-\nom Liberer Cadbot
-\but  ce cas montre la suite de pas permettant à un client de liberer le cadbot q'il a utilisé une fois ses courses terminés.
+\nom LibérerCadbot
+\but  ce cas montre la suite de pas permettant à un client de libérer le cadbot une fois ses courses terminées.
 \acteur Client
-\precondition Le client a fini de décharger ses courses du cadbot.
-
+\precondition Le cadBot est vide
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
 
