@@ -1,12 +1,12 @@
 % exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «AjouterArticleCadBot» }
+\subsection{«AjouterArticleCadBot»}
 
 \startCU
 \nom AjouterArticleCadBot
 \but Ce cas montre l'ajout d'un article dans le cadBot.
 \acteur Client
 \precondition Le client a pris son cadBot au cadPark.
-\declenchement Le client est pret à deposer un produit dans le cadBot.
+\declenchement Le client est prêt à déposer un produit dans le cadBot.
 \auteur François Dubiez
 \date 29/10/14
 
@@ -27,26 +27,24 @@
   \etape retour à l'étape \in[AAC:RETOUR]
 \stopcondition
 \postcondition Le CadBot a correctement lu le code barre.
+\startcondition[puce RFID ou code barre illisible]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot affecte le poids à un objet inconnu afin de continuer à suivre l'évolution du poids en fonction des objets.
+\stopcondition
+\postcondition L'anomalie sera transmise au portique de paiement.
+\startcondition[variation de poids détectée avant lecture RFID ou code barre]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot affecte le poids à un objet inconnu afin de continuer à suivre l'évolution du poids en fonction des objets.
+\stopcondition
+\postcondition L'anomalie sera transmise au portique de paiement.
 \stopalternatif
 
 \startalternatif[AAC:SE1]
 \startcondition[variation de Poids non detecté]
    \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
-   \etape Le cadBot émet un son plus grave émis pour alerter le client.
+   \etape Le cadBot émet un son plus grave pour alerter le client.
 \stopcondition
 \postcondition L'anomalie concernant cet objet sera transmise au portique de paiement.
 \stopalternatif
 
-\startalternatif[AAC:SA1]
-\startcondition[Ajout d'un produit non détécté]
-   \etape Le cadbot n'arrive pas à lire la puce RFID ou le code Barre.
-   \etape Le cadBot émet un son plus grave émis pour alerter le client.
-   \etape Le cadbot affecte le poids a un objet inconnu afin de continuer à suivre l'evolution du poids en fonction des objets.
-\stopcondition
-\postcondition L'anomalie sera transmise au portique de paiement.
-\stopalternatif
-
-% les scénarii d'exceptions
-\exception % ou \exceptions s'il y en a plusieurs
-Aucun scénario d'exception
 \stopCU
