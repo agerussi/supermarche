@@ -1,0 +1,45 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «UtiliserGuidageMarkettab» }
+
+\startCU
+\nom UtiliserGuidageMarkettab
+\but  ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
+\acteur Client
+\precondition Le client indique la liste des produits qu'il souhaite acheter dans le FuturMarket.
+
+\auteur Raissa Mbabazi Simbi
+\date 7/11/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[RETOUR1] Le client saisit une markettab. 
+\etape Le client indique la liste des produits qu'il souhaite acheter, soit par une liste connectée, soit par une composition de sa liste sur place.
+\etape[SE1]  La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
+\etape [RETOUR2]Le client suit le chemin.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition La carte du chemin à suivre est affichée sur la Markettab
+
+% les scénarii alternatifs
+\alternatifs
+\startalternatif
+\startcondition[La Markettab ne fonctionne pas] 
+  \etape Le client remet la Markettab sur son support.
+  \etape retour à l'étape \in[RETOUR1]
+\stopcondition
+\postcondition La carte du chemin à suivre est affichée sur la Markettab
+\stopalternatif
+
+\startalternatif[SE1]
+\startcondition[ La Markettab ne retrouve pas dans le FuturMarket certains articles sur la liste de produits indiquée par le client]
+   \etape  La Markettab indique le chemin corréspondant aux articles trouvés dans le FuturMarket.
+  \etape retour à l'étape \in[RETOUR2]
+\stopcondition
+\postcondition La carte du chemin à suivre est affichée sur la Markettab
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception
+Aucun articles sur la liste indiquée par le client n'est retrouvé dans le FuturMarket
+\stopCU

@@ -1,0 +1,40 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{Cas d'utilisation: «LibererCadbot» }
+
+\startCU
+\nom Liberer Cadbot
+\but  ce cas montre la suite de pas permettant à un client de liberer le cadbot q'il a utilisé une fois ses courses terminés.
+\acteur Client
+\precondition Le client a fini de décharger ses courses du cadbot.
+
+\auteur Raissa Mbabazi Simbi
+\date 7/11/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[SA1] Le client remet la balise dans son port sur le cadbot. 
+\etape Le Cadbot détécte la balise.
+\etape[RETOUR] Le cadbot suit le chemin indiqué par son système pour regagner le parking des cadbot le plus proche.
+\etape Le cadbot arrive à son parking.
+\etape Le cadbot s'accroche sur une place libre de la grille 
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le cadbot est dans le parking.
+
+% les scénarii alternatifs
+\alternatifs
+\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startcondition[Cadbot ne détecte pas la balise dans son port] 
+  \etape Le client active le retour au parking manuellement.
+	\etape retour à l'étape \in[RETOUR]
+
+\stopcondition
+\postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
+\stopalternatif
+
+
+
+% les scénarii d'exceptions
+\exception
+le cadbot est déchargé.
+\stopCU
