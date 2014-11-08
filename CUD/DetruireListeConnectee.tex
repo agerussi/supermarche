@@ -1,4 +1,7 @@
-\subsection{Cas d'utilisation: DétruireListeConnectée}
+\subsection{«DétruireListeConnectée»}
+\TODO\ ce CUD est incohérent: le déclenchement précise que le client veut détruire une liste précise (celle qu'il consulte) alors que le scénario décrit d'abord une sélection de liste, \etc
+Je pense qu'il faut simplifier le scénario pour simplement gérer la destruction de la liste que l'on consulte.
+Le choix d'une liste se fait en amont et constitue un autre CU.
 
 \startCU
 \nom DétruireListeConnectée
@@ -11,7 +14,7 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[DLC:DEJALISTE] Le client sélectionne Supprimer une/des listes dans le menu.
+\etape[DLC:DEJALISTE] Le client sélectionne Supprimer une liste dans le menu.
 \etape Le système propose au client une série de liste de courses sélectionnables pour la suppression avec l'action OK ou ANNULER.
 \etape[DLC:ANNULATION] Le client sélectionne une ou plusieurs listes à supprimer puis clique sur OK.
 \etape[DLC:VALIDATION] Le système valide le choix du client
