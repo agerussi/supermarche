@@ -37,7 +37,7 @@ Peu de risques pour le reste du système puisque ce \cu\ en est relativement ind
 
 \descCU{ChoisirArticles}
 \startnote
-\NC5 De ce \cu\ représente la faculté à constituer des listes d'articles réutilisables, et de manière assistée.
+\NC5 Ce \cu\ représente la faculté à constituer des listes d'articles réutilisables, de manière assistée.
 La quasi-totalité des fonctionnalités d'un \fm\ dépendent directement ou indirectement de celui-ci.
 \NR3 Peu de difficultés techniques, mais les fonctionnalités à développer vont influencer une grande partie du design du système, donc il est important de le traiter relativement tôt.
 \stopnote
@@ -68,7 +68,8 @@ De par les risques de «rejet technologique» des personnes peu versées dans le
 \startnote
 \NC5 Ce mode de passage en caisse est la dernière étape dans l'utilisation du cadbot.
 De ce point de vue, il est fondamental pour le client et la MOA.
-\NR2 Peu de difficultés si l'on suppose que le reste système cadbot existe et fonctionne, puisqu'il suffit simplement de faire communiquer le cadbot et un terminal de paiement classique (une solution complètement basique serait de scanner un code barre affiché sur l'écran du cadbot).
+\NR4 Plusieurs difficultés probables au niveau de la communication entre le cadBot et le portique (détection de présence, \etc): une solution complètement basique serait de scanner un code barre affiché sur l'écran du cadbot.
+Difficultés prévisibles également au niveau robustesse du système face aux éventuels comportements erratiques des clients.
 \stopnote
 
 \descCU{PayerEnEspèces}
@@ -152,8 +153,8 @@ Le tableau \in[CLASSEMENT] reprend les notes précédentes et classe les \cu\ da
   \HL
   \VL \bf rang\VL \bf \cu\VL \bf note\VL \bf NC\VL \bf NR\VL\FR \HL
   \VL \Num\VL UtiliserCadbot\VL 10\VL 5\VL 5\VL\MR \HL
+  \VL \Num\VL PasserPortiquePaiement\VL 9\VL 5\VL 4\VL\MR \HL
   \VL \Num\VL ChoisirArticles\VL 8\VL 5\VL 3\VL\MR \HL
-  \VL \Num\VL PasserPortiquePaiement\VL 7\VL 5\VL 2\VL\MR \HL
   \VL \Num\VL AppliquerRecetteConnectée, RechercherRecetteConnectée\VL 6\VL 4\VL 2\VL\MR \HL
   \VL \Num\VL GérerListeConnectée, UtiliserListeConnectée\VL 5\VL 4\VL 1\VL\MR \HL
   \VL \Num\VL UtiliserBorneEuréka\VL 6\VL 3\VL 3\VL\MR \HL

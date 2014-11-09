@@ -19,16 +19,20 @@
 \etape[RAC:SA3] Le cadBot valide la suppression de l'article en comparant la variation de poids du caddie.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition Le cadBot ôte le produit de la liste des objets deposés.
+\postcondition Le produit est retiré de la liste des objets déposés.
 
 % les scénarii alternatifs
-\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\alternatif % ou \alternatif s'il n'y en a qu'un seul
 \startalternatif[RAC:IDENTIFICATION] % ensemble des scénarii débutant à SA1
 \startcondition[Lecture du code Barre] 
   \etape Le client passe le code barre devant le lecteur optique du cadBot.
   \etape retour à l'étape \in[RAC:SA1]
 \stopcondition
 \postcondition La cadBot a réussi à lire le code Barre.
+\stopalternatif
+
+\exceptions
+\startalternatif[RAC:IDENTIFICATION]
 \startcondition[le client n'identifie pas l'article]
    \etape Le cadBot émet un son plus grave pour alerter le client.
    \etape Le cadbot garde en mémoire la variation de poids pour la transmettre au portique ainsi que le poids total actuel afin de poursuivre le suivi.
@@ -46,7 +50,6 @@
 
 \startalternatif[RAC:SA3]
 \startcondition[variation de Poids non detecté]
-   \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
    \etape Le cadBot émet un son plus grave pour alerter le client.
 \stopcondition
 \postcondition Le cadBot transmettra une alerte au portique concernant cet objet en indiquant que la diminution de poids n'a pas été détéctée.
