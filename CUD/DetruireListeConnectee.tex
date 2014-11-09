@@ -1,11 +1,8 @@
 \subsection{«DétruireListeConnectée»}
-\TODO\ ce CUD est incohérent: le déclenchement précise que le client veut détruire une liste précise (celle qu'il consulte) alors que le scénario décrit d'abord une sélection de liste, \etc
-Je pense qu'il faut simplifier le scénario pour simplement gérer la destruction de la liste que l'on consulte.
-Le choix d'une liste se fait en amont et constitue un autre CU.
 
 \startCU
 \nom DétruireListeConnectée
-\but Détruire une/des liste(s) précédemment crée(s).
+\but Détruire la liste en cours de consultation.
 \acteur Le client
 \precondition Le client consulte une liste connectée.
 \declenchement le client sélectionne l'option «supprimer la liste»
@@ -14,25 +11,15 @@ Le choix d'une liste se fait en amont et constitue un autre CU.
 
 \nominal % scénario nominal
 \startnominal
-\etape[DLC:DEJALISTE] Le client sélectionne Supprimer une liste dans le menu.
-\etape Le système propose au client une série de liste de courses sélectionnables pour la suppression avec l'action OK ou ANNULER.
-\etape[DLC:ANNULATION] Le client sélectionne une ou plusieurs listes à supprimer puis clique sur OK.
-\etape[DLC:VALIDATION] Le système valide le choix du client
-\etape[DLC:AFFICHAGE] Le système supprime la/les liste(s) sélectionnée(s).
-\etape[DLC:FIN] {\it fin du cas d'utilisation}
+\etape Le client sélectionne Supprimer la liste dans le menu.
+\etape Le système propose au client la suppression de la liste avec l'action OK ou ANNULER.
+\etape[DLC:ANNULATION] Le client clique sur OK.
+\etape Le système valide le choix du client
+\etape Le système supprime la sélectionnée.
+\etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition la/les listes ont ont été supprimées de la liste courante de liste de courses
+\postcondition la liste a été supprimée de la liste courante de liste de courses
 
-% les scénarii alternatifs
-\alternatifs 
-\startalternatif[DLC:DEJALISTE] 
-\startcondition[le client se trouve déja dans une liste de courses et désire la supprimer.Le système reconnait qu'une liste est en cours d'édition et le menu 'Supprimer une/des listes' est devenu 'Supprimer cette liste'.]
-  \etape Le client clique sur 'Supprimer cette liste'
-  \etape Le système demande confirmation.
-  \etape Le client confirme la suppression.
-  \etape Retour à l'étape \in[DLC:VALIDATION]
-\stopcondition
-\stopalternatif
 
 % les scénarii d'exceptions
 \exception 

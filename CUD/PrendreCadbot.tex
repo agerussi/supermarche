@@ -1,50 +1,41 @@
-% exemple de rédaction des scénarii associés à un CU
 \subsection{«PrendreCadbot»}
-\TODO\ ce CU n'est pas intégrable tel quel: 
-* les étapes ne décrivent pas toutes des interactions entre le système et le client; 
-* on ne sait pas comment l'anomalie est transmise à la maintenance 
-* comment met-on le cadbot en marche
-* ...
-
 \startCU
 \nom Prendre Cadbot
-\but  ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
+\but ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
 \acteur Client
 \precondition Le client veut faire ses courses dans le FuturMarket.
-
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
-
 \nominal % scénario nominal
 \startnominal
-\etape[PC:SA1] Le client arrive au parking des cadbot. 
-\etape[PC:RETOUR] 	Le client prend un cadbot de la grille.
+\etape[PC:SA1] Le client arrive au parking des cadbot.
+\etape[PC:RETOUR] Le client prend un cadbot de la grille.
 \etape[PC:SE1] Le client prend la balise du cadbot.
-\etape Le client met en marche le cadbot.
+\etape Le client met en marche le cadbot en appuyant sur le bouton Marche/Arrêt.
 \etape Le cadbot suit le client tout au long du FuturMarket
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le cadbot n'est plus dans le parking.
-
 % les scénarii alternatifs
 \alternatifs
 \startalternatif[PC:SA1] % ensemble des scénario débutant à SA1
-\startcondition[Cadbot ne fonctionne pas] 
-  \etape Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[PC:RETOUR]
+\startcondition[Cadbot ne fonctionne pas]
+\etape Le client indique que le cadbot est en panne par validation du cas d'urgence "En panne".
+\etape Le client remet la balise sur le cadbot
+\etape Le client remet le cadbot sur la grille.
+\etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
 \postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
 \stopalternatif
-
 \startalternatif[PC:SE1]
 \startcondition[Le cadbot ne detecte pas sa balise]
-   \etape  Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[PC:RETOUR]
+\etape Le client indique que le cadbot est en panne par validation du cas d'urgence "En panne".
+\etape Le client remet la balise sur le cadbot
+\etape Le client remet le cadbot sur la grille.
+\etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
-\postcondition L'anomalie concernant cet objet sera transmise à la maintenance.
+\postcondition par validation du cas d'urgence "En panne", L'annomalie de ce cadbot est transmis à la maintenance.
 \stopalternatif
-
-
 % les scénarii d'exceptions
 \exception
 Il n'y a plus de cadbot dans la parking
