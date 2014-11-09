@@ -140,7 +140,11 @@ Enfin, l'inclusion d'un moteur (entre autres périphériques) dans le cadbot va 
 À noter cependant: les fonctions de guidage du cadbot sont complètement découplées du reste du système, donc ce \cu\ ne mettra pas le design en péril et peut être considéré n'importe quand dans le projet.
 \stopnote
 
-
+\descCU{RecuperationCadBotEnPanne}
+\startnote
+\NC4 Si la fonctionnalité CadBot est implementé, il sera intérressant de suivre les anomalies et la localisation des cadBots. Cela implique logistique particulière pour le gestionnaire du magasin.
+\NR3 Les technologies utilisées sont maitrisées (wifi, gps, guidage) mais le risque est lié au soin que pouraient apporter les clients dans l'utilisation de cadBots et à la fiabilité du matériel stocké en exterieur.
+\stopnote
 
 
 
@@ -155,6 +159,7 @@ Le tableau \in[CLASSEMENT] reprend les notes précédentes et classe les \cu\ da
   \VL \Num\VL UtiliserCadbot\VL 10\VL 5\VL 5\VL\MR \HL
   \VL \Num\VL PasserPortiquePaiement\VL 9\VL 5\VL 4\VL\MR \HL
   \VL \Num\VL ChoisirArticles\VL 8\VL 5\VL 3\VL\MR \HL
+  \VL \Num\VL RecuperationCadBotEnPanne\VL 7\VL 4\VL 3\VL\MR \HL
   \VL \Num\VL AppliquerRecetteConnectée, RechercherRecetteConnectée\VL 6\VL 4\VL 2\VL\MR \HL
   \VL \Num\VL GérerListeConnectée, UtiliserListeConnectée\VL 5\VL 4\VL 1\VL\MR \HL
   \VL \Num\VL UtiliserBorneEuréka\VL 6\VL 3\VL 3\VL\MR \HL

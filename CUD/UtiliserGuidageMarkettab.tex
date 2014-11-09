@@ -1,48 +1,44 @@
-% exemple de rédaction des scénarii associés à un CU
 \subsection{«UtiliserGuidageMarkettab»}
-\TODO\ Pas intégrable en l'état:
-* Il manque beaucoup de détails (par exemple étape 4: comment ???) 
-* incohérences: par exemple en pré-condition: le client indique la liste des produits, et en étape 1, le client saisit une markettab...
-
 \startCU
 \nom UtiliserGuidageMarkettab
-\but  ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
-\acteur Client
-\precondition Le client indique la liste des produits qu'il souhaite acheter dans le FuturMarket.
-
+\but Ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
+\acteur Client, le vigile
+\precondition Le client prend une markettab.
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
-
 \nominal % scénario nominal
 \startnominal
-\etape[UGM:RETOUR1] Le client saisit une markettab. 
-\etape Le client indique la liste des produits qu'il souhaite acheter, soit par une liste connectée, soit par une composition de sa liste sur place.
-\etape[UGM:SE1]  La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
-\etape[UGM:RETOUR2] Le client suit le chemin.
+\etape[UGM:RETOUR1] Le client indique la liste des produits qu'il souhaite acheter, soit par une liste connectée, soit par une composition de sa liste sur place.
+\etape[UGM:SE1] La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
+\etape[UGM:RETOUR2] Le client se déplace dans le FuturMarket en suivant les indications sur la carte.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition La carte du chemin à suivre est affichée sur la Markettab
-
+\postcondition La carte du chemin à suivre est affichée sur la Markettab.
 % les scénarii alternatifs
 \alternatifs
 \startalternatif[UGM:RETOUR1]
-\startcondition[La Markettab ne fonctionne pas] 
-  \etape Le client remet la Markettab sur son support
-  \etape retour à l'étape \in[UGM:RETOUR1]
+\startcondition[La Markettab ne fonctionne pas]
+\etape Le client remet la Markettab au vigile qui s'occupe également des tablettes.
+\etape retour à l'étape \in[UGM:RETOUR1]
 \stopcondition
-\postcondition La carte du chemin à suivre est affichée sur la Markettab
+\postcondition le vigile indique au système que la marketTab est déféctueuse.
 \stopalternatif
-
 \startalternatif[UGM:SE1]
 \startcondition[ La Markettab ne retrouve pas dans le FuturMarket certains articles sur la liste de produits indiquée par le client]
-   \etape  La Markettab indique le chemin corréspondant aux articles trouvés dans le FuturMarket.
-  \etape retour à l'étape \in[UGM:RETOUR2]
+\etape La Markettab recherche le produit générique correspondant et indique le chemin dans le FuturMarket. La MarketTab informe le client que cet info est moins précise que les précédentes.
+\etape retour à l'étape \in[UGM:RETOUR2]
 \stopcondition
 \postcondition La carte du chemin à suivre est affichée sur la Markettab
 \stopalternatif
-
-
+\startalternatif[UGM:SE1]
+\startcondition[ Le client décide de passer sortir du chemin proposé par la Markettab]
+\etape La Markettab ferme la carte, et calcule un nouveau chemin qui correspond à l'emplacement actuel du client. 
+\etape La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
+\etape retour à l'étape \in[UGM:RETOUR2]
+\stopcondition
+\postcondition La carte du chemin à suivre est affichée sur la Markettab.
+\stopalternatif
 % les scénarii d'exceptions
 \exception
-Aucun articles sur la liste indiquée par le client n'est retrouvé dans le FuturMarket
+Aucun article sur la liste indiquée par le client n'est retrouvé dans le FuturMarket
 \stopCU

@@ -1,51 +1,34 @@
-% exemple de rédaction des scénarii associés à un CU
 \subsection{«PrendreCadbot»}
-\TODO\ ce CU n'est pas intégrable tel quel: 
-* les étapes ne décrivent pas toutes des interactions entre le système et le client; 
-* on ne sait pas comment l'anomalie est transmise à la maintenance 
-* comment met-on le cadbot en marche
-* ...
-
 \startCU
 \nom Prendre Cadbot
-\but  ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
+\but ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
 \acteur Client
 \precondition Le client veut faire ses courses dans le FuturMarket.
-
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
-
 \nominal % scénario nominal
 \startnominal
-\etape[PC:SA1] Le client arrive au parking des cadbot. 
-\etape[PC:RETOUR] 	Le client prend un cadbot de la grille.
-\etape[PC:SE1] Le client prend la balise du cadbot.
-\etape Le client met en marche le cadbot.
+\etape[PC:SA1] Le client arrive au parking des cadBots.
+\etape[PC:RETOUR] Le système indique via une borne les cadBots les plus proches disponibles, une led au niveau du cadbot indique également son état.
+\etape[PC:SE1] Le client prend la balise du cadbot choisi.
+\etape Le cadBot se met en marche suite a l'enlèvement de la balise et valide son état opérationnel par un beep.
+\etape Le client se déplace suite a l'émission du beep.
 \etape Le cadbot suit le client tout au long du FuturMarket
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le cadbot n'est plus dans le parking.
-
 % les scénarii alternatifs
 \alternatifs
-\startalternatif[PC:SA1] % ensemble des scénario débutant à SA1
-\startcondition[Cadbot ne fonctionne pas] 
-  \etape Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[PC:RETOUR]
+\startalternatif[PC:SE1] % ensemble des scénario débutant à SA1
+\startcondition[Cadbot ne fonctionne pas]
+\etape Le cadbot n'a pas émis de beep de mise en route et reste sur place.
+\etape Le client remet la balise sur le cadbot
+\etape Le client remet le cadbot sur la grille.
+\etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
-\postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
+\postcondition Le système détecte que ce cadBot n'a pas bougé malgré le nombre de cadBots utilisés, il envoie une demande maintenance au personnel du magasin pour ce cadBot.
 \stopalternatif
-
-\startalternatif[PC:SE1]
-\startcondition[Le cadbot ne detecte pas sa balise]
-   \etape  Le client remet le cadbot sur la grille.
-  \etape retour à l'étape \in[PC:RETOUR]
-\stopcondition
-\postcondition L'anomalie concernant cet objet sera transmise à la maintenance.
-\stopalternatif
-
-
 % les scénarii d'exceptions
 \exception
-Il n'y a plus de cadbot dans la parking
+Il n'y a plus de cadBots opérationnels dans le cadPark
 \stopCU
