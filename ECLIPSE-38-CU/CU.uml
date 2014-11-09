@@ -318,6 +318,7 @@
     <include xmi:id="_gntDwFtdEeS_R9WagCsW3g" addition="_ZZvoQFtdEeS_R9WagCsW3g"/>
     <include xmi:id="_fTUqwFtdEeS_R9WagCsW3g" addition="_JetH4FtdEeS_R9WagCsW3g"/>
     <extend xmi:id="_78ligFtjEeS_R9WagCsW3g" extendedCase="_Pj3TsEvEEeS1u7YNhmeRGw" extensionLocation="_qH_uQFtdEeS_R9WagCsW3g"/>
+    <extensionPoint xmi:id="_RGBmsGgjEeSkSrwDoAcOzw" name="point"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_7_vuwFtkEeS_R9WagCsW3g" name="UtiliserListeConnectée">
     <generalization xmi:id="_A8ZO8FtlEeS_R9WagCsW3g" general="_dcneIEvCEeS1u7YNhmeRGw"/>
@@ -434,4 +435,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_hUVa0GDwEeSfPtr3YUt7vQ" name="Actor3"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_mvhRIGDwEeSfPtr3YUt7vQ" name=""/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_M_OJYWgjEeSkSrwDoAcOzw" name="RéinitialiserCadbot">
+    <extend xmi:id="_RFolIGgjEeSkSrwDoAcOzw" extendedCase="_zeQrUFtjEeS_R9WagCsW3g" extensionLocation="_RGBmsGgjEeSkSrwDoAcOzw"/>
+  </packagedElement>
 </uml:Model>
