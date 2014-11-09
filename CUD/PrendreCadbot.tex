@@ -8,35 +8,27 @@
 \date 7/11/14
 \nominal % scénario nominal
 \startnominal
-\etape[PC:SA1] Le client arrive au parking des cadbot.
-\etape[PC:RETOUR] Le client prend un cadbot de la grille.
-\etape[PC:SE1] Le client prend la balise du cadbot.
-\etape Le client met en marche le cadbot en appuyant sur le bouton Marche/Arrêt.
+\etape[PC:SA1] Le client arrive au parking des cadBots.
+\etape[PC:RETOUR] Le système indique via une borne les cadBots les plus proches disponibles, une led au niveau du cadbot indique également son état.
+\etape[PC:SE1] Le client prend la balise du cadbot choisi.
+\etape Le cadBot se met en marche suite a l'enlèvement de la balise et valide son état opérationnel par un beep.
+\etape Le client se déplace suite a l'émission du beep.
 \etape Le cadbot suit le client tout au long du FuturMarket
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le cadbot n'est plus dans le parking.
 % les scénarii alternatifs
 \alternatifs
-\startalternatif[PC:SA1] % ensemble des scénario débutant à SA1
+\startalternatif[PC:SE1] % ensemble des scénario débutant à SA1
 \startcondition[Cadbot ne fonctionne pas]
-\etape Le client indique que le cadbot est en panne par validation du cas d'urgence "En panne".
+\etape Le cadbot n'a pas émis de beep de mise en route et reste sur place.
 \etape Le client remet la balise sur le cadbot
 \etape Le client remet le cadbot sur la grille.
 \etape retour à l'étape \in[PC:RETOUR]
 \stopcondition
-\postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
-\stopalternatif
-\startalternatif[PC:SE1]
-\startcondition[Le cadbot ne detecte pas sa balise]
-\etape Le client indique que le cadbot est en panne par validation du cas d'urgence "En panne".
-\etape Le client remet la balise sur le cadbot
-\etape Le client remet le cadbot sur la grille.
-\etape retour à l'étape \in[PC:RETOUR]
-\stopcondition
-\postcondition par validation du cas d'urgence "En panne", L'annomalie de ce cadbot est transmis à la maintenance.
+\postcondition Le système detecte que ce cadBot n'a pas bougé malgré le nombre de cadBots utilisés, il envoie une demande maintenance pour ce cadBot.
 \stopalternatif
 % les scénarii d'exceptions
 \exception
-Il n'y a plus de cadbot dans la parking
+Il n'y a plus de cadBots opérationnels dans la cadPark
 \stopCU
