@@ -2,7 +2,7 @@
 \startCU
 \nom UtiliserGuidageMarkettab
 \but Ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
-\acteur Client
+\acteur Client, le vigile
 \precondition Le client prend une markettab.
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
@@ -18,10 +18,10 @@
 \alternatifs
 \startalternatif[UGM:RETOUR1]
 \startcondition[La Markettab ne fonctionne pas]
-\etape Le client remet la Markettab sur son support
+\etape Le client remet la Markettab au vigile qui s'occupe également des tablettes.
 \etape retour à l'étape \in[UGM:RETOUR1]
 \stopcondition
-\postcondition Le client donne la marketTab au vigile qui s'occupe egalement des tablettes.
+\postcondition le vigile indique au système que la marketTab est déféctueuse.
 \stopalternatif
 \startalternatif[UGM:SE1]
 \startcondition[ La Markettab ne retrouve pas dans le FuturMarket certains articles sur la liste de produits indiquée par le client]
