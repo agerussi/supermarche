@@ -17,7 +17,7 @@
 \etape Le système reçoit l'information de la marketTab et marque le cadBot comme inopérant.
 \etape Le personnel scanne l'emplacement du cadPark pour le communiquer au système.
 \etape [RCP:RETOUR] Le CadBot est sur un emplacement et commence à se recharger.
-\etape [RCP:ANO] Le cadBot lance une vérifcation et envoie le résultat au système. 
+\etape [RCP:ANO] Le cadBot lance une vérification et envoie le résultat au système. 
 \etape Le système informe le personnel de maintenance du l'état du cadBot.
 \etape[RCP:FIN] {\it fin du cas d'utilisation}
 \stopnominal
@@ -27,7 +27,7 @@
 \alternatifs
 \startalternatif[RCP:SE1]
 \startcondition[Le code barre du cadBot n'est pas lisible]
-\etape Le personnel entre le numero du cadBot dans le formulaire cadBot en panne de la marketTab.
+\etape Le personnel entre le numéro du cadBot dans le formulaire cadBot en panne de la marketTab.
 \etape Le personnel ramène le cadBot au cadPark.
 \etape Retour à l'étape \in[RCP:RETOUR]
 \stopcondition
@@ -40,7 +40,7 @@
 \etape Le système informe la maintenance qu'aucune communication n'est possible avec ce cadBot.
 \etape retour à l'étape \in[RCP:FIN]
 \stopcondition
-\postcondition Le sytème marque ce cadBot comme nécéssitant de la maintenance et connait son emplacement.
+\postcondition Le système marque ce cadBot comme nécessitant de la maintenance et connaît son emplacement.
 \stopalternatif
 
 
