@@ -23,13 +23,6 @@
 % les scénarii alternatifs
 \alternatifs 
 
-\startalternatif[UBE:INCONNU]
-\startcondition[les mots prononcés ne sont pas reconnus]
-  \etape le système affiche un message d'information
-  \etape retour à l'étape \in[UBE:AUTRE]
-\stopcondition
-\stopalternatif
-
 \startalternatif[UBE:LISTEVIDE]
 \startcondition[la liste d'articles est vide]
 \etape retour à l'étape \in[UBE:AUTRE]
@@ -43,6 +36,14 @@
 \stopcondition
 \startcondition[le client appuie sur le bouton d'interrogation]
   \etape retour à l'étape \in[UBE:DEBUT]
+\stopcondition
+\stopalternatif
+
+\exception
+\startalternatif[UBE:INCONNU]
+\startcondition[les mots prononcés ne sont pas reconnus]
+  \etape le système affiche un message d'information
+  \etape retour à l'étape \in[UBE:AUTRE]
 \stopcondition
 \stopalternatif
 

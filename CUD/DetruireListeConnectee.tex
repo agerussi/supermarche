@@ -11,21 +11,19 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape Le client sélectionne Supprimer la liste dans le menu.
 \etape Le système propose au client la suppression de la liste avec l'action OK ou ANNULER.
 \etape[DLC:ANNULATION] Le client clique sur OK.
-\etape Le système valide le choix du client
 \etape Le système supprime la sélectionnée.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition la liste a été supprimée de la liste courante de liste de courses
+\postcondition la liste a été supprimée de l'ensemble des listes de courses.
 
 
 % les scénarii d'exceptions
 \exception 
 \startalternatif[DLC:ANNULATION] 
 \startcondition[le client sélectionne «ANNULATION»]
-  \etape Le système retourne à l'affichage de la série de liste de courses.
+  \etape Le système retourne à la consultation de la liste.
   \etape {\it fin du \cu} 
 \stopcondition
 \postcondition La liste de courses est inchangée

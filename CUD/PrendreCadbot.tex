@@ -3,32 +3,27 @@
 \nom Prendre Cadbot
 \but ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
 \acteur Client
-\precondition Le client veut faire ses courses dans le FuturMarket.
+\precondition le client a repéré un cadbot disponible (petite led verte) dans son cadPark
+\declenchement le client prend la balise du cadbot
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
 \nominal % scénario nominal
 \startnominal
-\etape[PC:SA1] Le client arrive au parking des cadBots.
-\etape[PC:RETOUR] Le système indique via une borne les cadBots les plus proches disponibles, une led au niveau du cadbot indique également son état.
-\etape[PC:SE1] Le client prend la balise du cadbot choisi.
-\etape Le cadBot se met en marche suite a l'enlèvement de la balise et valide son état opérationnel par un beep.
-\etape Le client se déplace suite a l'émission du beep.
-\etape Le cadbot suit le client tout au long du FuturMarket
+\etape [PC:SE1] Le cadBot se met en marche suite à l'enlèvement de la balise et valide son état opérationnel par un beep.
+\etape Le cadbot suit sa balise, portée par le client
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition Le cadbot n'est plus dans le parking.
+\postcondition Le cadbot est en mode de suivi de sa balise
 % les scénarii alternatifs
-\alternatifs
+% les scénarii d'exceptions
+\exception
 \startalternatif[PC:SE1] % ensemble des scénario débutant à SA1
 \startcondition[Cadbot ne fonctionne pas]
 \etape Le cadbot n'a pas émis de beep de mise en route et reste sur place.
 \etape Le client remet la balise sur le cadbot
-\etape Le client remet le cadbot sur la grille.
-\etape retour à l'étape \in[PC:RETOUR]
+\etape Le client peut éventuellement déclencher le \cu\ «RéinitialiserCadbot»
+\etape {\it fin du \cu}
 \stopcondition
-\postcondition Le système détecte que ce cadBot n'a pas bougé malgré le nombre de cadBots utilisés, il envoie une demande maintenance au personnel du magasin pour ce cadBot.
+\postcondition le cadBot est un attente dans le cadPark
 \stopalternatif
-% les scénarii d'exceptions
-\exception
-Il n'y a plus de cadBots opérationnels dans le cadPark
 \stopCU
