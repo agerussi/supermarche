@@ -1,6 +1,28 @@
 \chapter{Classes métier}
 
-Le diagramme des classes métiers est présenté à la \in{figure}[CLASSESMETIER].
+Pour davantage de lisibilité, nous présentons quatre diagrammes de classes différents:
+\startitemize
+\item le diagramme de la \in{figure}[CLASSES:GENERAL] donne une vue générale de haut niveau, dont les différentes classes sont ensuite détaillées séparément;
+\item la partie concernant les personnes est présentée en \in{figure}[CLASSES:INDIVIDU];
+\item celle représentant le matériel est à la \in{figure}[CLASSES:MATERIEL];
+\item enfin, la partie concernant les produits et les concepts associés (liste connectée, recette connectée, article générique\dots) sont à la \in{figure}[CLASSES:PRODUIT].
+\stopitemize
+Dans l'ensemble de ces diagrammes nous utilisons le code couleur suivant: si une classe apparaît en rouge sur un diagramme, cela signifie que ce diagramme la définit complètement et sert de référence à son égard.
+Par conséquent, chaque classe n'apparaît en rouge qu'une seule fois en tout et pour tout sur l'ensemble des diagrammes.
 
-\placefigure[][CLASSESMETIER]{diagramme des classes métier}{\externalfigure[CROQUIS/ClassesMetier.pdf][orientation=90,factor=250]}
+\placefigure[][CLASSES:GENERAL]
+{classes de haut niveau dans le système}
+{\externalfigure[ECLIPSE-LUNA-CLASSES-METIER/General.pdf][width=\hsize]}
+
+\placefigure[][CLASSES:INDIVIDU]
+{diagramme des classes concernant les personnes}
+{\externalfigure[ECLIPSE-LUNA-CLASSES-METIER/Individu.pdf][width=\hsize]}
+
+\placefigure[][CLASSES:MATERIEL]
+{diagramme des classes concernant le matériel}
+{\externalfigure[ECLIPSE-LUNA-CLASSES-METIER/Materiel.pdf][width=\hsize]}
+
+\placefigure[][CLASSES:PRODUIT]
+{diagramme des classes concernant les produits}
+{\externalfigure[ECLIPSE-LUNA-CLASSES-METIER/Produit.pdf][width=\hsize]}
 

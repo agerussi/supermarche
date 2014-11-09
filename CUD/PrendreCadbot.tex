@@ -1,0 +1,29 @@
+\subsection{«PrendreCadbot»}
+\startCU
+\nom Prendre Cadbot
+\but ce cas montre la suite de pas permettant à un client de prendre possession d'un cadbot pendant toute la durée de ses courses.
+\acteur Client
+\precondition le client a repéré un cadbot disponible (petite led verte) dans son cadPark
+\declenchement le client prend la balise du cadbot
+\auteur Raissa Mbabazi Simbi
+\date 7/11/14
+\nominal % scénario nominal
+\startnominal
+\etape [PC:SE1] Le cadBot se met en marche suite à l'enlèvement de la balise et valide son état opérationnel par un beep.
+\etape Le cadbot suit sa balise, portée par le client
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le cadbot est en mode de suivi de sa balise
+% les scénarii alternatifs
+% les scénarii d'exceptions
+\exception
+\startalternatif[PC:SE1] % ensemble des scénario débutant à SA1
+\startcondition[Cadbot ne fonctionne pas]
+\etape Le cadbot n'a pas émis de beep de mise en route et reste sur place.
+\etape Le client remet la balise sur le cadbot
+\etape Le client peut éventuellement déclencher le \cu\ «RéinitialiserCadbot»
+\etape {\it fin du \cu}
+\stopcondition
+\postcondition le cadBot est un attente dans le cadPark
+\stopalternatif
+\stopCU

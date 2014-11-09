@@ -1,0 +1,31 @@
+\subsection{«DétruireListeConnectée»}
+
+\startCU
+\nom DétruireListeConnectée
+\but Détruire la liste en cours de consultation.
+\acteur Le client
+\precondition Le client consulte une liste connectée.
+\declenchement le client sélectionne l'option «supprimer la liste»
+\auteur François D.
+\date 05/11/2014
+
+\nominal % scénario nominal
+\startnominal
+\etape Le système propose au client la suppression de la liste avec l'action OK ou ANNULER.
+\etape[DLC:ANNULATION] Le client clique sur OK.
+\etape Le système supprime la sélectionnée.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition la liste a été supprimée de l'ensemble des listes de courses.
+
+
+% les scénarii d'exceptions
+\exception 
+\startalternatif[DLC:ANNULATION] 
+\startcondition[le client sélectionne «ANNULATION»]
+  \etape Le système retourne à la consultation de la liste.
+  \etape {\it fin du \cu} 
+\stopcondition
+\postcondition La liste de courses est inchangée
+\stopalternatif
+\stopCU

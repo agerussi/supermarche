@@ -1,0 +1,168 @@
+\section{Description globale}
+
+Afin d'obtenir quelque chose de lisible, nous présentons plusieurs diagrammes différents.
+\par
+Le diagramme de la \in{figure}[CUCGLOBAL] décrit à grande échelle les \cu\ concernant les clients du FuturMarket.
+Trois autres diagrammes donnent les \cu\ détaillés concernant la constitution du panier (\in{figure}[CUCPANIER]), la récupération des articles (\in{figure}[CUCRECUPERER]) et le paiement (\in{figure}[CUCPAYER]).
+\par
+Le diagramme de la \in{figure}[CUCRECETTES] détaille la partie du système dédiée à la création et la gestion des recettes connectées.
+\par
+Un dernier diagramme présente les cas d'utilisation concernant le personnel du FuturMarket, \in{figure}[CUP].
+
+\placefigure[][CUCGLOBAL]{Vue d'ensemble des CU clients}{\externalfigure[ECLIPSE-38-CU/CUClient-general.pdf][width=\hsize]}
+\placefigure[][CUCPANIER]{CU relatifs à la constitution du panier}{\externalfigure[ECLIPSE-38-CU/CUClient-panier.pdf][width=\hsize]}
+\placefigure[][CUCRECUPERER]{CU relatifs à la récupération des articles}{\externalfigure[ECLIPSE-38-CU/CUClient-recuperer.pdf][width=\hsize]}
+\placefigure[][CUCPAYER]{CU relatifs au paiement}{\externalfigure[ECLIPSE-38-CU/CUClient-payer.pdf][width=\hsize]}
+\placefigure[][CUCRECETTES]{Détails concernant la gestion des recettes connectées}{\externalfigure[ECLIPSE-38-CU/CUClient-recettes.pdf][width=\hsize]}
+\placefigure[][CUP]{Cas d'utilisation du personnel}{\externalfigure[ECLIPSE-38-CU/CUPersonnel.pdf][width=\hsize]}
+
+\subsection{Liste ordonnée des cas d'utilisation abstraits}
+
+Ce sont pour la plupart des cas d'utilisation auxquels correspondent une multitude de scénarios possibles, ou qui décrivent un mode d'utilisation plutôt qu'une suite d'actions précises.
+Ils sont représentés en gras sur les diagrammes.
+
+\descCU{ChoisirArticles}
+Ce \cu\ décrit l'activité consistant à construire une liste connectée d'articles, en utilisant les diverses approches proposées à cet effet par le système.
+
+\descCU{ChoisirPanier}
+Ce cas d'utilisation regroupe tous les scénarios à la disposition du client pour établir son panier d'achats, que ce soit depuis chez lui ou directement dans le magasin.
+
+\descCU{FaireCourseEnPersonne}
+Ce \cu\ correspond à l'utilisation classique d'un FuturMarket, à savoir le client qui fait ses courses de lui-même dans le magasin.
+
+\descCU{FaireLivrer}
+Ce \cu\ décrit la livraison directement à domicile des articles décrits dans une liste connectée, moyennant un coût de livraison.
+Le paiement peut avoir lieu en ligne ou lors de la livraison.
+
+\descCU{GérerListeConnectée}
+Désigne l'administration des listes connectées (création, sauvegarde, effacement, modification\dots).
+
+\descCU{GérerPersonnel}
+Ce \cu\ regroupe tous les aspects liés à la gestion du personnel: plannings, pointage, périodes d'indisponibilité, affectations à divers postes, \etc
+
+\descCU{GérerRecettesConnectées}
+Ce \cu\ regroupe l'ensemble des opérations de gestion des recettes connectées: création, modification, suppression, notation\dots
+
+\descCU{GérerStocks}
+Ce \cu\ regroupe les actions nécessaires au suivi de la disponibilité de chaque article, par exemple l'estimation de la date de rupture de stocks, les commandes fournisseurs, \etc
+
+\descCU{PasserEnCaisse}
+Ce cas d'utilisation englobe le calcul du montant total des articles prélevés en magasin et le paiement en lui-même.
+
+\descCU{PayerCourses}
+Désigne le paiement proprement dit, quel que soit le moyen utilisé à cette fin.
+
+\descCU{RécupérerArticles}
+Ce cas d'utilisation regroupe tous les scénarios à la disposition du client pour récupérer les articles qu'il désire acheter, à partir d'un panier déjà établi ou lors d'un achat spontané.
+
+\descCU{SuivreEmplacementArticles}
+Ce \cu\ englobe l'ensemble des scénarios destinés à assurer la correspondance entre le ou les emplacement(s) effectif(s) des articles dans les rayons, et le ou les emplacement(s) théoriques enregistrés dans la base de données.
+
+\descCU{UtiliserCadbot}
+Ce cas d'utilisation décrit l'utilisation du cadbot en temps que support pour la récupération effective des articles en magasin.
+
+\descCU{UtiliserDrive}
+Ce \cu\ décrit la possibilité de court-circuiter la récupération des articles en magasin: à partir d'une liste connectée, les articles sont récoltés par le personnel du FuturMarket et récupérés emballés par le client au service «drive» du FuturMarket.
+
+
+\subsection{Liste ordonnée des cas d'utilisation concrets}
+
+\descCU{AjouterArticle}
+Dans ce cas d'utilisation, le client ajoute un produit à une liste connectée en cours de constitution, par libre choix après consultation du catalogue ou suite à des propositions spontanées de produits par le système.
+
+\descCU{AjouterArticleCadbot}
+Dans ce \cu\ le client ajoute un article dans le cadbot.
+
+\descCU{AjouterRecetteConnectée}
+Un client crée une nouvelle recette connectée et l'ajoute dans la base de données.
+
+\descCU{AppliquerContrainteBudget}
+Dans ce \cu, le client choisit plusieurs options possibles pour limiter le coût de ses achats.
+
+\descCU{AppliquerRecetteConnectée}
+Dans ce  \cu\ le client utilise une recette connectée pour ajouter des articles à son panier.
+
+\descCU{ConsulterPromotions}
+Le client fait afficher la liste des articles en promotion en ce moment, afin de pouvoir les inclure éventuellement dans son panier.
+
+\descCU{CréerListeConnectée}
+Ce \cu\ correspond à la création d'une nouvelle liste connectée, vierge au départ, qui pourra ensuite être complétée.
+
+\descCU{DétruireListeConnectée}
+Ici le client détruit définitivement une liste connectée préalablement sauvegardée.
+
+\descCU{GérerCaisse}
+Ce \cu\ regroupe tous les aspects de la gestion de caisse: ouverture de la caisse, traitement des paniers clients, traitements des anomalies de cadbots, gestion des articles non reconnus, rendu de la comptabilité, fermeture de la caisse.
+
+\descCU{LibérerCadbot}
+Dans ce \cu\ le client redonne sa liberté à son cadbot, en lui permettant de rejoindre son cadpark.
+
+\descCU{ModifierListeConnectée}
+Le client ajoute ou supprime des articles dans une liste connectée déjà existante.
+
+\descCU{ModifierRecetteConnectée}
+Un client modifie une des recettes connectées dont il est l'auteur.
+
+\descCU{NoterRecetteConnectée}
+Un client donne un avis sur une recette, sous la forme d'une note et d'un commentaire.
+
+\descCU{PlacerParMarkettab}
+Dans ce \cu, un personnel du magasin (généralement un magasinier) se sert d'une markettab pour gérer l'emplacement d'un produit dans la base de données.
+Il peut supprimer des emplacements connus, ou en rajouter de nouveaux.
+
+\descCU{PasserCaisseHôtesse}
+Ce cas décrit un passage classique dans une caisse comportant une hôtesse, incluant un déballage, scan et remballage des articles du caddie.
+
+\descCU{PasserPortiquePaiement}
+Dans ce cas d'utilisation, le client utilise un cadbot et va procéder au passage en caisse par un portique prévu à cet effet. 
+
+\descCU{PayerEnEspèces}
+Ce cas d'utilisation désigne l'utilisation de monnaie papier ou métallique pour payer ses achats, soit à une caisse classique, soit lors d'une livraison ou d'un retrait au drive.
+
+\descCU{PayerEnLigne}
+Ce cas d'utilisation désigne un paiement effectif de chez soi, à partir du site du futurmarket.
+
+\descCU{PayerParCarte}
+Ce cas d'utilisation désigne l'utilisation d'une carte (bancaire ou carte magasin) dans un terminal de paiement (caisse à hôtesse, portique, point drive, livraison).
+
+\descCU{PayerParTéléphone}
+Ce cas d'utilisation designe l'utilisation du téléphone comme intermédiaire de paiement entre le commerçant et le client. 
+
+\descCU{PointerTempsTravail}
+Ce \cu\ englobe les différents scénarios inhérents à la mesure du temps de présence effectif du personnel.
+L'ensemble du personnel doit notamment «pointer» grâce à son badge rfid.
+
+\descCU{RechercherRecetteConnectée}
+Ce \cu\ concerne le choix d'une recette connectée, par consultation directe d'une liste, par recherche basée sur un nom de recette, ou par une recherche basée sur un des ingrédients principaux.
+
+\descCU{RécupérerCadbot}
+Consiste à prendre possession d'un cadbot au cadpark.
+
+\descCU{RéinitialiserCadbot}
+Ce \cu\ décrit les situations particulières (par exemple, lorsque le cadBot est dans son cadPark), où un client peut ré-initialiser le système informatique d'un cadBot, par exemple s'il a constaté un dysfonctionnement.
+
+
+\descCU{RetirerArticleCadbot}
+Dans ce \cu\ le client retire un article de son cadbot.
+
+\descCU{SauvegarderListeConnectée}
+Ici le client valide les changements effectués à une liste connectée en les sauvegardant pour utilisation future.
+
+\descCU{SupprimerArticle}
+Ce \cu\ décrit la suppression d'un article d'une liste connectée en cours de conception/modification.
+
+\descCU{SupprimerRecetteConnectée}
+Un client supprime une recette dont il est l'auteur.
+
+\descCU{UtiliserBorneEuréka}
+Dans ce cas d'utilisation, le client interroge une borne euréka pour localiser un produit ou s'informer de sa disponibilité.
+
+\descCU{UtiliserGuidageMarkettab}
+Dans ce \cu\ le client se trouve dans le magasin et désire se laisser guider par la markettab pour récupérer les articles de sa liste.
+
+\descCU{UtiliserListeConnectée}
+Décrit le client qui, en magasin sur une markettab, verse les articles contenus dans une liste connectée dans son panier du jour.
+
+\descCU{UtiliserModeAutonome}
+Dans ce \cu\ le client met le cadbot en mode de déplacement autonome, dans lequel ce dernier le suit automatiquement et ira se ranger tout seul en fin de courses.
+\par

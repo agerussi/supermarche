@@ -1,0 +1,58 @@
+% exemple de rédaction des scénarii associés à un CU
+\subsection{«RetirerArticleCadBot»}
+
+\startCU
+\nom RetirerArticleCadBot
+\but Ce cas montre le retrait d'un article du cadBot.
+\acteur Client
+\precondition Le client a pris son cadBot au cadPark.
+\declenchement Le client retire un produit du cadBot.
+\auteur François Dubiez
+\date 30/10/14
+
+\nominal % scénario nominal
+\startnominal
+\etape Le cadBot détecte une variation de poids.
+\etape le cadBot attend l'identification d'un article
+\etape[RAC:IDENTIFICATION] le client passe l'article devant le détecteur RFID.
+\etape[RAC:SA1] Le cadBot émet un beep afin d'informer de l'identification du produit.
+\etape[RAC:SA3] Le cadBot valide la suppression de l'article en comparant la variation de poids du caddie.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le produit est retiré de la liste des objets déposés.
+
+% les scénarii alternatifs
+\alternatif % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[RAC:IDENTIFICATION] % ensemble des scénarii débutant à SA1
+\startcondition[Lecture du code Barre] 
+  \etape Le client passe le code barre devant le lecteur optique du cadBot.
+  \etape retour à l'étape \in[RAC:SA1]
+\stopcondition
+\postcondition La cadBot a réussi à lire le code Barre.
+\stopalternatif
+
+\exceptions
+\startalternatif[RAC:IDENTIFICATION]
+\startcondition[le client n'identifie pas l'article]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot garde en mémoire la variation de poids pour la transmettre au portique ainsi que le poids total actuel afin de poursuivre le suivi.
+\stopcondition
+\postcondition Le cadBot transmettra l'anomalie au portique de paiement.
+\stopalternatif
+
+\startalternatif[RAC:SA1]
+\startcondition[Erreur de lecture Tag RFID/code barre]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot garde en mémoire la variation de poids pour la transmettre au portique ainsi que le poids total actuel afin de poursuivre le suivi.
+\stopcondition
+\postcondition Le cadBot transmettra l'anomalie au portique de paiement.
+\stopalternatif
+
+\startalternatif[RAC:SA3]
+\startcondition[variation de Poids non détecté]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+\stopcondition
+\postcondition Le cadBot transmettra une alerte au portique concernant cet objet en indiquant que la diminution de poids n'a pas été détectée.
+\stopalternatif
+
+\stopCU

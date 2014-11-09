@@ -1,0 +1,38 @@
+\def\titre#1{%
+  \unskip
+  \blank[small]
+  {\bf #1}~:~
+}
+\def\startCU{%
+  \bgroup
+  \let\stopCU\egroup
+  \def\nom{\titre{Nom du cas}} 
+  \def\but{\titre{But}} 
+  \def\acteur{\titre{Acteur}} 
+  \def\auteur{\titre{Auteur}} 
+  \def\date{\titre{Date}} 
+  \def\precondition{\titre{Pré-condition}} 
+  \def\declenchement{\titre{Déclenchement}} 
+  \def\postcondition{\titre{Post-condition}} 
+  \def\nominal{\titre{Scénario nominal}}
+  \def\alternatif{\titre{Scénario alternatif}}
+  \def\alternatifs{\titre{Scénarii alternatifs}}
+  \def\exception{\titre{Scénario d'exception}}
+  \def\exceptions{\titre{Scénarii d'exceptions}}
+  \def\startnominal{\startitemize[n,packed,joinedup]\let\etape\item}
+  \let\stopnominal\stopitemize
+  \def\startalternatif[##1]{%
+    \bgroup
+    \def\stopalternatif{\stopitemize\egroup}
+    \def\startcondition[####1]{%
+      \let\etape\item%
+      \let\stopcondition\stopitemize%
+      \blank[medium]
+      \item\relax[{\it ####1}]%
+      \edef\numii{}%\in[##1]}%
+      \startitemize[n][left=\num,distance=1em]
+    }%
+    \edef\num{\in[##1]}%
+    \startitemize[a,repeat,joinedup][left=\num,distance=1em]
+  }%
+}

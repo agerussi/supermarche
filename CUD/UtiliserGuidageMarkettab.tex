@@ -1,0 +1,65 @@
+\subsection{«UtiliserGuidageMarkettab»}
+\TODO\ Ce scénario doit être revu, la markettab n'a pas (plus) de GPS, donc elle ne peut repérer le client, ni le guider... juste proposer un parcours sur un plan...
+
+\startCU
+\nom UtiliserGuidageMarkettab
+\but Ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
+\acteur Client
+\precondition Le client a sélectionné sa liste de course sur la marketTab, après avoir scanné sa carte Client. Pour commencer, le produit le plus proche du client est sélectionné.
+\auteur Raissa Mbabazi Simbi, François Dubiez
+\date 7/11/14, Rev 09/11/2014.
+\nominal % scénario nominal
+\startnominal
+\etape[UGM:SA1] La markettab ouvre un plan du magasin, positionne le client sur celui ci et indique le chemin le plus court pour aller au produit de la liste, le plus proche.
+\etape[UGM:RETOUR2] Le client en suivant les indications sur la carte, arrive à l'emplacement du produit cherché, prend le produit et sélectionne le suivant sur la marketTab.
+\etape La marketTab calcule la suite de l'itinéraire.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition La marketTab affiche l'itinéraire pour aller au produit sélectionné.
+
+% les scénarii alternatifs
+\alternatifs
+\startalternatif[UGM:SA1]
+\startcondition[Changement du type de parcours.]
+\etape Le client clique sur parcours découverte.
+\etape Le système recalcule un itinéraire pour faire découvrir de nouveaux produits dans le domaine de ceux listés parmi la liste de courses. Le système ajoute ces suggestions à la liste de courses avec un maximum de 2 articles à découvrir par article présents dans la liste.
+\etape retour à l'étape \in[UGM:RETOUR2]
+\stopcondition
+\postcondition La marketTab a complété la liste de courses avec des articles à découvrir.
+\stopalternatif
+\startalternatif[UGM:SA1]
+\startcondition[ Le système informe la Markettab qu'un article est en rupture de stock ]
+\etape La MarketTab informe le client que l'article est en rupture de stock et propose une suggestion de remplacement en indiquant une zone du magasin comportant ce type de produit.
+\etape retour à l'étape \in[UGM:RETOUR2]
+\stopcondition
+\postcondition La marketTab a proposé un produit de remplacement.
+\stopalternatif
+\startalternatif[UGM:RETOUR2]
+\startcondition[ Le client décide de sortir du chemin proposé par la Markettab]
+\etape La Markettab calcule un nouveau chemin qui correspond à l'emplacement actuel du client. 
+\etape La markettab ouvre une carte, positionne le client sur la carte et indique le chemin à suivre sur la carte.
+\etape retour à l'étape \in[UGM:RETOUR2]
+\stopcondition
+\postcondition La carte du chemin à suivre est affichée sur la Markettab.
+\stopalternatif
+\startalternatif[UGM:SA1]
+\startcondition[ La marketTab ne positionne plus le client ]
+\etape La MarketTab demande au client de scanner un objet à proximité pour l'aider à se positionner. 
+\etape Le Client scanne un produit du rayon.
+\etape La marketTab recherche ce produit dans le plan et définit sa position.
+\etape Retour à l'étape \in[UGM:SA1]
+\stopcondition
+\postcondition La carte du chemin à suivre est affichée sur la Markettab.
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception
+\startalternatif[UGM:SA1]
+\startcondition[article équivalent indisponible]
+  \etape La marketTab informe le client qu'aucun article équivalent n'est disponible et propose de passer au suivant.
+  \etape Le client valide le passage a l'article suivant.
+  \etape retour à l'étape \in[UGM:RETOUR2]
+\stopcondition
+\postcondition La Markettab connaît le produit suivant à chercher.
+\stopalternatif
+\stopCU

@@ -10,7 +10,7 @@ On ne fusionne dedans (merge) qu'après accord global.
 Lors de chaque rendu la branche est "taggée" pour garder une trace.
 
 * chaque membre a sa branche personnelle officielle, nommée:
-alexandre, congcong, francois, raissa
+alexandre, congcong, francois, raissa, khalil
 Chacun est libre de faire remonter (push) sa branche perso sur le serveur, 
 et les autres pourront fusionner les changements dans la leur s'ils le désirent.
 
@@ -19,6 +19,9 @@ et les autres pourront fusionner les changements dans la leur s'ils le désirent
   s'il le juge nécessaire).
 
 * Les fichiers .tex doivent être en UTF8, merci !
+
+* Les fichiers .tex peuvent s'inclure les uns dans les autres (voir par exemple document.tex) donc:
+créez un fichier par truc important, ne mettez pas tout dans un même gros fichier.
 
 Fichiers d'accompagnement:
 ==========================

@@ -19,14 +19,21 @@
   location=singlesided]
 \setuppagenumber[state=start]
 \setuppagenumbering[location={footer,inmargin}]
-\setupheads[alternative=inmargin]
+\unexpanded\def\HeadTitle#1#2%
+{\hbox to \hsize \bgroup
+\hfill
+\setupframed[offset=.25em,frame=off]
+\tbox{\framed[width=3cm,align=left]{#1\kern1ex}}%
+\tbox{\framed[align=right,leftframe=on]{\kern1ex#2}}%
+\egroup}
+\setupheads[command=\HeadTitle]
 
 % les macros pour titres spéciaux
 %\def\Title#1{\midaligned{\tfc #1}\blank[5pt]\hrule}
 
 % les fontes
 \usetypescript[palatino][ec]
-\setupbodyfont[palatino,12pt]
+\setupbodyfont[palatino,11pt]
 \definefontsize[e]
 \definebodyfontenvironment
   [default]
@@ -43,12 +50,11 @@
 \definevimtyping[XML][lines=split, syntax=xml, directory=../FORMAT/vimoutput/]
 
 % différents réglages de mise en page
-\definedescription[glossaire][location=top,headstyle=bold]
+\definedescription[glossaire][headstyle=bold]
+\definedescription[descCU][alternative=top]
 \definedescription[log][]
 
 % divers
 \mainlanguage[fr]
 \setupinteraction[state=start]
 \definetyping[PL][option=color]
-
-\input \path/abbreviations

@@ -1,8 +1,8 @@
 \section{«Pressé!»}
 
 Congcong de chez lui se connecte sur le site du distributeur afin de préparer ses courses (\in{figure}[lcon]).
-\placefigure[][lcon]{liste connectée avant login}{\externalfigure[CROQUIS/Liste_connectée_avt_login.svg][width=0.6\hsize]}
-La, il retrouve ses achats précédents groupés par date d'achat, ainsi qu'un menu qui lui permet de créer sa liste selon les derniers achats, selon des recettes qu'il choisira, ou avec une restriction budgétaire (\in{figure}[llogin]). 
+\placefigure[][lcon]{liste connectée avant login}{\externalfigure[CROQUIS/marketTab_login.png][width=0.6\hsize]}
+Là, il retrouve ses achats précédents groupés par date d'achat, ainsi qu'un menu qui lui permet de créer sa liste selon les derniers achats, selon des recettes qu'il choisira, ou avec une restriction budgétaire (\in{figure}[llogin]). 
 \placefigure[][llogin]{liste connectée après login}{\externalfigure[CROQUIS/Liste_connectée_apres_login.svg][width=0.6\hsize]}
 Aujourd'hui, Congcong est pressé et valide la proposition faite par le site, qui est de renouveler les achats de sa dernière liste, agrémentée de produits qu'il n'a pas acheté depuis longtemps (sopalin, savon, dentifrice et des filtres à café.)
 Congcong valide puis imprime sa liste sans prendre la peine de la sauvegarder: c'est une liste imparfaite mais qui fera son office aujourd'hui.
@@ -20,9 +20,14 @@ Congcong raccroche la balise au cadbot qui va automatiquement se ranger dans son
 \subsection{Variante: contrainte budgétaire}
 Congcong de chez lui se connecte sur le site du distributeur afin de préparer ses courses.
 Là, il retrouve ses achats précédents groupés par date d'achat.
-Aujourd'hui, Congcong a une fin de mois difficile et sélectionne le menu budget, puis définit un montant à ne pas dépasser.
+Aujourd'hui, Congcong a une fin de mois difficile et sélectionne le menu budget (\in{figure}[BUDGET1]), puis définit un montant à ne pas dépasser.
+\placefigure[][BUDGET1]{gestion de contraintes budgétaires}{\externalfigure[CROQUIS/marketTab_budget.png][width=0.6\hsize]}
 Le site lui propose une liste selon ses dernières listes d'achats, cependant les produits en plusieurs exemplaires et ceux pour lesquels il existe un produit moins cher (discount, marque distributeur, concurrent) apparaissent en surbrillance (\in{figure}[BUDGET]).
 \placefigure[][BUDGET]{gestion de contraintes budgétaires}{\externalfigure[CROQUIS/Liste_connectée_budget_login.svg][width=0.6\hsize]}
 Un bandeau de couleur rouge reste présent tant que le budget défini n'est pas atteint.
 Cela n'empêche pas Congcong de valider sa liste malgré le léger dépassement de la restriction budgétaire.
 Congcong se rend ultérieurement en magasin pour faire ses courses comme dans le scénario ci-dessus.
+
+\subsection{Variante: paiement par téléphone}
+ConCong arrivé à la caisse choisit de payer via son GSM. 
+Il indique alors son numéro de téléphone sur la marketTab. il reçoit quelques instants plus tard, un sms lui demandant de valider par retour le paiement.
