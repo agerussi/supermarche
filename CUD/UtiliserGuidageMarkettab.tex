@@ -1,7 +1,7 @@
-subsection{«UtiliserGuidageMarkettab»}
+\subsection{«UtiliserGuidageMarkettab»}
 \startCU
 \nom UtiliserGuidageMarkettab
-\but ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
+\but Ce cas montre la suite de pas permettant à un client d'utiliser l'option de guidage dans le FuturMarket par la markettab
 \acteur Client
 \precondition Le client prend une markettab.
 \auteur Raissa Mbabazi Simbi
@@ -21,11 +21,11 @@ subsection{«UtiliserGuidageMarkettab»}
 \etape Le client remet la Markettab sur son support
 \etape retour à l'étape \in[UGM:RETOUR1]
 \stopcondition
-\postcondition La carte du chemin à suivre est affichée sur la Markettab
+\postcondition Le client donne la marketTab au vigile qui s'occupe egalement des tablettes.
 \stopalternatif
 \startalternatif[UGM:SE1]
 \startcondition[ La Markettab ne retrouve pas dans le FuturMarket certains articles sur la liste de produits indiquée par le client]
-\etape La Markettab indique le chemin corréspondant aux articles trouvés dans le FuturMarket.
+\etape La Markettab recherche le produit générique correspondant et indique le chemin dans le FuturMarket. La MarketTab informe le client que cet info est moins précise que les précédentes.
 \etape retour à l'étape \in[UGM:RETOUR2]
 \stopcondition
 \postcondition La carte du chemin à suivre est affichée sur la Markettab
@@ -40,5 +40,5 @@ subsection{«UtiliserGuidageMarkettab»}
 \stopalternatif
 % les scénarii d'exceptions
 \exception
-Aucun articles sur la liste indiquée par le client n'est retrouvé dans le FuturMarket
+Aucun article sur la liste indiquée par le client n'est retrouvé dans le FuturMarket
 \stopCU
