@@ -34,7 +34,10 @@
 \startcondition[des anomalies avaient été enregistrées durant les achats]
   \etape Le CadBot envoie au système la liste des anomalies détectées.
   \etape Le système allume la lumière rouge du portique
-  \etape Un personnel du magasin essaye de traiter les anomalies avec le client. En cas d'échec le client est redirigé vers une caisse à hôtesse comme dans le scénario d'exception. {\it Rq: cette étape mériterait un approfondissement, par exemple en fonction du genre de pb rencontré durant les achats\dots}
+  \etape Un personnel du magasin via la caisse, demande au cadbot de scanner à nouveau tout les produits présents.
+  \etape Le Cadbot retourne la nouvelle liste des produits détectés.
+  \etape Le système envoie sur la caisse, la liste des produits en plus ou en moins, ainsi que la variation de poids attendue.
+  \etape[PPP:PASREC] Le personnel valide que le(s) produit(s) en ajout ou retrait correspond(ent) à la variation de poids détectée lors des courses.
   \etape retour à l'étape \in[PPP:PAIEMENT]
 \stopcondition
 \postcondition toutes les anomalies sont réglées, le système a identifié l'ensemble des articles
@@ -58,12 +61,25 @@
 \startcondition[Pas de communication cadBot / Portique]
   \etape le système allume une lumière rouge au niveau du portique
   \etape le système invite le client à se diriger vers une caisse à hôtesse
-  \etape le client retire le cadBot des panneaux du portique
+  \etape le client fait marche arrière avec le cadBot.
   \etape le système détecte le départ du cadBot
   \etape le système allume la lumière verte du portique
   \etape {\it fin du \cu}
 \stopcondition
 \postcondition le portique est opérationnel pour un nouveau client
 \stopalternatif
+
+\startalternatif[PPP:PASREC] 
+\startcondition[La liste des courses et le poids détecté restent incohérents]
+  \etape le système allume une lumière rouge au niveau du portique
+  \etape le système invite le client à se diriger vers une caisse à hôtesse.
+  \etape le client fait marche arrière avec le cadBot.
+  \etape le système détecte le départ du cadBot
+  \etape le système allume la lumière verte du portique
+  \etape {\it fin du \cu}
+\stopcondition
+\postcondition le portique est opérationnel pour un nouveau client
+\stopalternatif
+
 
 \stopCU
