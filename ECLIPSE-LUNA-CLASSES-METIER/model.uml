@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Model xmi:id="_VVpSwGAVEeSXjrPLCRUqJQ" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_YgL8IGAVEeSXjrPLCRUqJQ" name="FuturMarket"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_7e3skGAVEeSXjrPLCRUqJQ" name="Produit">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_nfunIGAhEeSXjrPLCRUqJQ" name="Description" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_KYUhMGAjEeSXjrPLCRUqJQ" name="Prix" type="_a0vQUGAjEeSXjrPLCRUqJQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Mvtv8GgyEeSXqtc1Lxnz9w" name="identifiant" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_8ge6kGAVEeSXjrPLCRUqJQ" name="Individu">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_wSbg8GAjEeSXjrPLCRUqJQ" name="Nom" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
@@ -21,7 +22,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_MQG1IGAWEeSXjrPLCRUqJQ" name="Client">
       <generalization xmi:type="uml:Generalization" xmi:id="_aaVs8GAbEeSXjrPLCRUqJQ" general="_8ge6kGAVEeSXjrPLCRUqJQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_X7ndAGdIEeSzCYdvi0ys6g" name="identifiantClient" type="_605PkGAiEeSXjrPLCRUqJQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_ag2W4GAWEeSXjrPLCRUqJQ" name="RecetteCuisine">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_DW8YEGBCEeSXjrPLCRUqJQ" name="Description" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
@@ -32,7 +32,7 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_hiRyQGAWEeSXjrPLCRUqJQ" name="Compte">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dLMIUGA5EeSXjrPLCRUqJQ" name="Email" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_M3gPgGAaEeSXjrPLCRUqJQ" name="propose" visibility="protected" memberEnd="_M3gPgWAaEeSXjrPLCRUqJQ _M3focGAaEeSXjrPLCRUqJQ">
+    <packagedElement xmi:type="uml:Association" xmi:id="_M3gPgGAaEeSXjrPLCRUqJQ" name="&lt;propose" visibility="protected" memberEnd="_M3gPgWAaEeSXjrPLCRUqJQ _M3focGAaEeSXjrPLCRUqJQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_M3gPgWAaEeSXjrPLCRUqJQ" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_M3gPgGAaEeSXjrPLCRUqJQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M3gPgmAaEeSXjrPLCRUqJQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M3gPg2AaEeSXjrPLCRUqJQ" value="1"/>
@@ -42,7 +42,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M3focmAaEeSXjrPLCRUqJQ" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_iqFLAGAaEeSXjrPLCRUqJQ" name="répertorie" memberEnd="_iqFLAWAaEeSXjrPLCRUqJQ _iqEj8GAaEeSXjrPLCRUqJQ">
+    <packagedElement xmi:type="uml:Association" xmi:id="_iqFLAGAaEeSXjrPLCRUqJQ" name="répertorie>" memberEnd="_iqFLAWAaEeSXjrPLCRUqJQ _iqEj8GAaEeSXjrPLCRUqJQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_iqFLAWAaEeSXjrPLCRUqJQ" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_iqFLAGAaEeSXjrPLCRUqJQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iqFLAmAaEeSXjrPLCRUqJQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iqFLA2AaEeSXjrPLCRUqJQ" value="1"/>
@@ -141,7 +141,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Gl2lEGA3EeSXjrPLCRUqJQ" name="CarteFuturMarket">
       <generalization xmi:type="uml:Generalization" xmi:id="_6F4Y0WdGEeSzCYdvi0ys6g" general="_6F3xyWdGEeSzCYdvi0ys6g"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q2h4wGA5EeSXjrPLCRUqJQ" name="identifiantClient" type="_605PkGAiEeSXjrPLCRUqJQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_LspfwGA3EeSXjrPLCRUqJQ" name="possède>" memberEnd="_LspfwWA3EeSXjrPLCRUqJQ _Lso4sGA3EeSXjrPLCRUqJQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_LspfwWA3EeSXjrPLCRUqJQ" name="client" type="_MQG1IGAWEeSXjrPLCRUqJQ" association="_LspfwGA3EeSXjrPLCRUqJQ">
@@ -200,7 +199,7 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_6F4Y4GdGEeSzCYdvi0ys6g" name="PortiquePaiement">
       <generalization xmi:type="uml:Generalization" xmi:id="_6F4Y4WdGEeSzCYdvi0ys6g" general="_6F3xyWdGEeSzCYdvi0ys6g"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_6F4_4GdGEeSzCYdvi0ys6g" name="connectée à" memberEnd="_6F4_4WdGEeSzCYdvi0ys6g _6F4_5GdGEeSzCYdvi0ys6g">
+    <packagedElement xmi:type="uml:Association" xmi:id="_6F4_4GdGEeSzCYdvi0ys6g" name="associée à >" memberEnd="_6F4_4WdGEeSzCYdvi0ys6g _6F4_5GdGEeSzCYdvi0ys6g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_6F4_4WdGEeSzCYdvi0ys6g" name="balise" type="_6F3xxWdGEeSzCYdvi0ys6g" association="_6F4_4GdGEeSzCYdvi0ys6g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6F4_4mdGEeSzCYdvi0ys6g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6F4_42dGEeSzCYdvi0ys6g" value="1"/>
@@ -220,7 +219,12 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y8DZ8mdHEeSzCYdvi0ys6g" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_-JVf0GdJEeSzCYdvi0ys6g" name="commentaireClient"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-JVf0GdJEeSzCYdvi0ys6g" name="commentaireClient">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6XDWkGgxEeSXqtc1Lxnz9w" name="commentaire" type="_rXAasGAhEeSXjrPLCRUqJQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_--T1kGgxEeSXqtc1Lxnz9w" name="date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_HSF-oGdLEeSzCYdvi0ys6g" name="possède" memberEnd="_HSF-oWdLEeSzCYdvi0ys6g _HSF-pGdLEeSzCYdvi0ys6g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_HSF-oWdLEeSzCYdvi0ys6g" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_HSF-oGdLEeSzCYdvi0ys6g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HSF-omdLEeSzCYdvi0ys6g" value="1"/>
@@ -241,7 +245,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HvBLNmdLEeSzCYdvi0ys6g" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_I0m6Q2dLEeSzCYdvi0ys6g" name="possède" memberEnd="_I0m6RGdLEeSzCYdvi0ys6g _I0m6QGdLEeSzCYdvi0ys6g">
+    <packagedElement xmi:type="uml:Association" xmi:id="_I0m6Q2dLEeSzCYdvi0ys6g" name="possède>" memberEnd="_I0m6RGdLEeSzCYdvi0ys6g _I0m6QGdLEeSzCYdvi0ys6g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_I0m6QGdLEeSzCYdvi0ys6g" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_I0m6Q2dLEeSzCYdvi0ys6g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I0m6QWdLEeSzCYdvi0ys6g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I0m6QmdLEeSzCYdvi0ys6g" value="1"/>
@@ -271,6 +275,36 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkG2EmdOEeSzCYdvi0ys6g" value="*"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BkuwIGgwEeSXqtc1Lxnz9w" name="&lt;définit" memberEnd="_BkuwIWgwEeSXqtc1Lxnz9w _BktiAGgwEeSXqtc1Lxnz9w">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_BkuwIWgwEeSXqtc1Lxnz9w" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_BkuwIGgwEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BkuwImgwEeSXqtc1Lxnz9w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BkuwI2gwEeSXqtc1Lxnz9w" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_BktiAGgwEeSXqtc1Lxnz9w" name="articleGénérique" type="_B7NngGRAEeSCv7l0tL9gJA" association="_BkuwIGgwEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BktiAWgwEeSXqtc1Lxnz9w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BktiAmgwEeSXqtc1Lxnz9w" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gOnDgGgwEeSXqtc1Lxnz9w" name="&lt; propose" memberEnd="_gOnDgWgwEeSXqtc1Lxnz9w _gOmccGgwEeSXqtc1Lxnz9w">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gOnDgWgwEeSXqtc1Lxnz9w" name="futurMarket" type="_YgL8IGAVEeSXjrPLCRUqJQ" association="_gOnDgGgwEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gOnDgmgwEeSXqtc1Lxnz9w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gOnDg2gwEeSXqtc1Lxnz9w" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gOmccGgwEeSXqtc1Lxnz9w" name="recetteConnectée" type="_A2RPEGAWEeSXjrPLCRUqJQ" association="_gOnDgGgwEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gOmccWgwEeSXqtc1Lxnz9w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gOmccmgwEeSXqtc1Lxnz9w" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_camw8GgxEeSXqtc1Lxnz9w" name="écrite par >" memberEnd="_camw8WgxEeSXqtc1Lxnz9w _camJ4GgxEeSXqtc1Lxnz9w">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_camw8WgxEeSXqtc1Lxnz9w" name="individu" type="_8ge6kGAVEeSXjrPLCRUqJQ" association="_camw8GgxEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_camw8mgxEeSXqtc1Lxnz9w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_camw82gxEeSXqtc1Lxnz9w" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_camJ4GgxEeSXqtc1Lxnz9w" name="recetteConnectée" type="_A2RPEGAWEeSXjrPLCRUqJQ" association="_camw8GgxEeSXqtc1Lxnz9w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_camJ4WgxEeSXqtc1Lxnz9w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_camJ4mgxEeSXqtc1Lxnz9w" value="*"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_h9inYGAVEeSXjrPLCRUqJQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h-DkwGAVEeSXjrPLCRUqJQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
@@ -279,4 +313,5 @@
     </profileApplication>
   </uml:Model>
   <ActionLanguage:TextualRepresentation xmi:id="_LCv8QWA5EeSXjrPLCRUqJQ" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <css:ModelStyleSheets xmi:id="_vTqFIGgyEeSXqtc1Lxnz9w"/>
 </xmi:XMI>
