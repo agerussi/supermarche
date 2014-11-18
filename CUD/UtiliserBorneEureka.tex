@@ -7,7 +7,7 @@
 \precondition le client est dans le magasin face à une borne Euréka
 \declenchement le client appuie sur le bouton d'interrogation
 \auteur Alexandre G
-\date 30/10/14
+\date 30/10/14, révision 14/11/14
 
 \nominal % scénario nominal
 \startnominal
@@ -18,10 +18,18 @@
 \etape[UBE:AUTRE] le système attend une minute avant d'afficher une page d'accueil
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition le système affiche une page d'accueil
+% Corrigé: pas une modification du système
+%\postcondition le système affiche une page d'accueil 
 
 % les scénarii alternatifs
 \alternatifs 
+
+\startalternatif[UBE:INCONNU]
+\startcondition[les mots prononcés ne sont pas reconnus]
+  \etape le système affiche un message d'information
+  \etape retour à l'étape \in[UBE:AUTRE]
+\stopcondition
+\stopalternatif
 
 \startalternatif[UBE:LISTEVIDE]
 \startcondition[la liste d'articles est vide]
@@ -36,14 +44,6 @@
 \stopcondition
 \startcondition[le client appuie sur le bouton d'interrogation]
   \etape retour à l'étape \in[UBE:DEBUT]
-\stopcondition
-\stopalternatif
-
-\exception
-\startalternatif[UBE:INCONNU]
-\startcondition[les mots prononcés ne sont pas reconnus]
-  \etape le système affiche un message d'information
-  \etape retour à l'étape \in[UBE:AUTRE]
 \stopcondition
 \stopalternatif
 

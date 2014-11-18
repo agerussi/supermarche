@@ -48,11 +48,8 @@
 \etape La marketTab recherche ce produit dans le plan et définit sa position.
 \etape Retour à l'étape \in[UGM:SA1]
 \stopcondition
-\postcondition La carte du chemin à suivre est affichée sur la Markettab.
+\postcondition La marketTab connait la position du client.
 \stopalternatif
-
-% les scénarii d'exceptions
-\exception
 \startalternatif[UGM:SA1]
 \startcondition[article équivalent indisponible]
   \etape La marketTab informe le client qu'aucun article équivalent n'est disponible et propose de passer au suivant.
@@ -60,5 +57,12 @@
   \etape retour à l'étape \in[UGM:RETOUR2]
 \stopcondition
 \postcondition La Markettab connaît le produit suivant à chercher.
+% Corrigé: pas une modification du système
+%\postcondition La carte du chemin à suivre est affichée sur la Markettab.
 \stopalternatif
+
+% les scénarii d'exceptions
+\exception
+Aucun scénario d'exception.
+
 \stopCU
