@@ -1,52 +1,50 @@
 % exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «AjouterArticleCadBot» }
+\subsection{«AjouterArticleCadBot»}
 
 \startCU
 \nom AjouterArticleCadBot
 \but Ce cas montre l'ajout d'un article dans le cadBot.
 \acteur Client
 \precondition Le client a pris son cadBot au cadPark.
-\declenchement Le client est pret à deposer un produit dans le cadBot.
+\declenchement Le client est prêt à déposer un produit dans le cadBot.
 \auteur François Dubiez
 \date 29/10/14
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le cadbot détecte le produit grace à sa puce RFID lorsque le client le passe devant le détecteur. 
-\etape[RETOUR] Le cadbot émet un beep afin d'informer le client de la lecture du code RFID.
-\etape[SE1] Le cadbot valide l'ajout de l'objet en comparant le poids obtenu via le tag RFID et  le poids ajouté dans le caddie.
+\etape[AAC:SA1] Le cadbot détecte le produit grâce à sa puce RFID lorsque le client le passe devant le détecteur. 
+\etape[AAC:RETOUR] Le cadbot émet un beep afin d'informer le client de la lecture du code RFID.
+\etape[AAC:SE1] Le cadbot valide l'ajout de l'objet en comparant le poids obtenu via le tag RFID et  le poids ajouté dans le caddie.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
 \postcondition Le CadBot ajoute l'objet à la liste des produits deposés.
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[SA1] % ensemble des scénarii débutant à SA1
+\startalternatif[AAC:SA1] % ensemble des scénarii débutant à SA1
 \startcondition[Lecture du code Barre] 
-  \etape[SE1] Le client passe le code barre devant le lecteur optique du cadBot.
-  \etape retour à l'étape \in[RETOUR]
+  \etape[AAC:SE1] Le client passe le code barre devant le lecteur optique du cadBot.
+  \etape retour à l'étape \in[AAC:RETOUR]
 \stopcondition
 \postcondition Le CadBot a correctement lu le code barre.
-\stopalternatif
-
-\startalternatif[SE1]
-\startcondition[ variation de Poids non detecté ]
-   \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
-   \etape Le cadBot émet un son plus grave émis pour alerter le client.
+\startcondition[puce RFID ou code barre illisible]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot affecte le poids à un objet inconnu afin de continuer à suivre l'évolution du poids en fonction des objets.
 \stopcondition
-\postcondition L'anomalie concernant cet objet sera transmise au portique de paiement.
-\stopalternatif
-
-\startalternatif[SA1]
-\startcondition[ Ajout d'un produit non détécté ]
-   \etape Le cadbot n'arrive pas à lire la puce RFID ou le code Barre.
-   \etape Le cadBot émet un son plus grave émis pour alerter le client.
-   \etape Le cadbot affecte le poids a un objet inconnu afin de continuer à suivre l'evolution du poids en fonction des objets.
+\postcondition L'anomalie sera transmise au portique de paiement.
+\startcondition[variation de poids détectée avant lecture RFID ou code barre]
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+   \etape Le cadbot affecte le poids à un objet inconnu afin de continuer à suivre l'évolution du poids en fonction des objets.
 \stopcondition
 \postcondition L'anomalie sera transmise au portique de paiement.
 \stopalternatif
 
-% les scénarii d'exceptions
-\exception % ou \exceptions s'il y en a plusieurs
-Aucun scénario d'exception
+\startalternatif[AAC:SE1]
+\startcondition[variation de Poids non détecté]
+   \etape Le cadbot ne détecte pas la variation de poids dans le caddie.
+   \etape Le cadBot émet un son plus grave pour alerter le client.
+\stopcondition
+\postcondition L'anomalie concernant cet objet sera transmise au portique de paiement.
+\stopalternatif
+
 \stopCU

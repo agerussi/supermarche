@@ -1,54 +1,85 @@
 ﻿% exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «PasserPortiquePaiement» }
+\subsection{«PasserPortiquePaiement»}
 
 \startCU
 \nom PasserPortiquePaiement
-\but le CadBot se positionne sur l'emplacement dédié en caisse et transfert la liste des objets présents dans le cadBot
+\but le CadBot communique à la caisse la liste des objets qu'il contient
 \acteur client, personnel du magasin
-\precondition Le client a fait ses courses avec un cadBot.
-\declenchement le client a terminé ses courses.
-\auteur François Dubiez
-\date 30/10/14
+\precondition le portique de paiement est en service et libre (indiqué par une lumière verte), ses barrières de sortie sont bloquées
+\declenchement le système détecte la présence du cadbot entre ses panneaux
+\auteur François Dubiez, Alexandre Gerussi
+\date 30/10/14, révision 08/10/14
 
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le client se dirige vers la caisse comportant un portique de paiement.
-\etape[RETOUR] le CadBot est dans l'emplacement dédié.
-\etape[SA2] Le CadBot envoie au système la liste détaillée des articles présents dans le cadBot.
-\etape [RETOUR2]{\it fin du cas d'utilisation}
+\etape le système allume la lumière orange du portique
+\etape[PPP:PASCOM] le système établit une communication avec le cadBot
+\etape[PPP:ANOMALIES] le CadBot envoie au système la liste détaillée des articles qu'il contient
+\etape [PPP:PAIEMENT] le système établit la facture et initialise la caisse du portique pour le paiement
+\etape le scénario «PayerCourses» est enclenché au niveau de la caisse du portique
+\etape le système détecte la fin normale du scénario «PayerCourses»
+\etape le système débloque les barrières du portique
+\etape le client sort du portique par les barrières
+\etape[PPP:DETECTION] le système détecte le passage du client dans les barrières
+\etape[PPP:RESET] le système bloque les barrières
+\etape le système allume la lumière verte du portique
+\etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition Le client est prêt a procéder au paiement.
+\postcondition le portique est prêt pour l'accueil d'un nouveau cadBot
 
 % les scénarii alternatifs
 \alternatifs % ou \alternatif s'il n'y en a qu'un seul
-\startalternatif[SA1] % ensemble des scénarii débutant à SA1
-\startcondition[ModeManuel] 
-  \etape le Client place le cadBot conformément au marquage au sol.
-  \etape retour à l'étape \in[RETOUR]
-\stopcondition
-\postcondition Le cadBot est en mesure de transmettre la liste des produits détectés.
-\stopalternatif
 
-\startalternatif[RETOUR] 
-\startcondition[Pas de communication cadBot / Portique]
-  \etape Le cadBot émet en son grave.
-  \etape Le cadBot envoie par wifi une alerte au système informatique du magasin afin d'alerter le personnel.
- \etape Un membre du personnel procède a l'identification traditionnel des objets. 
-  \etape retour à l'étape \in[RETOUR2]
-\stopcondition
-\postcondition Le client peut procéder au paiement.
-\stopalternatif
-
-\startalternatif[SA2]
-\startcondition[Anomalies]
+\startalternatif[PPP:ANOMALIES]
+\startcondition[des anomalies avaient été enregistrées durant les achats]
   \etape Le CadBot envoie au système la liste des anomalies détectées.
-    \etape Le système informe le personnel du magasin qu'au moins une anomalie nécessite une intervention exterieur au système.
-  \etape Le personnel du magasin traite la/les anomalies.
-  \etape retour à l'étape \in[RETOUR2]
+  \etape Le système allume la lumière rouge du portique
+  \etape Un personnel du magasin via la caisse, demande au cadbot de scanner à nouveau tout les produits présents.
+  \etape Le Cadbot retourne la nouvelle liste des produits détectés.
+  \etape Le système envoie sur la caisse, la liste des produits en plus ou en moins, ainsi que la variation de poids attendue.
+  \etape[PPP:PASREC] Le personnel valide que le(s) produit(s) en ajout ou retrait correspond(ent) à la variation de poids détectée lors des courses.
+  \etape retour à l'étape \in[PPP:PAIEMENT]
+\stopcondition
+\postcondition toutes les anomalies sont réglées, le système a identifié l'ensemble des articles
+\stopalternatif
+
+\startalternatif[PPP:DETECTION]
+\startcondition[le système détecte que le cadBot a été retiré des panneaux mais pas un passage dans les barrières dans un délai raisonnable (30 secondes ?)]
+  \etape Le système allume la lumière rouge en mode clignotant 
+  \etape Un personnel du magasin essaye de traiter le problème en invitant le client à sortir par un passage «sans achats»
+  \etape Le personnel scanne sa carte au niveau de la caisse du portique
+  \etape le système affiche le menu de maintenance
+  \etape le personnel sélectionne «passage forcé»
+  \etape le système affiche l'écran normal de la caisse
+  \etape retour à l'étape \in[PPP:RESET]
 \stopcondition
 \stopalternatif
 
-% les scénarii d'exceptions
-\exception % ou \exceptions s'il y en a plusieurs
+% scénarii d'exception
+\exception
+\startalternatif[PPP:PASCOM] 
+\startcondition[Pas de communication cadBot / Portique]
+  \etape le système allume une lumière rouge au niveau du portique
+  \etape le système invite le client à se diriger vers une caisse à hôtesse
+  \etape le client fait marche arrière avec le cadBot.
+  \etape le système détecte le départ du cadBot
+  \etape le système allume la lumière verte du portique
+  \etape {\it fin du \cu}
+\stopcondition
+\postcondition le portique est opérationnel pour un nouveau client
+\stopalternatif
+
+\startalternatif[PPP:PASREC] 
+\startcondition[La liste des courses et le poids détecté restent incohérents]
+  \etape le système allume une lumière rouge au niveau du portique
+  \etape le système invite le client à se diriger vers une caisse à hôtesse.
+  \etape le client fait marche arrière avec le cadBot.
+  \etape le système détecte le départ du cadBot
+  \etape le système allume la lumière verte du portique
+  \etape {\it fin du \cu}
+\stopcondition
+\postcondition le portique est opérationnel pour un nouveau client
+\stopalternatif
+
 
 \stopCU

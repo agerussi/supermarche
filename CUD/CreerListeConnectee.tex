@@ -1,0 +1,39 @@
+\subsection{«CréerListeConnectée»}
+
+\startCU
+\nom CréerListeConnectée
+\but Ce cas d’utilisation correspond à la création d’une nouvelle liste connectée, vierge au départ, qui pourra ensuite être complétée.
+\acteur client
+\precondition Le client est connecté sur le site ou en possession d'une markettab
+\declenchement le client clique sur \type{«nouvelle liste de course»} dans le menu.
+\auteur François D.
+\date 03/11/14
+
+\nominal % scénario nominal
+\startnominal
+\etape[CLC:DEPART] Le système demande le nom de la liste et propose également d'annuler la création de liste.
+\etape[CLC:ANNUL] Le client saisit le nom de la liste
+\etape[CLC:NOMINVAL] Le système valide le nom de la liste fournie par le Client.
+\etape {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le système a enregistré une nouvelle liste de courses vierge.
+
+% les scénarii alternatifs
+\alternatifs % ou \alternatif s'il n'y en a qu'un seul
+\startalternatif[CLC:NOMINVAL] % ensemble des scénarii débutant à SA1
+\startcondition[Nom invalide]
+  \etape Le système informe le client que le nom est incorrect.
+  \etape retour à l'étape \in[CLC:DEPART]
+\stopcondition
+\stopalternatif
+
+% les scénarii d'exceptions
+\exception % ou \exceptions s'il y en a plusieurs
+\startalternatif[CLC:ANNUL]
+\startcondition[le client clique sur le bouton annuler]
+  \etape Le système met fin à la création de liste
+  \etape {\it fin du cas d'utilisation}
+\stopcondition
+\postcondition Aucune liste de course n'a été créée
+\stopalternatif
+\stopCU

@@ -1,0 +1,50 @@
+\subsection{«RécuperationCadBotEnPanne»}
+\TODO\ A remanier et discuter en profondeur: 
+* trop d'hypothèses ou d'options peu réalistes
+* description trop macroscopique des interactions
+* CU non prioritaire car lié au personnel et non au client...
+\startCU
+\nom RécuperationCadBotEnPanne
+\but Ce cas montre la suite de pas permettant au personnel de récupérer et remettre le cadBot en panne au cadPark.
+\acteur Personnel du magasin.
+\precondition Le personnel a pris un marketTab.
+\auteur Raissa Mbabazi Simbi, François Dubiez
+\date 7/11/14, 9/11/14
+\nominal % scénario nominal
+\startnominal
+\etape[RCP:RETOUR1] la marketTab indique le chemin pour aller à la dernière position connue du cadBot en panne.
+\etape[RCP:SE1] Le personnel trouve le cadBot, scanne son code-barre et le ramène au cadPark.
+\etape Le système reçoit l'information de la marketTab et marque le cadBot comme inopérant.
+\etape Le personnel scanne l'emplacement du cadPark pour le communiquer au système.
+\etape [RCP:RETOUR] Le CadBot est sur un emplacement et commence à se recharger.
+\etape [RCP:ANO] Le cadBot lance une vérification et envoie le résultat au système. 
+\etape Le système informe le personnel de maintenance du l'état du cadBot.
+\etape[RCP:FIN] {\it fin du cas d'utilisation}
+\stopnominal
+\postcondition Le CadBot est indiqué localisé et inopérant dans le système.
+.
+% les scénarii alternatifs
+\alternatifs
+\startalternatif[RCP:SE1]
+\startcondition[Le code barre du cadBot n'est pas lisible]
+\etape Le personnel entre le numéro du cadBot dans le formulaire cadBot en panne de la marketTab.
+\etape Le personnel ramène le cadBot au cadPark.
+\etape Retour à l'étape \in[RCP:RETOUR]
+\stopcondition
+\postcondition Le système a identifié le cadBot en panne et a mis à jour son état.
+\stopalternatif
+
+
+\startalternatif[RCP:ANO]
+\startcondition [ Aucune communication n'a lieu entre le cadBot et le système ]
+\etape Le système informe la maintenance qu'aucune communication n'est possible avec ce cadBot.
+\etape retour à l'étape \in[RCP:FIN]
+\stopcondition
+\postcondition Le système marque ce cadBot comme nécessitant de la maintenance et connaît son emplacement.
+\stopalternatif
+
+
+% les scénarii d'exceptions
+\exception
+Le cadBot n'est pas à l'emplacement indiqué, ni dans les environs.
+\stopCU

@@ -11,11 +11,11 @@
 
 \nominal % scénario nominal
 \startnominal
-\etape[DEBUT] le client choisit un article (par clic à partir d'une liste ou scan en magasin)
+\etape[RRC:DEBUT] le client choisit un article (par clic à partir d'une liste ou scan en magasin)
 \etape le système affiche la page de consultation de l'article
 \etape le client choisit l'option «recettes associées»
 \etape le système affiche la liste des recettes associées à l'article 
-\etape[SELECT] le client en sélectionne une
+\etape[RRC:SELECT] le client en sélectionne une
 \etape le système affiche la page consultation de la recette
 \etape {\it fin du cas d'utilisation}
 \stopnominal
@@ -23,17 +23,17 @@
 
 % les scénarii alternatifs
 \alternatifs 
-\startalternatif[DEBUT] 
+\startalternatif[RRC:DEBUT] 
 \startcondition[le client sélectionne l'option «rechercher recettes»] 
   \etape le système affiche la liste des recettes connues par ordre alphabétique
-  \etape retour à l'étape \in[SELECT]
+  \etape retour à l'étape \in[RRC:SELECT]
 \stopcondition
 \stopalternatif
 
-\startalternatif[SELECT] 
+\startalternatif[RRC:SELECT] 
 \startcondition[le client saisit quelques lettres dans le cadre «filtre»]
   \etape le système filtre les recettes affichées à l'aide du motif tapé par le client
-  \etape retour à l'étape \in[SELECT]
+  \etape retour à l'étape \in[RRC:SELECT]
 \stopcondition
 \stopalternatif
 \stopCU

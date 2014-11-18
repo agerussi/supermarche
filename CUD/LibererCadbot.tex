@@ -1,40 +1,54 @@
-% exemple de rédaction des scénarii associés à un CU
-\subsection{Cas d'utilisation: «LibererCadbot» }
-
+\subsection{«LibérerCadbot»}
 \startCU
-\nom Liberer Cadbot
-\but  ce cas montre la suite de pas permettant à un client de liberer le cadbot q'il a utilisé une fois ses courses terminés.
+\nom LibérerCadbot
+\but ce cas montre la suite de pas permettant à un client de libérer le cadbot une fois ses courses terminées.
 \acteur Client
-\precondition Le client a fini de décharger ses courses du cadbot.
-
+\precondition Le client possède la balise de son cadBot et se trouve à l'extérieur du magasin.
+\declenchement le client remet la balise dans le port du cadBot.
 \auteur Raissa Mbabazi Simbi
 \date 7/11/14
-
 \nominal % scénario nominal
 \startnominal
-\etape[SA1] Le client remet la balise dans son port sur le cadbot. 
-\etape Le Cadbot détécte la balise.
-\etape[RETOUR] Le cadbot suit le chemin indiqué par son système pour regagner le parking des cadbot le plus proche.
-\etape Le cadbot arrive à son parking.
-\etape Le cadbot s'accroche sur une place libre de la grille 
+\etape[LC:SA2] Le cadbot détecte la balise.
+\etape[LC:VIDE] Le cadBot vérifie qu'il est vide
+\etape[LC:RETOUR] Le cadbot suit le chemin indiqué par son système pour regagner le cadPark le plus proche.
 \etape {\it fin du cas d'utilisation}
 \stopnominal
-\postcondition Le cadbot est dans le parking.
-
+\postcondition Le cadbot s'éloigne du client.
 % les scénarii alternatifs
 \alternatifs
-\startalternatif[SA1] % ensemble des scénarii débutant à SA1
-\startcondition[Cadbot ne détecte pas la balise dans son port] 
-  \etape Le client active le retour au parking manuellement.
-	\etape retour à l'étape \in[RETOUR]
-
+\startalternatif[LC:SA2] % ensemble des scénario débutant à SA1
+\startcondition[Cadbot ne détecte pas la balise dans son port]
+\etape Le client pousse le cadBot, un peu plus loin pour pouvoir quitter le centre commercial avec sa voiture.
+\etape Le cadBot qui a passé 15 minutes, sans article, à l'extérieur du magasin, envoie une alerte de non détection de balise au système via wifi.
+\etape Le système reçoit l'alerte du cadBot et en informe le personnel du magasin.
+\etape Le CadBot retourne au cadPark.
+\etape retour à l'étape \in[LC:RETOUR]
 \stopcondition
-\postcondition L'anomalie concernant ce cadbot sera transmise à la maintenance.
+\postcondition Ce cadbot ne sera plus disponible pour les clients.
 \stopalternatif
 
+
+%\startalternatif[LC:SA2] % ensemble des scénario débutant à SA1
+%\startcondition[Le cadbot est presque déchargé]
+%\etape Le cadbot indique par deux longs bips  q'il est presque déchargé
+%\etape Le client valide le cas d'urgence corréspondant (batterie faible).
+%\etape Le cadBot envoie une alerte au système via le Wifi ainsi que sa position, regulièrement.
+%\etape le Système suis le cadBot précisément et enverra une alerte au personnel lors de la perte du suivi.
+%\stopcondition
+%\postcondition Le système connait l'état du cadBot, sa position et a levé une alerte.
+%\stopalternatif
 
 
 % les scénarii d'exceptions
 \exception
-le cadbot est déchargé.
+
+\startalternatif[LC:VIDE] % ensemble des scénario débutant à SA1
+\startcondition[le cadBot n'est pas vide]
+\etape Le cadbot émet un signal sonore jusqu'à ce que la balise soit enlevée.
+\etape {\it fin du \cu} 
+\stopcondition
+\postcondition Le cadBot attend d'être vidé.
+\stopalternatif
+
 \stopCU
