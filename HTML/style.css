@@ -1,0 +1,63 @@
+ul#menu_horizontal {  
+width : 1850px;
+height : 30px;
+list-style-type : none; 
+border-bottom : 1px solid #000; 
+}
+ul#menu_horizontal li {
+padding : 0 0.5em; /* Pour espacer les boutons entre eux */
+}
+li.bouton_gauche {
+float : left;
+}
+li.bouton_droite {
+float : right;
+}
+
+a
+{
+text-decoration: none; 
+}
+
+h1
+{
+text-align: center; 
+}
+.box 
+{
+	height: 500px; 
+	border-bottom : 1px solid #000;
+	border-left : 1px solid #000;
+	border-top : 1px solid #000;
+	border-right : 1px solid #000;
+	/*text-align: center;*/ 
+	margin-right: 400px;
+	margin-left: 400px;
+	padding-left: 100px;
+	padding-top: 100px;
+}
+
+.parcour
+{
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	width: 200px;
+	height: 400px; 
+	 
+}
+
+.liste_course
+{
+	border-right: 1px solid #000;
+	width: 200px;
+	height: 400px;
+}
+
+.milieu
+{
+	width: 400px;
+	border-right: 1px solid #000;
+	margin-left: 201px;
+	padding-top: 1px; 
+	margin-top: 1px; 
+}
