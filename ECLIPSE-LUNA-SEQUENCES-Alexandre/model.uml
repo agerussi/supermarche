@@ -23,7 +23,7 @@ des accesseurs get/set fournis par le modèle.</body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_wKOwIHGbEeSHsuqkzZf8Ig">
     <body> GestionVue est une classe interne au contrôleur,
-qui implétente Écouteur. 
+qui implémente Écouteur. 
 Sa méthode action() a donc accès à l'ensemble de 
 l'objet Contrôleur qui la contient.
 C'est la méthode officielle d'implémentation des
@@ -31,7 +31,6 @@ C'est la méthode officielle d'implémentation des
 possède pas d'objet &quot;fonction&quot; (ou des pointeurs
 de fonction)</body>
   </ownedComment>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_c3B68G9HEeSH1pQUvFooPg" name="Interaction1"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_BeBkMG_QEeSO2cYsw_d1IA" name="Vue">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_RzqgcG_REeSO2cYsw_d1IA" name="modèle" type="_C240kG_QEeSO2cYsw_d1IA" aggregation="shared" association="_RzrukG_REeSO2cYsw_d1IA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RzqgcW_REeSO2cYsw_d1IA" value="1"/>
@@ -55,7 +54,7 @@ de fonction)</body>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bdGDYW_SEeSO2cYsw_d1IA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bdGDYm_SEeSO2cYsw_d1IA" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_k7PY0G_SEeSO2cYsw_d1IA" name="vue" type="_BeBkMG_QEeSO2cYsw_d1IA" aggregation="shared" association="_k7P_4G_SEeSO2cYsw_d1IA">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k7PY0G_SEeSO2cYsw_d1IA" name="client" type="_BeBkMG_QEeSO2cYsw_d1IA" association="_k7P_4G_SEeSO2cYsw_d1IA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k7PY0W_SEeSO2cYsw_d1IA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k7PY0m_SEeSO2cYsw_d1IA" value="*"/>
     </ownedAttribute>
@@ -131,4 +130,102 @@ de fonction)</body>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gOiIc3GbEeSHsuqkzZf8Ig" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_C9kK8HGqEeSHsuqkzZf8Ig" name="Activity1"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wRQgAHGtEeSHsuqkzZf8Ig" name="BorneEurékaMod">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wvDAgHGzEeSDqcC__n6kPQ" name="produitsProposés" type="_vEaDoHGzEeSDqcC__n6kPQ" aggregation="shared" association="_wvDnkHGzEeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wvDAgXGzEeSDqcC__n6kPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wvDAgnGzEeSDqcC__n6kPQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bCgmIHG0EeSDqcC__n6kPQ" name="propreEmplacement" type="_ZSG_gHG0EeSDqcC__n6kPQ" aggregation="composite" association="_bChNMHG0EeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bCgmIXG0EeSDqcC__n6kPQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bCgmInG0EeSDqcC__n6kPQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ItaMMHG2EeSDqcC__n6kPQ" name="produitSélectionné" type="_vEaDoHGzEeSDqcC__n6kPQ" aggregation="shared" association="_ItazQHG2EeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ItaMMXG2EeSDqcC__n6kPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ItaMMnG2EeSDqcC__n6kPQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5_UVMHG3EeSDqcC__n6kPQ" name="motsPrononcés" visibility="private" type="_GUkaoHG4EeSDqcC__n6kPQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CPN2MHG1EeSDqcC__n6kPQ" name="getPropreEmplacement"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HbyBsHG1EeSDqcC__n6kPQ" name="getEmplacementProduit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KVpKwHG1EeSDqcC__n6kPQ" name="getListeProduits"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OQ0qEHG5EeSDqcC__n6kPQ" name="setListeProduits"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UJZnAHG5EeSDqcC__n6kPQ" name="setEmplacementProduit"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ypEr8HGtEeSHsuqkzZf8Ig" name="BorneEurékaCTRL">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BZhBcHGuEeSHsuqkzZf8Ig" name="borneEuréka" type="_wRQgAHGtEeSHsuqkzZf8Ig" aggregation="shared" association="_BZiPkHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BZhBcXGuEeSHsuqkzZf8Ig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BZhBcnGuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IZRo4HGuEeSHsuqkzZf8Ig" name="borneEurékaUI" type="_2Bbu4HGtEeSHsuqkzZf8Ig" aggregation="composite" association="_IZS3AHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IZRo4XGuEeSHsuqkzZf8Ig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IZRo4nGuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r9iLkHGuEeSHsuqkzZf8Ig" name="msgBoxUI" type="_aippEHGuEeSHsuqkzZf8Ig" aggregation="composite" association="_r9jZsHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r9iLkXGuEeSHsuqkzZf8Ig"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r9iLknGuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_etcU4HG2EeSDqcC__n6kPQ" name="interrogation">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zNIFIHG2EeSDqcC__n6kPQ" name="message" type="_oLwCYHG2EeSDqcC__n6kPQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_x44usHG5EeSDqcC__n6kPQ" name="interprèteAudio"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0XzoMHG5EeSDqcC__n6kPQ" name="trouveProduitsGénériques"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2Bbu4HGtEeSHsuqkzZf8Ig" name="BorneEurékaUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_94zzcHGwEeSDqcC__n6kPQ" name="borneEuréka" type="_wRQgAHGtEeSHsuqkzZf8Ig" aggregation="shared" association="_940agHGwEeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_94zzcXGwEeSDqcC__n6kPQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_94zzcnGwEeSDqcC__n6kPQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BZiPkHGuEeSHsuqkzZf8Ig" memberEnd="_BZiPkXGuEeSHsuqkzZf8Ig _BZhBcHGuEeSHsuqkzZf8Ig">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BZiPkXGuEeSHsuqkzZf8Ig" name="borneEurékaCTRL" type="_ypEr8HGtEeSHsuqkzZf8Ig" association="_BZiPkHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BZiPknGuEeSHsuqkzZf8Ig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BZiPk3GuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IZS3AHGuEeSHsuqkzZf8Ig" memberEnd="_IZS3AXGuEeSHsuqkzZf8Ig _IZRo4HGuEeSHsuqkzZf8Ig">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IZS3AXGuEeSHsuqkzZf8Ig" name="borneEurékaCTRL" type="_ypEr8HGtEeSHsuqkzZf8Ig" association="_IZS3AHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IZS3AnGuEeSHsuqkzZf8Ig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IZS3A3GuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aippEHGuEeSHsuqkzZf8Ig" name="MsgBoxUI"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_r9jZsHGuEeSHsuqkzZf8Ig" memberEnd="_r9jZsXGuEeSHsuqkzZf8Ig _r9iLkHGuEeSHsuqkzZf8Ig">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_r9jZsXGuEeSHsuqkzZf8Ig" name="borneEurékaCTRL" type="_ypEr8HGtEeSHsuqkzZf8Ig" association="_r9jZsHGuEeSHsuqkzZf8Ig">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r9jZsnGuEeSHsuqkzZf8Ig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r9jZs3GuEeSHsuqkzZf8Ig" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_QqjtIHGvEeSDqcC__n6kPQ" name="DSS «UtiliserBorneEuréka»">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_bYgdkHGvEeSDqcC__n6kPQ" name="CTRL Borne Euréka"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_cMrFcHGvEeSDqcC__n6kPQ" name="Classe métier BorneEuréka" represents="_94zzcHGwEeSDqcC__n6kPQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_tE_esHG1EeSDqcC__n6kPQ" name="Lifeline0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_940agHGwEeSDqcC__n6kPQ" memberEnd="_940agXGwEeSDqcC__n6kPQ _94zzcHGwEeSDqcC__n6kPQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_940agXGwEeSDqcC__n6kPQ" name="borneEurékaUI" type="_2Bbu4HGtEeSHsuqkzZf8Ig" association="_940agHGwEeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_940agnGwEeSDqcC__n6kPQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_940ag3GwEeSDqcC__n6kPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vEaDoHGzEeSDqcC__n6kPQ" name="Produit"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wvDnkHGzEeSDqcC__n6kPQ" memberEnd="_wvDnkXGzEeSDqcC__n6kPQ _wvDAgHGzEeSDqcC__n6kPQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wvDnkXGzEeSDqcC__n6kPQ" name="borneEuréka" type="_wRQgAHGtEeSHsuqkzZf8Ig" association="_wvDnkHGzEeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wvDnknGzEeSDqcC__n6kPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wvDnk3GzEeSDqcC__n6kPQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZSG_gHG0EeSDqcC__n6kPQ" name="Emplacement"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bChNMHG0EeSDqcC__n6kPQ" visibility="private" memberEnd="_bChNMXG0EeSDqcC__n6kPQ _bCgmIHG0EeSDqcC__n6kPQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bChNMXG0EeSDqcC__n6kPQ" name="borneEuréka" type="_wRQgAHGtEeSHsuqkzZf8Ig" association="_bChNMHG0EeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bChNMnG0EeSDqcC__n6kPQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bChNM3G0EeSDqcC__n6kPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ItazQHG2EeSDqcC__n6kPQ" memberEnd="_ItazQXG2EeSDqcC__n6kPQ _ItaMMHG2EeSDqcC__n6kPQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ItazQXG2EeSDqcC__n6kPQ" name="borneEuréka" type="_wRQgAHGtEeSHsuqkzZf8Ig" association="_ItazQHG2EeSDqcC__n6kPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ItazQnG2EeSDqcC__n6kPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ItazQ3G2EeSDqcC__n6kPQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_oLwCYHG2EeSDqcC__n6kPQ" name="FichierAudio"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_GUkaoHG4EeSDqcC__n6kPQ" name="String"/>
 </uml:Model>

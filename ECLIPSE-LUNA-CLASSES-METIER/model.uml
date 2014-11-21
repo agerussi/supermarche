@@ -125,7 +125,7 @@
     <packagedElement xmi:type="uml:DataType" xmi:id="_rXAasGAhEeSXjrPLCRUqJQ" name="String"/>
     <packagedElement xmi:type="uml:DataType" xmi:id="_605PkGAiEeSXjrPLCRUqJQ" name="Integer"/>
     <packagedElement xmi:type="uml:DataType" xmi:id="_a0vQUGAjEeSXjrPLCRUqJQ" name="Double"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_fyDsoGAoEeSXjrPLCRUqJQ" name="EmplacementProduit">
+    <packagedElement xmi:type="uml:Class" xmi:id="_fyDsoGAoEeSXjrPLCRUqJQ" name="Emplacement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_v8bVkGBAEeSXjrPLCRUqJQ" name="allée" type="_605PkGAiEeSXjrPLCRUqJQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_4QMikGBAEeSXjrPLCRUqJQ" name="marqueur" type="_605PkGAiEeSXjrPLCRUqJQ"/>
     </packagedElement>
