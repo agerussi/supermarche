@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
+  <uml:Model xmi:id="_lCJ7gHJ3EeSmNoAb1SAkIA" name="model">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_R_eEAHKTEeSmNoAb1SAkIA" annotatedElement="_JJaoIHJ5EeSmNoAb1SAkIA">
+      <body> «singleton»</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3SSD8HJ3EeSmNoAb1SAkIA" name="ConsulterRecetteUI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_x7RPEHKPEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_x7R2IHKPEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x7RPEXKPEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x7RPEnKPEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_429iwHJ3EeSmNoAb1SAkIA" name="ConsulterRecetteCTRL">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9GvwYHKMEeSmNoAb1SAkIA" name="consulterRecetteUI" type="_3SSD8HJ3EeSmNoAb1SAkIA" aggregation="composite" association="_9Gw-gHKMEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9GvwYXKMEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9GvwYnKMEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_58ciIHKNEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_58dJMHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_58ciIXKNEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_58ciInKNEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8CNE0HJ5EeSmNoAb1SAkIA" name="miseÉchelle"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7umeQHJ3EeSmNoAb1SAkIA" name="RecetteConnectée">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EMXC0HJ6EeSmNoAb1SAkIA" name="validerNBPersonnes"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_J7VX0HJ6EeSmNoAb1SAkIA" name="getListeProduits"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AjvoQHJ4EeSmNoAb1SAkIA" name="MiseAEchelleUI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Vuzj4HKQEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_Vuzj43KQEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vuzj4XKQEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vuzj4nKQEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jS1i4HKLEeSmNoAb1SAkIA" name="demanderConfirmation"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_E9L9oHKMEeSmNoAb1SAkIA" name="incrémenterNBPersonnes"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_G6UYsHKMEeSmNoAb1SAkIA" name="décrémenterNBPersonnes"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DhGKMHJ4EeSmNoAb1SAkIA" name="MiseAEchelleCTRL">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MzVlEHKNEeSmNoAb1SAkIA" name="miseAEchelleUI" type="_AjvoQHJ4EeSmNoAb1SAkIA" aggregation="composite" association="_MzXaQHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MzVlEXKNEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MzVlEnKNEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CkzfEHKOEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_Ck0GIHKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CkzfEXKOEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CkzfEnKOEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_OtokAHKMEeSmNoAb1SAkIA" name="setNBPersonnes()"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FiCuQHJ4EeSmNoAb1SAkIA" name="ListeProduitsUI">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_c13C8HKMEeSmNoAb1SAkIA" name="désélectionnerProduit"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ftCrcHKMEeSmNoAb1SAkIA" name="sélectionneProduit"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HFgsIHJ4EeSmNoAb1SAkIA" name="ListeProduitsCTRL">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yA8rMHKNEeSmNoAb1SAkIA" name="listeProduitsUI" type="_FiCuQHJ4EeSmNoAb1SAkIA" aggregation="composite" association="_yA9SQHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yA8rMXKNEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yA8rMnKNEeSmNoAb1SAkIA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jwRQUHKMEeSmNoAb1SAkIA" name="annulation"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nc8WYHKMEeSmNoAb1SAkIA" name="validation()"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ah_fUHJ5EeSmNoAb1SAkIA" name="Produit">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_snRtQHKMEeSmNoAb1SAkIA" name="getProduitsAlternatifs"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JJaoIHJ5EeSmNoAb1SAkIA" name="ListeCourante">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_OTjy8HKTEeSmNoAb1SAkIA">
+        <body>pattern Singleton</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wMNk4HKSEeSmNoAb1SAkIA" name="instanceUnique" visibility="private" isStatic="true" type="_JJaoIHJ5EeSmNoAb1SAkIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qP5XcHKSEeSmNoAb1SAkIA" name="getInstance" isStatic="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fAr3kHKTEeSmNoAb1SAkIA" name="Listecourante" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LfX-oHKUEeSmNoAb1SAkIA" name="ajouterProduits"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9Gw-gHKMEeSmNoAb1SAkIA" memberEnd="_9Gw-gXKMEeSmNoAb1SAkIA _9GvwYHKMEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9Gw-gXKMEeSmNoAb1SAkIA" name="consulterRecetteCTRL" type="_429iwHJ3EeSmNoAb1SAkIA" association="_9Gw-gHKMEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Gw-gnKMEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Gw-g3KMEeSmNoAb1SAkIA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MzXaQHKNEeSmNoAb1SAkIA" memberEnd="_MzXaQXKNEeSmNoAb1SAkIA _MzVlEHKNEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_MzXaQXKNEeSmNoAb1SAkIA" name="miseAEchelleCTRL" type="_DhGKMHJ4EeSmNoAb1SAkIA" association="_MzXaQHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MzXaQnKNEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MzXaQ3KNEeSmNoAb1SAkIA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yA9SQHKNEeSmNoAb1SAkIA" memberEnd="_yA9SQXKNEeSmNoAb1SAkIA _yA8rMHKNEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yA9SQXKNEeSmNoAb1SAkIA" name="listeProduitsCTRL" type="_HFgsIHJ4EeSmNoAb1SAkIA" association="_yA9SQHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yA9SQnKNEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yA9SQ3KNEeSmNoAb1SAkIA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_58dJMHKNEeSmNoAb1SAkIA" memberEnd="_58dJMXKNEeSmNoAb1SAkIA _58ciIHKNEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_58dJMXKNEeSmNoAb1SAkIA" name="consulterRecetteCTRL" type="_429iwHJ3EeSmNoAb1SAkIA" association="_58dJMHKNEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_58dJMnKNEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_58dJM3KNEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Ck0GIHKOEeSmNoAb1SAkIA" memberEnd="_Ck0GIXKOEeSmNoAb1SAkIA _CkzfEHKOEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Ck0GIXKOEeSmNoAb1SAkIA" name="miseAEchelleCTRL" type="_DhGKMHJ4EeSmNoAb1SAkIA" association="_Ck0GIHKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ck0GInKOEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ck0GI3KOEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Z3oFUHKOEeSmNoAb1SAkIA" name="ArticleGénérique"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kM3a0HKOEeSmNoAb1SAkIA" memberEnd="_kM3a0XKOEeSmNoAb1SAkIA _kM2zwHKOEeSmNoAb1SAkIA" navigableOwnedEnd="_kM2zwHKOEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kM3a0XKOEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" association="_kM3a0HKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kM3a0nKOEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kM3a03KOEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kM2zwHKOEeSmNoAb1SAkIA" name="articlesGénériques" type="_Z3oFUHKOEeSmNoAb1SAkIA" aggregation="shared" association="_kM3a0HKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kM2zwXKOEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kM2zwnKOEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_mkPh4HKOEeSmNoAb1SAkIA" memberEnd="_mkPh4XKOEeSmNoAb1SAkIA _mkO60HKOEeSmNoAb1SAkIA" navigableOwnedEnd="_mkPh4XKOEeSmNoAb1SAkIA _mkO60HKOEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mkPh4XKOEeSmNoAb1SAkIA" name="articlesGénériques" type="_Z3oFUHKOEeSmNoAb1SAkIA" association="_mkPh4HKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mkPh4nKOEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mkPh43KOEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mkO60HKOEeSmNoAb1SAkIA" name="produits" type="_Ah_fUHJ5EeSmNoAb1SAkIA" association="_mkPh4HKOEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mkO60XKOEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mkO60nKOEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_x7R2IHKPEeSmNoAb1SAkIA" memberEnd="_x7R2IXKPEeSmNoAb1SAkIA _x7RPEHKPEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_x7R2IXKPEeSmNoAb1SAkIA" name="consulterRecetteUI" type="_3SSD8HJ3EeSmNoAb1SAkIA" association="_x7R2IHKPEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x7R2InKPEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x7R2I3KPEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Vuzj43KQEeSmNoAb1SAkIA" memberEnd="_Vuzj5HKQEeSmNoAb1SAkIA _Vuzj4HKQEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Vuzj5HKQEeSmNoAb1SAkIA" name="miseAEchelleUI" type="_AjvoQHJ4EeSmNoAb1SAkIA" association="_Vuzj43KQEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vuzj5XKQEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vuzj5nKQEeSmNoAb1SAkIA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_hJNVMHKREeSmNoAb1SAkIA" client="_429iwHJ3EeSmNoAb1SAkIA" supplier="_DhGKMHJ4EeSmNoAb1SAkIA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_q01tAHKREeSmNoAb1SAkIA" client="_DhGKMHJ4EeSmNoAb1SAkIA" supplier="_HFgsIHJ4EeSmNoAb1SAkIA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ABf4AHKSEeSmNoAb1SAkIA" memberEnd="_ABf4AXKSEeSmNoAb1SAkIA _ABep4HKSEeSmNoAb1SAkIA" navigableOwnedEnd="_ABep4HKSEeSmNoAb1SAkIA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ABf4AXKSEeSmNoAb1SAkIA" name="listeCourante" type="_JJaoIHJ5EeSmNoAb1SAkIA" association="_ABf4AHKSEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ABf4AnKSEeSmNoAb1SAkIA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ABgfEHKSEeSmNoAb1SAkIA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ABep4HKSEeSmNoAb1SAkIA" name="produits" type="_Ah_fUHJ5EeSmNoAb1SAkIA" aggregation="shared" association="_ABf4AHKSEeSmNoAb1SAkIA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ABep4XKSEeSmNoAb1SAkIA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ABep4nKSEeSmNoAb1SAkIA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xY9E0HKSEeSmNoAb1SAkIA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xZTqIHKSEeSmNoAb1SAkIA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ActionLanguage:TextualRepresentation xmi:id="_xZWGYHKSEeSmNoAb1SAkIA" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_y0VdsHKSEeSmNoAb1SAkIA" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+</xmi:XMI>
