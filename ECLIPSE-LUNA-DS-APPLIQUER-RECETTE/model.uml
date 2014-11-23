@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Model xmi:id="_lCJ7gHJ3EeSmNoAb1SAkIA" name="model">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_R_eEAHKTEeSmNoAb1SAkIA" annotatedElement="_JJaoIHJ5EeSmNoAb1SAkIA">
-      <body> «singleton»</body>
-    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_3SSD8HJ3EeSmNoAb1SAkIA" name="ConsulterRecetteUI">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_x7RPEHKPEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_x7R2IHKPEeSmNoAb1SAkIA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x7RPEXKPEeSmNoAb1SAkIA" value="1"/>
@@ -60,13 +57,10 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_Ah_fUHJ5EeSmNoAb1SAkIA" name="Produit">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_snRtQHKMEeSmNoAb1SAkIA" name="getProduitsAlternatifs"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_JJaoIHJ5EeSmNoAb1SAkIA" name="ListeCourante">
+    <packagedElement xmi:type="uml:Class" xmi:id="_JJaoIHJ5EeSmNoAb1SAkIA" name="Panier">
       <ownedComment xmi:type="uml:Comment" xmi:id="_OTjy8HKTEeSmNoAb1SAkIA">
         <body>pattern Singleton</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_wMNk4HKSEeSmNoAb1SAkIA" name="instanceUnique" visibility="private" isStatic="true" type="_JJaoIHJ5EeSmNoAb1SAkIA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_qP5XcHKSEeSmNoAb1SAkIA" name="getInstance" isStatic="true"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_fAr3kHKTEeSmNoAb1SAkIA" name="Listecourante" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_LfX-oHKUEeSmNoAb1SAkIA" name="ajouterProduits"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_9Gw-gHKMEeSmNoAb1SAkIA" memberEnd="_9Gw-gXKMEeSmNoAb1SAkIA _9GvwYHKMEeSmNoAb1SAkIA">

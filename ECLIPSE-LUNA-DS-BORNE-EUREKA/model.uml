@@ -135,7 +135,7 @@ Date de création: 22/11/2014</body>
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Activity" xmi:id="_C9kK8HGqEeSHsuqkzZf8Ig" name="Activity1"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_wRQgAHGtEeSHsuqkzZf8Ig" name="BorneEurékaMOD">
+  <packagedElement xmi:type="uml:Class" xmi:id="_wRQgAHGtEeSHsuqkzZf8Ig" name="BorneEuréka">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_wvDAgHGzEeSDqcC__n6kPQ" name="produitsProposés" type="_vEaDoHGzEeSDqcC__n6kPQ" aggregation="shared" association="_wvDnkHGzEeSDqcC__n6kPQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wvDAgXGzEeSDqcC__n6kPQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wvDAgnGzEeSDqcC__n6kPQ" value="*"/>
