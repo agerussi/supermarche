@@ -184,6 +184,11 @@
           <element xmi:type="uml:CombinedFragment" href="Diag_seq_Fr.uml#_QNZroHKiEeSkuMHI27M5UA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QNdWAXKiEeSkuMHI27M5UA" x="368" y="63" width="540" height="115"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_52fFQHKnEeSq0IqkfxahoA" type="3009">
+          <children xmi:type="notation:DecorationNode" xmi:id="_52gTYHKnEeSq0IqkfxahoA" type="5006"/>
+          <element xmi:type="uml:Comment" href="Diag_seq_Fr.uml#_5yiZYHKnEeSq0IqkfxahoA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_52fFQXKnEeSq0IqkfxahoA" x="44" y="673" width="268" height="73"/>
+        </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tFYBHIwEeSpEO_g-AthAQ"/>
       </children>
       <element xmi:type="uml:Interaction" href="Diag_seq_Fr.uml#_6r0q4HIwEeSpEO_g-AthAQ"/>

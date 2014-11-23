@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6N2AUHIuEeSpEO_g-AthAQ" name="model">
   <packagedElement xmi:type="uml:Interaction" xmi:id="_6r0q4HIwEeSpEO_g-AthAQ" name="AjouterArticleCadbot">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_5yiZYHKnEeSq0IqkfxahoA">
+      <body> Diagramme de sequence: AjouterArticleCadBot
+
+François Dubiez 22/11/2014
+</body>
+    </ownedComment>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_NDQDQHIzEeSpEO_g-AthAQ" name=":Client" coveredBy="_m3iTUHJ4EeSpEO_g-AthAQ _m3hsQHJ4EeSpEO_g-AthAQ _XfIWMHKJEeSpEO_g-AthAQ _VuDKYHKaEeSkuMHI27M5UA _2udrwHKkEeSkuMHI27M5UA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_WIOqwHIzEeSpEO_g-AthAQ" name="buzzerUI:AjouterArticleCadBotBuzzer" coveredBy="_yDoZgHKSEeS95eKfK5pNVg _jkk1UHKaEeSkuMHI27M5UA _p5K_4HKaEeSkuMHI27M5UA _yRZ2IHKaEeSkuMHI27M5UA _Hh2U8HKbEeSkuMHI27M5UA _MapP4HKbEeSkuMHI27M5UA _A3Al4HKhEeSkuMHI27M5UA _A3BM8HKhEeSkuMHI27M5UA _lOhKcHKhEeSkuMHI27M5UA _INhD8HKiEeSkuMHI27M5UA _QNZroHKiEeSkuMHI27M5UA _QNa5wHKiEeSkuMHI27M5UA _TK8a0HKiEeSkuMHI27M5UA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_mOinAHIzEeSpEO_g-AthAQ" name="balanceUI:AjouterCadBotBalance" coveredBy="_tscVoHJ4EeSpEO_g-AthAQ _XfJkUHKJEeSpEO_g-AthAQ _v7ovEHKOEeS95eKfK5pNVg _fiCsoHKdEeSkuMHI27M5UA _A3Al4HKhEeSkuMHI27M5UA _A3BM8HKhEeSkuMHI27M5UA _lOhKcHKhEeSkuMHI27M5UA _EvcTMHKlEeSkuMHI27M5UA _GJ6GEHKlEeSkuMHI27M5UA _HjGtoHKlEeSkuMHI27M5UA"/>
