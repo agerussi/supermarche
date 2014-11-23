@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6N2AUHIuEeSpEO_g-AthAQ" name="model">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_UIg8QHMkEeSCn8UL1IaLfg">
+    <body>Auteur: François Dubiez
+Date de création: 23/11/2014</body>
+  </ownedComment>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_6r0q4HIwEeSpEO_g-AthAQ" name="AjouterArticleCadbot">
     <ownedComment xmi:type="uml:Comment" xmi:id="_5yiZYHKnEeSq0IqkfxahoA">
       <body> Diagramme de sequence: AjouterArticleCadBot
@@ -7,6 +11,11 @@
 François Dubiez 22/11/2014
 </body>
     </ownedComment>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_yeaggHMgEeSCn8UL1IaLfg" name="AjouterCadBotMod"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_yec8wHMgEeSCn8UL1IaLfg" name="AjouterCadBotUI"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_yedj0HMgEeSCn8UL1IaLfg" name="AjouterCadBotBuzzerUI"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_yedj0XMgEeSCn8UL1IaLfg" name="Produit"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_yedj0nMgEeSCn8UL1IaLfg" name="AjouterCadBotCTRL"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_NDQDQHIzEeSpEO_g-AthAQ" name=":Client" coveredBy="_m3iTUHJ4EeSpEO_g-AthAQ _m3hsQHJ4EeSpEO_g-AthAQ _XfIWMHKJEeSpEO_g-AthAQ _VuDKYHKaEeSkuMHI27M5UA _2udrwHKkEeSkuMHI27M5UA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_WIOqwHIzEeSpEO_g-AthAQ" name="buzzerUI:AjouterArticleCadBotBuzzer" coveredBy="_yDoZgHKSEeS95eKfK5pNVg _jkk1UHKaEeSkuMHI27M5UA _p5K_4HKaEeSkuMHI27M5UA _yRZ2IHKaEeSkuMHI27M5UA _Hh2U8HKbEeSkuMHI27M5UA _MapP4HKbEeSkuMHI27M5UA _A3Al4HKhEeSkuMHI27M5UA _A3BM8HKhEeSkuMHI27M5UA _lOhKcHKhEeSkuMHI27M5UA _INhD8HKiEeSkuMHI27M5UA _QNZroHKiEeSkuMHI27M5UA _QNa5wHKiEeSkuMHI27M5UA _TK8a0HKiEeSkuMHI27M5UA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_mOinAHIzEeSpEO_g-AthAQ" name="balanceUI:AjouterCadBotBalance" coveredBy="_tscVoHJ4EeSpEO_g-AthAQ _XfJkUHKJEeSpEO_g-AthAQ _v7ovEHKOEeS95eKfK5pNVg _fiCsoHKdEeSkuMHI27M5UA _A3Al4HKhEeSkuMHI27M5UA _A3BM8HKhEeSkuMHI27M5UA _lOhKcHKhEeSkuMHI27M5UA _EvcTMHKlEeSkuMHI27M5UA _GJ6GEHKlEeSkuMHI27M5UA _HjGtoHKlEeSkuMHI27M5UA"/>
@@ -152,5 +161,161 @@ François Dubiez 22/11/2014
     <message xmi:type="uml:Message" xmi:id="_gB-3UHKlEeSkuMHI27M5UA" name="Message17" receiveEvent="_gCAsgHKlEeSkuMHI27M5UA"/>
     <message xmi:type="uml:Message" xmi:id="_4vYlMHKlEeSkuMHI27M5UA" name="sendEmitSound(True: bool)" messageSort="asynchCall" receiveEvent="_4vbogHKlEeSkuMHI27M5UA" sendEvent="_4vaaYHKlEeSkuMHI27M5UA"/>
     <message xmi:type="uml:Message" xmi:id="_YRlAoHKmEeSkuMHI27M5UA" name="GetWeightFromStore()" messageSort="asynchCall" receiveEvent="_ZakpAHKmEeSkuMHI27M5UA" sendEvent="_YRm10HKmEeSkuMHI27M5UA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xw7S8HMhEeSCn8UL1IaLfg" name="AjouterCadBotUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2L5XgHMjEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_38SXEHMjEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_snQYgHMjEeSCn8UL1IaLfg" name="readRFIDTag"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vhHhkHMjEeSCn8UL1IaLfg" name="readBarCode"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_B9DjUHMiEeSCn8UL1IaLfg" name="AjouterArticleCadBotCTRL">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_P1ItcHMiEeSCn8UL1IaLfg" name="readerStatusUI" visibility="public" type="_sCpFAHMiEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k_drQXMkEeSCn8UL1IaLfg" name="ajouterCadBotUI" type="_xw7S8HMhEeSCn8UL1IaLfg" aggregation="composite" association="_k_drQHMkEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k_drQnMkEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k_drQ3MkEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_40DaoHMlEeSCn8UL1IaLfg" name="ajouterArticleCadBotBuzzer" type="_EnheIHMlEeSCn8UL1IaLfg" aggregation="composite" association="_40EBsHMlEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_40DaoXMlEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_40DaonMlEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_znYE8HMmEeSCn8UL1IaLfg" name="ajouterCadBotBalanceUI" type="_fPu2YHMmEeSCn8UL1IaLfg" aggregation="composite" association="_znYsAHMmEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_znYE8XMmEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znYE8nMmEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-05GQHMmEeSCn8UL1IaLfg" name="weightFromBal" visibility="public" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CMpFMHMnEeSCn8UL1IaLfg" name="weighFromDB" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1u-OIHMnEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" aggregation="shared" association="_1u-1MHMnEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1u-OIXMnEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1u-OInMnEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IDBcAHMiEeSCn8UL1IaLfg" name="sendEmitSound">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZQUuIHMlEeSCn8UL1IaLfg" name="ReadStatusUI" type="_sCpFAHMiEeSCn8UL1IaLfg" direction="out"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_DeZIUHMkEeSCn8UL1IaLfg" name="getbarCode"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_D0JV4HMkEeSCn8UL1IaLfg" name="getrfidTag"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WslUIHMnEeSCn8UL1IaLfg" name="getWeightFromStoreWithBarCode"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4M3IHMnEeSCn8UL1IaLfg" name="getWeightFromBalwithBarCode"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2D9KMHMoEeSCn8UL1IaLfg" name="getWeightFromStoreWithRfidTag"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8OxtsHMoEeSCn8UL1IaLfg" name="getWeightFromBalWithRfidTag"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AzbSsHMrEeSCn8UL1IaLfg" name="checkWeight"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MFs4MHMrEeSCn8UL1IaLfg" name="addPoductToBasket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ql4e0HMrEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TZgdAHMrEeSCn8UL1IaLfg" name="wieght" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sCpFAHMiEeSCn8UL1IaLfg" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sOyDkHMiEeSCn8UL1IaLfg" name="String"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_k_drQHMkEeSCn8UL1IaLfg" memberEnd="_k_drQXMkEeSCn8UL1IaLfg _k_b2EHMkEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_k_b2EHMkEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_k_drQHMkEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k_b2EXMkEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k_b2EnMkEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EnheIHMlEeSCn8UL1IaLfg" name="AjouterArticleCadBotBuzzer">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JRrgIHMlEeSCn8UL1IaLfg" name="emitSound">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Qdip4HMlEeSCn8UL1IaLfg" name="readStatus" type="_sCpFAHMiEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_40EBsHMlEeSCn8UL1IaLfg" name="cadBotBuzzer" memberEnd="_40EBsXMlEeSCn8UL1IaLfg _40DaoHMlEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_40EBsXMlEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_40EBsHMlEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_40EBsnMlEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_40EBs3MlEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fPu2YHMmEeSCn8UL1IaLfg" name="AjouterCadBotBalanceUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_l4X-UHMmEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_stTOwHMmEeSCn8UL1IaLfg" name="setWeight"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n_Vq0HMmEeSCn8UL1IaLfg" name="integer"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_znYsAHMmEeSCn8UL1IaLfg" memberEnd="_znYsAXMmEeSCn8UL1IaLfg _znYE8HMmEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_znYsAXMmEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_znYsAHMmEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_znYsAnMmEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znYsA3MmEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JmH0MHMnEeSCn8UL1IaLfg" name="AjouterArticleCadBotMod">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bXbSoHMnEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fgKCkHMnEeSCn8UL1IaLfg" name="rfidtag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jNNjIHMnEeSCn8UL1IaLfg" name="barcode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QFYEsHMpEeSCn8UL1IaLfg" name="produit" type="_ASaXsHMoEeSCn8UL1IaLfg" aggregation="shared" association="_QFYrwHMpEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFYEsXMpEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFYEsnMpEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QjlqsHMpEeSCn8UL1IaLfg" name="produit" type="_ASaXsHMoEeSCn8UL1IaLfg" aggregation="shared" association="_QjmRwHMpEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QjlqsXMpEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QjlqsnMpEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zquhoHMrEeSCn8UL1IaLfg" name="panier" type="_uTFHgHMrEeSCn8UL1IaLfg" aggregation="shared" association="_zqvIsHMrEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zquhoXMrEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zquhonMrEeSCn8UL1IaLfg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_efAuoHMnEeSCn8UL1IaLfg" name="getWeight"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rBh0AHMnEeSCn8UL1IaLfg" name="setWeight"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-6TYcHMrEeSCn8UL1IaLfg" name="addProductToBasket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GmckwHMsEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HM2dcHMsEeSCn8UL1IaLfg" name="addProductToBasket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OGrcAHMsEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_PC7o4HMsEeSCn8UL1IaLfg" name="addAnomalyItemToBasket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ztmb0HMsEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_XJKwMHMsEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aZsFwHMsEeSCn8UL1IaLfg" name="addAnomalyItemToBasket">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eRKGkHMsEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gakqIHMsEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1u-1MHMnEeSCn8UL1IaLfg" memberEnd="_1u-1MXMnEeSCn8UL1IaLfg _1u-OIHMnEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1u-1MXMnEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_1u-1MHMnEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1u-1MnMnEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1u-1M3MnEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ASaXsHMoEeSCn8UL1IaLfg" name="Produit"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ASaXsXMoEeSCn8UL1IaLfg" memberEnd="_ASaXsnMoEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ASaXsnMoEeSCn8UL1IaLfg" name="borneEuréka" association="_ASaXsXMoEeSCn8UL1IaLfg">
+      <type xmi:type="uml:Class" href="../ECLIPSE-LUNA-DS-BORNE-EUREKA/model.uml#_wRQgAHGtEeSHsuqkzZf8Ig"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ASaXs3MoEeSCn8UL1IaLfg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ASaXtHMoEeSCn8UL1IaLfg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ASa-wHMoEeSCn8UL1IaLfg" memberEnd="_ASa-wXMoEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ASa-wXMoEeSCn8UL1IaLfg" name="borneEuréka" association="_ASa-wHMoEeSCn8UL1IaLfg">
+      <type xmi:type="uml:Class" href="../ECLIPSE-LUNA-DS-BORNE-EUREKA/model.uml#_wRQgAHGtEeSHsuqkzZf8Ig"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ASa-wnMoEeSCn8UL1IaLfg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ASa-w3MoEeSCn8UL1IaLfg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QFYrwHMpEeSCn8UL1IaLfg" name="produitRfidTag" memberEnd="_QFYrwXMpEeSCn8UL1IaLfg _QFYEsHMpEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QFYrwXMpEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_QFYrwHMpEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFYrwnMpEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFYrw3MpEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QjmRwHMpEeSCn8UL1IaLfg" name="produitBarCode" memberEnd="_QjmRwXMpEeSCn8UL1IaLfg _QjlqsHMpEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QjmRwXMpEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_QjmRwHMpEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QjmRwnMpEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QjmRw3MpEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_uTFHgHMrEeSCn8UL1IaLfg" name="Panier"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zqvIsHMrEeSCn8UL1IaLfg" name="addItem" memberEnd="_zqvIsXMrEeSCn8UL1IaLfg _zquhoHMrEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zqvIsXMrEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_zqvIsHMrEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zqvIsnMrEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zqvIs3MrEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sCpEAHMtEeSCn8UL1IaLfg" name="FutureMarket">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vpcyoHMtEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" aggregation="composite" association="_vpen0HMtEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpcyoXMtEeSCn8UL1IaLfg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpcyonMtEeSCn8UL1IaLfg" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vpen0HMtEeSCn8UL1IaLfg" memberEnd="_vpen0XMtEeSCn8UL1IaLfg _vpcyoHMtEeSCn8UL1IaLfg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vpen0XMtEeSCn8UL1IaLfg" name="futureMarket" type="_sCpEAHMtEeSCn8UL1IaLfg" association="_vpen0HMtEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpen0nMtEeSCn8UL1IaLfg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpen03MtEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
