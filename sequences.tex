@@ -3,13 +3,21 @@
 Dans cette section nous présentons les diagrammes de séquence (DS) reliés à quelques-uns des \cu\ les plus emblématiques de notre application.
 
 \startitemize
-\item la \in{figure}[DS:BE] correspond au \in{\cu}[SS:CUD:UBE].
+\item la \in{figure}[DS:BE] correspond au \cu\ «UtiliserBorneEuréka», voir \in{section}[SS:CUD:UBE].
 Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:BE].
 Les classes faisant partie de l'UI sont les «vues» et possèdent leur propre fil d'exécution afin de rester réactives aux sollicitations du client.
-Par exemple, l'objet \type{carteUI} répond à des toucher de l'utilisateur pour faire défiler ou zoomer la carte (ces interactions ne sont pas représentées sur le diagramme).
+Par exemple, l'objet \type{carteUI} répond à des touchers de l'utilisateur pour faire défiler ou zoomer la carte (ces interactions ne sont pas représentées sur le diagramme).
+
+\item la \in{figure}[DS:AR] correspond au \cu\ «AppliquerRecetteConnectée», voir \in{section}[SS:CUD:AR].
+Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:AR].
+
 % TO BE CONTINUED
 \stopitemize
 
 
-\placefigure[][DS:BE]{DS du \cu\ «UtiliserBorneEuréka»}{\externalfigure[ECLIPSE-LUNA-DS-BORNE-EUREKA/DSUtiliserBorneEureka.pdf][width=\hsize]}
+\placefigure[][DS:BE]{DS du \cu\ «UtiliserBorneEuréka»}
+{\externalfigure[ECLIPSE-LUNA-DS-BORNE-EUREKA/DSUtiliserBorneEureka.pdf][width=\hsize]}
+
+\placefigure[][DS:AR]{DS du \cu\ «AppliquerRecetteConnectée»}
+{\externalfigure[ECLIPSE-LUNA-DS-APPLIQUER-RECETTE/DSAppliquerRecette.pdf][width=\hsize]}
 % TO BE CONTINUED
