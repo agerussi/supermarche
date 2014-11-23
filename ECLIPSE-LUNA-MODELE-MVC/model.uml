@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_N5a60HJ2EeSmNoAb1SAkIA" name="model">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_UVat4HJ2EeSmNoAb1SAkIA">
+    <body> le contrôleur et la vue communiquent 
+par un pattern écouteur/écouté.
+Quand l'utilisateur interagit avec la vue,
+celle-ci appelle la/les méthodes des contrôleurs
+qui se sont abonnés à la vue.
+Si besoin, les controleurs détruisent la vue
+et en créent d'autres, adaptées à ce qui doit 
+être affiché. </body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_UVat4XJ2EeSmNoAb1SAkIA">
+    <body> GestionVue est une classe interne au contrôleur,
+qui implémente Écouteur. 
+Sa méthode action() a donc accès à l'ensemble de 
+l'objet Contrôleur qui la contient.
+C'est la méthode officielle d'implémentation des
+écouteurs en Java, ou tout autre langage qui ne 
+possède pas d'objet &quot;fonction&quot; (ou des pointeurs
+de fonction)</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_UVat73J2EeSmNoAb1SAkIA">
+    <body> la vue se rafraichit selon le modèle
+par un pattern observateur/observé.
+Pour s'actualiser, la vue va chercher les 
+infos qui l'intéressent dans le modèle
+qui lui offre des accesseurs appropriés.</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_UVbU-nJ2EeSmNoAb1SAkIA">
+    <body> Le contrôleur agit sur le modèle par l'intermédiaire
+des accesseurs get/set fournis par le modèle.</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_YIXbEHJ2EeSmNoAb1SAkIA">
+    <body>Le modèle contient et manipule 
+les données métiers</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_d47rgHJ2EeSmNoAb1SAkIA">
+    <body>La vue écoute les actions de l'utilisateur
+et/ou visualise une partie du modèle</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_kjyZ8HJ2EeSmNoAb1SAkIA">
+    <body>Le contrôleur est le chef d'orchestre entre 
+les vues et le modèle. Il contient la dynamique
+des interactions.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVZfwHJ2EeSmNoAb1SAkIA" memberEnd="_UVZfwXJ2EeSmNoAb1SAkIA _UVbVAHJ2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVZfwXJ2EeSmNoAb1SAkIA" name="vue" type="_UVbU_3J2EeSmNoAb1SAkIA" association="_UVZfwHJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVZfwnJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVZfw3J2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_UVaG0HJ2EeSmNoAb1SAkIA" name="Observable">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVaG0XJ2EeSmNoAb1SAkIA" name="ajouterObservateur">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVaG0nJ2EeSmNoAb1SAkIA" name="obs" type="_UVat7XJ2EeSmNoAb1SAkIA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVaG03J2EeSmNoAb1SAkIA" name="supprimerObservateur">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVaG1HJ2EeSmNoAb1SAkIA" name="obs" type="_UVat7XJ2EeSmNoAb1SAkIA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVaG1XJ2EeSmNoAb1SAkIA" name="notifierObservateurs" visibility="private"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVaG1nJ2EeSmNoAb1SAkIA" memberEnd="_UVaG13J2EeSmNoAb1SAkIA _UVb8BHJ2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVaG13J2EeSmNoAb1SAkIA" name="contrôleur" type="_UVb8AHJ2EeSmNoAb1SAkIA" association="_UVaG1nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVaG2HJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVaG2XJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_UVaG2nJ2EeSmNoAb1SAkIA" client="_UVb8CnJ2EeSmNoAb1SAkIA" supplier="_UVbU93J2EeSmNoAb1SAkIA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVat4nJ2EeSmNoAb1SAkIA" memberEnd="_UVat43J2EeSmNoAb1SAkIA _UVb8B3J2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVat43J2EeSmNoAb1SAkIA" name="contrôleur" type="_UVb8AHJ2EeSmNoAb1SAkIA" association="_UVat4nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVat5HJ2EeSmNoAb1SAkIA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVat5XJ2EeSmNoAb1SAkIA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVat5nJ2EeSmNoAb1SAkIA" memberEnd="_UVat6nJ2EeSmNoAb1SAkIA _UVat53J2EeSmNoAb1SAkIA" navigableOwnedEnd="_UVat53J2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVat53J2EeSmNoAb1SAkIA" name="écouteurs" type="_UVbU93J2EeSmNoAb1SAkIA" aggregation="shared" association="_UVat5nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVat6HJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVat6XJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVat6nJ2EeSmNoAb1SAkIA" name="écoutable" type="_UVb8D3J2EeSmNoAb1SAkIA" association="_UVat5nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVat63J2EeSmNoAb1SAkIA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVat7HJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_UVat7XJ2EeSmNoAb1SAkIA" name="Observateur">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVat7nJ2EeSmNoAb1SAkIA" name="actualiser"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UVbU8HJ2EeSmNoAb1SAkIA" name="Modèle">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UVbU8XJ2EeSmNoAb1SAkIA" name="observateur" type="_UVat7XJ2EeSmNoAb1SAkIA" aggregation="shared" association="_UVb8C3J2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVbU8nJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVbU83J2EeSmNoAb1SAkIA" value="*"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbU9HJ2EeSmNoAb1SAkIA" client="_UVbU8HJ2EeSmNoAb1SAkIA _UVbU8HJ2EeSmNoAb1SAkIA _UVbU8HJ2EeSmNoAb1SAkIA" supplier="_UVaG0HJ2EeSmNoAb1SAkIA" contract="_UVaG0HJ2EeSmNoAb1SAkIA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbU9XJ2EeSmNoAb1SAkIA" name="getEtat"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbU9nJ2EeSmNoAb1SAkIA" name="setEtat"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_UVbU93J2EeSmNoAb1SAkIA" name="Écouteur">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbU-HJ2EeSmNoAb1SAkIA" name="action" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVbU-XJ2EeSmNoAb1SAkIA" name="vue" type="_UVbU_3J2EeSmNoAb1SAkIA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVbU-3J2EeSmNoAb1SAkIA" memberEnd="_UVbU_HJ2EeSmNoAb1SAkIA _UVb8AXJ2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVbU_HJ2EeSmNoAb1SAkIA" name="contrôleur" type="_UVb8AHJ2EeSmNoAb1SAkIA" association="_UVbU-3J2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVbU_XJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVbU_nJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UVbU_3J2EeSmNoAb1SAkIA" name="Vue">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UVbVAHJ2EeSmNoAb1SAkIA" name="modèle" type="_UVbU8HJ2EeSmNoAb1SAkIA" aggregation="shared" association="_UVZfwHJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVbVAXJ2EeSmNoAb1SAkIA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVbVAnJ2EeSmNoAb1SAkIA" value="1"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVA3J2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVat7XJ2EeSmNoAb1SAkIA" contract="_UVat7XJ2EeSmNoAb1SAkIA"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVBHJ2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVb8D3J2EeSmNoAb1SAkIA" contract="_UVb8D3J2EeSmNoAb1SAkIA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbVBXJ2EeSmNoAb1SAkIA" name="getDonnées"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UVb8AHJ2EeSmNoAb1SAkIA" name="Contrôleur">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UVb8AXJ2EeSmNoAb1SAkIA" name="modèle" type="_UVbU8HJ2EeSmNoAb1SAkIA" aggregation="shared" association="_UVbU-3J2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVb8AnJ2EeSmNoAb1SAkIA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVb8A3J2EeSmNoAb1SAkIA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UVb8BHJ2EeSmNoAb1SAkIA" name="client" type="_UVbU_3J2EeSmNoAb1SAkIA" association="_UVaG1nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVb8BXJ2EeSmNoAb1SAkIA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVb8BnJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UVb8B3J2EeSmNoAb1SAkIA" name="mesÉcouteurs" type="_UVb8CnJ2EeSmNoAb1SAkIA" aggregation="composite" association="_UVat4nJ2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVb8CHJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVb8CXJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedAttribute>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_UVb8CnJ2EeSmNoAb1SAkIA" name="MonÉcouteur"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UVb8C3J2EeSmNoAb1SAkIA" memberEnd="_UVb8DHJ2EeSmNoAb1SAkIA _UVbU8XJ2EeSmNoAb1SAkIA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UVb8DHJ2EeSmNoAb1SAkIA" name="observé" type="_UVaG0HJ2EeSmNoAb1SAkIA" association="_UVb8C3J2EeSmNoAb1SAkIA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVb8DXJ2EeSmNoAb1SAkIA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVb8DnJ2EeSmNoAb1SAkIA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_UVb8D3J2EeSmNoAb1SAkIA" name="Écoutable">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVb8EHJ2EeSmNoAb1SAkIA" name="ajouterÉcouteur" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVb8EXJ2EeSmNoAb1SAkIA" name="e" type="_UVbU93J2EeSmNoAb1SAkIA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UVb8EnJ2EeSmNoAb1SAkIA" name="supprimerÉcouteur">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVb8E3J2EeSmNoAb1SAkIA" name="e" type="_UVbU93J2EeSmNoAb1SAkIA"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

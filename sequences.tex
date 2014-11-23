@@ -4,7 +4,9 @@ Dans cette section nous présentons les diagrammes de séquence (DS) reliés à 
 
 \startitemize
 \item la \in{figure}[DS:BE] correspond au \in{\cu}[SS:CUD:UBE].
-Le diagramme de classes détaillés correspondant est à la figure \in{figure}[DC:BE].
+Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:BE].
+Les classes faisant partie de l'UI possèdent leur propre fil d'exécution afin de rester réactives aux sollicitations du client.
+Par exemple, l'objet \type{carteUI} répond à des toucher de l'utilisateur pour faire défiler ou zoomer la carte (ces interactions ne sont pas représentées sur le diagramme). 
 % TO BE CONTINUED
 \stopitemize
 
