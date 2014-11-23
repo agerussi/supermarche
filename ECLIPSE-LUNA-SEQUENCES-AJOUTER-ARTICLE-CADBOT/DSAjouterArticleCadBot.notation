@@ -421,4 +421,13 @@
     <element xmi:type="uml:Interaction" href="DSAjouterArticleCadBot.uml#_6r0q4HIwEeSpEO_g-AthAQ"/>
   </notation:Diagram>
   <css:ModelStyleSheets xmi:id="_8iH6wHMYEeSC4LICNdVn6w"/>
+  <notation:Diagram xmi:id="_aVvNIHMcEeSCn8UL1IaLfg" type="PapyrusUMLClassDiagram" name="DCAjouterArticleCadBot" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_aVvNIXMcEeSCn8UL1IaLfg" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_aVvNInMcEeSCn8UL1IaLfg"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_aVvNI3McEeSCn8UL1IaLfg">
+      <owner xmi:type="uml:Interaction" href="DSAjouterArticleCadBot.uml#_6r0q4HIwEeSpEO_g-AthAQ"/>
+      <configuration xmi:type="configuration:PapyrusDiagram" href="platform:/plugin/org.eclipse.papyrus.infra.viewpoints.policy/builtin/default.configuration#_7wLmk9xhEeOqHvRyiN87hA"/>
+    </styles>
+    <element xmi:type="uml:Interaction" href="DSAjouterArticleCadBot.uml#_6r0q4HIwEeSpEO_g-AthAQ"/>
+  </notation:Diagram>
 </xmi:XMI>
