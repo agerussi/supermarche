@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_lmCqcHMhEeSCn8UL1IaLfg" name="model">
+  <packagedElement xmi:type="uml:Class" xmi:id="_FB5l0HNNEeSML666MEbVFg" name="PortiqueUI">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YtBFkHNNEeSML666MEbVFg" name="setLight"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_G9yDsHNNEeSML666MEbVFg" name="PortiqueCTRL">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iXGlQHNNEeSML666MEbVFg" name="portiqueMod" type="_IpMcoHNNEeSML666MEbVFg" aggregation="composite" association="_iXKPoHNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iXGlQXNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iXGlQnNNEeSML666MEbVFg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dwUnYHNNEeSML666MEbVFg" name="getCadBotId()"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_lEVnkHNNEeSML666MEbVFg" name="getArticleListe"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IpMcoHNNEeSML666MEbVFg" name="PortiqueMod"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_M6tVIHNNEeSML666MEbVFg" name="CadBotUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fsFwgHNNEeSML666MEbVFg" name="portiqueUI" type="_FB5l0HNNEeSML666MEbVFg" association="_fsHlsHNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fsFwgXNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fsFwgnNNEeSML666MEbVFg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_RIGioHNNEeSML666MEbVFg" name="detectPortique"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fsHlsHNNEeSML666MEbVFg" memberEnd="_fsHlsXNNEeSML666MEbVFg _fsFwgHNNEeSML666MEbVFg">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fsHlsXNNEeSML666MEbVFg" name="cadBotUI" type="_M6tVIHNNEeSML666MEbVFg" association="_fsHlsHNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fsHlsnNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fsHls3NNEeSML666MEbVFg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gh2T0HNNEeSML666MEbVFg" memberEnd="_gh2T0XNNEeSML666MEbVFg _gh1swHNNEeSML666MEbVFg">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gh2T0XNNEeSML666MEbVFg" name="portiqueUI" type="_FB5l0HNNEeSML666MEbVFg" aggregation="composite" association="_gh2T0HNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gh2T0nNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gh2T03NNEeSML666MEbVFg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gh1swHNNEeSML666MEbVFg" name="portiqueCTRL" type="_G9yDsHNNEeSML666MEbVFg" association="_gh2T0HNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gh1swXNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gh1swnNNEeSML666MEbVFg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iXKPoHNNEeSML666MEbVFg" memberEnd="_iXKPoXNNEeSML666MEbVFg _iXGlQHNNEeSML666MEbVFg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iXKPoXNNEeSML666MEbVFg" name="portiqueCTRL" type="_G9yDsHNNEeSML666MEbVFg" association="_iXKPoHNNEeSML666MEbVFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iXKPonNNEeSML666MEbVFg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iXKPo3NNEeSML666MEbVFg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_W9unUHNPEeSML666MEbVFg" name="PasserPortique">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_ede9cHNPEeSML666MEbVFg" name="CadBotUI" coveredBy="_HNrZgHNQEeSML666MEbVFg _Uqx30HNQEeSML666MEbVFg _Z5buAHNQEeSML666MEbVFg _lSFBQHNQEeSML666MEbVFg _0cc5sHNQEeSML666MEbVFg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_jO0lgHNPEeSML666MEbVFg" name="CadBotCTRL" coveredBy="_EBslsHNQEeSML666MEbVFg _HNsnoHNQEeSML666MEbVFg _Z5af4HNQEeSML666MEbVFg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PidTIHNQEeSML666MEbVFg" name="PortiqueUI" coveredBy="_VSOSUHNQEeSML666MEbVFg _lSGPYHNQEeSML666MEbVFg _0ccSoHNQEeSML666MEbVFg _rjPLYHNSEeSML666MEbVFg _J9w0IHNTEeSML666MEbVFg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_LrE8cHNREeSML666MEbVFg" name="PortiqueCTRL" coveredBy="_2qAg8HNREeSML666MEbVFg _2p_54HNREeSML666MEbVFg _priC4HNSEeSML666MEbVFg _prj4EHNSEeSML666MEbVFg _prjRAHNSEeSML666MEbVFg _rjQZgHNSEeSML666MEbVFg _J9yCQHNTEeSML666MEbVFg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_UzZy4HNREeSML666MEbVFg" name="PortiqueMod"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HNrZgHNQEeSML666MEbVFg" name="MessageSend" covered="_ede9cHNPEeSML666MEbVFg" message="_HNqycHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_EBslsHNQEeSML666MEbVFg" name="ActionExecSpec" covered="_jO0lgHNPEeSML666MEbVFg" finish="_Z5af4HNQEeSML666MEbVFg" start="_HNsnoHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HNsnoHNQEeSML666MEbVFg" name="MessageRecv" covered="_jO0lgHNPEeSML666MEbVFg" message="_HNqycHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lSFBQHNQEeSML666MEbVFg" name="Message0Send" covered="_ede9cHNPEeSML666MEbVFg" message="_lSEaMHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z5af4HNQEeSML666MEbVFg" name="MessageSend0" covered="_jO0lgHNPEeSML666MEbVFg" message="_Z5ZRwHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_Uqx30HNQEeSML666MEbVFg" name="informPortique" covered="_ede9cHNPEeSML666MEbVFg" finish="_0cc5sHNQEeSML666MEbVFg" start="_Z5buAHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J9w0IHNTEeSML666MEbVFg" name="Message0Send0" covered="_PidTIHNQEeSML666MEbVFg" message="_J9vmAHNTEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z5buAHNQEeSML666MEbVFg" name="MessageRecv0" covered="_ede9cHNPEeSML666MEbVFg" message="_Z5ZRwHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_2p_54HNREeSML666MEbVFg" name="ActionExecSpec0" covered="_LrE8cHNREeSML666MEbVFg" finish="_2qAg8HNREeSML666MEbVFg" start="_J9yCQHNTEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_VSOSUHNQEeSML666MEbVFg" name="ActionPortiqueInformed" covered="_PidTIHNQEeSML666MEbVFg" finish="_0ccSoHNQEeSML666MEbVFg" start="_lSGPYHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lSGPYHNQEeSML666MEbVFg" name="Message0Recv" covered="_PidTIHNQEeSML666MEbVFg" message="_lSEaMHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J9yCQHNTEeSML666MEbVFg" name="Message0Recv0" covered="_LrE8cHNREeSML666MEbVFg" message="_J9vmAHNTEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0ccSoHNQEeSML666MEbVFg" name="MessageSend1" covered="_PidTIHNQEeSML666MEbVFg" message="_0cbrkHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0cc5sHNQEeSML666MEbVFg" name="MessageRecv1" covered="_ede9cHNPEeSML666MEbVFg" message="_0cbrkHNQEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_priC4HNSEeSML666MEbVFg" name="ActionExecSpec1Start" covered="_LrE8cHNREeSML666MEbVFg" execution="_prjRAHNSEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_prjRAHNSEeSML666MEbVFg" name="ActionExecSetLight" covered="_LrE8cHNREeSML666MEbVFg" finish="_prj4EHNSEeSML666MEbVFg" start="_priC4HNSEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rjPLYHNSEeSML666MEbVFg" name="MessageSend2" covered="_PidTIHNQEeSML666MEbVFg" message="_rjN9QHNSEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rjQZgHNSEeSML666MEbVFg" name="MessageRecv2" covered="_LrE8cHNREeSML666MEbVFg" message="_rjN9QHNSEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_prj4EHNSEeSML666MEbVFg" name="ActionExecSpec1Finish" covered="_LrE8cHNREeSML666MEbVFg" execution="_prjRAHNSEeSML666MEbVFg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_2qAg8HNREeSML666MEbVFg" name="ActionExecSpec0Finish" covered="_LrE8cHNREeSML666MEbVFg" execution="_2p_54HNREeSML666MEbVFg"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_WOkecHNTEeSML666MEbVFg" name="CombinedFragment" interactionOperator="alt">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_WOnhwHNTEeSML666MEbVFg" name="InteractionOperand">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_WOp-AHNTEeSML666MEbVFg">
+          <specification xmi:type="uml:LiteralString" xmi:id="_WOp-AXNTEeSML666MEbVFg" value="CadBotMsgReceived"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_WOqlEXNTEeSML666MEbVFg" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_WOqlEHNTEeSML666MEbVFg"/>
+        </guard>
+      </operand>
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_3iQFoHNTEeSML666MEbVFg" name="InteractionOperand0">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_3iQssHNTEeSML666MEbVFg">
+          <specification xmi:type="uml:LiteralString" xmi:id="_3iRTwHNTEeSML666MEbVFg" value="CadBotMsgNotReceived"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_3iRTwnNTEeSML666MEbVFg" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_3iRTwXNTEeSML666MEbVFg"/>
+        </guard>
+      </operand>
+    </fragment>
+    <message xmi:type="uml:Message" xmi:id="_HNqycHNQEeSML666MEbVFg" name="detectPortique" messageSort="asynchCall" receiveEvent="_HNsnoHNQEeSML666MEbVFg" sendEvent="_HNrZgHNQEeSML666MEbVFg"/>
+    <message xmi:type="uml:Message" xmi:id="_Z5ZRwHNQEeSML666MEbVFg" name="informPortique" messageSort="reply" receiveEvent="_Z5buAHNQEeSML666MEbVFg" sendEvent="_Z5af4HNQEeSML666MEbVFg"/>
+    <message xmi:type="uml:Message" xmi:id="_lSEaMHNQEeSML666MEbVFg" name="InformPortiqueUI" receiveEvent="_lSGPYHNQEeSML666MEbVFg" sendEvent="_lSFBQHNQEeSML666MEbVFg"/>
+    <message xmi:type="uml:Message" xmi:id="_0cbrkHNQEeSML666MEbVFg" name="DetectionAknowlegded" messageSort="reply" receiveEvent="_0cc5sHNQEeSML666MEbVFg" sendEvent="_0ccSoHNQEeSML666MEbVFg"/>
+    <message xmi:type="uml:Message" xmi:id="_rjN9QHNSEeSML666MEbVFg" name="InformPortiqueCTRL" messageSort="asynchCall" receiveEvent="_rjQZgHNSEeSML666MEbVFg" sendEvent="_rjPLYHNSEeSML666MEbVFg"/>
+    <message xmi:type="uml:Message" xmi:id="_J9vmAHNTEeSML666MEbVFg" name="InformPortiqueCTRL" receiveEvent="_J9yCQHNTEeSML666MEbVFg" sendEvent="_J9w0IHNTEeSML666MEbVFg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:TimeObservation" xmi:id="_XqZYsHNSEeSML666MEbVFg" name="detectPortiqueSignalNotReceived" event="_RIGioHNNEeSML666MEbVFg"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_gfR5QHNTEeSML666MEbVFg" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_gz8hsHNTEeSML666MEbVFg" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_j6ATsHNTEeSML666MEbVFg" name="Boolean"/>
+</uml:Model>
