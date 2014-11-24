@@ -3,7 +3,7 @@
   <uml:Model xmi:id="_lCJ7gHJ3EeSmNoAb1SAkIA" name="model">
     <ownedComment xmi:type="uml:Comment" xmi:id="_S0-70HL4EeSmNoAb1SAkIA">
       <body>Auteur: Alexandre Gerussi
-Date: 22/11/2014</body>
+Date: 24/11/2014</body>
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_3SSD8HJ3EeSmNoAb1SAkIA" name="ConsulterRecetteUI">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_x7RPEHKPEeSmNoAb1SAkIA" name="recetteConnectée" type="_7umeQHJ3EeSmNoAb1SAkIA" aggregation="shared" association="_x7R2IHKPEeSmNoAb1SAkIA">
@@ -188,7 +188,7 @@ Date: 22/11/2014</body>
     <packagedElement xmi:type="uml:Interaction" xmi:id="_WQPMoHL2EeSmNoAb1SAkIA" name="DS AppliquerRecetteConnectée">
       <ownedComment xmi:type="uml:Comment" xmi:id="_SKwvwHMcEeSb6a8_5_IAnw">
         <body>Auteur: Alexandre Gerussi
-Date: 23/11/2014</body>
+Date: 24/11/2014</body>
       </ownedComment>
       <lifeline xmi:type="uml:Lifeline" xmi:id="_s_KboHL2EeSmNoAb1SAkIA" name="client" coveredBy="_IHJVkHL3EeSmNoAb1SAkIA _IHKjsXL3EeSmNoAb1SAkIA _IHKjsHL3EeSmNoAb1SAkIA _UH3VcHL3EeSmNoAb1SAkIA _UGaN0HMAEeSmNoAb1SAkIA _eh_a4HMLEeSmNoAb1SAkIA _LNFmQHMMEeSmNoAb1SAkIA _8zmaYHMaEeSb6a8_5_IAnw _gxjaAHMcEeSb6a8_5_IAnw _4C8VgHMfEeSRS7XdL7hcHg _SxtMQHMiEeSRS7XdL7hcHg"/>
       <lifeline xmi:type="uml:Lifeline" xmi:id="_vU15kHL2EeSmNoAb1SAkIA" name="Lifeline0" represents="_9GvwYHKMEeSmNoAb1SAkIA" coveredBy="_O8xJkHL3EeSmNoAb1SAkIA _O8yXsHL3EeSmNoAb1SAkIA _O8xwoHL3EeSmNoAb1SAkIA _UH38gHL3EeSmNoAb1SAkIA _U9fOgHL6EeSmNoAb1SAkIA _rZfoEHMnEeSRS7XdL7hcHg"/>
@@ -298,7 +298,6 @@ Date: 23/11/2014</body>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FSNBgHPjEeSk1pKHmgrYVw" name="validation_MessageRecv" covered="_msWTkHMTEeSb6a8_5_IAnw" message="_Ub9EUHPiEeSk1pKHmgrYVw"/>
       <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_IHKjsXL3EeSmNoAb1SAkIA" name="ActionExecSpecFinish" covered="_s_KboHL2EeSmNoAb1SAkIA" execution="_IHKjsHL3EeSmNoAb1SAkIA"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wH_kEHMSEeSb6a8_5_IAnw" name="Message3Recv0" covered="_DgmrcHL7EeSmNoAb1SAkIA"/>
-      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UrATMHMBEeSmNoAb1SAkIA" name="MessageRecv3" message="_Uq-eAHMBEeSmNoAb1SAkIA"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8oRacHPmEeSldIkUSFMsRQ" name="Message3Send" covered="_msWTkHMTEeSb6a8_5_IAnw" message="_8oQMUHPmEeSldIkUSFMsRQ"/>
       <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_L9Uj0HMhEeSRS7XdL7hcHg" name="ActionExecSpec19" covered="_FIX-4HMZEeSb6a8_5_IAnw" finish="_YV0KgHMhEeSRS7XdL7hcHg" start="_TPzS4HPlEeSldIkUSFMsRQ"/>
       <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_Q6PvwHPwEeSldIkUSFMsRQ" name="ActionExecSpec23" covered="_7yk6sHL4EeSmNoAb1SAkIA" finish="_dumMAHPwEeSldIkUSFMsRQ" start="_S8AzMHPwEeSldIkUSFMsRQ"/>
@@ -313,7 +312,7 @@ Date: 23/11/2014</body>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_NnEHoXMHEeSmNoAb1SAkIA" name="ActionExecSpec" finish="_ThbNQHMHEeSmNoAb1SAkIA" start="_QFLv4HMHEeSmNoAb1SAkIA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QFLv4HMHEeSmNoAb1SAkIA" name="demanderConfirmation_MessageRecv" message="_QFIskHMHEeSmNoAb1SAkIA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ThbNQHMHEeSmNoAb1SAkIA" name="MessageSend" message="_ThZYEHMHEeSmNoAb1SAkIA"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ThamMHMHEeSmNoAb1SAkIA" name="MessageRecv4" message="_ThZYEHMHEeSmNoAb1SAkIA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UrATMHMBEeSmNoAb1SAkIA" name="MessageRecv3" message="_Uq-eAHMBEeSmNoAb1SAkIA"/>
           <guard xmi:type="uml:InteractionConstraint" xmi:id="_wkCOkXMMEeSmNoAb1SAkIA">
             <specification xmi:type="uml:LiteralString" xmi:id="_wkCOknMMEeSmNoAb1SAkIA" value="valide=false"/>
             <maxint xmi:type="uml:LiteralInteger" xmi:id="_wkC1oHMMEeSmNoAb1SAkIA" value="1"/>
@@ -382,6 +381,7 @@ Date: 23/11/2014</body>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_gxkBEHMcEeSb6a8_5_IAnw" name="Message0Recv3" covered="_VPRRUHMWEeSb6a8_5_IAnw" message="_gxiL4HMcEeSb6a8_5_IAnw"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HSTwwHMiEeSRS7XdL7hcHg" name="Message0Send" covered="_VPRRUHMWEeSb6a8_5_IAnw" message="_HSSioHMiEeSRS7XdL7hcHg"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KNXBAHPwEeSldIkUSFMsRQ" name="Message4Send0" covered="_msWTkHMTEeSb6a8_5_IAnw" message="_KNVy4HPwEeSldIkUSFMsRQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ThamMHMHEeSmNoAb1SAkIA" name="MessageRecv4" message="_ThZYEHMHEeSmNoAb1SAkIA"/>
       <message xmi:type="uml:Message" xmi:id="_UH2HUHL3EeSmNoAb1SAkIA" name="appui bouton mise à l'échelle" messageSort="asynchCall" receiveEvent="_UH38gHL3EeSmNoAb1SAkIA" sendEvent="_UH3VcHL3EeSmNoAb1SAkIA"/>
       <message xmi:type="uml:Message" xmi:id="_7yxH8HL4EeSmNoAb1SAkIA" name="&lt;&lt;create>>" messageSort="createMessage" receiveEvent="_7yxvAXL4EeSmNoAb1SAkIA" sendEvent="_7yxvAHL4EeSmNoAb1SAkIA"/>
       <message xmi:type="uml:Message" xmi:id="_U9encHL6EeSmNoAb1SAkIA" name="miseÉchelle_Message" receiveEvent="_U9f1kHL6EeSmNoAb1SAkIA" sendEvent="_U9fOgHL6EeSmNoAb1SAkIA" signature="_8CNE0HJ5EeSmNoAb1SAkIA"/>
