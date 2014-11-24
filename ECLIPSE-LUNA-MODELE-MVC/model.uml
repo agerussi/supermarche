@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_N5a60HJ2EeSmNoAb1SAkIA" name="model">
   <ownedComment xmi:type="uml:Comment" xmi:id="_UVat4HJ2EeSmNoAb1SAkIA">
-    <body> le contrôleur et la vue communiquent 
+    <body>Le contrôleur et la vue communiquent 
 par un pattern écouteur/écouté.
 Quand l'utilisateur interagit avec la vue,
 celle-ci appelle la/les méthodes des contrôleurs
@@ -11,7 +11,7 @@ et en créent d'autres, adaptées à ce qui doit
 être affiché. </body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_UVat4XJ2EeSmNoAb1SAkIA">
-    <body> GestionVue est une classe interne au contrôleur,
+    <body>MonÉcouteur est une classe interne au contrôleur,
 qui implémente Écouteur. 
 Sa méthode action() a donc accès à l'ensemble de 
 l'objet Contrôleur qui la contient.
@@ -21,7 +21,7 @@ possède pas d'objet &quot;fonction&quot; (ou des pointeurs
 de fonction)</body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_UVat73J2EeSmNoAb1SAkIA">
-    <body> la vue se rafraichit selon le modèle
+    <body>La vue se rafraichit selon le modèle
 par un pattern observateur/observé.
 Pour s'actualiser, la vue va chercher les 
 infos qui l'intéressent dans le modèle
@@ -90,7 +90,7 @@ des interactions.</body>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVbU8nJ2EeSmNoAb1SAkIA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVbU83J2EeSmNoAb1SAkIA" value="*"/>
     </ownedAttribute>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbU9HJ2EeSmNoAb1SAkIA" client="_UVbU8HJ2EeSmNoAb1SAkIA _UVbU8HJ2EeSmNoAb1SAkIA _UVbU8HJ2EeSmNoAb1SAkIA" supplier="_UVaG0HJ2EeSmNoAb1SAkIA" contract="_UVaG0HJ2EeSmNoAb1SAkIA"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbU9HJ2EeSmNoAb1SAkIA" client="_UVbU8HJ2EeSmNoAb1SAkIA" supplier="_UVaG0HJ2EeSmNoAb1SAkIA" contract="_UVaG0HJ2EeSmNoAb1SAkIA"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbU9XJ2EeSmNoAb1SAkIA" name="getEtat"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbU9nJ2EeSmNoAb1SAkIA" name="setEtat"/>
   </packagedElement>
@@ -110,8 +110,8 @@ des interactions.</body>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UVbVAXJ2EeSmNoAb1SAkIA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UVbVAnJ2EeSmNoAb1SAkIA" value="1"/>
     </ownedAttribute>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVA3J2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVat7XJ2EeSmNoAb1SAkIA" contract="_UVat7XJ2EeSmNoAb1SAkIA"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVBHJ2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA _UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVb8D3J2EeSmNoAb1SAkIA" contract="_UVb8D3J2EeSmNoAb1SAkIA"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVA3J2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVat7XJ2EeSmNoAb1SAkIA" contract="_UVat7XJ2EeSmNoAb1SAkIA"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UVbVBHJ2EeSmNoAb1SAkIA" client="_UVbU_3J2EeSmNoAb1SAkIA" supplier="_UVb8D3J2EeSmNoAb1SAkIA" contract="_UVb8D3J2EeSmNoAb1SAkIA"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_UVbVBXJ2EeSmNoAb1SAkIA" name="getDonnées"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_UVb8AHJ2EeSmNoAb1SAkIA" name="Contrôleur">
