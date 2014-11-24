@@ -336,6 +336,16 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Et4ic3LxEeSmNoAb1SAkIA" value="1"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_f5HVQHQQEeSALIVVz0Qi3w" name="contient" memberEnd="_f5HVQXQQEeSALIVVz0Qi3w _f5E5AHQQEeSALIVVz0Qi3w">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_f5HVQXQQEeSALIVVz0Qi3w" name="cadbot" type="_6F3xw2dGEeSzCYdvi0ys6g" association="_f5HVQHQQEeSALIVVz0Qi3w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f5HVQnQQEeSALIVVz0Qi3w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f5HVQ3QQEeSALIVVz0Qi3w" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_f5E5AHQQEeSALIVVz0Qi3w" name="produit" type="_7e3skGAVEeSXjrPLCRUqJQ" association="_f5HVQHQQEeSALIVVz0Qi3w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f5E5AXQQEeSALIVVz0Qi3w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f5E5AnQQEeSALIVVz0Qi3w" value="*"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_h9inYGAVEeSXjrPLCRUqJQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h-DkwGAVEeSXjrPLCRUqJQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
