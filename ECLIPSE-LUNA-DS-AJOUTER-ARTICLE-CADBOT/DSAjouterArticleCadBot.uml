@@ -233,7 +233,7 @@ François Dubiez 22/11/2014
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znYsA3MmEeSCn8UL1IaLfg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_JmH0MHMnEeSCn8UL1IaLfg" name="AjouterArticleCadBotMod">
+  <packagedElement xmi:type="uml:Class" xmi:id="_JmH0MHMnEeSCn8UL1IaLfg" name="CadBot">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_bXbSoHMnEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_fgKCkHMnEeSCn8UL1IaLfg" name="rfidtag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_jNNjIHMnEeSCn8UL1IaLfg" name="barcode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
