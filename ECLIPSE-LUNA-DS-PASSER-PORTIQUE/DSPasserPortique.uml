@@ -242,8 +242,8 @@
     </message>
     <message xmi:type="uml:Message" xmi:id="_guY0wHQuEeSARcKP1RnVRg" name="transmitItems2CTRL" receiveEvent="_guap8HQuEeSARcKP1RnVRg" sendEvent="_guZb0HQuEeSARcKP1RnVRg"/>
     <message xmi:type="uml:Message" xmi:id="_hzpzsHQuEeSARcKP1RnVRg" name="transmitItems2Panier" receiveEvent="_hzro4HQuEeSARcKP1RnVRg" sendEvent="_lRB5gHQuEeSARcKP1RnVRg"/>
-    <message xmi:type="uml:Message" xmi:id="_izm00HQuEeSARcKP1RnVRg" messageSort="reply" receiveEvent="_izrGQHQuEeSARcKP1RnVRg" sendEvent="_izoqAHQuEeSARcKP1RnVRg"/>
-    <message xmi:type="uml:Message" xmi:id="_kIXBQHQuEeSARcKP1RnVRg" messageSort="reply" receiveEvent="_kIY2cHQuEeSARcKP1RnVRg" sendEvent="_lRDusHQuEeSARcKP1RnVRg"/>
+    <message xmi:type="uml:Message" xmi:id="_izm00HQuEeSARcKP1RnVRg" name="Message1" messageSort="reply" receiveEvent="_izrGQHQuEeSARcKP1RnVRg" sendEvent="_izoqAHQuEeSARcKP1RnVRg"/>
+    <message xmi:type="uml:Message" xmi:id="_kIXBQHQuEeSARcKP1RnVRg" name="Message2" messageSort="reply" receiveEvent="_kIY2cHQuEeSARcKP1RnVRg" sendEvent="_lRDusHQuEeSARcKP1RnVRg"/>
     <message xmi:type="uml:Message" xmi:id="_fifM4HQvEeSARcKP1RnVRg" name="panierIsPaid" messageSort="asynchCall" receiveEvent="_fiiQMHQvEeSARcKP1RnVRg" sendEvent="_figbAHQvEeSARcKP1RnVRg"/>
     <message xmi:type="uml:Message" xmi:id="_gY4pYHQvEeSARcKP1RnVRg" name="getPanierStatus" messageSort="asynchCall" receiveEvent="_gY7ssHQvEeSARcKP1RnVRg"/>
     <message xmi:type="uml:Message" xmi:id="_kf7-UHQvEeSARcKP1RnVRg" name="sendPanierStatus" receiveEvent="_kf9McHQvEeSARcKP1RnVRg"/>
