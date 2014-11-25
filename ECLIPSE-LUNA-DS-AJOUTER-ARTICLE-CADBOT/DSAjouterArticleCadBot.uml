@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6N2AUHIuEeSpEO_g-AthAQ" name="model">
   <ownedComment xmi:type="uml:Comment" xmi:id="_UIg8QHMkEeSCn8UL1IaLfg">
-    <body>Auteur: François Dubiez
-Date de création: 23/11/2014</body>
+    <body>Auteur: François Dubiez, Alexandre Gerussi
+Date de création: 23/11/2014, rév: 25/11/2014</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_6r0q4HIwEeSpEO_g-AthAQ" name="AjouterArticleCadbot">
     <ownedComment xmi:type="uml:Comment" xmi:id="_5yiZYHKnEeSq0IqkfxahoA">
@@ -162,45 +162,38 @@ François Dubiez 22/11/2014
     <message xmi:type="uml:Message" xmi:id="_4vYlMHKlEeSkuMHI27M5UA" name="sendEmitSound(True: bool)" messageSort="asynchCall" receiveEvent="_4vbogHKlEeSkuMHI27M5UA" sendEvent="_4vaaYHKlEeSkuMHI27M5UA"/>
     <message xmi:type="uml:Message" xmi:id="_YRlAoHKmEeSkuMHI27M5UA" name="GetWeightFromStore()" messageSort="asynchCall" receiveEvent="_ZakpAHKmEeSkuMHI27M5UA" sendEvent="_YRm10HKmEeSkuMHI27M5UA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_xw7S8HMhEeSCn8UL1IaLfg" name="AjouterCadBotUI">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_2L5XgHMjEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_38SXEHMjEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_snQYgHMjEeSCn8UL1IaLfg" name="readRFIDTag"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_vhHhkHMjEeSCn8UL1IaLfg" name="readBarCode"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_B9DjUHMiEeSCn8UL1IaLfg" name="AjouterArticleCadBotCTRL">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_P1ItcHMiEeSCn8UL1IaLfg" name="readerStatusUI" visibility="public" type="_sCpFAHMiEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_k_drQXMkEeSCn8UL1IaLfg" name="ajouterCadBotUI" type="_xw7S8HMhEeSCn8UL1IaLfg" aggregation="composite" association="_k_drQHMkEeSCn8UL1IaLfg">
+  <packagedElement xmi:type="uml:Class" xmi:id="_xw7S8HMhEeSCn8UL1IaLfg" name="CadBotLecteurUI"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_B9DjUHMiEeSCn8UL1IaLfg" name="CadBotCTRL">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k_drQXMkEeSCn8UL1IaLfg" name="CadBotUI" type="_xw7S8HMhEeSCn8UL1IaLfg" aggregation="composite" association="_k_drQHMkEeSCn8UL1IaLfg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k_drQnMkEeSCn8UL1IaLfg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k_drQ3MkEeSCn8UL1IaLfg" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_40DaoHMlEeSCn8UL1IaLfg" name="ajouterArticleCadBotBuzzer" type="_EnheIHMlEeSCn8UL1IaLfg" aggregation="composite" association="_40EBsHMlEeSCn8UL1IaLfg">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_40DaoHMlEeSCn8UL1IaLfg" name="buzzer" type="_EnheIHMlEeSCn8UL1IaLfg" aggregation="composite" association="_40EBsHMlEeSCn8UL1IaLfg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_40DaoXMlEeSCn8UL1IaLfg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_40DaonMlEeSCn8UL1IaLfg" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_znYE8HMmEeSCn8UL1IaLfg" name="ajouterCadBotBalanceUI" type="_fPu2YHMmEeSCn8UL1IaLfg" aggregation="composite" association="_znYsAHMmEeSCn8UL1IaLfg">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_znYE8HMmEeSCn8UL1IaLfg" name="balance" type="_fPu2YHMmEeSCn8UL1IaLfg" aggregation="composite" association="_znYsAHMmEeSCn8UL1IaLfg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_znYE8XMmEeSCn8UL1IaLfg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znYE8nMmEeSCn8UL1IaLfg" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_-05GQHMmEeSCn8UL1IaLfg" name="weightFromBal" visibility="public" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_CMpFMHMnEeSCn8UL1IaLfg" name="weighFromDB" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_1u-OIHMnEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" aggregation="shared" association="_1u-1MHMnEeSCn8UL1IaLfg">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1u-OIHMnEeSCn8UL1IaLfg" name="cadBot" type="_JmH0MHMnEeSCn8UL1IaLfg" aggregation="shared" association="_1u-1MHMnEeSCn8UL1IaLfg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1u-OIXMnEeSCn8UL1IaLfg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1u-OInMnEeSCn8UL1IaLfg" value="1"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_IDBcAHMiEeSCn8UL1IaLfg" name="sendEmitSound">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZQUuIHMlEeSCn8UL1IaLfg" name="ReadStatusUI" type="_sCpFAHMiEeSCn8UL1IaLfg" direction="out"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qZhWsHTFEeSllboptWDUDA" name="fm" type="_sCpEAHMtEeSCn8UL1IaLfg" association="_qZh9wHTFEeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qZhWsXTFEeSllboptWDUDA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qZhWsnTFEeSllboptWDUDA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_DeZIUHMkEeSCn8UL1IaLfg" name="newBarCode">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ra7gQHTHEeSllboptWDUDA" name="code" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_DeZIUHMkEeSCn8UL1IaLfg" name="getbarCode"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_D0JV4HMkEeSCn8UL1IaLfg" name="getrfidTag"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_WslUIHMnEeSCn8UL1IaLfg" name="getWeightFromStoreWithBarCode"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4M3IHMnEeSCn8UL1IaLfg" name="getWeightFromBalwithBarCode"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_2D9KMHMoEeSCn8UL1IaLfg" name="getWeightFromStoreWithRfidTag"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_8OxtsHMoEeSCn8UL1IaLfg" name="getWeightFromBalWithRfidTag"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_AzbSsHMrEeSCn8UL1IaLfg" name="checkWeight"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_D0JV4HMkEeSCn8UL1IaLfg" name="newRfidTag"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_MFs4MHMrEeSCn8UL1IaLfg" name="addPoductToBasket">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ql4e0HMrEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_TZgdAHMrEeSCn8UL1IaLfg" name="wieght" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_b_xKQHTCEeSllboptWDUDA" name="newWeightVariation">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_sA8H0HTCEeSllboptWDUDA" name="w" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sCpFAHMiEeSCn8UL1IaLfg" name="Boolean"/>
@@ -211,7 +204,7 @@ François Dubiez 22/11/2014
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k_b2EnMkEeSCn8UL1IaLfg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_EnheIHMlEeSCn8UL1IaLfg" name="AjouterArticleCadBotBuzzer">
+  <packagedElement xmi:type="uml:Class" xmi:id="_EnheIHMlEeSCn8UL1IaLfg" name="CadBotBuzzer">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_JRrgIHMlEeSCn8UL1IaLfg" name="emitSound">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Qdip4HMlEeSCn8UL1IaLfg" name="readStatus" type="_sCpFAHMiEeSCn8UL1IaLfg"/>
     </ownedOperation>
@@ -222,10 +215,7 @@ François Dubiez 22/11/2014
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_40EBs3MlEeSCn8UL1IaLfg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_fPu2YHMmEeSCn8UL1IaLfg" name="AjouterCadBotBalanceUI">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_l4X-UHMmEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_stTOwHMmEeSCn8UL1IaLfg" name="setWeight"/>
-  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fPu2YHMmEeSCn8UL1IaLfg" name="CadBotBalanceUI"/>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n_Vq0HMmEeSCn8UL1IaLfg" name="integer"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_znYsAHMmEeSCn8UL1IaLfg" memberEnd="_znYsAXMmEeSCn8UL1IaLfg _znYE8HMmEeSCn8UL1IaLfg">
     <ownedEnd xmi:type="uml:Property" xmi:id="_znYsAXMmEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_znYsAHMmEeSCn8UL1IaLfg">
@@ -234,36 +224,20 @@ François Dubiez 22/11/2014
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_JmH0MHMnEeSCn8UL1IaLfg" name="CadBot">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_bXbSoHMnEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_fgKCkHMnEeSCn8UL1IaLfg" name="rfidtag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_jNNjIHMnEeSCn8UL1IaLfg" name="barcode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_QFYEsHMpEeSCn8UL1IaLfg" name="produit" type="_ASaXsHMoEeSCn8UL1IaLfg" aggregation="shared" association="_QFYrwHMpEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFYEsXMpEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFYEsnMpEeSCn8UL1IaLfg" value="1"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Qnum4HS1EeSllboptWDUDA" name="contenu" type="_ASaXsHMoEeSCn8UL1IaLfg" aggregation="shared" association="_QnvN8HS1EeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qnum4XS1EeSllboptWDUDA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qnum4nS1EeSllboptWDUDA" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_QjlqsHMpEeSCn8UL1IaLfg" name="produit" type="_ASaXsHMoEeSCn8UL1IaLfg" aggregation="shared" association="_QjmRwHMpEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QjlqsXMpEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QjlqsnMpEeSCn8UL1IaLfg" value="1"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oDnCgHS1EeSllboptWDUDA" name="anomalies" type="_a8s2oHS1EeSllboptWDUDA" aggregation="composite" association="_oDnpkHS1EeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oDnCgXS1EeSllboptWDUDA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oDnCgnS1EeSllboptWDUDA" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_zquhoHMrEeSCn8UL1IaLfg" name="panier" type="_uTFHgHMrEeSCn8UL1IaLfg" aggregation="shared" association="_zqvIsHMrEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zquhoXMrEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zquhonMrEeSCn8UL1IaLfg" value="1"/>
-    </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_efAuoHMnEeSCn8UL1IaLfg" name="getWeight"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_rBh0AHMnEeSCn8UL1IaLfg" name="setWeight"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_-6TYcHMrEeSCn8UL1IaLfg" name="addProductToBasket">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GmckwHMsEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-6TYcHMrEeSCn8UL1IaLfg" name="addToContenu">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GmckwHMsEeSCn8UL1IaLfg" name="p" type="_ASaXsHMoEeSCn8UL1IaLfg"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_HM2dcHMsEeSCn8UL1IaLfg" name="addProductToBasket">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OGrcAHMsEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_PC7o4HMsEeSCn8UL1IaLfg" name="addAnomalyItemToBasket">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ztmb0HMsEeSCn8UL1IaLfg" name="rfidTag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_PC7o4HMsEeSCn8UL1IaLfg" name="addAnomalie">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ztmb0HMsEeSCn8UL1IaLfg" name="tag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_XJKwMHMsEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_aZsFwHMsEeSCn8UL1IaLfg" name="addAnomalyItemToBasket">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eRKGkHMsEeSCn8UL1IaLfg" name="barCode" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gakqIHMsEeSCn8UL1IaLfg" name="weight" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_1u-1MHMnEeSCn8UL1IaLfg" memberEnd="_1u-1MXMnEeSCn8UL1IaLfg _1u-OIHMnEeSCn8UL1IaLfg">
@@ -287,35 +261,168 @@ François Dubiez 22/11/2014
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ASa-w3MoEeSCn8UL1IaLfg" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_QFYrwHMpEeSCn8UL1IaLfg" name="produitRfidTag" memberEnd="_QFYrwXMpEeSCn8UL1IaLfg _QFYEsHMpEeSCn8UL1IaLfg">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_QFYrwXMpEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_QFYrwHMpEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFYrwnMpEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFYrw3MpEeSCn8UL1IaLfg" value="1"/>
-    </ownedEnd>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sCpEAHMtEeSCn8UL1IaLfg" name="FuturMarket">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wYZXoHS_EeSllboptWDUDA" name="checkConformity">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_NicagHTBEeSllboptWDUDA" name="tag" type="_sOyDkHMiEeSCn8UL1IaLfg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QO-5QHTBEeSllboptWDUDA" name="poids" type="_n_Vq0HMmEeSCn8UL1IaLfg"/>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_QjmRwHMpEeSCn8UL1IaLfg" name="produitBarCode" memberEnd="_QjmRwXMpEeSCn8UL1IaLfg _QjlqsHMpEeSCn8UL1IaLfg">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_QjmRwXMpEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_QjmRwHMpEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QjmRwnMpEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QjmRw3MpEeSCn8UL1IaLfg" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_uTFHgHMrEeSCn8UL1IaLfg" name="Panier"/>
-  <packagedElement xmi:type="uml:Association" xmi:id="_zqvIsHMrEeSCn8UL1IaLfg" name="addItem" memberEnd="_zqvIsXMrEeSCn8UL1IaLfg _zquhoHMrEeSCn8UL1IaLfg">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_zqvIsXMrEeSCn8UL1IaLfg" name="ajouterArticleCadBotMod" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_zqvIsHMrEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zqvIsnMrEeSCn8UL1IaLfg" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zqvIs3MrEeSCn8UL1IaLfg" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_sCpEAHMtEeSCn8UL1IaLfg" name="FutureMarket">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_vpcyoHMtEeSCn8UL1IaLfg" name="ajouterArticleCadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" aggregation="composite" association="_vpen0HMtEeSCn8UL1IaLfg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpcyoXMtEeSCn8UL1IaLfg"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpcyonMtEeSCn8UL1IaLfg" value="*"/>
-    </ownedAttribute>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_vpen0HMtEeSCn8UL1IaLfg" memberEnd="_vpen0XMtEeSCn8UL1IaLfg _vpcyoHMtEeSCn8UL1IaLfg">
+  <packagedElement xmi:type="uml:Association" xmi:id="_vpen0HMtEeSCn8UL1IaLfg" memberEnd="_vpen0XMtEeSCn8UL1IaLfg _vpcyoHMtEeSCn8UL1IaLfg" navigableOwnedEnd="_vpcyoHMtEeSCn8UL1IaLfg">
     <ownedEnd xmi:type="uml:Property" xmi:id="_vpen0XMtEeSCn8UL1IaLfg" name="futureMarket" type="_sCpEAHMtEeSCn8UL1IaLfg" association="_vpen0HMtEeSCn8UL1IaLfg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpen0nMtEeSCn8UL1IaLfg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpen03MtEeSCn8UL1IaLfg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vpcyoHMtEeSCn8UL1IaLfg" name="CBctrl" type="_B9DjUHMiEeSCn8UL1IaLfg" aggregation="composite" association="_vpen0HMtEeSCn8UL1IaLfg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpcyoXMtEeSCn8UL1IaLfg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpcyonMtEeSCn8UL1IaLfg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QnvN8HS1EeSllboptWDUDA" memberEnd="_QnvN8XS1EeSllboptWDUDA _Qnum4HS1EeSllboptWDUDA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QnvN8XS1EeSllboptWDUDA" name="cadBot" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_QnvN8HS1EeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QnvN8nS1EeSllboptWDUDA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QnvN83S1EeSllboptWDUDA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_a8s2oHS1EeSllboptWDUDA" name="Anomalie" classifierBehavior="_AIw8QHTEEeSllboptWDUDA">
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_AIw8QHTEEeSllboptWDUDA" name="AjouterArticleCadbot">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_dDF5YHTLEeSllboptWDUDA">
+        <body>Auteur: François Dubiez, Alexandre Gerussi
+Date: 20/11/14, rév. 25/11/14</body>
+      </ownedComment>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_VSZocHTEEeSllboptWDUDA" name="Lifeline" represents="_k_drQXMkEeSCn8UL1IaLfg" coveredBy="_W6RTQXTGEeSllboptWDUDA _bWDiEHTGEeSllboptWDUDA _j0_dQHTGEeSllboptWDUDA _VAf4wXTHEeSllboptWDUDA _fJJjwHTHEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_jykGQHTEEeSllboptWDUDA" name=":Client" coveredBy="_EtCt0HTGEeSllboptWDUDA _EtCt0XTGEeSllboptWDUDA _bWC7AHTGEeSllboptWDUDA _dBlaUHTHEeSllboptWDUDA _3P79kHTHEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_kFC9YHTEEeSllboptWDUDA" name="Lifeline1" represents="_vpcyoHMtEeSCn8UL1IaLfg" coveredBy="_GChBEHTIEeSllboptWDUDA _JH2aUHTIEeSllboptWDUDA _WBLdMHTIEeSllboptWDUDA _XuU7gHTIEeSllboptWDUDA _-vcmoHTIEeSllboptWDUDA _IGq0sHTJEeSllboptWDUDA _gtkR8HTJEeSllboptWDUDA _gtlgEHTJEeSllboptWDUDA _7L05cHTJEeSllboptWDUDA _NzgmQHTKEeSllboptWDUDA _NzhNUHTKEeSllboptWDUDA _Qc5qYHTKEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_l0TUgHTEEeSllboptWDUDA" name="Lifeline2" represents="_40DaoHMlEeSCn8UL1IaLfg" coveredBy="_gtkR8HTJEeSllboptWDUDA _gtlgEHTJEeSllboptWDUDA _7L05cHTJEeSllboptWDUDA _NzgmQHTKEeSllboptWDUDA _NzhNUHTKEeSllboptWDUDA _Qc5qYHTKEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_mfdxYHTEEeSllboptWDUDA" name="Lifeline3" represents="_znYE8HMmEeSCn8UL1IaLfg" coveredBy="_0yrQ8HTHEeSllboptWDUDA _3P8koHTHEeSllboptWDUDA _JH1zQHTIEeSllboptWDUDA _IGsC0HTJEeSllboptWDUDA _IyyT0HTJEeSllboptWDUDA _NzgmQHTKEeSllboptWDUDA _NzhNUHTKEeSllboptWDUDA _Qc5qYHTKEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_muoOwHTEEeSllboptWDUDA" name="Lifeline4" represents="_qZhWsHTFEeSllboptWDUDA" coveredBy="_UN6v0XTIEeSllboptWDUDA _WBMEQHTIEeSllboptWDUDA _XuTtYHTIEeSllboptWDUDA _NzgmQHTKEeSllboptWDUDA _NzhNUHTKEeSllboptWDUDA _Qc5qYHTKEeSllboptWDUDA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_nVASQHTEEeSllboptWDUDA" name="Lifeline5" represents="_1u-OIHMnEeSCn8UL1IaLfg" coveredBy="_NzgmQHTKEeSllboptWDUDA _NzhNUHTKEeSllboptWDUDA _Qc5qYHTKEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:CombinedFragment" xmi:id="_gtkR8HTJEeSllboptWDUDA" name="CombinedFragment" covered="_l0TUgHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA" interactionOperator="alt">
+        <operand xmi:type="uml:InteractionOperand" xmi:id="_gtlgEHTJEeSllboptWDUDA" name="InteractionOperand" covered="_l0TUgHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA">
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qDBs0HTGEeSllboptWDUDA" name="emitSound_MessageRecv" message="_qC_3oHTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_nmDUEHTGEeSllboptWDUDA" name="ActionExecSpec2" finish="_yfIWcHTGEeSllboptWDUDA" start="_qDBs0HTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yfIWcHTGEeSllboptWDUDA" name="MessageSend0" message="_yfHvYHTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tzt6wHTHEeSllboptWDUDA" name="MessageSend2" message="_tzssoHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_pWwAMHTHEeSllboptWDUDA" name="ActionExecSpec4" finish="_tzt6wHTHEeSllboptWDUDA" start="_rtvFsHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rtvFsHTHEeSllboptWDUDA" name="emitSound_Message0Recv" message="_rttQgHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qDBFwHTGEeSllboptWDUDA" name="emitSound_MessageSend" message="_qC_3oHTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VAf4wHTHEeSllboptWDUDA" name="MessageSend1" message="_VAeqoHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_j0_dQXTGEeSllboptWDUDA" name="newBarCode_MessageRecv" message="_j0-PIHTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yfI9gHTGEeSllboptWDUDA" name="MessageRecv0" message="_yfHvYHTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_f-KVoHTGEeSllboptWDUDA" name="ActionExecSpec1" finish="_VAf4wHTHEeSllboptWDUDA" start="_j0_dQXTGEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_ocWNcXTHEeSllboptWDUDA" name="ActionExecSpec3" finish="_wr96QHTHEeSllboptWDUDA" start="_ocWNcHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tzt6wXTHEeSllboptWDUDA" name="MessageRecv2" message="_tzssoHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rtueoHTHEeSllboptWDUDA" name="emitSound_Message0Send" message="_rttQgHTHEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_wr96QHTHEeSllboptWDUDA" name="ActionExecSpec3Finish" execution="_ocWNcXTHEeSllboptWDUDA"/>
+          <guard xmi:type="uml:InteractionConstraint" xmi:id="_gtlgEXTJEeSllboptWDUDA">
+            <specification xmi:type="uml:LiteralString" xmi:id="_gtlgEnTJEeSllboptWDUDA" value="code reconnu"/>
+            <maxint xmi:type="uml:LiteralInteger" xmi:id="_gtmHIXTJEeSllboptWDUDA" value="1"/>
+            <minint xmi:type="uml:LiteralInteger" xmi:id="_gtmHIHTJEeSllboptWDUDA"/>
+          </guard>
+        </operand>
+        <operand xmi:type="uml:InteractionOperand" xmi:id="_7L05cHTJEeSllboptWDUDA" name="InteractionOperand0" covered="_l0TUgHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA">
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_ocWNcHTHEeSllboptWDUDA" name="ActionExecSpec3Start" execution="_ocWNcXTHEeSllboptWDUDA"/>
+          <guard xmi:type="uml:InteractionConstraint" xmi:id="_7L1ggHTJEeSllboptWDUDA">
+            <specification xmi:type="uml:LiteralString" xmi:id="_7L1ggXTJEeSllboptWDUDA" value="code non reconnu"/>
+            <maxint xmi:type="uml:LiteralInteger" xmi:id="_7L1gg3TJEeSllboptWDUDA" value="1"/>
+            <minint xmi:type="uml:LiteralInteger" xmi:id="_7L1ggnTJEeSllboptWDUDA"/>
+          </guard>
+        </operand>
+      </fragment>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_EtCt0HTGEeSllboptWDUDA" name="ActionExecSpecStart" covered="_jykGQHTEEeSllboptWDUDA" execution="_EtCt0XTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_EtCt0XTGEeSllboptWDUDA" name="ActionExecSpec" covered="_jykGQHTEEeSllboptWDUDA" finish="_dBlaUHTHEeSllboptWDUDA" start="_EtCt0HTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bWC7AHTGEeSllboptWDUDA" name="MessageSend" covered="_jykGQHTEEeSllboptWDUDA" message="_bWCT8HTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_W6RTQXTGEeSllboptWDUDA" name="ActionExecSpec0" covered="_VSZocHTEEeSllboptWDUDA" finish="_fJJjwHTHEeSllboptWDUDA" start="_bWDiEHTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bWDiEHTGEeSllboptWDUDA" name="MessageRecv" covered="_VSZocHTEEeSllboptWDUDA" message="_bWCT8HTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_j0_dQHTGEeSllboptWDUDA" name="newBarCode_MessageSend" covered="_VSZocHTEEeSllboptWDUDA" message="_j0-PIHTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VAf4wXTHEeSllboptWDUDA" name="MessageRecv1" covered="_VSZocHTEEeSllboptWDUDA" message="_VAeqoHTHEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fJJjwHTHEeSllboptWDUDA" name="ActionExecSpec0Finish" covered="_VSZocHTEEeSllboptWDUDA" execution="_W6RTQXTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3P79kHTHEeSllboptWDUDA" name="MessageSend3" covered="_jykGQHTEEeSllboptWDUDA" message="_3P7WgHTHEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_0yrQ8HTHEeSllboptWDUDA" name="ActionExecSpec5" covered="_mfdxYHTEEeSllboptWDUDA" finish="_IyyT0HTJEeSllboptWDUDA" start="_3P8koHTHEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3P8koHTHEeSllboptWDUDA" name="MessageRecv3" covered="_mfdxYHTEEeSllboptWDUDA" message="_3P7WgHTHEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JH1zQHTIEeSllboptWDUDA" name="newWeightVariation_MessageSend" covered="_mfdxYHTEEeSllboptWDUDA" message="_JH0lIHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_GChBEHTIEeSllboptWDUDA" name="ActionExecSpec6" covered="_kFC9YHTEEeSllboptWDUDA" finish="_-vcmoHTIEeSllboptWDUDA" start="_JH2aUHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JH2aUHTIEeSllboptWDUDA" name="newWeightVariation_MessageRecv" covered="_kFC9YHTEEeSllboptWDUDA" message="_JH0lIHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WBLdMHTIEeSllboptWDUDA" name="checkConformity_MessageSend" covered="_kFC9YHTEEeSllboptWDUDA" message="_WBKPEHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_UN6v0XTIEeSllboptWDUDA" name="ActionExecSpec7" covered="_muoOwHTEEeSllboptWDUDA" finish="_XuTtYHTIEeSllboptWDUDA" start="_WBMEQHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WBMEQHTIEeSllboptWDUDA" name="checkConformity_MessageRecv" covered="_muoOwHTEEeSllboptWDUDA" message="_WBKPEHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XuTtYHTIEeSllboptWDUDA" name="MessageSend4" covered="_muoOwHTEEeSllboptWDUDA" message="_XuTGUHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XuU7gHTIEeSllboptWDUDA" name="MessageRecv4" covered="_kFC9YHTEEeSllboptWDUDA" message="_XuTGUHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:CombinedFragment" xmi:id="_NzgmQHTKEeSllboptWDUDA" name="CombinedFragment0" covered="_mfdxYHTEEeSllboptWDUDA _l0TUgHTEEeSllboptWDUDA _nVASQHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA _muoOwHTEEeSllboptWDUDA" interactionOperator="alt">
+        <operand xmi:type="uml:InteractionOperand" xmi:id="_NzhNUHTKEeSllboptWDUDA" name="InteractionOperand" covered="_mfdxYHTEEeSllboptWDUDA _l0TUgHTEEeSllboptWDUDA _nVASQHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA _muoOwHTEEeSllboptWDUDA">
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_eMjjMHTIEeSllboptWDUDA" name="ActionExecSpec8" finish="_eMkKQHTIEeSllboptWDUDA" start="_oThzMHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rZLVgHTIEeSllboptWDUDA" name="MessageSend6" message="_rZKHYHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oThzMHTIEeSllboptWDUDA" name="addToContenu_MessageRecv" message="_oTfW8HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_eMkKQHTIEeSllboptWDUDA" name="ActionExecSpec8Finish" execution="_eMjjMHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9XhxcHTIEeSllboptWDUDA" name="Message0Send" message="_9Xf8QHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6Luj0HTIEeSllboptWDUDA" name="addAnomalie_MessageRecv" message="_6LsHkHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_4_VCIXTIEeSllboptWDUDA" name="ActionExecSpec11" finish="_9XhxcHTIEeSllboptWDUDA" start="_6Luj0HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_haDZ8HTIEeSllboptWDUDA" name="ActionExecSpec9" finish="_kUXO8HTIEeSllboptWDUDA" start="_itOSAHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_itOSAHTIEeSllboptWDUDA" name="emitSound_Message1Recv" message="_itMc0HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kUXO8HTIEeSllboptWDUDA" name="MessageSend5" message="_kUWA0HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rZL8kHTIEeSllboptWDUDA" name="MessageRecv6" message="_rZKHYHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kUX2AHTIEeSllboptWDUDA" name="MessageRecv5" message="_kUWA0HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9Xi_kHTIEeSllboptWDUDA" name="Message0Recv" message="_9Xf8QHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oTglEHTIEeSllboptWDUDA" name="addToContenu_MessageSend" message="_oTfW8HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_itND4HTIEeSllboptWDUDA" name="emitSound_Message1Send" message="_itMc0HTIEeSllboptWDUDA"/>
+          <guard xmi:type="uml:InteractionConstraint" xmi:id="_NzhNUXTKEeSllboptWDUDA">
+            <specification xmi:type="uml:LiteralString" xmi:id="_NzhNUnTKEeSllboptWDUDA" value="produit identifié"/>
+            <maxint xmi:type="uml:LiteralInteger" xmi:id="_Nzh0YHTKEeSllboptWDUDA" value="1"/>
+            <minint xmi:type="uml:LiteralInteger" xmi:id="_NzhNU3TKEeSllboptWDUDA"/>
+          </guard>
+        </operand>
+        <operand xmi:type="uml:InteractionOperand" xmi:id="_Qc5qYHTKEeSllboptWDUDA" name="InteractionOperand0" covered="_mfdxYHTEEeSllboptWDUDA _l0TUgHTEEeSllboptWDUDA _nVASQHTEEeSllboptWDUDA _kFC9YHTEEeSllboptWDUDA _muoOwHTEEeSllboptWDUDA">
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zzuf8HTIEeSllboptWDUDA" name="Message0Send" message="_zztR0HTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_w6Ag0HTIEeSllboptWDUDA" name="ActionExecSpec10" finish="_zzuf8HTIEeSllboptWDUDA" start="_yzlRkHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yzlRkHTIEeSllboptWDUDA" name="emitSound_Message2Recv" message="_yzjcYHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yzkqgHTIEeSllboptWDUDA" name="emitSound_Message2Send" message="_yzjcYHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6LtVsHTIEeSllboptWDUDA" name="addAnomalie_MessageSend" message="_6LsHkHTIEeSllboptWDUDA"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zzw8MHTIEeSllboptWDUDA" name="Message0Recv" message="_zztR0HTIEeSllboptWDUDA"/>
+          <guard xmi:type="uml:InteractionConstraint" xmi:id="_Qc6RcHTKEeSllboptWDUDA">
+            <specification xmi:type="uml:LiteralString" xmi:id="_Qc6RcXTKEeSllboptWDUDA" value="produit non identifié"/>
+            <maxint xmi:type="uml:LiteralInteger" xmi:id="_Qc6Rc3TKEeSllboptWDUDA" value="1"/>
+            <minint xmi:type="uml:LiteralInteger" xmi:id="_Qc6RcnTKEeSllboptWDUDA"/>
+          </guard>
+        </operand>
+      </fragment>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IGq0sHTJEeSllboptWDUDA" name="Message1Send" covered="_kFC9YHTEEeSllboptWDUDA" message="_IGpmkHTJEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IGsC0HTJEeSllboptWDUDA" name="Message1Recv" covered="_mfdxYHTEEeSllboptWDUDA" message="_IGpmkHTJEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-vcmoHTIEeSllboptWDUDA" name="ActionExecSpec6Finish" covered="_kFC9YHTEEeSllboptWDUDA" execution="_GChBEHTIEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_dBlaUHTHEeSllboptWDUDA" name="ActionExecSpecFinish" covered="_jykGQHTEEeSllboptWDUDA" execution="_EtCt0XTGEeSllboptWDUDA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_IyyT0HTJEeSllboptWDUDA" name="ActionExecSpec5Finish" covered="_mfdxYHTEEeSllboptWDUDA" execution="_0yrQ8HTHEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_bWCT8HTGEeSllboptWDUDA" name="scan code barre" messageSort="asynchCall" receiveEvent="_bWDiEHTGEeSllboptWDUDA" sendEvent="_bWC7AHTGEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_j0-PIHTGEeSllboptWDUDA" name="newBarCode_Message" receiveEvent="_j0_dQXTGEeSllboptWDUDA" sendEvent="_j0_dQHTGEeSllboptWDUDA" signature="_DeZIUHMkEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_qC_3oHTGEeSllboptWDUDA" name="emitSound_Message" receiveEvent="_qDBs0HTGEeSllboptWDUDA" sendEvent="_qDBFwHTGEeSllboptWDUDA" signature="_JRrgIHMlEeSCn8UL1IaLfg">
+        <argument xmi:type="uml:LiteralBoolean" xmi:id="_vc-NAHTGEeSllboptWDUDA" name="readStatus" value="true"/>
+      </message>
+      <message xmi:type="uml:Message" xmi:id="_yfHvYHTGEeSllboptWDUDA" name="(un bip &quot;OK&quot; est émis)" messageSort="reply" receiveEvent="_yfI9gHTGEeSllboptWDUDA" sendEvent="_yfIWcHTGEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_VAeqoHTHEeSllboptWDUDA" name="retour newBarCode" messageSort="reply" receiveEvent="_VAf4wXTHEeSllboptWDUDA" sendEvent="_VAf4wHTHEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_rttQgHTHEeSllboptWDUDA" name="emitSound_Message0" receiveEvent="_rtvFsHTHEeSllboptWDUDA" sendEvent="_rtueoHTHEeSllboptWDUDA" signature="_JRrgIHMlEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_tzssoHTHEeSllboptWDUDA" name="(un bip &quot;KO&quot; est émis)" messageSort="reply" receiveEvent="_tzt6wXTHEeSllboptWDUDA" sendEvent="_tzt6wHTHEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_3P7WgHTHEeSllboptWDUDA" name="dépose d'un article" receiveEvent="_3P8koHTHEeSllboptWDUDA" sendEvent="_3P79kHTHEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_JH0lIHTIEeSllboptWDUDA" name="newWeightVariation_Message" receiveEvent="_JH2aUHTIEeSllboptWDUDA" sendEvent="_JH1zQHTIEeSllboptWDUDA" signature="_b_xKQHTCEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_WBKPEHTIEeSllboptWDUDA" name="checkConformity_Message" receiveEvent="_WBMEQHTIEeSllboptWDUDA" sendEvent="_WBLdMHTIEeSllboptWDUDA" signature="_wYZXoHS_EeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_XuTGUHTIEeSllboptWDUDA" name="p: produit identifié ou null" messageSort="reply" receiveEvent="_XuU7gHTIEeSllboptWDUDA" sendEvent="_XuTtYHTIEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_itMc0HTIEeSllboptWDUDA" name="emitSound_Message1" receiveEvent="_itOSAHTIEeSllboptWDUDA" sendEvent="_itND4HTIEeSllboptWDUDA" signature="_JRrgIHMlEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_kUWA0HTIEeSllboptWDUDA" name="(un bip &quot;OK&quot; est émis)" messageSort="reply" receiveEvent="_kUX2AHTIEeSllboptWDUDA" sendEvent="_kUXO8HTIEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_oTfW8HTIEeSllboptWDUDA" name="addToContenu_Message" receiveEvent="_oThzMHTIEeSllboptWDUDA" sendEvent="_oTglEHTIEeSllboptWDUDA" signature="_-6TYcHMrEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_rZKHYHTIEeSllboptWDUDA" name="Message" messageSort="reply" receiveEvent="_rZL8kHTIEeSllboptWDUDA" sendEvent="_rZLVgHTIEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_yzjcYHTIEeSllboptWDUDA" name="emitSound_Message2" receiveEvent="_yzlRkHTIEeSllboptWDUDA" sendEvent="_yzkqgHTIEeSllboptWDUDA" signature="_JRrgIHMlEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_zztR0HTIEeSllboptWDUDA" name="(un bip &quot;KO&quot; est émis)" messageSort="reply" receiveEvent="_zzw8MHTIEeSllboptWDUDA" sendEvent="_zzuf8HTIEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_6LsHkHTIEeSllboptWDUDA" name="addAnomalie_Message" receiveEvent="_6Luj0HTIEeSllboptWDUDA" sendEvent="_6LtVsHTIEeSllboptWDUDA" signature="_PC7o4HMsEeSCn8UL1IaLfg"/>
+      <message xmi:type="uml:Message" xmi:id="_9Xf8QHTIEeSllboptWDUDA" name="Message0" messageSort="reply" receiveEvent="_9Xi_kHTIEeSllboptWDUDA" sendEvent="_9XhxcHTIEeSllboptWDUDA"/>
+      <message xmi:type="uml:Message" xmi:id="_IGpmkHTJEeSllboptWDUDA" name="Message1" messageSort="reply" receiveEvent="_IGsC0HTJEeSllboptWDUDA" sendEvent="_IGq0sHTJEeSllboptWDUDA"/>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oDnpkHS1EeSllboptWDUDA" memberEnd="_oDnpkXS1EeSllboptWDUDA _oDnCgHS1EeSllboptWDUDA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oDnpkXS1EeSllboptWDUDA" name="cadBot" type="_JmH0MHMnEeSCn8UL1IaLfg" association="_oDnpkHS1EeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oDnpknS1EeSllboptWDUDA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oDnpk3S1EeSllboptWDUDA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qZh9wHTFEeSllboptWDUDA" memberEnd="_qZh9wXTFEeSllboptWDUDA _qZhWsHTFEeSllboptWDUDA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qZh9wXTFEeSllboptWDUDA" name="cadBotCTRL" type="_B9DjUHMiEeSCn8UL1IaLfg" association="_qZh9wHTFEeSllboptWDUDA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qZh9wnTFEeSllboptWDUDA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qZh9w3TFEeSllboptWDUDA" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>
