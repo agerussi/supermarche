@@ -3,13 +3,14 @@
 Dans cette section nous présentons les diagrammes de séquence (DS) reliés à quelques-uns des \cu\ les plus emblématiques de notre application.\crlf
 Ces diagrammes ont été élaborés selon le pattern Modèle Vue Contrôleur. 
 Étant donné qu'il existe plusieurs moutures différentes de ce pattern (qui diffèrent notamment par les relations entre le modèle et les vues), nous avons formulé notre propre synthèse. 
-Nous la présentons pour référence en annexe de ce document (\in{figure}[FIG:MVC]).
+Nous la présentons pour référence, dans une version relativement détaillée, en annexe de ce document (\in{figure}[FIG:MVC]).
 
 \startitemize
 \item la \in{figure}[DS:BE] correspond au \cu\ «UtiliserBorneEuréka», voir \in{section}[SS:CUD:UBE].
 Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:BE].
 Les classes faisant partie de l'UI sont les «vues» et possèdent leur propre fil d'exécution afin de rester réactives aux sollicitations du client.
 Par exemple, l'objet \type{carteUI} répond à des touchers de l'utilisateur pour faire défiler ou zoomer la carte (ces interactions ne sont pas représentées sur le diagramme).
+Dans un souci de lisibilité, nous n'avons pas toujours indiqué les flèches de retour correspondant aux appels asynchrones.
 
 \item les \in{figures}[DS:AR1] et \in[DS:AR2] correspondent au \cu\ «AppliquerRecetteConnectée», voir \in{section}[SS:CUD:AR].
 Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:AR].
@@ -30,9 +31,9 @@ Le diagramme de classes détaillé correspondant est à la \in{figure}[DC:PP].
 {\externalfigure[ECLIPSE-LUNA-DS-BORNE-EUREKA/DSUtiliserBorneEureka.pdf][width=\hsize]}
 
 \placefigure[][DS:AR1]{DS du \cu\ «AppliquerRecetteConnectée» (partie haute)}
-{\externalfigure[ECLIPSE-LUNA-DS-APPLIQUER-RECETTE/DSAppliquerRecetteHAUT.pdf][orientation=90,height=.9\hsize]}
+{\externalfigure[ECLIPSE-LUNA-DS-APPLIQUER-RECETTE/DSAppliquerRecetteHAUT.pdf][orientation=90,width=23truecm,height=\hsize]}
 \placefigure[][DS:AR2]{DS du \cu\ «AppliquerRecetteConnectée» (partie basse)}
-{\externalfigure[ECLIPSE-LUNA-DS-APPLIQUER-RECETTE/DSAppliquerRecetteBAS.pdf][orientation=90,height=1.1\hsize]}
+{\externalfigure[ECLIPSE-LUNA-DS-APPLIQUER-RECETTE/DSAppliquerRecetteBAS.pdf][orientation=90,width=25truecm,height=\hsize]}
 
 \placefigure[][DS:AAC]{DS du \cu\ «AjouterArticleCadBot»}
 {\externalfigure[ECLIPSE-LUNA-DS-AJOUTER-ARTICLE-CADBOT/DSAjouterArticleCadBot.pdf][width=\hsize]}
