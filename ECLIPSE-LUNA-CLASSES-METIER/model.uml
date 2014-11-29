@@ -139,8 +139,8 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x9bQ42AoEeSXjrPLCRUqJQ" value="*"/>
       </ownedEnd>
       <ownedEnd xmi:type="uml:Property" xmi:id="_x9aCwGAoEeSXjrPLCRUqJQ" name="produit" type="_7e3skGAVEeSXjrPLCRUqJQ" association="_x9bQ4GAoEeSXjrPLCRUqJQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x9aCwWAoEeSXjrPLCRUqJQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x9aCwmAoEeSXjrPLCRUqJQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x9aCwWAoEeSXjrPLCRUqJQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x9aCwmAoEeSXjrPLCRUqJQ" value="*"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Gl2lEGA3EeSXjrPLCRUqJQ" name="CarteFuturMarket">
@@ -513,6 +513,36 @@ Date: 20/11/14, rév. 25/11/14</body>
       <ownedEnd xmi:type="uml:Property" xmi:id="_-z5DgHfCEeS39LSJv4DaYg" name="anomalie" type="_0odKQHfCEeS39LSJv4DaYg" association="_-z5qkHfCEeS39LSJv4DaYg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-z5DgXfCEeS39LSJv4DaYg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-z5DgnfCEeS39LSJv4DaYg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Y7n5AHfREeShLNBgzuGIjA" name="affiche" memberEnd="_Y7n5AXfREeShLNBgzuGIjA _Y7k1sHfREeShLNBgzuGIjA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Y7n5AXfREeShLNBgzuGIjA" name="borneEureka" type="_6F3xwGdGEeSzCYdvi0ys6g" association="_Y7n5AHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y7n5AnfREeShLNBgzuGIjA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y7n5A3fREeShLNBgzuGIjA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Y7k1sHfREeShLNBgzuGIjA" name="produit" type="_7e3skGAVEeSXjrPLCRUqJQ" association="_Y7n5AHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y7k1sXfREeShLNBgzuGIjA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y7k1snfREeShLNBgzuGIjA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_25DWEHfREeShLNBgzuGIjA" name="possède" memberEnd="_25DWEXfREeShLNBgzuGIjA _25CH8HfREeShLNBgzuGIjA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_25DWEXfREeShLNBgzuGIjA" name="borneEureka" type="_6F3xwGdGEeSzCYdvi0ys6g" association="_25DWEHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_25DWEnfREeShLNBgzuGIjA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_25DWE3fREeShLNBgzuGIjA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_25CH8HfREeShLNBgzuGIjA" name="emplacement" type="_fyDsoGAoEeSXjrPLCRUqJQ" association="_25DWEHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_25CH8XfREeShLNBgzuGIjA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_25CH8nfREeShLNBgzuGIjA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9Cy7gHfREeShLNBgzuGIjA" name="localisé par" memberEnd="_9Cy7gXfREeShLNBgzuGIjA _9CyUcHfREeShLNBgzuGIjA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9Cy7gXfREeShLNBgzuGIjA" name="emplacement" type="_fyDsoGAoEeSXjrPLCRUqJQ" association="_9Cy7gHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Cy7gnfREeShLNBgzuGIjA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Cy7g3fREeShLNBgzuGIjA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9CyUcHfREeShLNBgzuGIjA" name="produit" type="_7e3skGAVEeSXjrPLCRUqJQ" association="_9Cy7gHfREeShLNBgzuGIjA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9CyUcXfREeShLNBgzuGIjA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9CyUcnfREeShLNBgzuGIjA" value="*"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_h9inYGAVEeSXjrPLCRUqJQ">
