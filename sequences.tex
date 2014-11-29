@@ -1,9 +1,13 @@
 \chapter{Diagrammes de séquences}
 
-Dans cette section nous présentons les diagrammes de séquence (DS) reliés à quelques-uns des \cu\ les plus emblématiques de notre application.\crlf
-Ces diagrammes ont été élaborés selon le pattern Modèle Vue Contrôleur. 
-Étant donné qu'il existe plusieurs moutures différentes de ce pattern (qui diffèrent notamment par les relations entre le modèle et les vues), nous avons formulé notre propre synthèse. 
-Nous la présentons pour référence, dans une version relativement détaillée, en annexe de ce document (\in{figure}[FIG:MVC]).
+Dans cette section nous présentons les diagrammes de séquence (DS) reliés à quelques-uns des \cu\ les plus emblématiques de notre application.
+\crlf
+Ces diagrammes ont été élaborés selon le pattern Modèle-Vue-Contrôleur.
+Étant donné qu'il existe plusieurs moutures différentes de ce pattern (qui diffèrent notamment par les relations entre le modèle et les vues), nous avons formulé notre propre synthèse que nous présentons pour référence et dans une version relativement détaillée, en annexe de ce document (\in{figure}[FIG:MVC]).
+\par
+Il faut noter également que nous parlons ici d'un modèle MVC «à gros grain» qui structure notre application (voir notamment \in{chapitre}[CH:ARCHI]). 
+Ainsi, les objets de type «contrôle» correspondent aux principales actions définies dans les \cu.
+Les objets «UI» sont des objets {\em frontière} complexes, qui seront eux-mêmes probablement implémentés en utilisant un deuxième modèle MVC à grains plus fins que l'on retrouve classiquement dans les constructions des interfaces utilisateurs.
 
 \startitemize
 \item la \in{figure}[DS:BE] correspond au \cu\ «UtiliserBorneEuréka», voir \in{section}[SS:CUD:UBE].

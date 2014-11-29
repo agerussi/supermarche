@@ -5,6 +5,7 @@
 _*
 *.bak
 CROQUIS/m_k_i_v*
+m_k_i_v*
 *.tmp
 *.mp
 *.tui

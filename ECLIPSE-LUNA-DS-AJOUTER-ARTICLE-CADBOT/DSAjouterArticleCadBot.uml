@@ -204,7 +204,7 @@ François Dubiez 22/11/2014
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k_b2EnMkEeSCn8UL1IaLfg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_EnheIHMlEeSCn8UL1IaLfg" name="CadBotBuzzer">
+  <packagedElement xmi:type="uml:Class" xmi:id="_EnheIHMlEeSCn8UL1IaLfg" name="CadBotBuzzerUI">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_JRrgIHMlEeSCn8UL1IaLfg" name="emitSound">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Qdip4HMlEeSCn8UL1IaLfg" name="readStatus" type="_sCpFAHMiEeSCn8UL1IaLfg"/>
     </ownedOperation>
