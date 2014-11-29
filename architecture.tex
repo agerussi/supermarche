@@ -1,0 +1,32 @@
+\chapter[CH:ARCHI]{Architecture}
+
+\section{Architecture logique}
+
+Nous décrivons ici l'organisation logique sous-jacente à notre application.
+Celle-ci permet de comprendre les principales dépendances et relations entre les classes du système à grande échelle, et également de se représenter le chemin emprunté par le flux d'informations qui existe entre l'utilisateur final et la base de données.
+\blank
+
+La \in{figure}[FIG:ARCHI] présente schématiquement notre organisation en couches.
+\placefigure[here][FIG:ARCHI]{Organisation logique de l'application}{\externalfigure[CROQUIS/logique-architecturale.svg][width=.5\hsize]}
+
+\startitemize
+\item La couche la plus basse de l'application est constituée des classes en relation directe avec une base de données. 
+Nous pensons ici à des opérations de bas niveau de type création, maintenance, requêtes, \etc, écrites en SQL.
+\item La couche immédiatement au-dessus est une couche de «services techniques» au sens large du terme.
+Nous n'avons pas eu l'occasion d'analyser en profondeur la structure ou le contenu de cette couche mais nous préssentons le besoin probable d'une étape intermédiaire entre la BDD et la couche suivante, le modèle.
+Nous pensons ici à fonctionnalités liées à la persistance des objets métiers, à la gestion des communications entre objets du système, \etc 
+À cet effet nous utiliserons probablement des solutions existantes (EJB, RMI,  \dots).\par
+\item La troisième couche constitue le modèle métier de notre application.
+On y retrouvera les classes présentes sur les diagrammes de classe métiers (\in{chapitre}[CH:CM]).
+\item La couche suivante est formée des entités de type «contrôle», \cad celles qui implémentent directement les \cu\ de l'application.
+On y retrouvera entre autres les classes nommées «xxxCTRL» qui ont été découvertes à partir des diagrammes de séquence (\in{chapitre}[CH:CT]).
+\item L'avant dernière couche est formée de classes «frontière». 
+Dans notre application, ces classes sont des sortes d'UI «génériques»: elles définissent les fonctionnalités de l'UI mais seront sous-classées par des classes plus spécifiques de la couche supérieure.
+Les classes de cette couche sont celles nommées «xxxUI» dans les diagrammes du \in{chapitre}[CH:CT].
+\item La couche supérieure est formée de classes implémentant des UI spécifiques aux différents supports gérés par l'application: par exemple, le site web du \fm et la marketTab offrent au client un grand nombre de fonctionnalités identiques dont seule la présentation change.
+Les classes de cette couche seront probablement organisées elles aussi selon un pattern MVC à grains fins, qui n'apparaît pas sur le schéma général.
+Elles utiliseront probablement un framework existant permettant de faire des interfaces (Qt, Gtk, Swing\dots).
+\stopitemize
+
+
+\section{Répartition en paquetages}
