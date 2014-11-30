@@ -23,7 +23,7 @@ On y retrouvera entre autres les classes nommées «xxxCTRL» qui ont été déc
 \item L'avant dernière couche est formée de classes «frontière». 
 Dans notre application, ces classes sont des sortes d'UI «génériques»: elles définissent les fonctionnalités de l'UI mais seront sous-classées ou interfacées par des classes plus spécifiques de la couche supérieure.
 Les classes de cette couche sont celles nommées «xxxUI» dans les diagrammes du \in{chapitre}[CH:CT].
-\item La couche supérieure est formée de classes implémentant des UI spécifiques aux différents supports gérés par l'application: par exemple, le site web du \fm et la marketTab offrent au client un grand nombre de fonctionnalités identiques dont seule la présentation change.
+\item La couche supérieure est formée de classes implémentant des UI spécifiques aux différents supports gérés par l'application: par exemple, le site web du \fm\ et la marketTab offrent au client un grand nombre de fonctionnalités identiques dont seule la présentation change.
 Les classes de cette couche seront probablement organisées elles aussi selon un pattern MVC à grains fins, qui n'apparaît pas sur le schéma général.
 Elles utiliseront probablement un framework existant permettant de faire des interfaces (Qt, Gtk, Swing, Androïd\dots).
 \stopitemize
@@ -36,10 +36,11 @@ La répartition en paquetages a été faite en tenant compte de notre architectu
 \startitemize[n]
 \item regrouper entre elles des classes ayant un dénominateur commun fort: réalisation d'un certain service, même niveau d'abstraction, \etc;
 \item avoir un faible couplage entre les différents paquetages, mais une forte cohésion à l'intérieur des paquetages;
-\item éviter des dépendances circulaires entre paquetages, qui pourraient poser des problèmes à la compilation. Notons à ce propos qu'en appliquant le modèle MVC que nous proposons en annexe, les interfaces «observateur» et «écouteur» permettent de découpler les paquetages contrôleurs paquetages frontières et donc d'éviter des dépendances circulaires entre eux (les interfaces correspondantes n'apparaissent pas sur le diagramme).
+\item éviter des dépendances circulaires entre paquetages, qui pourraient poser des problèmes à la compilation. 
+    Notons à ce propos qu'en appliquant le modèle MVC que nous proposons en annexe, les interfaces «observateur» et «écouteur» permettent de découpler les paquetages contrôleurs des paquetages frontières et donc d'éviter des dépendances circulaires entre eux (les interfaces correspondantes sont ommises ici).
 \stopitemize
 
 La \in{figure}[FIG:PAQUETAGES] présente notre organisation.
-Il est à noter que pour des raisons de lisibilité, nous avons omis les nombreuses dépendances portant sur la classe FuturMarket, qui sert de «point d'accès» aux ressources du système pour de nombreuses méthodes, et qui référence elle-même directement les principales composantes.
+Il est à noter que pour des raisons de lisibilité, nous avons omis les nombreuses dépendances portant sur la classe FuturMarket, qui sert de «point d'accès» aux ressources du système pour de nombreuses méthodes, et qui référence elle-même directement les principales composantes. Sont absentes également les dépendances liées à la classe \type{Matériel}.
 \placefigure[here][FIG:PAQUETAGES]{Découpage en paquetages}{\externalfigure[diagramme-paquetages.svg][width=.98\hsize, height=.95\vsize]}
 
