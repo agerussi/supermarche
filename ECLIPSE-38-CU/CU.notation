@@ -2118,10 +2118,6 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_zec4lltjEeS_R9WagCsW3g" type="5016"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_zec4l1tjEeS_R9WagCsW3g" type="7009">
-        <children xmi:type="notation:Shape" xmi:id="_RGbPUGgjEeSkSrwDoAcOzw" type="3007" fontName="Cantarell" fontHeight="11" lineColor="0">
-          <element xmi:type="uml:ExtensionPoint" href="CU.uml#_RGBmsGgjEeSkSrwDoAcOzw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_RGbPUWgjEeSkSrwDoAcOzw"/>
-        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_zec4mFtjEeS_R9WagCsW3g"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_zec4mVtjEeS_R9WagCsW3g"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zedfoFtjEeS_R9WagCsW3g"/>
