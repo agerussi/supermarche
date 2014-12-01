@@ -4,11 +4,16 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8" />
         <title>Borne Eureka</title>
+	<script>
+	    function afficheCarte() {
+		img = document.getElementById("plan");
+		img.setAttribute("src","plan2.jpg");
+	    }
+	</script>
     </head>
     <body>	
 		
 		<div class ="center">
-			<form method="post" action="traitement.php">
     			<p>
         			<input type="text" name="article_recherche" /><a href="#"><img src="search.jpg" width="30" height="20"/></a><br/>
 				<label>Recherche Vocale</label>	
@@ -32,8 +37,10 @@
 				
 			</p>
 			<p>
-				<button class="btndroit" onclick="#">Plan</button> 
+				<button class="btndroit" onclick="return afficheCarte()">Plan</button> 
 			</p>
-		</form>
+<div>
+<img id="plan" width="50%" src="plan1.jpg"/>
+</div>
     </body>
 </html>
