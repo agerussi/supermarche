@@ -9,30 +9,33 @@
 		img = document.getElementById("plan");
 		img.setAttribute("src","plan2.jpg");
 	    }
+	    function afficheProposition() {
+		select = document.getElementById("select");
+options =  '<option value="#">Petits Suisse Yoplait 1,40€</option>';
+options += '<option value="#">Petits Suisse Mamie Nova 2€</option>';
+options += '<option value="#">Petits Suisse PremierPrix 1€</option>';
+options += '<option value="#">Petits Suisse Dakota 2,55€</option>';
+options += '<option value="#">Petits Suisse Viva 1,23€</option>';
+options += '<option value="#">Fromage Blanc Danone 1kg 2€80</option>';
+options += '<option value="#">Petits Suisse Bjord 1,43€</option>';
+options += '<option value="#">Petits Suisse Amazing 1,09€</option>';
+options += '<option value="#">Petits Suisse Maine 2,15€</option>';
+		select.innerHTML = options;
+	    }
 	</script>
     </head>
     <body>	
 		
 		<div class ="center">
     			<p>
-        			<input type="text" name="article_recherche" /><a href="#"><img src="search.jpg" width="30" height="20"/></a><br/>
+        			<input type="text" name="article_recherche" /><img src="search.jpg" width="30" height="20" onclick="return afficheProposition()" /><br/>
 				<label>Recherche Vocale</label>	
 				<img src="no_flex_zone.jpg" width="30" height="30"/>
    			</p>
 			<p>
 				Liste de produits associ&eacute;s:<br/>
-				<select>
-					<option value="#">Petits Suisse Yoplait 1,40€</option>
-					<option value="#">Petits Suisse Mamie Nova 2€</option>
-					<option value="#">Petits Suisse PremierPrix 1€</option>
-					<option value="#">Petits Suisse Dakota 2,55€</option>
-					<option value="#">Petits Suisse Viva 1,23€</option>
-					<option value="#">Fromage Blanc Danone 1kg 2€80</option>
-					<option value="#">Petits Suisse Bjord 1,43€</option>
-					<option value="#">Petits Suisse Amazing 1,09€</option>
-					<option value="#">Petits Suisse Maine 2,15€</option>
-					
-					
+				<select id="select">
+				    <option>aucune requête n'a été entendue</option>
 				</select>
 				
 			</p>
