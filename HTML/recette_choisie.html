@@ -6,26 +6,28 @@
     </head>
     <body>	
 	<div class="entete">Recette: poulet basquaise </div>
-
 	<div>
-		<form action="liste_connectee.html">
+		<form action="recette_connectee_validation.html">
 			<table class="petit">
        				<tr>
-					<td class="blue">mise &agrave; l'echelle</td>
+					<td class="blue" colspan="2">mise &agrave; l'echelle</td>
        				</tr>
-			</table>
-			
-			</br>
-			<input class="chk1" type="checkbox" value="1">nombre de personne</br>
-
-			<input class="chk2" type="checkbox" value="1">facteur d'echelle
-			</br>
-			<input class="btn1" type="submit" value="valider">
-			<input class="btn2" type="submit" value="retour">
-			<input class="btn3" type="submit" value="annuler">
-		</form>
+       				<tr>
+       				<td><input name="zoomvalue" type="text"></td>
+       				<td><select name="zoom" size="1">
+       						<option value="nb">Nombre de personnes</option>
+       						<option value="pct">Pourcentage</option>
+       				</select></td>
+       				</tr>
+      	       				
+<tr>
+       				<td colspan="2">
+			<input class="btn1" type="submit" value="valider"></input>
+			<input class="btn2" type="submit" value="retour" onclick="history.go(-1)"></input>
+			<input class="btn3" type="submit" value="annuler"onclick="history.go(-1)" ></input>
+			</td>
+			</tr>
+			</table> 
+ 		</form>
 	</div>
-	<p>2 recettes associées à cet article</p>
-    
-
 </body></html>

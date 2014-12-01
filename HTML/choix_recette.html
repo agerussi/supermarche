@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+
+<script language="javascript"> 
+function eToggle(anctag,darg,darg2) 
+{
+  var ele = document.getElementById(darg);
+  var ele2 = document.getElementById(darg2);
+  var text = document.getElementById(anctag);
+  if(ele.style.display == "block") 
+  {
+    ele.style.display = "none";
+    ele2.style.display ="block";
+	text.innerHTML = "recette";
+  }
+  else 
+  {
+	ele.style.display = "block";
+	ele2.style.display ="none";
+	text.innerHTML = "Recettes";
+  }
+} 
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
         <title>Choix recette</title>
     </head>
     <body>	
 	<div class="entete">Vous avez scanné: "2 cuisses de poulet Label Rouge, Maitre Coc </div>
+	
+</br></br></br>	
+	
+<div id="pouletdetail" style="display:block">
+			<table>
+       				<tbody><tr>
+					<td class="blue">Détails</td>
+       			<td class="blue">A consommer avant</td>
+					<td class="blue">Elevé par</td>
+       			<td class="blue">Prix/Kg</td>
+					<td class="blue">Poids Net</td>
+					<td class="blue">Prix</td>
+      	 			</tr><tr>
+				</tr><tr>
+					<td class="cornflowerblue">Cuisses de poulet / HT CUIS PLT BIO S/OS SAT2</a></td>
+					<td class="cornflowerblue">20/12/2014</td>
+					<td class="cornflowerblue">Mr Jean Claude Dusse</td>
+					<td class="cornflowerblue">15,99</td>
+					<td class="cornflowerblue">0,825Kg</td>
+					<td class="cornflowerblue">13,19</td>
+				</tr>
+			</tbody></table>	
+</div>
+	
 	<div>
 		<ul id="menu">
-			<li class="bouton_gauche"><a href="#">recettes</a></li>
+			<li class="bouton_gauche"><a href="javascript:eToggle('atag','helptxt','pouletdetail');"    id="atag">Rechercher les Recettes</a></li>
 		</ul>
 	</div>
+
+<div id="helptxt" style="display: none">
 
 	<div class="recettes">
 		<form action="recette_choisie.html">
@@ -20,27 +69,26 @@
        					<td class="blue">note /5</td>
 					<td class="blue">cout</td>
        					<td class="blue">temps</td>
-					<td class="blue">imprimer</td>
+					<td class="blue"></td>
       	 			</tr><tr>
 				</tr><tr>
-					<td class="cornflowerblue"><a href="imprimer1.html"><!--<button type="submit" value="paella">-->paella<!--</button>--></a></td>
+					<td class="cornflowerblue"><a href="recette_paella.html"><!--<button type="submit" value="paella">-->paella<!--</button>--></a></td>
 					<td class="cornflowerblue">4.4</td>
 					<td class="cornflowerblue">**</td>
 					<td class="cornflowerblue">1h30</td>
-					<td class="cornflowerblue"><a href="imprimer1.html"><img src="print.jpg" width="20" height="20"/></a></td>
+					<td></td>
 				</tr>
 				<tr>
-					<td class="blue"><a href="imprimer2.html"><!--<button type="submit" value="poulet">-->poulet basquaise<!--</button>--></a></td>
+					<td class="blue"><a href="recette_poulet.html"><!--<button type="submit" value="poulet">-->poulet basquaise<!--</button>--></a></td>
 					<td class="blue">4.2</td>
 					<td class="blue">*</td>
 					<td class="blue">45min</td>
-					<td class="blue"><a href="imprimer2.html"><img src="print.jpg" width="20" height="20"/></a></td>
+					<td></td>
 				</tr>
 			</tbody></table>
-			<input class="btn" type="submit" value="nouvelle recette">
-		</form>
+				</form>
 	</div>
 	<p>2 recettes associées à cet article</p>
-    
+</div>    
 
 </body></html>

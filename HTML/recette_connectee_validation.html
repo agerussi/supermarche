@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>panier</title>
+    </head>
+    <body>	
+
+	<div class="entete">Recette: poulet basquaise </div>
+	</br>
+	Voici la liste des ingrédients pour votre recette telle que vous l'avez demandé.
+	</br></br>		
+	Veuillez modifier ou supprimer les produits ci dessous. 
+	</br></br>
+	
+		<form action="recette_connectee_validation.html">
+	<table>
+       		<tbody>
+			<tr>
+				<td >articles</td>
+       				<td>marque</td>
+				<td>prix/€</td>
+       				<td>quantite</td>
+						<td>Supprimer</td>
+      	 		</tr>
+			<tr>
+				<td ><input type="checkbox">blanc de poulet 240g</td>
+				<td>Le gaulois</td>
+				<td>4,50</td>
+				<td><input type="number" value="4"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td ><input type="checkbox">escalope de poulet 240g</td>
+				<td>Le gaulois</td>
+				<td>5,00</td>
+				<td><input type="number" value="0"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">petit pois 125g</td>
+				<td>Bonduelle</td>
+				<td>1,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td ><input type="checkbox">riz 1kg</td>
+				<td>Uncle Ben's</td>
+				<td>3,00</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Capsule Safran</td>
+				<td>Bonduelle</td>
+				<td>1,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Poivron rouge</td>
+				<td>Bonduelle</td>
+				<td>1,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Poivron vert</td>
+				<td>Bonduelle</td>
+				<td>1,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Ognons 1kg</td>
+				<td>Beauce ognons</td>
+				<td>3,20</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+				
+			</tr>
+			<tr>
+				<td><input type="checkbox">huile d'olive 1l </td>
+				<td>Puget</td>
+				<td>7,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Sel 750g</td>
+				<td>Baleine</td>
+				<td>2,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">Poivre 42g</td>
+				<td>Ducros</td>
+				<td>1,40</td>
+				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
+			</tr>
+			</tbody></table>
+Valider votre choix:
+<input class="btn1" type="submit" value="valider"></input>
+			<input class="btn2" type="submit" value="retour" onclick="history.go(-1)"></input>
+			<input class="btn3" type="submit" value="annuler" onclick="guidage_markettab.html" ></input>
+</form>
+	</body>
+</html>
