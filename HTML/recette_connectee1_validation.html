@@ -5,6 +5,16 @@
         <title>panier</title>
     </head>
     <body>	
+
+	<div class="entete">Recette: paella </div>
+	</br>
+	Voici la liste des ingrédients pour votre recette telle que vous l'avez demandé.
+	</br></br>		
+	Veuillez modifier la quantité ou supprimer les produits ci dessous. 
+	</br></br>
+	
+
+<form action="recette_connectee_ajout_liste.html">
 	<table>
        		<tbody>
 			<tr>
@@ -12,13 +22,14 @@
        				<td>marque</td>
 				<td>prix/€</td>
        				<td>quantite</td>
-					
+					<td>Supprimer</td>
       	 		</tr>
 			<tr>
 				<td ><input type="checkbox">poulet entier 240g</td>
 				<td>Le gaulois</td>
 				<td>4,50</td>
 				<td><input type="number"  value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			
 			<tr>
@@ -26,50 +37,65 @@
 				<td>Aromatt</td>
 				<td>2,99</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Vin blanc</td>
 				<td>Saint Mont</td>
 				<td>4,40</td>
 				<td><input type="number"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Poivron rouge</td>
 				<td>Bonduelle</td>
 				<td>1,40</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Poivron vert</td>
 				<td>Bonduelle</td>
 				<td>1,40</td>
 				<td><input type="number"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Oignons 1kg</td>
 				<td>Beauce ognons</td>
 				<td>3,20</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">huile d'olive 1l </td>
 				<td>Puget</td>
 				<td>7,40</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Sel 750g</td>
 				<td>Baleine</td>
 				<td>2,40</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox">Poivre 42g</td>
 				<td>Ducros</td>
 				<td>1,40</td>
 				<td><input type="number" value="1"></td>
+				<td><input type="checkbox"></td>
 			</tr>
+			<tr>
+<td colspan="5"></br>Valider votre choix:</td></tr>
+<tr><td colspan="5">
+			<input type="submit" value="valider"></input>
+			<input type="submit" value="retour" onclick="history.go(-1)"></input>
+			<input type="submit" value="annuler" onclick="location.href='guidage_markettab.html'" ></input></td>
+</tr>
 			</tbody></table>
-
-	</body>
+</form>
+</body>
 </html>
