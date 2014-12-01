@@ -3,28 +3,35 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8" />
-        <title>Login</title>
+        <title>Guide Dans le FuturMarket</title>
     </head>
     <body>	
 	<div>
 		<ul id="menu_horizontal">
 			<li class="bouton_gauche"><a href="#">Vos listes</a></li>
 			<li class="bouton_gauche"><a href="#">Budget</a></li>
-			<li class="bouton_gauche"><a href="#">Recettes</a></li>
+			<li class="bouton_gauche"><a href="chercher_recette.html">Recettes</a></li>
 			<li class="bouton_gauche"><a href="#">Aide au choix</a></li>
 			<li class="bouton_droite"><a href="#">Identifiant</a></li>
 		</ul>
 	</div>
 
 	<div class="liste_course">
-		<form>
+		<form action="liste_connectee.html">
 			<p>
-       				Listes Antérieures :<br /> <br />
+       				<a href="liste_connectee.html">Composer nouvelle liste</a>
+			</p>
+			<br /> 
+			<br />
+			<p>
+       				<a href="#">Listes Antérieures :</a><br /> <br />
        				<input type="checkbox"/> <label>ma-liste-01/03/14</label><br />
        				<input type="checkbox"/> <label>ma-liste-produits lourds</label><br />
       	 			<input type="checkbox" /> <label>ma-liste-10/10/14</label><br />
 
 			</p>
+			<input class="btn" type="submit" value="Valider">			
+			
 		</form>
 	</div>
 	
@@ -38,7 +45,7 @@
 	</div>
 
 	<div class="milieu">
-		<p>jejeorher</p>
+	
 	</div>
     </body>
 </html>
