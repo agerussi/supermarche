@@ -4,15 +4,20 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8" />
         <title>Guide Dans le FuturMarket</title>
+	<script>
+	    function afficheListe() {
+		liste1 = document.getElementById("liste1");
+		liste1.style.display = "table";
+	    }
+	</script>
     </head>
     <body>	
 	<div>
 		<ul id="menu_horizontal">
-			<li class="bouton_gauche"><a href="#">Vos listes</a></li>
-			<li class="bouton_gauche"><a href="#">Budget</a></li>
+			<li class="bouton_gauche" style="border:2pt solid black;">Vos listes</li>
+			<li class="bouton_gauche">Budget</li>
 			<li class="bouton_gauche"><a href="chercher_recette.html">Recettes</a></li>
-			<li class="bouton_gauche"><a href="#">Aide au choix</a></li>
-			<li class="bouton_droite"><a href="#">Identifiant</a></li>
+			<li class="bouton_droite">Client: Alexandre Gerussi</li>
 		</ul>
 	</div>
 
@@ -24,13 +29,13 @@
 			<br /> 
 			<br />
 			<p>
-       				<a href="#">Listes Antérieures :</a><br /> <br />
-       				<input type="checkbox"/> <label>ma-liste-01/03/14</label><br />
-       				<input type="checkbox"/> <label>ma-liste-produits lourds</label><br />
-      	 			<input type="checkbox" /> <label>ma-liste-10/10/14</label><br />
+       				Listes Antérieures:<br /> <br />
+       				<input type="radio" name="listes" onclick="return afficheListe()" /> <label>ma-liste-01/03/14</label><br />
+       				<input type="radio" name="listes" onclick="return afficheListe()" /> <label>ma-liste-produits lourds</label><br />
+      	 			<input type="radio"  name="listes" onclick="return afficheListe()" /> <label>ma-liste-10/10/14</label><br />
 
 			</p>
-			<input class="btn" type="submit" value="Valider">			
+			<!-- <input class="btn" type="submit" value="Valider">	-->
 			
 		</form>
 	</div>
@@ -38,14 +43,92 @@
 	<div class="parcour">
 
 		<ul>
-			<li><a href="#">Parcours Rapide</a></li>
-			<li><a href="#">Parcours d&eacute;couverte</a></li>
+			<li><a href="plusCourtChemin.html">Parcours Rapide</a></li>
+			<li><a href="#">Parcours D&eacute;couverte</a></li>
 			<li><a href="#">Parcours Gourmand</a></li>
 		</ul>
 	</div>
 
 	<div class="milieu">
 	
+
+<table id="liste1" style="display:none">
+<tbody>
+    <tr>
+	    <td >articles</td>
+	    <td>marque</td>
+	    <td>prix/€</td>
+	    <td>quantite</td>
+		    
+    </tr>
+    <tr>
+	    <td ><input type="checkbox">blanc de poulet 240g</td>
+	    <td>Le gaulois</td>
+	    <td>4,50</td>
+	    <td><input type="number" value="2" class="NB"></td>
+    </tr>
+    <tr>
+	    <td ><input type="checkbox">escalope de poulet 240g</td>
+	    <td>Le gaulois</td>
+	    <td>5,00</td>
+	    <td><input type="number" class="NB" value="2"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">petit pois 125g</td>
+	    <td>Bonduelle</td>
+	    <td>1,40</td>
+	    <td><input type="number" class="NB" value="2"></td>
+    </tr>
+    <tr>
+	    <td ><input type="checkbox">riz 1kg</td>
+	    <td>Uncle Ben's</td>
+	    <td>3,00</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Capsule Safran</td>
+	    <td>Bonduelle</td>
+	    <td>1,40</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Poivron rouge</td>
+	    <td>Bonduelle</td>
+	    <td>1,40</td>
+	    <td><input type="number" class="NB" value="4"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Poivron vert</td>
+	    <td>Bonduelle</td>
+	    <td>1,40</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Oignons 1kg</td>
+	    <td>Beauce ognons</td>
+	    <td>3,20</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">huile d'olive 1l</td>
+	    <td>Puget</td>
+	    <td>7,40</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Sel 750g</td>
+	    <td>Baleine</td>
+	    <td>2,40</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    <tr>
+	    <td><input type="checkbox">Poivre 42g</td>
+	    <td>Ducros</td>
+	    <td>1,40</td>
+	    <td><input type="number" class="NB" value="1"></td>
+    </tr>
+    </tbody>
+</table>
 	</div>
     </body>
 </html>
