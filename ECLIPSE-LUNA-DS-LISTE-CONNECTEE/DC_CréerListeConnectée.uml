@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_idH8AHijEeSnRdQriJt6mA" name="model">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_oZJowHlXEeSSbqTtHzvmXQ">
+    <body>DC CréerListeConnectée
+Acteur: Congcong XU
+Date: 01/12/2014</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jIw6AHijEeSnRdQriJt6mA" name="listeConnectée"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jrrZ0HijEeSnRdQriJt6mA" name="listeConnectéeUI">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3xZK4HijEeSnRdQriJt6mA" name="afficherListeCréée"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OguCgHikEeSnRdQriJt6mA" name="replyNomFaulte"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_krF9gHilEeSnRdQriJt6mA" name="replyDbFaulte"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_l_hrwHijEeSnRdQriJt6mA" name="listeConnectéeCTRL">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XiWbEHikEeSnRdQriJt6mA" name="listeConnectéeUI" type="_jrrZ0HijEeSnRdQriJt6mA" aggregation="composite" association="_XiXpMHikEeSnRdQriJt6mA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XiWbEXikEeSnRdQriJt6mA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XiWbEnikEeSnRdQriJt6mA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_liZOYHikEeSnRdQriJt6mA" name="listeConnectée" type="_jIw6AHijEeSnRdQriJt6mA" aggregation="composite" association="_libDkHikEeSnRdQriJt6mA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_liZOYXikEeSnRdQriJt6mA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_liZOYnikEeSnRdQriJt6mA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_GGqAQHikEeSnRdQriJt6mA" name="créerListe"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XiXpMHikEeSnRdQriJt6mA" memberEnd="_XiXpMXikEeSnRdQriJt6mA _XiWbEHikEeSnRdQriJt6mA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XiXpMXikEeSnRdQriJt6mA" name="listeConnectéeCTRL" type="_l_hrwHijEeSnRdQriJt6mA" association="_XiXpMHikEeSnRdQriJt6mA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XiXpMnikEeSnRdQriJt6mA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XiXpM3ikEeSnRdQriJt6mA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_libDkHikEeSnRdQriJt6mA" memberEnd="_libDkXikEeSnRdQriJt6mA _liZOYHikEeSnRdQriJt6mA">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_libDkXikEeSnRdQriJt6mA" name="listeConnectéeCTRL" type="_l_hrwHijEeSnRdQriJt6mA" association="_libDkHikEeSnRdQriJt6mA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_libDknikEeSnRdQriJt6mA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_libDk3ikEeSnRdQriJt6mA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
