@@ -13,7 +13,7 @@ La \in{figure}[FIG:ARCHI] présente schématiquement notre organisation en couch
 \item La couche la plus basse de l'application est constituée des classes en relation directe avec une base de données. 
 Nous pensons ici à des opérations de bas niveau de type création, maintenance, requêtes, \etc, écrites en SQL.
 \item La couche immédiatement au-dessus est une couche de «services techniques» au sens large du terme.
-Nous n'avons pas eu l'occasion d'analyser en profondeur la structure ou le contenu de cette couche mais nous préssentons le besoin probable d'une étape intermédiaire entre la BDD et la couche suivante, le modèle.
+Nous n'avons pas eu l'occasion d'analyser en profondeur la structure ou le contenu de cette couche mais nous pressentons le besoin probable d'une étape intermédiaire entre la BDD et la couche suivante, le modèle.
 Nous pensons à des fonctionnalités liées à la persistance des objets métiers, à la gestion des communications entre objets du système, \etc 
 À cet effet nous utiliserons probablement des solutions existantes (EJB, RMI, \dots).\par
 \item La troisième couche constitue le modèle métier de notre application.
@@ -37,7 +37,7 @@ La répartition en paquetages a été faite en tenant compte de notre architectu
 \item regrouper entre elles des classes ayant un dénominateur commun fort: réalisation d'un certain service, même niveau d'abstraction, \etc;
 \item avoir un faible couplage entre les différents paquetages, mais une forte cohésion à l'intérieur des paquetages;
 \item éviter des dépendances circulaires entre paquetages, qui pourraient poser des problèmes à la compilation. 
-    Notons à ce propos qu'en appliquant le modèle MVC que nous proposons en annexe, les interfaces «observateur» et «écouteur» permettent de découpler les paquetages contrôleurs des paquetages frontières et donc d'éviter des dépendances circulaires entre eux (les interfaces correspondantes sont ommises ici).
+    Notons à ce propos qu'en appliquant le modèle MVC que nous proposons en annexe, les interfaces «observateur» et «écouteur» permettent de découpler les paquetages contrôleurs des paquetages frontières et donc d'éviter des dépendances circulaires entre eux (les interfaces correspondantes sont omises ici).
 \stopitemize
 
 La \in{figure}[FIG:PAQUETAGES] présente notre organisation.
