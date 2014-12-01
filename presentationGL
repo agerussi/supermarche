@@ -10,10 +10,10 @@ page 4: sociologie des clients
 (Raissa)
 page 5: nos solutions
 page 6: nos solutions: liste connectée
-page 7: nos solutions: recettes connectées + démo
-page 8: nos solutions: marketTab
+page 7: nos solutions: recettes connectées + démo ?
+page 8: nos solutions: marketTab + démo ?
 (pour TsongTsong)
-page 9: nos solutions: borne Eurêka.
+page 9: nos solutions: borne Eurêka + démo ?
 page 10: nos solutions: cadBot.
 
 (Alexandre)
@@ -34,16 +34,27 @@ page 20  conclusion usagers
 page 21: conclusion MOA
 
 
-Pour utiliser MarketTab, il faut d'abord laisser MarketTab nous reconnaitre. 
-Ici, il ne demande pas à saisir notre compte, on scanne seulement notre carte client, et après, on saisit notre code secret.
 
-C'est un petit qualité. Les gros avantages du MarketTab sont "Guidage à partir d'une connectée" et "Accès aux recettes". 
+Texte de TsongTsong:
 
-Donc qu'est-ce que c'est "Guidage à partir d'une connectée"?
-C'est à dire que MarketTab peut nous donner le chemin le plus court et nous guider pour trouver l'article dans la liste. Quand on a déjà trouvé le premier article, MarketTab va recalculer les chemins les plus courts pour d'autres articles et il nous attend pour nous guider.
- 
-Et qu'est-ce que c'est "Accès aux recettes"? 
-Sur MarketTab, chacun acticle est associé à pleusieurs recettes, (chacun recette contient pleusieurs articles), on pent accéder à ces recettes. Quand on trouve que un recette nous fait plaisir, on peut choisir ce recette, et saisir le nombre de personnes, (par exemple, il y a 4 personnes dans une famile, on peut saisir le chiffre 4), ensuite, MarketTab va nous afficher la liste des articles à acheter et les quantités associées.
+La borne eurêka.
+Ce sont des bornes disposées un peu partout dans le futurmarket.
+On les interroge vocalement pour trouver l'emplacement d'un article,
+   ou connaître sa disponibilité.
+Elles sont donc parfaites pour le client "dirigé" qui serait perdu.
 
-Merci, mon copain va vous présenter "Borne Eurêka".
+(là tu peux lancer la démonstration ou bien le faire sur le dessin)
+Le client s'approche de la borne et prononce les mots "petits suissses"
+Alors le système affiche automatiquement les articles rattachés.
+Après sélection d'un article, sa position apparait sur un plan du magasin.
+Les ruptures de stock éventuelles sont signalées également.
+
+(page suivante)
+Le cadbot est un caddie intelligent.
+Une de ses fonctionnalités principales est de permettre au client de bipper directement
+et une fois pour toutes les articles.
+Le cadbot connait à tout moment les articles qu'il contient.
+Lors du passage en caisse il suffit de positionner le cadbot entre un portique de paiement
+et le client peut directement procéder au paiement.
+Pas de déballage/remballage d'articles, pas d'attente.
 
