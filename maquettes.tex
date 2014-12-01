@@ -7,7 +7,8 @@ Nous avons développé quelques maquettes interactives qui reprennent certains d
 
 Les liens suivants permettent d'explorer dynamiquement les scénarios sur un navigateur web:
 \useURL[BE][HTML/borne_eureka.html][][«UtiliserBorneEurêka»]
-\useURL[GUIDE][HTML/guidage_markettab.html][][utilisation de la marketTab]
+\useURL[GUIDE][HTML/guidage_markettab.html][]["UtiliserGuidageMarketTab"]
+\useURL[CHREC][HTML/chercher_recette.html][]["RechercherRecetteConnectée"]
 \startitemize
 \item le \cu\ \from[BE]; mode d'emploi:
     \startitemize[n]
@@ -15,11 +16,22 @@ Les liens suivants permettent d'explorer dynamiquement les scénarios sur un nav
     \item le système propose alors une liste de produits associés; on en sélectionne un
     \item en cliquant sur «plan», le système localise le produit sur le plan, ainsi que la position actuelle du client (devant la borne).
     \stopitemize
-\item l'\from[GUIDE] pour se faire guider à partir d'une liste de courses; mode d'emploi:
+\item le \cu\ \from[GUIDE] pour se faire guider à partir d'une liste de courses; mode d'emploi:
     \startitemize[n]
 \item le premier écran est l'écran d'accueil par lequel le client s'identifie, soit par scan de sa carte, soit par saisie de son code client;
 \item une fois reconnu, le client se retrouve dans la page de consultation de ses listes connectées personnelles; il en sélectionne une, dont le détail s'affiche;
 \item il peut ensuite sélectionner un type de parcours (seul le rapide est implémenté);
 \item un plan du magasin apparaît alors avec le parcours optimal tracé, ainsi que les emplacements exacts des produits cherchés.
+    \stopitemize
+
+\item le \cu\ \from[CHREC] pour rechercher une recette a partir de son nom ou d'un produit; mode d'emploi:
+    \startitemize[n]
+\item le premier écran est l'écran de recherche de recette via un nom de recette ou un produit;
+\item La recherche validée, un detail du produit est affichée.
+\item En cliquant sur Rechercher les Recettes, la liste des recettes est affichée.
+\item Le client choisit alors parmi les recettes et se retrouve dans la page de la recette proprement dite.
+\item Il peut ensuite proceder a la mise a l'echelle de la recette.
+\item L'ecran suivant indique alors la liste et la quantité d'articles nécéssaires a la confection de la recette. Le client peut supprimer l'article ou modifier les quantités proposées.
+\item Le client après validation de la liste reçoit la confirmation de l'ajout de sa liste des articles à sa liste de courses.
     \stopitemize
 \stopitemize
